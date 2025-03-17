@@ -5,7 +5,7 @@ date: today
 ---
 
 ::: {.callout-tip}
-### Learning Objectives
+### Learning Outcomes
 
 By the end of this session, learners will be able to:
 
@@ -16,6 +16,11 @@ By the end of this session, learners will be able to:
 ## Lectures and Materials
 
 Links to video recordings and session material
+
+**Example**
+
+<iframe src="https://docs.google.com/presentation/d/1vKoL-0AzID9tPM3HwcnvclJPJOnygMJS/preview" width="640" height="360" allow="autoplay"></iframe>
+The full presentation can be downloaded as a pdf by clicking [here](https://docs.google.com/presentation/d/1vKoL-0AzID9tPM3HwcnvclJPJOnygMJS/export?format=pdf).
 
 ## Quiz
 

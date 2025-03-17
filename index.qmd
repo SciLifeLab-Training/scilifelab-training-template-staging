@@ -22,10 +22,15 @@ Course lead: John Doe (SciLifeLab) <a href="https://orcid.org/0000-XXXX" rel="or
 
 Course contact: john.doe@scilifelab.se
 
+<!-- Update href link to the url for the registration form -->
+<a class="nice-button" href="#"> Register</a>
+
 ## Course description
 
 Short description of the course
 
+
+<!-- For more information on how to create learning outcomes, see our resources: https://training.scilifelab.se/our_resources/guides -->
 ## Learning Objectives and Learning Outcomes
 #### Learning Objectives
 

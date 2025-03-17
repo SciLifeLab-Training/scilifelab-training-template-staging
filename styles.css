@@ -65,3 +65,11 @@ a:hover {
 .quiz-box {
     padding-top:30px;
 }
+
+.nice-button {
+    background-color: #199319;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 15%;
+}

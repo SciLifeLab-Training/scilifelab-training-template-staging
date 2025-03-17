@@ -5,7 +5,7 @@ date: today
 ---
 
 ::: {.callout-tip}
-### Learning Objectives
+### Learning Outcomes
 
 By the end of this session, learners will be able to:
 

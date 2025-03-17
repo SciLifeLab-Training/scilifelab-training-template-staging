@@ -17,7 +17,7 @@ website:
     fontsize: 30px
     search: true
     contents: 
-      - index.qmd 
+      - index.qmd              # Update this to match your own pages
       - schedule.qmd
       - instructors.qmd
       - module1.qmd
