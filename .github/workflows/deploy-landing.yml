@@ -67,6 +67,10 @@ jobs:
             rsync -a _site/site_libs/ gh-pages/site_libs/
           fi
 
+          if [ -d "_site/index_files" ]; then
+            rsync -a _site/index_files/ gh-pages/index_files/
+          fi
+
           if [ -d "_site/img" ]; then
             rsync -a _site/img/ gh-pages/img/
           fi
@@ -86,7 +90,7 @@ jobs:
           git config user.email "do_not_email@example.com"
           git config user.name "gh_action"
 
-          git add index.html styles.css site_libs img data .nojekyll
+          git add index.html styles.css site_libs index_files img data .nojekyll
           git add -u
 
           if git diff --cached --quiet; then
