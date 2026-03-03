@@ -77,12 +77,12 @@ format:
   </section>
 
   <section class="instances-band">
-    <aside class="current-instance-card">
+    <div class="current-instance-card">
       <p class="instance-label">Current course instance</p>
       <h2 class="instance-title">Current instance</h2>
       <a class="instance-link" href="./0000/">Open</a>
       <a class="instance-register" href="https://example.org/registration">Registration</a>
-    </aside>
+    </div>
 
     <div class="previous-instances">
       <h2 class="section-title">Previous course instances</h2>
