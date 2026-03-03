@@ -3,7 +3,7 @@ instances:
     label: "Current instance"
     status: current
     visible: true
-    instance_url: "./0000/"
+    instance_url: "/0000/"
     registration_url: "https://example.org/registration"
     sort_key: 200000
 
@@ -11,7 +11,7 @@ instances:
     label: "May 2025"
     status: previous
     visible: false
-    instance_url: "./2505/"
+    instance_url: "/2505/"
     registration_url: ""
     sort_key: 202505
 
@@ -19,6 +19,6 @@ instances:
     label: "Nov 2024"
     status: previous
     visible: false
-    instance_url: "./2411/"
+    instance_url: "/2411/"
     registration_url: ""
     sort_key: 202411
