@@ -1,11 +1,11 @@
 ---
-title: "Course Landing"
 format:
   html:
     toc: false
     page-layout: full
 ---
 
+```{=html}
 <div class="landing-shell">
   <section class="hero">
     <div class="hero__header">
@@ -14,7 +14,7 @@ format:
     </div>
     <p class="hero__subtitle">Implement Open Science practices into every step of your research project.</p>
     <div class="hero__actions">
-      <a class="hero-cta hero-cta--secondary" href="/0000/">View current instance</a>
+      <a class="hero-cta hero-cta--secondary" href="./0000/">View current instance</a>
       <a class="hero-cta hero-cta--primary" href="https://example.org/registration">Registration open!</a>
     </div>
   </section>
@@ -80,7 +80,7 @@ format:
     <aside class="current-instance-card">
       <p class="instance-label">Current course instance</p>
       <h2 class="instance-title">Current instance</h2>
-      <a class="instance-link" href="/0000/">Open</a>
+      <a class="instance-link" href="./0000/">Open</a>
       <a class="instance-register" href="https://example.org/registration">Registration</a>
     </aside>
 
@@ -123,3 +123,4 @@ format:
     </a>
   </footer>
 </div>
+```

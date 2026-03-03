@@ -1,5 +1,5 @@
 project:
-  type: website
+  type: default
   output-dir: _site
   pre-render:
     - python scripts/generate_landing.py
@@ -7,20 +7,12 @@ project:
     - img
     - data
 
-website:
-  title: "SciLifeLab Course Hub"
-  navbar:
-    background: "#1f5f6b"
-    logo: "img/SciLifeLab_Logotype_NEG.png"
-    right:
-      - icon: github
-        href: https://github.com/SciLifeLab-Training/scilifelab-training-template-staging
-
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: false
+    page-layout: full
 
 execute:
   freeze: auto
