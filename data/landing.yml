@@ -1,0 +1,50 @@
+course:
+  title: Open Science in the Swedish Context
+  subtitle: Implement Open Science practices into every step of your research project.
+  logo: img/SciLifeLab_Logotype_NEG.png
+  current_instance_note: Current course instance
+hero_actions:
+  - label: View current instance
+    href: /0000/
+    style: secondary
+  - label: Registration open!
+    href: https://example.org/registration
+    style: primary
+cards:
+  - title: Course content
+    icon: bi-journal-text
+    paragraphs:
+      - Open Science in the Swedish context is designed to teach DDLS research school scientists how to apply Swedish Open Science standards in their daily research.
+      - The course covers key stages of the research lifecycle, from planning and publication to sharing results, to license communication and responsible archiving.
+  - title: Learning outcomes
+    icon: bi-bullseye
+    ordered:
+      - Get acquainted with Open Science principles and how they are implemented in the Swedish context.
+      - Develop a foundational understanding of how to apply Open Science principles across key stages of a research project.
+      - Identify practical next steps to improve openness in your own work.
+  - title: Topics covered
+    icon: bi-grid-1x2
+    bullets:
+      - Learning principles and why they apply to training and teaching.
+      - Designing and planning sessions, course materials, and feedback loops.
+      - Teaching techniques to enhance learner engagement and participation.
+      - Assessment, maintenance, and continuous improvement.
+  - title: Keywords
+    icon: bi-tag
+    bullets:
+      - Open Science
+      - FAIR
+      - Reproducibility
+      - Data stewardship
+founders:
+  - name: SciLifeLab Training Hub
+    role: Programme owner
+contributors:
+  - name: Open Science Team
+    role: Content and facilitation
+  - name: DDLS training collaborators
+    role: Domain experts
+footer:
+  license: By SciLifeLab Training Hub. Licensed under CC BY 4.0.
+  built_with: Built with Quarto and hosted on GitHub Pages.
+  github_url: https://github.com/SciLifeLab-Training/scilifelab-training-template-staging

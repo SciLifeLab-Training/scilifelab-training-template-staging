@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --sl-base-bg: #f4f5f7;
+  --sl-card-bg: #eceef0;
+  --sl-hero-bg: linear-gradient(135deg, #1c5563 0%, #2a6d78 100%);
+  --sl-band-bg: #d7e8ec;
+  --sl-text-main: #1d2730;
+  --sl-text-muted: #50616d;
+  --sl-accent: #9bc23f;
+  --sl-link: #2f1258;
+  --sl-white: #ffffff;
+}
+
+body {
+  background: var(--sl-base-bg);
+  color: var(--sl-text-main);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.navbar-title {
+  font-family: "Barlow", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.landing-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--sl-base-bg);
+  border: 3px solid #ef6a3b;
+}
+
+.hero {
+  background: var(--sl-hero-bg);
+  color: var(--sl-white);
+  padding: 2.25rem 2.25rem 2rem;
+}
+
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3.3rem);
+  max-width: 16ch;
+  line-height: 1.08;
+}
+
+.hero__subtitle {
+  color: #d8e7ea;
+  font-size: 1.2rem;
+  max-width: 42rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.hero__logo {
+  width: min(220px, 38vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hero-cta {
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.hero-cta--primary {
+  background: var(--sl-accent);
+  color: #133319;
+}
+
+.hero-cta--secondary {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--sl-white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.info-card {
+  background: var(--sl-card-bg);
+  padding: 1.15rem 1.15rem 1.25rem;
+  min-height: 190px;
+}
+
+.card-headline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.card-headline i {
+  font-size: 1.2rem;
+  color: #7dac2d;
+}
+
+.card-headline h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.card-content p,
+.card-content li,
+.people-list li {
+  color: var(--sl-text-muted);
+  line-height: 1.52;
+}
+
+.card-content ol,
+.card-content ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.instances-band {
+  margin-top: 0.2rem;
+  display: grid;
+  grid-template-columns: minmax(210px, 280px) 1fr;
+  gap: 0.85rem;
+  background: var(--sl-band-bg);
+  padding: 1rem;
+}
+
+.current-instance-card {
+  background: #2b606f;
+  color: var(--sl-white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.instance-label {
+  margin: 0;
+  font-size: 0.84rem;
+  opacity: 0.88;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.instance-title {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.08;
+}
+
+.instance-link,
+.instance-register,
+.instance-pill {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.instance-link {
+  color: var(--sl-white);
+  width: fit-content;
+}
+
+.instance-register {
+  width: fit-content;
+  background: var(--sl-accent);
+  color: #122e17;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+}
+
+.previous-instances {
+  min-width: 0;
+}
+
+.section-title {
+  margin: 0 0 0.7rem;
+  font-size: 1.5rem;
+}
+
+.instance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.55rem;
+}
+
+.instance-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border-radius: 6px;
+  background: var(--sl-link);
+  color: var(--sl-white);
+  padding: 0.5rem 0.7rem;
+}
+
+.empty-note {
+  margin: 0;
+  color: var(--sl-text-muted);
+}
+
+.people-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.people-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.people-list strong {
+  color: var(--sl-text-main);
+}
+
+.landing-footer {
+  background: #b8b8bd;
+  color: #20303b;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.landing-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.landing-footer a {
+  color: #2b3740;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+@media (max-width: 960px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instances-band {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-shell {
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.3rem;
+  }
+
+  .hero__header {
+    flex-direction: column;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .card-headline h3 {
+    font-size: 1.22rem;
+  }
+}
