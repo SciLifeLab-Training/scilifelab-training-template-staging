@@ -1,11 +1,11 @@
 ---
+title: "Course Landing"
 format:
   html:
     toc: false
     page-layout: full
 ---
 
-```{=html}
 <div class="landing-shell">
   <section class="hero">
     <div class="hero__header">
@@ -68,4 +68,3 @@ format:
     </a>
   </footer>
 </div>
-```
