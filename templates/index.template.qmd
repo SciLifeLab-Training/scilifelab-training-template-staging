@@ -1,0 +1,70 @@
+---
+title: "Course Landing"
+format:
+  html:
+    toc: false
+    page-layout: full
+---
+
+<div class="landing-shell">
+  <section class="hero">
+    <div class="hero__header">
+      <h1 class="hero__title">{{COURSE_TITLE}}</h1>
+      <img class="hero__logo" src="{{COURSE_LOGO}}" alt="SciLifeLab logo" />
+    </div>
+    <p class="hero__subtitle">{{COURSE_SUBTITLE}}</p>
+    <div class="hero__actions">
+      {{HERO_ACTIONS}}
+    </div>
+  </section>
+
+  <section class="cards-grid cards-grid--top">
+    {{TOP_CARDS}}
+  </section>
+
+  <section class="instances-band">
+    <aside class="current-instance-card">
+      <p class="instance-label">{{CURRENT_INSTANCE_NOTE}}</p>
+      <h2 class="instance-title">{{CURRENT_INSTANCE_TITLE}}</h2>
+      <a class="instance-link" href="{{CURRENT_INSTANCE_LINK}}">Open</a>
+      {{CURRENT_REGISTRATION_BUTTON}}
+    </aside>
+
+    <div class="previous-instances">
+      <h2 class="section-title">Previous course instances</h2>
+      <div class="instance-grid">
+        {{PREVIOUS_INSTANCE_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <section class="cards-grid cards-grid--bottom">
+    <article class="info-card">
+      <div class="card-headline">
+        <i class="bi bi-people"></i>
+        <h3>Course founders</h3>
+      </div>
+      <ul class="people-list">
+        {{FOUNDERS_LIST}}
+      </ul>
+    </article>
+
+    <article class="info-card">
+      <div class="card-headline">
+        <i class="bi bi-person-workspace"></i>
+        <h3>Contributors</h3>
+      </div>
+      <ul class="people-list">
+        {{CONTRIBUTORS_LIST}}
+      </ul>
+    </article>
+  </section>
+
+  <footer class="landing-footer">
+    <p>{{FOOTER_LICENSE}}</p>
+    <p>{{FOOTER_BUILT_WITH}}</p>
+    <a href="{{FOOTER_GITHUB_URL}}" aria-label="GitHub repository">
+      <i class="bi bi-github"></i>
+    </a>
+  </footer>
+</div>

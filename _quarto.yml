@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render:
+    - python scripts/generate_landing.py
+  resources:
+    - img
+    - data
+
+website:
+  title: "SciLifeLab Course Hub"
+  navbar:
+    background: "#1f5f6b"
+    logo: "img/SciLifeLab_Logotype_NEG.png"
+    right:
+      - icon: github
+        href: https://github.com/SciLifeLab-Training/scilifelab-training-template-staging
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+execute:
+  freeze: auto
