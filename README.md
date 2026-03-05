@@ -19,26 +19,51 @@ This template supports a two-layer site model on GitHub Pages:
    - Root contains landing page output.
    - Subdirectories (`0000/`, `2505/`, etc.) contain rendered course instances.
 
-## Landing page customization
+## Landing authoring model
 
-Edit these files on `main`:
+- `index.qmd` is the stable landing entrypoint.
+- `_sections/*.qmd` contains authored page copy and structure.
+- `scripts/generate_landing.py` validates data and generates `_generated/*.qmd` dynamic partials.
+- `data/instances.yml` is the source of truth for current/previous instance links and visibility.
+- `data/ui.yml` controls dynamic CTA and instance-band labels.
 
-- `index.qmd`: landing entrypoint composition.
-- `_sections/*.qmd`: authored landing copy and structure.
-- `data/instances.yml`: current/previous instance metadata and visibility.
-- `data/ui.yml`: labels for dynamic buttons and instance-band copy (only documented keys are allowed; unknown keys fail validation).
-- `styles.css`: visual design.
-- `scripts/generate_landing.py`: metadata validation + dynamic partial generation (`_generated/*`).
-
-The generator no longer writes `index.qmd`; it validates `data/instances.yml` and writes only dynamic include files into `_generated/*` before render.
 Do not edit `_generated/*` manually.
+
+## Local contributor workflow
+
+Prerequisites:
+
+- Python 3.12
+- Quarto 1.3.340 (same pin as CI workflows)
+
+Setup and checks:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python scripts/generate_landing.py
+quarto render
+```
+
+Rendered output is written to `_site/`.
 
 ## Course instance workflow
 
 Create a new instance by creating a new `release-YYMM` branch from `release-0000`, then update content and `_quarto.yml` in that branch. On push, the release workflow deploys only that instance folder to `gh-pages`.
 
-## Notes
+## Deploy safety invariants
 
 - Keep `.nojekyll` on `gh-pages`.
-- The landing and instance workflows share a single concurrency group to avoid deployment races.
-- `gh-pages` should not be edited manually.
+- The landing and instance workflows share `deploy-gh-pages` concurrency control to avoid deploy races.
+- Never use root-level sync like `rsync -a --delete _site/ gh-pages/`; this can remove instance directories.
+- Publish landing root with allowlist copy only (`index.html`, `styles.css`, `site_libs/`, `index_files/`, `img/`).
+- Keep raw data out of published output (`gh-pages/data/` and root `*.yml` must not exist).
+- `gh-pages` is machine-managed output; manual commits are last-resort incident recovery only.
+
+## Additional docs
+
+- Contributor runbook: `docs/landing-runbook.md`
+- Legacy-to-new migration map: `docs/landing-migration-map.md`
