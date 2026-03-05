@@ -8,8 +8,8 @@ This template supports a two-layer site model on GitHub Pages:
 ## Branch model
 
 1. `main`
-   - Holds landing page source inputs (`data/*`, `templates/*`, `scripts/*`, `styles.css`).
-   - `index.qmd` is generated during Quarto pre-render by `scripts/generate_landing.py` and should not be edited manually.
+   - Holds landing source files (`index.qmd`, `_sections/*`, `styles.css`) and instance metadata (`data/instances.yml`).
+   - Uses pre-render script `scripts/generate_landing.py` to validate metadata and generate dynamic partials in `_generated/*`.
    - Uses `.github/workflows/deploy-landing.yml` to publish root landing assets to `gh-pages`.
 2. `release-YYMM`
    - Holds Quarto content for a specific course run.
@@ -23,14 +23,15 @@ This template supports a two-layer site model on GitHub Pages:
 
 Edit these files on `main`:
 
-- `data/landing.yml`: hero text, top cards, footer, founders, contributors.
+- `index.qmd`: landing entrypoint composition.
+- `_sections/*.qmd`: authored landing copy and structure.
 - `data/instances.yml`: current/previous instance metadata and visibility.
+- `data/ui.yml`: labels for dynamic buttons and instance-band copy (only documented keys are allowed; unknown keys fail validation).
 - `styles.css`: visual design.
-- `templates/index.template.qmd`: layout template used by `scripts/generate_landing.py`.
+- `scripts/generate_landing.py`: metadata validation + dynamic partial generation (`_generated/*`).
 
-The landing page is regenerated from data before render.
-
-Do not edit `index.qmd` directly on `main`; edit the data/template files above and let the generator update `index.qmd` during render.
+The generator no longer writes `index.qmd`; it validates `data/instances.yml` and writes only dynamic include files into `_generated/*` before render.
+Do not edit `_generated/*` manually.
 
 ## Course instance workflow
 

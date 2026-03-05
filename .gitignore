@@ -1,1 +1,5 @@
 /.quarto/
+/_generated/
+/_site/
+__pycache__/
+*.egg-info/

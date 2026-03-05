@@ -1,0 +1,17 @@
+<section class="hero">
+  <div class="hero__header">
+    <h1 class="hero__title">Open Science in the Swedish Context</h1>
+    <img
+      class="hero__logo"
+      src="img/SciLifeLab_Logotype_NEG.png"
+      alt="SciLifeLab logo"
+    />
+  </div>
+  <p class="hero__subtitle">
+    Implement Open Science practices into every step of your research project.
+  </p>
+  <div class="hero__actions">
+    <!-- Nested include path is relative to this file. -->
+{{< include ../_generated/hero-actions.qmd >}}
+  </div>
+</section>

@@ -8,11 +8,12 @@ on:
       - '.github/workflows/validate-landing.yml'
       - '.github/workflows/deploy-landing.yml'
       - '_quarto.yml'
+      - '_sections/**'
       - 'data/**'
       - 'img/**'
+      - 'index.qmd'
       - 'requirements*.txt'
       - 'scripts/**'
-      - 'templates/**'
       - 'styles.css'
       - 'README.md'
       - 'tests/**'
@@ -45,6 +46,9 @@ jobs:
         with:
           version: ${{ env.QUARTO_VERSION }}
 
+      - name: Run tests
+        run: python -m pytest -q
+
       - name: Render landing
         run: quarto render
 
@@ -57,10 +61,13 @@ jobs:
             exit 1
           fi
 
-          if grep -En 'data/|landing\.yml|instances\.yml' _site/index.html; then
-            echo "Unexpected raw data reference found in _site/index.html."
+          if find _site -type f \( -name '*.yml' -o -name '*.yaml' \) | grep -q .; then
+            echo "Unexpected YAML file(s) found in _site output:"
+            find _site -type f \( -name '*.yml' -o -name '*.yaml' \)
             exit 1
           fi
 
-      - name: Run tests
-        run: python -m pytest -q
+          if grep -En '(^|[^[:alnum:]_.-])(\./|/)?data/(instances|landing)\.yml($|[^[:alnum:]_.-])' _site/index.html; then
+            echo "Unexpected raw data file reference found in _site/index.html."
+            exit 1
+          fi

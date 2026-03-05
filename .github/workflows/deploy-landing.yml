@@ -7,11 +7,12 @@ on:
     paths:
       - '.github/workflows/deploy-landing.yml'
       - '_quarto.yml'
+      - '_sections/**'
       - 'data/**'
       - 'img/**'
+      - 'index.qmd'
       - 'requirements.txt'
       - 'scripts/**'
-      - 'templates/**'
       - 'styles.css'
       - 'README.md'
   workflow_dispatch:
