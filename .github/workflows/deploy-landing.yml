@@ -9,6 +9,7 @@ on:
       - '_quarto.yml'
       - 'data/**'
       - 'img/**'
+      - 'requirements.txt'
       - 'scripts/**'
       - 'templates/**'
       - 'styles.css'
@@ -23,6 +24,8 @@ jobs:
     concurrency:
       group: deploy-gh-pages
       cancel-in-progress: true
+    env:
+      QUARTO_VERSION: '1.3.340'
 
     steps:
       - name: Checkout main
@@ -36,15 +39,14 @@ jobs:
           python-version: '3.12'
 
       - name: Install build dependencies
-        run: python -m pip install --upgrade pip pyyaml
-
-      - name: Generate landing page from data
-        run: python scripts/generate_landing.py
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.3.340
+          version: ${{ env.QUARTO_VERSION }}
 
       - name: Render landing
         run: quarto render
@@ -60,27 +62,37 @@ jobs:
         run: |
           set -euo pipefail
 
-          rsync -a _site/index.html gh-pages/index.html
-          rsync -a _site/styles.css gh-pages/styles.css
+          # Copy only known root files. Never use root-level --delete sync because
+          # gh-pages also stores release instance directories (e.g. 0000/, 2505/).
+          cp _site/index.html gh-pages/index.html
+          cp _site/styles.css gh-pages/styles.css
 
-          if [ -d "_site/site_libs" ]; then
-            rsync -a _site/site_libs/ gh-pages/site_libs/
-          fi
+          # Mirror landing-owned asset directories.
+          for d in site_libs index_files img; do
+            if [ -d "_site/$d" ]; then
+              mkdir -p "gh-pages/$d"
+              rsync -a --delete "_site/$d/" "gh-pages/$d/"
+            else
+              rm -rf "gh-pages/$d"
+            fi
+          done
 
-          if [ -d "_site/index_files" ]; then
-            rsync -a _site/index_files/ gh-pages/index_files/
-          fi
-
-          if [ -d "_site/img" ]; then
-            rsync -a _site/img/ gh-pages/img/
-          fi
-
-          mkdir -p gh-pages/data
-          cp data/landing.yml gh-pages/data/landing.yml
-          cp data/instances.yml gh-pages/data/instances.yml
-
+          # Remove previously leaked raw config artifacts.
+          rm -rf gh-pages/data
           rm -f gh-pages/index.md gh-pages/_config.yml
           touch gh-pages/.nojekyll
+
+          # Deploy safety assertions.
+          if [ -d gh-pages/data ]; then
+            echo "Unexpected gh-pages/data directory still present."
+            exit 1
+          fi
+
+          if find gh-pages -maxdepth 1 -type f \( -name '*.yml' -o -name '*.yaml' \) | grep -q .; then
+            echo "Unexpected YAML files at gh-pages root:"
+            find gh-pages -maxdepth 1 -type f \( -name '*.yml' -o -name '*.yaml' \)
+            exit 1
+          fi
 
       - name: Commit and push
         run: |
@@ -90,7 +102,12 @@ jobs:
           git config user.email "do_not_email@example.com"
           git config user.name "gh_action"
 
-          git add index.html styles.css site_libs index_files img data .nojekyll
+          git add index.html styles.css .nojekyll
+          for path in site_libs index_files img; do
+            if [ -e "$path" ]; then
+              git add --all "$path"
+            fi
+          done
           git add -u
 
           if git diff --cached --quiet; then

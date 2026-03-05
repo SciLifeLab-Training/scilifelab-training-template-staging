@@ -5,7 +5,6 @@ project:
     - python scripts/generate_landing.py
   resources:
     - img
-    - data
 
 format:
   html:

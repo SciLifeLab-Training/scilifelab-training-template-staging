@@ -8,7 +8,8 @@ This template supports a two-layer site model on GitHub Pages:
 ## Branch model
 
 1. `main`
-   - Holds landing page source files (`index.qmd`, `styles.css`, `data/*`, `scripts/*`).
+   - Holds landing page source inputs (`data/*`, `templates/*`, `scripts/*`, `styles.css`).
+   - `index.qmd` is generated during Quarto pre-render by `scripts/generate_landing.py` and should not be edited manually.
    - Uses `.github/workflows/deploy-landing.yml` to publish root landing assets to `gh-pages`.
 2. `release-YYMM`
    - Holds Quarto content for a specific course run.
@@ -28,6 +29,8 @@ Edit these files on `main`:
 - `templates/index.template.qmd`: layout template used by `scripts/generate_landing.py`.
 
 The landing page is regenerated from data before render.
+
+Do not edit `index.qmd` directly on `main`; edit the data/template files above and let the generator update `index.qmd` during render.
 
 ## Course instance workflow
 
