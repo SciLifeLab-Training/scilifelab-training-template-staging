@@ -1,3 +1,4 @@
+```{=html}
 <footer class="landing-footer">
   <p>By SciLifeLab Training Hub. Licensed under CC BY 4.0.</p>
   <p>Built with Quarto and hosted on GitHub Pages.</p>
@@ -8,3 +9,4 @@
     <i class="bi bi-github"></i>
   </a>
 </footer>
+```

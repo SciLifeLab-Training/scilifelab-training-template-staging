@@ -5,10 +5,10 @@ format:
     page-layout: full
 ---
 
-<div class="landing-shell">
+:::{.landing-shell}
 {{< include _sections/hero.qmd >}}
 {{< include _sections/top-cards.qmd >}}
-{{< include _generated/instances-band.qmd >}}
+{{< include _sections/instances-band.qmd >}}
 {{< include _sections/bottom-cards.qmd >}}
 {{< include _sections/footer.qmd >}}
-</div>
+:::

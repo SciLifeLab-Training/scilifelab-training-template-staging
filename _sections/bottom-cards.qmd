@@ -1,3 +1,4 @@
+```{=html}
 <section class="cards-grid cards-grid--bottom">
   <article class="info-card">
     <div class="card-headline">
@@ -20,3 +21,4 @@
     </ul>
   </article>
 </section>
+```

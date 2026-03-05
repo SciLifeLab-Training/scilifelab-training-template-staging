@@ -1,4 +1,5 @@
 /.quarto/
+/.tools/
 /_generated/
 /_site/
 __pycache__/
