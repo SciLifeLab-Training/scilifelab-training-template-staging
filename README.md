@@ -1,29 +1,69 @@
-# The SciLifeLab course template
+# Release Branch Course Template
 
-The SciLifeLab template for setting up SciLifeLab branded courses using github pages. It includes:
+This branch is the starter template for one course instance.
 
-- Pre-configured GitHub Actions for continuous deployment to GitHub Pages (works out-of-the-box within the SciLifeLab github organization).
-- A github workflow for rendering the website and deploying it automatically.
-- All pages are rendered using Quarto. For customizations see the official Quarto documentation. While developing the materials you can use quarto to render the pages locally.
+Use it to create branches like:
 
-You can see how this template looks when rendered at [https://scilifelab-training.github.io/scilifelab-training-template/](https://scilifelab-training.github.io/scilifelab-training-template/). 
+- `release-0000`
+- `release-2505`
+- `release-2511`
 
-## DISCLAIMER
-This is the first version of this template, and can thus contain errors. Let us know if there are things that are broken.
+Each `release-YYMM` branch publishes one course instance to `gh-pages/YYMM/`.
 
-## Getting Started
+## What This Branch Is For
 
-1. Click the **Use this template** button to create your own repository.
-2. The template does not copy all branches from the template, these you have to copy over from the template yourself:
-   - Create an empty branch called gh-pages. Copy the file called `_config.yml` from the template repo into it, and change the content accordingly.
-3. (If outside the SciLifeLab organization) Set up your repository secrets so github actions can run. If you name it ORG_PAT it will work without changing the workflow file.
-4. Github actions will run when you push, but before everything is setup it will fail in running correctly. Once everything is set up correctly this should be solved automatically.
+- course pages and navigation
+- course-specific Quarto configuration
+- styles and assets for one course run
 
-## Configuration
+This branch does **not** control the landing page at the root of the site. The landing page lives on `main`.
 
-- Modify the `_quarto.yml` file to configure branches to use. In this setup it's one branch per course instance, allowing you to keep older instances alive on the same website. Name your branch release-* (YYMM). Here is also where the menu items are listed. Push your changes.
-- Create and push the new branch from the main branch.
+## Simple Workflow
+
+1. Create a new branch from `release-0000`.
+2. Name it `release-YYMM`, for example `release-2505`.
+3. Update the course content in that new branch.
+4. Push the branch.
+5. GitHub Actions renders the course and publishes it to `gh-pages/YYMM/`.
+
+The output directory is derived from the branch name by the release workflow. You do not need to maintain a separate branch-mapping list in `_quarto.yml`.
+
+## What To Edit
+
+For normal course work, edit:
+
+- the course `.qmd` pages
+- `_quarto.yml` for course-site settings like title, sidebar, navbar, and theme
+- images and other course assets
+
+## Local Preview
+
+If you have Quarto installed, you can render locally:
+
+```bash
+quarto render
+```
+
+Rendered output is written to `_site/`.
 
 ## GitHub Actions
 
-Your site will automatically build and deploy when you push changes. If you wish to customize the workflow, see `.github/workflows/main.yml`. See Actions in github to see where your page is deployed.
+This branch uses `.github/workflows/main.yml`.
+
+On push to a `release-*` branch, the workflow:
+
+1. reads the branch name
+2. validates that it matches `release-YYMM`
+3. renders the course site
+4. publishes the result to the matching directory on `gh-pages`
+
+Examples:
+
+- `release-0000` -> `gh-pages/0000/`
+- `release-2505` -> `gh-pages/2505/`
+
+## Notes
+
+- `gh-pages` is deployment output only
+- `.nojekyll` is kept by the workflow
+- the landing page branch (`main`) separately controls which instances appear on the landing page

@@ -1,1 +1,10 @@
 /.quarto/
+/.tools/
+/_generated/
+/_site/
+/course_page_redesign/
+/PLAN_*
+/PLAN-*
+__pycache__/
+*.egg-info/
+.venv/
