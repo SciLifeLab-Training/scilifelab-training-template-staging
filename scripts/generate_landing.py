@@ -35,8 +35,18 @@ UI_DEFAULTS = {
 }
 
 
-def esc(value: Any) -> str:
-    return html.escape(str(value), quote=True)
+def esc_text(value: Any) -> str:
+    text = str(value).replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]")
+    return html.escape(text, quote=False)
+
+
+def esc_url(value: str) -> str:
+    return value.replace("<", "%3C").replace(">", "%3E")
+
+
+def format_link(label: str, href: str, classes: list[str]) -> str:
+    class_attrs = " ".join(f".{css_class}" for css_class in classes)
+    return f"[{esc_text(label)}](<{esc_url(href)}>){{{class_attrs}}}"
 
 
 def load_yaml_dict(path: Path) -> dict[str, Any]:
@@ -205,18 +215,20 @@ def validate_instances_data(data: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _render_hero_actions(current: dict[str, Any], ui_labels: dict[str, str]) -> str:
     actions = [
-        (
-            '<a class="hero-cta hero-cta--secondary" href="{href}">{label}</a>'
-        ).format(
-            href=esc(current["instance_url"]),
-            label=esc(ui_labels["hero_view_current_label"]),
+        "- "
+        + format_link(
+            ui_labels["hero_view_current_label"],
+            current["instance_url"],
+            ["hero-cta", "hero-cta--secondary"],
         )
     ]
     if current["registration_url"]:
         actions.append(
-            '<a class="hero-cta hero-cta--primary" href="{href}">{label}</a>'.format(
-                href=esc(current["registration_url"]),
-                label=esc(ui_labels["hero_registration_open_label"]),
+            "- "
+            + format_link(
+                ui_labels["hero_registration_open_label"],
+                current["registration_url"],
+                ["hero-cta", "hero-cta--primary"],
             )
         )
     return "\n".join(actions) + "\n"
@@ -226,16 +238,20 @@ def _render_previous_instance_buttons(
     previous: list[dict[str, Any]], ui_labels: dict[str, str]
 ) -> str:
     if not previous:
-        return '<p class="empty-note">{text}</p>'.format(
-            text=esc(ui_labels["no_previous_instances_label"])
+        return (
+            "::: {.empty-note}\n"
+            f"{esc_text(ui_labels['no_previous_instances_label'])}\n"
+            ":::\n"
         )
 
     buttons = []
     for item in previous:
         buttons.append(
-            '<a class="instance-pill" href="{href}">{label}</a>'.format(
-                href=esc(item["instance_url"]),
-                label=esc(item["label"]),
+            "- "
+            + format_link(
+                item["label"],
+                item["instance_url"],
+                ["instance-pill"],
             )
         )
     return "\n".join(buttons)
@@ -250,33 +266,42 @@ def _render_instances_band(instances: list[dict[str, Any]], ui_labels: dict[str,
         reverse=True,
     )
 
-    current_registration_button = ""
-    if current["registration_url"]:
-        current_registration_button = (
-            '<a class="instance-register" href="{href}">{label}</a>'.format(
-                href=esc(current["registration_url"]),
-                label=esc(ui_labels["current_instance_registration_label"]),
-            )
+    current_actions_block = (
+        "- "
+        + format_link(
+            ui_labels["current_instance_open_label"],
+            current["instance_url"],
+            ["instance-link"],
         )
-
+    )
     previous_buttons = _render_previous_instance_buttons(previous, ui_labels)
 
     return f"""
-<section class="instances-band">
-  <div class="current-instance-card">
-    <p class="instance-label">{esc(ui_labels["current_instance_note_label"])}</p>
-    <h2 class="instance-title">{esc(current["label"])}</h2>
-    <a class="instance-link" href="{esc(current["instance_url"])}">{esc(ui_labels["current_instance_open_label"])}</a>
-    {current_registration_button}
-  </div>
+::: {{.instances-band}}
+::: {{.current-instance-card}}
+::: {{.instance-label}}
+{esc_text(ui_labels["current_instance_note_label"])}
+:::
 
-  <div class="previous-instances">
-    <h2 class="section-title">{esc(ui_labels["previous_instances_title"])}</h2>
-    <div class="instance-grid">
-      {previous_buttons}
-    </div>
-  </div>
-</section>
+::: {{.instance-title}}
+{esc_text(current["label"])}
+:::
+
+::: {{.current-instance-actions}}
+{current_actions_block}
+:::
+:::
+
+::: {{.previous-instances}}
+::: {{.section-title}}
+{esc_text(ui_labels["previous_instances_title"])}
+:::
+
+::: {{.instance-grid}}
+{previous_buttons}
+:::
+:::
+:::
 """.strip() + "\n"
 
 

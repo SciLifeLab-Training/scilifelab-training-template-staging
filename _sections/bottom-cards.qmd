@@ -1,24 +1,22 @@
-```{=html}
-<section class="cards-grid cards-grid--bottom">
-  <article class="info-card">
-    <div class="card-headline">
-      <i class="bi bi-people"></i>
-      <h3>Course founders</h3>
-    </div>
-    <ul class="people-list">
-      <li><strong>SciLifeLab Training Hub</strong><span>Programme owner</span></li>
-    </ul>
-  </article>
+:::{.cards-grid .cards-grid--bottom}
+:::{.info-card .info-card--plain .info-card--founders}
+:::{.card-title}
+Course founders
+:::
 
-  <article class="info-card">
-    <div class="card-headline">
-      <i class="bi bi-person-workspace"></i>
-      <h3>Contributors</h3>
-    </div>
-    <ul class="people-list">
-      <li><strong>Open Science Team</strong><span>Content and facilitation</span></li>
-      <li><strong>DDLS training collaborators</strong><span>Domain experts</span></li>
-    </ul>
-  </article>
-</section>
-```
+:::{.people-list}
+- **SciLifeLab Training Hub**
+:::
+:::
+
+:::{.info-card .info-card--plain .info-card--contributors}
+:::{.card-title}
+Contributors
+:::
+
+:::{.people-list}
+- **Open Science Team**
+- **DDLS training collaborators**
+:::
+:::
+:::

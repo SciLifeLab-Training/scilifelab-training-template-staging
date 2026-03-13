@@ -1,18 +1,20 @@
-```{=html}
-<section class="hero">
-  <div class="hero__header">
-    <h1 class="hero__title">Open Science in the Swedish Context</h1>
-    <img
-      class="hero__logo"
-      src="img/SciLifeLab_Logotype_NEG.png"
-      alt="SciLifeLab logo"
-    />
-  </div>
-  <p class="hero__subtitle">
-    Implement Open Science practices into every step of your research project.
-  </p>
-  <div class="hero__actions">
+:::{.hero}
+:::{.hero__brand}
+![SciLifeLab](img/SciLifeLab_Logotype_NEG.png){.hero__logo}
+:::
+
+:::{.hero__copy}
+:::{.hero__title}
+Open Science in the
+Swedish Context
+:::
+
+:::{.hero__subtitle}
+Implement Open Science practices into every step of your research project
+:::
+:::
+
+:::{.hero__actions}
 {{< include _generated/hero-actions.qmd >}}
-  </div>
-</section>
-```
+:::
+:::

@@ -165,6 +165,20 @@ def test_build_dynamic_partials_uses_configurable_labels() -> None:
     assert "Earlier runs" in band
 
 
+def test_build_dynamic_partials_emit_markdown_links_without_html_url_escaping() -> None:
+    validated = gl.validate_instances_data(
+        make_instances(
+            current_registration="https://example.org/register?course=sci&session=2"
+        )
+    )
+    ui = gl.UI_DEFAULTS.copy()
+    hero, _ = gl.build_dynamic_partials(validated, ui)
+
+    assert "[Registration open!]" in hero
+    assert "(<https://example.org/register?course=sci&session=2>)" in hero
+    assert "&amp;" not in hero
+
+
 def test_write_generated_partials_writes_expected_files(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     validated = gl.validate_instances_data(make_instances())
     ui = gl.UI_DEFAULTS.copy()
