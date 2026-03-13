@@ -1,42 +1,73 @@
-# The SciLifeLab course template
+# The SciLifeLab Course Template
 
-This template supports a two-layer site model on GitHub Pages:
+This repository publishes one website with two layers:
 
-- `main`: customizable landing page source (hero, cards, links, contributors).
-- `release-*`: one branch per course instance, rendered into a dated subdirectory on `gh-pages`.
+- the landing page at the root
+- one subdirectory per course instance
 
-## Branch model
+Examples:
 
-1. `main`
-   - Holds landing source files (`index.qmd`, `_sections/*`, `styles.css`) and instance metadata (`data/instances.yml`).
-   - Uses pre-render script `scripts/generate_landing.py` to validate metadata and generate dynamic partials in `_generated/*`.
-   - Uses `.github/workflows/deploy-landing.yml` to publish root landing assets to `gh-pages`.
-2. `release-YYMM`
-   - Holds Quarto content for a specific course run.
-   - Uses branch workflow (`.github/workflows/main.yml` on release branches) to publish only `YYMM/` on `gh-pages`.
-3. `gh-pages`
-   - Deployment output only.
-   - Root contains landing page output.
-   - Subdirectories (`0000/`, `2505/`, etc.) contain rendered course instances.
+- `main` publishes the landing page to `/`
+- `release-0000` publishes the course instance to `/0000/`
+- `release-2505` publishes the course instance to `/2505/`
 
-## Landing authoring model
+## The Simple Model
 
-- `index.qmd` is the stable landing entrypoint.
-- `_sections/*.qmd` contains authored page copy and structure.
-- `scripts/generate_landing.py` validates data and generates `_generated/*.qmd` dynamic partials.
-- `data/instances.yml` is the source of truth for current/previous instance links and visibility.
-- `data/ui.yml` controls dynamic CTA and instance-band labels.
+- `main` = landing page source
+- `release-YYMM` = one course instance
+- `gh-pages` = published output only
+
+Use `main` when you want to change the landing page.
+
+Use a `release-YYMM` branch when you want to change the actual course materials for one run.
+
+Do not work directly on `gh-pages` unless you are recovering from a deployment problem.
+
+## What Gets Deployed
+
+1. Push to `main`
+   - GitHub Actions renders the landing page.
+   - The landing is published to the root of `gh-pages`.
+2. Push to `release-YYMM`
+   - GitHub Actions renders that course instance.
+   - The instance is published to `gh-pages/YYMM/`.
+
+The landing page does not auto-discover release branches. If you create a new instance branch, you must also update `data/instances.yml` on `main` if you want that instance to appear on the landing page.
+
+## Which Files To Edit
+
+### Landing page on `main`
+
+Edit these files for most landing-page changes:
+
+- `index.qmd`: top-level page shell
+- `_sections/*.qmd`: authored landing sections
+- `styles.css`: landing design and layout
+- `data/instances.yml`: current/previous instance links and visibility
+- `data/ui.yml`: landing UI labels
+
+Dynamic partials are generated automatically:
+
+- `_generated/hero-actions.qmd`
+- `_generated/instances-band.qmd`
 
 Do not edit `_generated/*` manually.
 
-## Local contributor workflow
+### Course instance on `release-YYMM`
 
-Prerequisites:
+Edit the Quarto course files on that branch:
 
-- Python 3.12
-- Quarto 1.3.340 (same pin as CI workflows)
+- course `.qmd` pages
+- branch-local `_quarto.yml`
+- images and other branch-local course assets
 
-Setup and checks:
+## Common Workflows
+
+### 1. Change the landing page
+
+1. Work on `main`.
+2. Edit the landing sections, styles, or landing data.
+3. Run local checks:
 
 ```bash
 python3 -m venv .venv
@@ -44,26 +75,85 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
-python scripts/generate_landing.py
 quarto render
 ```
 
-Rendered output is written to `_site/`.
+4. Push `main`.
+5. GitHub Actions publishes the updated landing root.
 
-## Course instance workflow
+### 2. Create a new course instance
 
-Create a new instance by creating a new `release-YYMM` branch from `release-0000`, then update content and `_quarto.yml` in that branch. On push, the release workflow deploys only that instance folder to `gh-pages`.
+1. Create a new branch from `release-0000`.
+2. Name it `release-YYMM`, for example `release-2505`.
+3. Update the course content on that branch.
+4. Push the branch.
+5. GitHub Actions publishes that instance to `gh-pages/YYMM/`.
+6. Update `data/instances.yml` on `main` so the landing page links to it.
 
-## Deploy safety invariants
+### 3. Update an existing course instance
 
-- Keep `.nojekyll` on `gh-pages`.
-- The landing and instance workflows share `deploy-gh-pages` concurrency control to avoid deploy races.
-- Never use root-level sync like `rsync -a --delete _site/ gh-pages/`; this can remove instance directories.
-- Publish landing root with allowlist copy only (`index.html`, `styles.css`, `site_libs/`, `index_files/`, `img/`).
-- Keep raw data out of published output (`gh-pages/data/` and root `*.yml` must not exist).
-- `gh-pages` is machine-managed output; manual commits are last-resort incident recovery only.
+1. Checkout the relevant `release-YYMM` branch.
+2. Edit the course materials.
+3. Push the branch.
+4. GitHub Actions republishes only that instance directory.
 
-## Additional docs
+### 4. Change which instance is current on the landing page
 
-- Contributor runbook: `docs/landing-runbook.md`
-- Legacy-to-new migration map: `docs/landing-migration-map.md`
+Edit `data/instances.yml` on `main`.
+
+Rules enforced by validation:
+
+- exactly one instance must have `status: current`
+- the current instance must have `visible: true`
+- relative instance URLs must match the slug
+
+## How The Landing Is Built
+
+The landing page is built in three layers:
+
+1. Authored content
+   - `index.qmd`
+   - `_sections/*.qmd`
+2. Data and generated fragments
+   - `data/instances.yml`
+   - `data/ui.yml`
+   - `scripts/generate_landing.py`
+   - `_generated/*.qmd`
+3. Presentation
+   - `styles.css`
+
+Render flow:
+
+1. `quarto render` starts
+2. Quarto runs `scripts/generate_landing.py` as a pre-render step
+3. the generator validates YAML data and writes `_generated/*.qmd`
+4. `index.qmd` includes the authored sections
+5. those sections include the generated fragments where needed
+6. Quarto writes the final site to `_site/`
+
+## GitHub Actions
+
+- `.github/workflows/validate-landing.yml`
+  - runs on pull requests to `main`
+  - runs tests, renders the landing, and checks that no raw YAML leaks into `_site`
+
+- `.github/workflows/deploy-landing.yml`
+  - runs on push to `main`
+  - publishes only landing-owned root files to `gh-pages`
+
+- `.github/workflows/main.yml` on `release-*` branches
+  - runs on push to release branches
+  - publishes only the matching instance directory to `gh-pages`
+
+## Important Rules
+
+- `gh-pages` is machine-managed output
+- keep `.nojekyll` on `gh-pages`
+- never use a root-level deploy sync like `rsync -a --delete _site/ gh-pages/`
+- keep raw YAML out of published output
+- update `data/instances.yml` on `main` when instance visibility changes
+
+## Additional Docs
+
+- `docs/landing-runbook.md`
+- `docs/landing-migration-map.md`
