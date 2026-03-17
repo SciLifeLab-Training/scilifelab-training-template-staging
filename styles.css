@@ -46,6 +46,10 @@ main.content,
   min-height: 100vh;
 }
 
+#quarto-content.page-rows-contents > main.content {
+  grid-row: content-top / page-bottom;
+}
+
 main.content {
   display: flex;
   min-height: 100vh;
