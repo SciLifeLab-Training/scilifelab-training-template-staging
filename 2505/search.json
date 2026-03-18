@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Syllabus",
+    "section": "",
+    "text": "About\n\n\n\nOrganizers: SciLifeLab Training Hub\nDate: 14-15 May 2025\nLocation: SciLifeLab Solna and online\nSuggested number of credits: 0 hp\nEnrollment opens: 10 February 2025\nEnrollment closes: 30 April 2025\nCourse fee: No fee\nCourse lead: Open Science Team (SciLifeLab)\nCourse contact: training@scilifelab.se"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Course Syllabus",
+    "section": "Course description",
+    "text": "Course description\nThis demo course instance showcases how a published course run appears when linked from the landing page as a previous instance.\nThe course introduces practical Open Science approaches for planning research, sharing data and code responsibly, and communicating results for reuse across Swedish academia."
+  },
+  {
+    "objectID": "index.html#learning-objectives-and-learning-outcomes",
+    "href": "index.html#learning-objectives-and-learning-outcomes",
+    "title": "Course Syllabus",
+    "section": "Learning Objectives and Learning Outcomes",
+    "text": "Learning Objectives and Learning Outcomes\n\nLearning Objectives\n\nTo understand the main Open Science principles used in Swedish research environments\nTo apply practical actions for planning, sharing, and publishing research outputs\n\n\n\nLearning Outcomes\nBy the end of this course, learners will be able to:\n\ndescribe the core Open Science concepts used in the course\nidentify practical steps that make research outputs more open and reusable"
+  },
+  {
+    "objectID": "index.html#target-audience-and-course-prerequisites",
+    "href": "index.html#target-audience-and-course-prerequisites",
+    "title": "Course Syllabus",
+    "section": "Target audience and course prerequisites",
+    "text": "Target audience and course prerequisites\nTarget audience: doctoral students, postdocs, research support staff Course prerequisites: none Level: beginner/intermediate"
+  },
+  {
+    "objectID": "index.html#forms-of-instruction-and-examination",
+    "href": "index.html#forms-of-instruction-and-examination",
+    "title": "Course Syllabus",
+    "section": "Forms of instruction and examination",
+    "text": "Forms of instruction and examination\nForms of instruction: In-person, digital communications\nForms of study: self-studies (incl. independent work), group activities, lectures, and discussion seminars\nLanguage: English\nExamination: Active participation in all sessions and group assignments."
+  },
+  {
+    "objectID": "index.html#additional-notes",
+    "href": "index.html#additional-notes",
+    "title": "Course Syllabus",
+    "section": "Additional notes",
+    "text": "Additional notes\n\nThis branch is used as a simple published example of a previous course instance."
+  },
+  {
+    "objectID": "instructors.html",
+    "href": "instructors.html",
+    "title": "Instructors",
+    "section": "",
+    "text": "Open Science Team\n\nSciLifeLab Training Hub\n\n\n\n\n\nThis demo course instance uses a simple team-level instructor entry to illustrate how a published previous course run can look in the template."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Wednesday 14 May 2025\n\n\n\n\n\n\n\nTime\nSession\n\n\n\n\n09:00 - 10:15\nOpen Science foundations\n\n\n10:15 - 10:45\nCoffee break\n\n\n10:45 - 12:00\nSharing, publishing, and reuse\n\n\n12:00 - 13:00\nLunch\n\n\n\n\n\n\nThursday 15 May 2025\n\n\n\n\n\n\n\nTime\nTopic\n\n\n\n\n09:00 - 10:30\nGroup discussion: applying Open Science locally\n\n\n10:30 - 12:00\nWrap-up and action planning"
+  },
+  {
+    "objectID": "module2.html",
+    "href": "module2.html",
+    "title": "Sharing, publishing, and reuse",
+    "section": "",
+    "text": "Learning Objectives\n\n\n\nBy the end of this session, learners will be able to:\n\ndescribe practical routes for sharing data, code, and publications\nidentify common barriers to reuse and how to reduce them"
+  },
+  {
+    "objectID": "module2.html#lectures-and-materials",
+    "href": "module2.html#lectures-and-materials",
+    "title": "Sharing, publishing, and reuse",
+    "section": "Lectures and Materials",
+    "text": "Lectures and Materials\n\nFAIR data and responsible sharing practices\nOpen access publishing and science communication\nEnabling reuse through documentation and licensing"
+  },
+  {
+    "objectID": "module2.html#contributors",
+    "href": "module2.html#contributors",
+    "title": "Sharing, publishing, and reuse",
+    "section": "Contributors",
+    "text": "Contributors\n\nOpen Science Team"
+  },
+  {
+    "objectID": "module1.html",
+    "href": "module1.html",
+    "title": "Open Science foundations",
+    "section": "",
+    "text": "Learning Objectives\n\n\n\nBy the end of this session, learners will be able to:\n\nexplain the core Open Science principles used across the course\nconnect research planning decisions to openness and reuse"
+  },
+  {
+    "objectID": "module1.html#lectures-and-materials",
+    "href": "module1.html#lectures-and-materials",
+    "title": "Open Science foundations",
+    "section": "Lectures and Materials",
+    "text": "Lectures and Materials\n\nIntroduction to Open Science in the Swedish context\nResearch planning for openness from the start\nExamples of practical actions researchers can adopt immediately"
+  },
+  {
+    "objectID": "module1.html#contributors",
+    "href": "module1.html#contributors",
+    "title": "Open Science foundations",
+    "section": "Contributors",
+    "text": "Contributors\n\nOpen Science Team"
+  }
+]
