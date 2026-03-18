@@ -1,7 +1,7 @@
 ---
-title: "Module 1"
-author: "John Doe"
-date: today
+title: "Open Science foundations"
+author: "SciLifeLab Training Hub"
+date: "2025-05-14"
 ---
 
 ::: {.callout-tip}
@@ -9,15 +9,17 @@ date: today
 
 By the end of this session, learners will be able to:
 
-- List...
-- Define...
+- explain the core Open Science principles used across the course
+- connect research planning decisions to openness and reuse
 :::
 
 ## Lectures and Materials
 
-Links to video recordings and session material
+- Introduction to Open Science in the Swedish context
+- Research planning for openness from the start
+- Examples of practical actions researchers can adopt immediately
 
 
 ## Contributors
 
-- John Doe <a href="https://orcid.org/0009-XXXX" rel="orcid"><img src="img/ORCID_Logomark.png" alt="" width="20" height="20"/></a>
+- Open Science Team

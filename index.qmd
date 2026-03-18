@@ -1,49 +1,53 @@
 ---
 title: "Course Syllabus"
-author: "John Doe"
-date: today
+author: "SciLifeLab Training Hub"
+date: "2025-05-14"
 ---
 
 ::: {.callout-warning icon=false}
 
 ## About
 
-**Organizers:** 	                SciLifeLab  
-**Date:**	   	                    Month, date, year  
-**Location:**		 			    SciLifeLab Solna, Air&Fire  
-**Suggested number of credits:** 	X hp  
-**Enrollment opens:**				Month day, year  
-**Enrollment closes:**				Month day, year     
-**Course fee:**				        XX   
+**Organizers:**                    SciLifeLab Training Hub  
+**Date:**                          14-15 May 2025  
+**Location:**                      SciLifeLab Solna and online  
+**Suggested number of credits:**   0 hp  
+**Enrollment opens:**              10 February 2025  
+**Enrollment closes:**             30 April 2025  
+**Course fee:**                    No fee
 
 :::
 
-Course lead: John Doe (SciLifeLab) <a href="https://orcid.org/0000-XXXX" rel="orcid"><img src="img/ORCID_Logomark.png" alt="" width="20" height="20"/></a>
+Course lead: Open Science Team (SciLifeLab)
 
-Course contact: john.doe@scilifelab.se
+Course contact: training@scilifelab.se
 
 ## Course description
 
-Short description of the course
+This demo course instance showcases how a published course run appears when linked from the
+landing page as a previous instance.
+
+The course introduces practical Open Science approaches for planning research, sharing data and
+code responsibly, and communicating results for reuse across Swedish academia.
 
 ## Learning Objectives and Learning Outcomes
 #### Learning Objectives
 
-- To get acquainted with...
-- To be able to...
+- To understand the main Open Science principles used in Swedish research environments
+- To apply practical actions for planning, sharing, and publishing research outputs
 
 #### Learning Outcomes
 
 By the end of this course, learners will be able to:
 
-- Name...
-- Describe...
+- describe the core Open Science concepts used in the course
+- identify practical steps that make research outputs more open and reusable
 
 ## Target audience and course prerequisites
 
-**Target audience:** XXX    
-**Course prerequisites:** none   
-**Level:** beginner/intermediate  
+**Target audience:** doctoral students, postdocs, research support staff
+**Course prerequisites:** none
+**Level:** beginner/intermediate
 
 
 ## Forms of instruction and examination  
@@ -57,4 +61,4 @@ By the end of this course, learners will be able to:
 
 ## Additional notes  
 
-- Other useful information  
+- This branch is used as a simple published example of a previous course instance.

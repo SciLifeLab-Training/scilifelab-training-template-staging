@@ -5,7 +5,7 @@ project:
 # This file only configures the Quarto course site itself.
 
 website:
-  title: "Course Title"
+  title: "Open Science in the Swedish Context"
   sidebar:
     style: "floating"
     background: "#F4F6F6"
