@@ -10,7 +10,7 @@ instances:
   - slug: "2505"
     label: "May 2025"
     status: previous
-    visible: false
+    visible: true
     instance_url: "./2505/"
     registration_url: ""
     sort_key: 202505
