@@ -1,6 +1,14 @@
 :::{.hero}
 :::{.hero__brand}
-![SciLifeLab](img/SciLifeLab_Logotype_NEG.png){.hero__logo}
+<div class="hero__brand-item">
+  <img src="img/brand/elixir.png" alt="ELIXIR" class="hero__partner-logo hero__partner-logo--elixir">
+</div>
+<div class="hero__brand-item">
+  <img src="img/brand/chalmers.png" alt="Chalmers" class="hero__partner-logo hero__partner-logo--chalmers">
+</div>
+<div class="hero__brand-item">
+  <img src="img/SciLifeLab_Logotype_NEG.png" alt="SciLifeLab" class="hero__partner-logo hero__partner-logo--scilifelab">
+</div>
 :::
 
 :::{.hero__copy}

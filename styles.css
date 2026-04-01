@@ -107,28 +107,38 @@ a.anchorjs-link {
   position: absolute;
   top: 1.65rem;
   right: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  max-width: min(36rem, 58vw);
   justify-self: end;
 }
 
-.hero__brand .quarto-figure,
-.hero__brand .quarto-figure-center,
-.hero__brand figure {
-  margin: 0;
-}
-
-.hero__brand .figure-caption {
-  display: none;
-}
-
-.hero__brand p {
+.hero__brand-item {
   display: flex;
-  justify-content: flex-end;
-  margin: 0;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
-.hero__logo {
-  width: min(13.5rem, 22vw);
+.hero__partner-logo {
+  display: block;
   height: auto;
+  max-height: 3rem;
+  width: auto;
+}
+
+.hero__partner-logo--elixir {
+  max-height: 3.35rem;
+}
+
+.hero__partner-logo--chalmers {
+  max-height: 3.35rem;
+}
+
+.hero__partner-logo--scilifelab {
+  max-height: 3rem;
 }
 
 .hero__copy {
@@ -139,7 +149,7 @@ a.anchorjs-link {
 
 .hero__title p {
   max-width: 12.5ch;
-  font-size: clamp(2.75rem, 4.4vw, 4.2rem);
+  font-size: clamp(2.45rem, 4vw, 3.65rem);
   font-weight: 300;
   line-height: 0.99;
   letter-spacing: -0.03em;
@@ -505,8 +515,17 @@ a.anchorjs-link {
     padding: 2.8rem 1.75rem 2.5rem;
   }
 
-  .hero__logo {
-    width: min(11rem, 30vw);
+  .hero__brand {
+    gap: 1rem;
+    max-width: min(30rem, 60vw);
+  }
+
+  .hero__partner-logo {
+    max-height: 2.65rem;
+  }
+
+  .info-card__heading {
+    font-size: clamp(1.7rem, 2vw, 2.1rem);
   }
 
   .instances-band {
