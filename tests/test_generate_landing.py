@@ -145,12 +145,15 @@ def test_build_dynamic_partials_include_visible_previous_only() -> None:
 
     visible = gl.validate_instances_data(make_instances(previous_visible=True))
     _, band_visible = gl.build_dynamic_partials(visible, ui)
+    assert "Current run" in band_visible
     assert "Previous run" in band_visible
+    assert "instance-pill--current" in band_visible
 
     hidden = gl.validate_instances_data(make_instances(previous_visible=False))
     _, band_hidden = gl.build_dynamic_partials(hidden, ui)
+    assert "Current run" in band_hidden
     assert "Previous run" not in band_hidden
-    assert ui["no_previous_instances_label"] in band_hidden
+    assert "instance-pill--current" in band_hidden
 
 
 def test_build_dynamic_partials_uses_configurable_labels() -> None:
@@ -158,7 +161,7 @@ def test_build_dynamic_partials_uses_configurable_labels() -> None:
     ui = gl.UI_DEFAULTS.copy()
     ui["hero_view_current_label"] = "Go to current"
     ui["hero_registration_open_label"] = "Apply now"
-    ui["previous_instances_title"] = "Earlier runs"
+    ui["instances_band_title"] = "Earlier runs"
     hero, band = gl.build_dynamic_partials(validated, ui)
     assert "Go to current" in hero
     assert "Apply now" in hero

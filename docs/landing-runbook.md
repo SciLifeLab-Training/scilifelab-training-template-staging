@@ -54,9 +54,7 @@ Expected outputs:
 - Only documented keys are allowed
 - Provided values must be non-empty strings
 - Allowed keys are: `hero_view_current_label`, `hero_registration_open_label`,
-  `current_instance_note_label`, `current_instance_open_label`,
-  `current_instance_registration_label`, `previous_instances_title`,
-  `no_previous_instances_label` (see `data/ui.yml`).
+  `instances_band_title` (see `data/ui.yml`).
 
 ## 6. Deploy safety contract
 

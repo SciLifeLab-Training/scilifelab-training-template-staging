@@ -1,7 +1,3 @@
 hero_view_current_label: View current instance
 hero_registration_open_label: Registration open!
-current_instance_note_label: Current course instance
-current_instance_open_label: Open
-current_instance_registration_label: Registration
-previous_instances_title: Previous course instances
-no_previous_instances_label: No previous instances published yet.
+instances_band_title: All course instances

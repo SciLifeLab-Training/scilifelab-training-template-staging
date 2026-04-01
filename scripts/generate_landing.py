@@ -27,11 +27,7 @@ class ValidationError(ValueError):
 UI_DEFAULTS = {
     "hero_view_current_label": "View current instance",
     "hero_registration_open_label": "Registration open!",
-    "current_instance_note_label": "Current course instance",
-    "current_instance_open_label": "Open",
-    "current_instance_registration_label": "Registration",
-    "previous_instances_title": "Previous course instances",
-    "no_previous_instances_label": "No previous instances published yet.",
+    "instances_band_title": "All course instances",
 }
 
 
@@ -234,24 +230,18 @@ def _render_hero_actions(current: dict[str, Any], ui_labels: dict[str, str]) -> 
     return "\n".join(actions) + "\n"
 
 
-def _render_previous_instance_buttons(
-    previous: list[dict[str, Any]], ui_labels: dict[str, str]
-) -> str:
-    if not previous:
-        return (
-            "::: {.empty-note}\n"
-            f"{esc_text(ui_labels['no_previous_instances_label'])}\n"
-            ":::\n"
-        )
-
+def _render_instance_pills(visible_instances: list[dict[str, Any]]) -> str:
     buttons = []
-    for item in previous:
+    for item in visible_instances:
+        classes = ["instance-pill"]
+        if item["status"] == "current":
+            classes.append("instance-pill--current")
         buttons.append(
             "- "
             + format_link(
                 item["label"],
                 item["instance_url"],
-                ["instance-pill"],
+                classes,
             )
         )
     return "\n".join(buttons)
@@ -265,40 +255,21 @@ def _render_instances_band(instances: list[dict[str, Any]], ui_labels: dict[str,
         key=lambda item: item["sort_key"],
         reverse=True,
     )
-
-    current_actions_block = (
-        "- "
-        + format_link(
-            ui_labels["current_instance_open_label"],
-            current["instance_url"],
-            ["instance-link"],
-        )
-    )
-    previous_buttons = _render_previous_instance_buttons(previous, ui_labels)
+    ordered_instances = [current, *previous]
+    instance_pills = _render_instance_pills(ordered_instances)
 
     return f"""
 ::: {{.instances-band}}
-::: {{.current-instance-card}}
-::: {{.instance-label}}
-{esc_text(ui_labels["current_instance_note_label"])}
+<div class="instances-band__media" aria-hidden="true">
+  <img src="img/navet-band.jpg" alt="" class="instances-band__image">
+</div>
+::: {{.instances-band__content}}
+::: {{.section-title .instances-band__title}}
+{esc_text(ui_labels["instances_band_title"])}
 :::
 
-::: {{.instance-title}}
-{esc_text(current["label"])}
-:::
-
-::: {{.current-instance-actions}}
-{current_actions_block}
-:::
-:::
-
-::: {{.previous-instances}}
-::: {{.section-title}}
-{esc_text(ui_labels["previous_instances_title"])}
-:::
-
-::: {{.instance-grid}}
-{previous_buttons}
+::: {{.instance-grid .instance-grid--band}}
+{instance_pills}
 :::
 :::
 :::
