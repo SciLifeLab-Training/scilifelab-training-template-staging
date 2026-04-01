@@ -352,12 +352,17 @@ a.anchorjs-link {
 
 .cards-grid--top .info-card--keywords .card-copy ul li {
   padding: 0.24rem 0.62rem;
+  padding-left: 0.62rem;
   border-radius: 999px;
   background: rgba(169, 200, 69, 0.16);
   color: #30481a;
   font-size: 0.84rem;
   font-weight: 600;
   line-height: 1.2;
+}
+
+.cards-grid--top .info-card--keywords .card-copy ul li::before {
+  content: none;
 }
 
 .people-list ul {
