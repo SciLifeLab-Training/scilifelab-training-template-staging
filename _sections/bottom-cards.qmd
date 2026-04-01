@@ -1,18 +1,24 @@
 :::{.cards-grid .cards-grid--bottom}
-:::{.info-card .info-card--plain .info-card--founders}
-:::{.card-title}
-Course founders
-:::
+:::{.info-card .info-card--founders}
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/person.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Course founders</h2>
+</div>
 
 :::{.people-list}
 - **SciLifeLab Training Hub**
 :::
 :::
 
-:::{.info-card .info-card--plain .info-card--contributors}
-:::{.card-title}
-Contributors
-:::
+:::{.info-card .info-card--contributors}
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/group.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Contributors</h2>
+</div>
 
 :::{.people-list}
 - **Open Science Team**

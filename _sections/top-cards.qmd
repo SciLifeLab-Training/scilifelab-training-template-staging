@@ -1,8 +1,11 @@
 :::{.cards-grid .cards-grid--top}
 :::{.info-card .info-card--course}
-:::{.card-title}
-Course content
-:::
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/book-stack.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Course content</h2>
+</div>
 
 :::{.card-copy}
 "Open Science in the Swedish Context" is designed to teach DDLS research school scientists how to apply Swedish Open Science standards in their daily research.
@@ -14,9 +17,12 @@ Participants will explore open access publishing, research data sharing, researc
 :::
 
 :::{.info-card .info-card--outcomes}
-:::{.card-title}
-Learning outcomes
-:::
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/target.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Learning outcomes</h2>
+</div>
 
 :::{.card-copy}
 1. Get acquainted with Open Science principles and how they are being implemented across Swedish academia.
@@ -26,9 +32,12 @@ Learning outcomes
 :::
 
 :::{.info-card .info-card--topics}
-:::{.card-title}
-Topics covered
-:::
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/lightbulb.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Topics covered</h2>
+</div>
 
 :::{.card-copy}
 - Open research planning and project design
@@ -40,9 +49,12 @@ Topics covered
 :::
 
 :::{.info-card .info-card--keywords}
-:::{.card-title}
-Keywords
-:::
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/tag.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Keywords</h2>
+</div>
 
 :::{.card-copy}
 - Open Science

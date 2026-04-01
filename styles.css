@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap");
 
 :root {
-  --lp-page-bg: #ececec;
+  --lp-page-bg: #ffffff;
   --lp-hero-bg: #045c64;
   --lp-card-bg: #f4f4f4;
   --lp-band-bg: #c0d6d8;
@@ -82,10 +82,7 @@ a.anchorjs-link {
 .hero__brand,
 .hero__title,
 .hero__subtitle,
-.card-title,
 .section-title,
-.instance-label,
-.instance-title,
 .landing-footer__meta {
   margin: 0;
 }
@@ -93,13 +90,8 @@ a.anchorjs-link {
 .hero__brand p,
 .hero__title p,
 .hero__subtitle p,
-.card-title p,
 .section-title p,
-.instance-label p,
-.instance-title p,
-.landing-footer__meta p,
-.landing-footer__actions p,
-.empty-note p {
+.landing-footer__meta p {
   margin: 0;
 }
 
@@ -232,53 +224,87 @@ a.anchorjs-link {
 
 .cards-grid--top {
   padding-top: 0.75rem;
+  align-items: stretch;
+  grid-template-areas:
+    "course outcomes"
+    "topics outcomes"
+    "topics keywords";
 }
 
 .cards-grid--bottom {
   padding-top: 0.75rem;
+  align-items: stretch;
 }
 
-.info-card {
+.cards-grid .info-card {
   background: var(--lp-card-bg);
-  box-shadow: var(--lp-shadow);
-  padding: 1.3rem 1.45rem 1.4rem;
+  border-radius: 0.22rem;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.7rem 1.7rem 1.55rem;
   min-height: 0;
 }
 
-.info-card--plain {
-  background: var(--lp-white);
-  min-height: 12rem;
+.info-card--course {
+  grid-area: course;
 }
 
-.card-title {
-  margin-bottom: 1.2rem;
+.info-card--outcomes {
+  grid-area: outcomes;
 }
 
-.card-title p {
-  display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr);
+.info-card--topics {
+  grid-area: topics;
+}
+
+.info-card--keywords {
+  grid-area: keywords;
+}
+
+.cards-grid--bottom .info-card {
+  min-height: 13.25rem;
+}
+
+.info-card__header {
+  display: flex;
   align-items: center;
-  column-gap: 1.2rem;
-  font-size: clamp(1.55rem, 2vw, 2.45rem);
-  font-weight: 600;
-  line-height: 1.08;
-  color: var(--lp-text-strong);
+  gap: 1.05rem;
+  margin-bottom: 1.25rem;
 }
 
-.card-title p::before {
-  content: "";
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.65rem;
+.info-card__icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 0.82rem;
   background: var(--lp-accent);
-  align-self: center;
+}
+
+.info-card__icon-img {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.info-card__heading {
+  margin: 0;
+  font-size: clamp(1.95rem, 2vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.04;
+  color: var(--lp-text-strong);
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
 }
 
 .card-copy p,
 .card-copy li,
 .people-list li {
-  font-size: 0.95rem;
-  line-height: 1.42;
+  font-size: 1.02rem;
+  line-height: 1.46;
   color: var(--lp-text-body);
 }
 
@@ -312,14 +338,45 @@ a.anchorjs-link {
   left: 0;
 }
 
-.info-card--keywords .card-copy ul li::before {
-  content: none;
+.cards-grid--top .card-copy p + p {
+  margin-top: 0.85rem;
+}
+
+.cards-grid--top .card-copy ol {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.4rem;
+}
+
+.cards-grid--top .card-copy ul {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.cards-grid--top .info-card--keywords .card-copy ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.cards-grid--top .info-card--keywords .card-copy ul li {
+  padding: 0.32rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(169, 200, 69, 0.16);
+  color: #30481a;
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .people-list ul {
   list-style: none;
   display: grid;
   gap: 0.55rem;
+}
+
+.cards-grid--bottom .people-list ul {
+  gap: 0.7rem;
 }
 
 .people-list strong {
