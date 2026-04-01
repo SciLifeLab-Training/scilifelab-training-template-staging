@@ -6,8 +6,6 @@ Built with Quarto and hosted on GitHub Pages.
 :::
 
 :::{.landing-footer__actions}
-<a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging" class="landing-footer__repo-link" aria-label="GitHub repository">
-  <img src="img/icons/github.svg" alt="" class="landing-footer__repo-icon">
-</a>
+{{< include _generated/footer-link.qmd >}}
 :::
 :::

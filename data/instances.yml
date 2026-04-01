@@ -1,6 +1,6 @@
 instances:
   - slug: "0000"
-    label: "Current instance"
+    label: "May 2026"
     status: current
     visible: true
     instance_url: "./0000/"

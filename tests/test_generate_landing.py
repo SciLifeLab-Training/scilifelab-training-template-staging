@@ -78,6 +78,17 @@ def test_load_ui_labels_rejects_unknown_keys(tmp_path: Path) -> None:
     assert "unknown key(s)" in str(exc.value)
 
 
+def test_load_ui_labels_rejects_non_http_footer_repo_url(tmp_path: Path) -> None:
+    ui = tmp_path / "ui.yml"
+    ui.write_text(
+        "footer_repo_url: ./repo\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(gl.ValidationError) as exc:
+        gl.load_ui_labels(ui)
+    assert "footer_repo_url" in str(exc.value)
+
+
 def test_validate_instances_rejects_multiple_current() -> None:
     data = make_instances()
     data["instances"][1]["status"] = "current"
@@ -144,13 +155,13 @@ def test_build_dynamic_partials_include_visible_previous_only() -> None:
     ui = gl.UI_DEFAULTS.copy()
 
     visible = gl.validate_instances_data(make_instances(previous_visible=True))
-    _, band_visible = gl.build_dynamic_partials(visible, ui)
+    _, band_visible, _ = gl.build_dynamic_partials(visible, ui)
     assert "Current run" in band_visible
     assert "Previous run" in band_visible
     assert "instance-pill--current" in band_visible
 
     hidden = gl.validate_instances_data(make_instances(previous_visible=False))
-    _, band_hidden = gl.build_dynamic_partials(hidden, ui)
+    _, band_hidden, _ = gl.build_dynamic_partials(hidden, ui)
     assert "Current run" in band_hidden
     assert "Previous run" not in band_hidden
     assert "instance-pill--current" in band_hidden
@@ -162,10 +173,12 @@ def test_build_dynamic_partials_uses_configurable_labels() -> None:
     ui["hero_view_current_label"] = "Go to current"
     ui["hero_registration_open_label"] = "Apply now"
     ui["instances_band_title"] = "Earlier runs"
-    hero, band = gl.build_dynamic_partials(validated, ui)
+    ui["footer_repo_url"] = "https://github.com/example/training"
+    hero, band, footer = gl.build_dynamic_partials(validated, ui)
     assert "Go to current" in hero
     assert "Apply now" in hero
     assert "Earlier runs" in band
+    assert 'href="https://github.com/example/training"' in footer
 
 
 def test_build_dynamic_partials_emit_markdown_links_without_html_url_escaping() -> None:
@@ -175,7 +188,7 @@ def test_build_dynamic_partials_emit_markdown_links_without_html_url_escaping() 
         )
     )
     ui = gl.UI_DEFAULTS.copy()
-    hero, _ = gl.build_dynamic_partials(validated, ui)
+    hero, _, _ = gl.build_dynamic_partials(validated, ui)
 
     assert "[Registration open!]" in hero
     assert "(<https://example.org/register?course=sci&session=2>)" in hero
@@ -189,14 +202,18 @@ def test_write_generated_partials_writes_expected_files(tmp_path: Path, monkeypa
     generated_dir = tmp_path / "_generated"
     hero_file = generated_dir / "hero-actions.qmd"
     band_file = generated_dir / "instances-band.qmd"
+    footer_file = generated_dir / "footer-link.qmd"
 
     monkeypatch.setattr(gl, "GENERATED_DIR", generated_dir)
     monkeypatch.setattr(gl, "HERO_ACTIONS_FILE", hero_file)
     monkeypatch.setattr(gl, "INSTANCES_BAND_FILE", band_file)
+    monkeypatch.setattr(gl, "FOOTER_LINK_FILE", footer_file)
 
     gl.write_generated_partials(validated, ui)
 
     assert hero_file.exists()
     assert band_file.exists()
+    assert footer_file.exists()
     assert "./2601/" in hero_file.read_text(encoding="utf-8")
     assert "Previous run" in band_file.read_text(encoding="utf-8")
+    assert "github.com" in footer_file.read_text(encoding="utf-8")

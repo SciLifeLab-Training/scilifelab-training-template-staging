@@ -18,6 +18,7 @@ UI_FILE = ROOT / "data" / "ui.yml"
 GENERATED_DIR = ROOT / "_generated"
 HERO_ACTIONS_FILE = GENERATED_DIR / "hero-actions.qmd"
 INSTANCES_BAND_FILE = GENERATED_DIR / "instances-band.qmd"
+FOOTER_LINK_FILE = GENERATED_DIR / "footer-link.qmd"
 
 
 class ValidationError(ValueError):
@@ -28,6 +29,7 @@ UI_DEFAULTS = {
     "hero_view_current_label": "View current instance",
     "hero_registration_open_label": "Registration open!",
     "instances_band_title": "All course instances",
+    "footer_repo_url": "https://github.com/SciLifeLab-Training/scilifelab-training-template-staging",
 }
 
 
@@ -79,6 +81,8 @@ def load_ui_labels(path: Path) -> dict[str, str]:
             raise ValidationError(
                 f"ui.yml.{key} must be a non-empty string when provided."
             )
+        if key == "footer_repo_url" and not _is_http_url(value):
+            raise ValidationError("ui.yml.footer_repo_url must be an absolute http(s) URL.")
         labels[key] = value
     return labels
 
@@ -276,12 +280,24 @@ def _render_instances_band(instances: list[dict[str, Any]], ui_labels: dict[str,
 """.strip() + "\n"
 
 
+def _render_footer_link(ui_labels: dict[str, str]) -> str:
+    repo_url = esc_url(ui_labels["footer_repo_url"])
+    return (
+        f'<a href="{repo_url}" class="landing-footer__repo-link" '
+        'aria-label="GitHub repository">\n'
+        '  <img src="img/icons/github.svg" alt="" class="landing-footer__repo-icon">\n'
+        "</a>\n"
+    )
+
+
 def build_dynamic_partials(
     instances: list[dict[str, Any]], ui_labels: dict[str, str]
-) -> tuple[str, str]:
+) -> tuple[str, str, str]:
     current = next(item for item in instances if item["status"] == "current")
-    return _render_hero_actions(current, ui_labels), _render_instances_band(
-        instances, ui_labels
+    return (
+        _render_hero_actions(current, ui_labels),
+        _render_instances_band(instances, ui_labels),
+        _render_footer_link(ui_labels),
     )
 
 
@@ -289,9 +305,12 @@ def write_generated_partials(
     instances: list[dict[str, Any]], ui_labels: dict[str, str]
 ) -> None:
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
-    hero_actions, instances_band = build_dynamic_partials(instances, ui_labels)
+    hero_actions, instances_band, footer_link = build_dynamic_partials(
+        instances, ui_labels
+    )
     HERO_ACTIONS_FILE.write_text(hero_actions, encoding="utf-8")
     INSTANCES_BAND_FILE.write_text(instances_band, encoding="utf-8")
+    FOOTER_LINK_FILE.write_text(footer_link, encoding="utf-8")
 
 
 def main() -> None:
@@ -303,6 +322,7 @@ def main() -> None:
         "Generated dynamic partials:",
         HERO_ACTIONS_FILE.relative_to(ROOT),
         INSTANCES_BAND_FILE.relative_to(ROOT),
+        FOOTER_LINK_FILE.relative_to(ROOT),
     )
 
 
