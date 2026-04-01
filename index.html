@@ -49,11 +49,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="landing-shell">
 <div class="hero">
 <div class="hero__brand">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/SciLifeLab_Logotype_NEG.png" class="hero__logo img-fluid figure-img"></p>
-<figcaption class="figure-caption">SciLifeLab</figcaption>
-</figure>
+<div class="hero__brand-item">
+<p><img src="img/brand/elixir.png" alt="ELIXIR" class="hero__partner-logo hero__partner-logo--elixir"></p>
+</div>
+<div class="hero__brand-item">
+<p><img src="img/brand/chalmers.png" alt="Chalmers" class="hero__partner-logo hero__partner-logo--chalmers"></p>
+</div>
+<div class="hero__brand-item">
+<p><img src="img/SciLifeLab_Logotype_NEG.png" alt="SciLifeLab" class="hero__partner-logo hero__partner-logo--scilifelab"></p>
 </div>
 </div>
 <div class="hero__copy">
@@ -73,8 +76,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="cards-grid cards-grid--top">
 <div class="info-card info-card--course">
-<div class="card-title">
-<p>Course content</p>
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/book-stack.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Course content
+</h2>
 </div>
 <div class="card-copy">
 <p>“Open Science in the Swedish Context” is designed to teach DDLS research school scientists how to apply Swedish Open Science standards in their daily research.</p>
@@ -83,8 +89,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="info-card info-card--outcomes">
-<div class="card-title">
-<p>Learning outcomes</p>
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/target.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Learning outcomes
+</h2>
 </div>
 <div class="card-copy">
 <ol type="1">
@@ -95,8 +104,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="info-card info-card--topics">
-<div class="card-title">
-<p>Topics covered</p>
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/lightbulb.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Topics covered
+</h2>
 </div>
 <div class="card-copy">
 <ul>
@@ -109,8 +121,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="info-card info-card--keywords">
-<div class="card-title">
-<p>Keywords</p>
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/tag.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Keywords
+</h2>
 </div>
 <div class="card-copy">
 <ul>
@@ -123,34 +138,28 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="instances-band">
-<div class="current-instance-card">
-<div class="instance-label">
-<p>Current course instance</p>
+<div class="instances-band__media" aria-hidden="true">
+<p><img src="img/navet-band.jpg" alt="" class="instances-band__image"></p>
 </div>
-<div class="instance-title">
-<p>Current instance</p>
+<div class="instances-band__content">
+<div class="section-title instances-band__title">
+<p>All course instances</p>
 </div>
-<div class="current-instance-actions">
+<div class="instance-grid instance-grid--band">
 <ul>
-<li><a href="./0000/" class="instance-link">Open</a></li>
-</ul>
-</div>
-</div>
-<div class="previous-instances">
-<div class="section-title">
-<p>Previous course instances</p>
-</div>
-<div class="instance-grid">
-<ul>
+<li><a href="./0000/" class="instance-pill instance-pill--current">Current instance</a></li>
 <li><a href="./2505/" class="instance-pill">May 2025</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div class="cards-grid cards-grid--bottom">
-<div class="info-card info-card--plain info-card--founders">
-<div class="card-title">
-<p>Course founders</p>
+<div class="info-card info-card--founders">
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/person.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Course founders
+</h2>
 </div>
 <div class="people-list">
 <ul>
@@ -158,9 +167,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
-<div class="info-card info-card--plain info-card--contributors">
-<div class="card-title">
-<p>Contributors</p>
+<div class="info-card info-card--contributors">
+<div class="info-card__header">
+<span class="info-card__icon" aria-hidden="true"> <img src="img/icons/group.svg" alt="" class="info-card__icon-img"> </span>
+<h2 class="info-card__heading anchored">
+Contributors
+</h2>
 </div>
 <div class="people-list">
 <ul>
@@ -176,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Built with Quarto and hosted on GitHub Pages.</p>
 </div>
 <div class="landing-footer__actions">
-<p><a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging" class="landing-footer__repo-link" aria-label="GitHub repository">GitHub repository</a></p>
+<p><a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging" class="landing-footer__repo-link" aria-label="GitHub repository"> <img src="img/icons/github.svg" alt="" class="landing-footer__repo-icon"> </a></p>
 </div>
 </div>
 </div>
