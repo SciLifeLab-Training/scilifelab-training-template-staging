@@ -1,5 +1,5 @@
 :::{.cards-grid .cards-grid--top}
-:::{.info-card .info-card--course}
+:::{.info-card .info-card--course-content}
 <div class="info-card__header">
   <span class="info-card__icon" aria-hidden="true">
     <img src="img/icons/book-stack.svg" alt="" class="info-card__icon-img">
@@ -8,15 +8,17 @@
 </div>
 
 :::{.card-copy}
-"Open Science in the Swedish Context" is designed to teach DDLS research school scientists how to apply Swedish Open Science standards in their daily research.
+Description of the content of the course 
 
-The course covers key stages of the research lifecycle, from planning a research project and sharing results to science communication, researcher evaluation, and collaborative practice.
-
-Participants will explore open access publishing, research data sharing, researcher evaluation criteria, and citizen science as part of a more open and collaborative research culture.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra vehicula est non feugiat. Maecenas nec cursus eros, at consectetur enim. Ut tincidunt eros ipsum, ut tempor tortor eleifend eu.   
+  
+Aliquam hendrerit dui tristique felis faucibus semper. Integer placerat, mauris id tempus ultricies, felis magna ultricies risus, nec ullamcorper nisi justo ut mi. Duis scelerisque molestie sollicitudin.  
+  
+Aliquam feugiat, neque in ultricies fermentum, tortor nunc dignissim nulla, non gravida dui quam pulvinar turpis. Donec id viverra dolor. 
 :::
 :::
 
-:::{.info-card .info-card--outcomes}
+:::{.info-card .info-card--learning-outcomes}
 <div class="info-card__header">
   <span class="info-card__icon" aria-hidden="true">
     <img src="img/icons/target.svg" alt="" class="info-card__icon-img">
@@ -25,26 +27,10 @@ Participants will explore open access publishing, research data sharing, researc
 </div>
 
 :::{.card-copy}
-1. Get acquainted with Open Science principles and how they are being implemented across Swedish academia.
-2. Develop a foundational understanding of how to apply Open Science practices at key stages of a research project.
-3. Identify practical actions that make your research outputs more open, reusable, and collaborative.
-:::
-:::
-
-:::{.info-card .info-card--topics}
-<div class="info-card__header">
-  <span class="info-card__icon" aria-hidden="true">
-    <img src="img/icons/lightbulb.svg" alt="" class="info-card__icon-img">
-  </span>
-  <h2 class="info-card__heading">Topics covered</h2>
-</div>
-
-:::{.card-copy}
-- Open research planning and project design
-- FAIR data and responsible sharing practices
-- Open access publishing and science communication
-- Research assessment, citizen science, and collaborative research
-- Creating and maintaining engagement
+1. Learning outcome 1
+2. Learning outcome 2
+3. Learning outcome 3
+4. ...
 :::
 :::
 
@@ -57,10 +43,27 @@ Participants will explore open access publishing, research data sharing, researc
 </div>
 
 :::{.card-copy}
-- Open Science
-- FAIR data
-- Open Access
-- Citizen science
+- Keyword 1
+- Keyword 2
+- Keyword 3
+- Keyword 4
+:::
+:::
+
+:::{.info-card .info-card--topics-covered}
+<div class="info-card__header">
+  <span class="info-card__icon" aria-hidden="true">
+    <img src="img/icons/lightbulb.svg" alt="" class="info-card__icon-img">
+  </span>
+  <h2 class="info-card__heading">Topics covered</h2>
+</div>
+
+:::{.card-copy}
+- Topic 1
+- Topic 2
+- Topic 3
+- Topic 4
+- ...
 :::
 :::
 :::

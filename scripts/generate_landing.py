@@ -169,6 +169,10 @@ def validate_instances_data(data: dict[str, Any]) -> list[dict[str, Any]]:
         visible = raw.get("visible")
         if not isinstance(visible, bool):
             raise ValidationError(f"{context}.visible must be a boolean.")
+        
+        show_in_hero = raw.get("show_in_hero", True)
+        if not isinstance(show_in_hero, bool):
+            raise ValidationError(f"{context}.show_in_hero must be a boolean.")
 
         instance_url = _require_string(raw, "instance_url", context)
         _validate_instance_url(instance_url, context)
@@ -198,6 +202,7 @@ def validate_instances_data(data: dict[str, Any]) -> list[dict[str, Any]]:
                 "label": label,
                 "status": status,
                 "visible": visible,
+                "show_in_hero": show_in_hero,
                 "instance_url": instance_url,
                 "registration_url": registration_url,
                 "sort_key": sort_key,
@@ -214,23 +219,28 @@ def validate_instances_data(data: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _render_hero_actions(current: dict[str, Any], ui_labels: dict[str, str]) -> str:
-    actions = [
-        "- "
-        + format_link(
-            ui_labels["hero_view_current_label"],
-            current["instance_url"],
-            ["hero-cta", "hero-cta--secondary"],
+    actions = []
+
+    if current["show_in_hero"]:
+        actions.append(
+            "- "
+            + format_link(
+                ui_labels["hero_view_current_label"],
+                current["instance_url"],
+                ["hero-cta", "hero-cta--primary"],
+            )
         )
-    ]
+
     if current["registration_url"]:
         actions.append(
             "- "
             + format_link(
                 ui_labels["hero_registration_open_label"],
                 current["registration_url"],
-                ["hero-cta", "hero-cta--primary"],
+                ["hero-cta", "hero-cta--secondary"],
             )
         )
+
     return "\n".join(actions) + "\n"
 
 

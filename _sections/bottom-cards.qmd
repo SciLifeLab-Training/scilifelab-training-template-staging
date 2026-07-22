@@ -8,7 +8,9 @@
 </div>
 
 :::{.people-list}
-- **SciLifeLab Training Hub**
+- Course founder 1
+- Course founder 2
+- ...
 :::
 :::
 
@@ -21,8 +23,9 @@
 </div>
 
 :::{.people-list}
-- **Open Science Team**
-- **DDLS training collaborators**
+- Contributor 1
+- Contributor 2
+- ... 
 :::
 :::
 :::

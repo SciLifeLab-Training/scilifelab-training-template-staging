@@ -1,24 +1,17 @@
 :::{.hero}
 :::{.hero__brand}
 <div class="hero__brand-item">
-  <img src="img/brand/elixir.png" alt="ELIXIR" class="hero__partner-logo hero__partner-logo--elixir">
-</div>
-<div class="hero__brand-item">
-  <img src="img/brand/chalmers.png" alt="Chalmers" class="hero__partner-logo hero__partner-logo--chalmers">
-</div>
-<div class="hero__brand-item">
-  <img src="img/SciLifeLab_Logotype_NEG.png" alt="SciLifeLab" class="hero__partner-logo hero__partner-logo--scilifelab">
+  <img src="img/logos/SciLifeLab_Logotype_NEG.png" alt="SciLifeLab" class="hero__partner-logo">
 </div>
 :::
 
 :::{.hero__copy}
 :::{.hero__title}
-Open Science in the
-Swedish Context
+Course title
 :::
 
 :::{.hero__subtitle}
-Implement Open Science practices into every step of your research project
+Course subtitle
 :::
 :::
 
