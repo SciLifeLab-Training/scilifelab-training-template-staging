@@ -1,10 +1,10 @@
 instances:
-  - slug: "2605"
+  - slug: "2505"
     label: "May 2026"
     status: current
     visible: true
     show_in_hero: true
-    instance_url: "./2605/"
+    instance_url: "./2505/"
     registration_url: "https://example.org/registration"
     sort_key: 200000
 
