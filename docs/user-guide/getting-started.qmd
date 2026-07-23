@@ -1,0 +1,19 @@
+# Getting started
+
+This guide assumes you have:
+
+- cloned the repository
+- created a Python virtual environment
+- installed the project dependencies
+
+To preview the landing page locally:
+
+```bash
+quarto preview
+```
+
+::: {.callout-tip}
+Use a white logo if possible.
+:::
+
+Copy
