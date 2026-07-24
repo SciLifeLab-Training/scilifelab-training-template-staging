@@ -59,7 +59,7 @@ The generator:
 scripts/generate_landing.py
 ```
 
-validates these files and generates:
+validates these files and generates the dynamic landing-page fragments:
 
 ```text
 _generated/hero-actions.qmd
@@ -140,13 +140,20 @@ For landing-page development, the primary files are:
 |---|---|
 | Top-level page shell | `index.qmd` |
 | Authored landing-page content | `_sections/*.qmd` |
+| Template onboarding banner | `_sections/template-banner.qmd` |
+| *All course instances* banner structure and decorative image | `_sections/instances-band.qmd` |
 | Course instances, URLs, status and visibility | `data/instances.yml` |
 | Dynamic UI labels | `data/ui.yml` |
 | Landing-page styling | `styles.css` |
 | Dynamic content generation and validation | `scripts/generate_landing.py` |
-| Generated dynamic fragments | `_generated/*.qmd` |
+| Generated hero actions | `_generated/hero-actions.qmd` |
+| Generated *All course instances* heading and instance links | `_generated/instances-band.qmd` |
 
-Files under `_generated/` are generated automatically and should not be edited directly.
+`_sections/template-banner.qmd` is specific to the template repository. It links to the externally maintained [SciLifeLab Course Page Template User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/) and is intended to be removed when the template is adapted for a course.
+
+The *All course instances* banner is split between authored and generated content. `_sections/instances-band.qmd` contains the static banner structure and decorative image, while `_generated/instances-band.qmd` contains the dynamically generated heading and course-instance links.
+
+Files under `_generated/` are created automatically by `scripts/generate_landing.py` and should not be edited directly.
 
 ## 7. Local validation and rendering
 
@@ -349,7 +356,7 @@ If course-instance content has been affected, verify that the corresponding `gh-
 
 ### User documentation
 
-The [User Guide](docs/user-guide) contains instructions for course organisers, including:
+The [User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/) contains instructions for course organisers, including:
 
 - setting up and previewing the template;
 - customising the landing page;
@@ -361,4 +368,4 @@ The [User Guide](docs/user-guide) contains instructions for course organisers, i
 
 See also:
 
-- [`landing-migration-map.md`](docs/developer/landing-migration-map.md) — maps the legacy `data/landing.yml` model to the current Quarto-first architecture.
+- [`landing-migration-map.md`](landing-migration-map.md) — maps the legacy `data/landing.yml` model to the current Quarto-first architecture.

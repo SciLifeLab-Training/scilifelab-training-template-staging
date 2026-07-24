@@ -2,7 +2,7 @@
 
 This document records how the legacy `data/landing.yml` configuration maps to the current Quarto-first landing-page architecture.
 
-It is retained as a reference for developers maintaining or migrating the template. For the current landing-page architecture, validation, and deployment model, see the [Landing Page Maintenance Runbook](docs/developer/landing-runbook.md).
+It is retained as a reference for developers maintaining or migrating the template. For the current landing-page architecture, validation, and deployment model, see the [Landing Page Maintenance Runbook](landing-runbook.md).
 
 ## Legacy to new ownership
 
@@ -25,9 +25,15 @@ It is retained as a reference for developers maintaining or migrating the templa
 | `footer.built_with` | `_sections/footer.qmd` (`.landing-footer__meta`) | Hosting and build information is authored directly in the footer. |
 | `footer.github_url` | `_sections/footer.qmd` (`.landing-footer__actions`) | Repository URL is set directly in the GitHub image link (`href`). |
 
-## New configuration fields
+## New architecture elements
 
-The current landing-page model includes configuration options that did not have equivalent explicit keys in the legacy `data/landing.yml`.
+The current landing-page model includes elements and configuration options that did not have equivalent explicit keys in the legacy `data/landing.yml`.
+
+### `_sections/template-banner.qmd`
+
+The template repository includes an onboarding banner that links to the externally maintained SciLifeLab Course Page Template User Guide.
+
+This banner is specific to the template and is intended to be removed when the template is adapted for an individual course.
 
 ### `data/ui.yml`
 
@@ -37,6 +43,15 @@ The current landing-page model includes configuration options that did not have 
 
 - `show_in_hero` — controls whether the current course instance is displayed as an action button in the hero.
 - `registration_url` — controls the registration link. If the value is empty, the registration button is not generated.
+
+### `_sections/instances-band.qmd`
+
+The *All course instances* banner is divided between authored and generated content.
+
+- `_sections/instances-band.qmd` contains the static banner structure and decorative image.
+- `_generated/instances-band.qmd` contains the dynamically generated heading and course-instance links.
+
+The generated content is created by `scripts/generate_landing.py` from `data/ui.yml` and `data/instances.yml`.
 
 ## Removed legacy file
 

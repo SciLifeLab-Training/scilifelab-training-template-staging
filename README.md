@@ -1,56 +1,71 @@
-# SciLifeLab Course Page Template
+# SciLifeLab Course Webpage Template
 
-The SciLifeLab Course Page Template provides a reusable structure for creating, publishing, and maintaining training materials using Quarto and GitHub Pages.
+The SciLifeLab Course Webpage Template is a Quarto-based template for creating, publishing, and maintaining reusable training materials with GitHub Pages.
 
-The template consists of:
+The template provides:
 
-- a landing page containing general information about the course;
-- individual course instances maintained in separate branches;
-- a user guide explaining how to customise and maintain the template.
+- a landing page for general information about a course;
+- separate course instances maintained in `release-YYMM` branches;
+- automated publication of the landing page and course instances through GitHub Pages.
 
-## Get started
+## User Guide
 
-New to the template? See the **[SciLifeLab Course Page Template User Guide](LINK-TO-PUBLISHED-GUIDE)** for step-by-step instructions.
+New to the template? See the **[SciLifeLab Course Webpage Template User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/)**.
 
-The guide covers:
+The User Guide provides step-by-step instructions for:
 
 - setting up the template for a new course;
 - customising the landing page;
 - creating and managing course instances;
+- customising course instance pages;
 - previewing and publishing changes;
-- making training materials FAIR and citable.
+- preparing training materials for publication, citation, and reuse.
 
-## Repository structure
+## Working locally
 
-The template uses three types of branches:
+The website is built with [Quarto](https://quarto.org/).
 
-- `main` — contains the course landing page and general course information.
-- `release-YYMM` — contains the training materials for an individual course instance.
-- `gh-pages` — contains the published website and is managed automatically.
+After cloning the repository, create and activate the Python virtual environment:
 
-Do not edit the `gh-pages` branch directly.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-## Documentation
+Install the required dependencies:
 
-For instructions on using this template, see the **[User Guide](LINK-TO-PUBLISHED-GUIDE)**.
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
+```
 
-For information about the template's technical architecture and deployment, see [Template maintenance](docs/template-maintenance.md).
+Render the site with:
+
+```bash
+quarto render
+```
+
+Or preview it locally with:
+
+```bash
+quarto preview
+```
+
+For complete setup and step-by-step editing instructions, see the [User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/).
+
+## Development and maintenance
+
+Technical documentation for developers and maintainers of the template is available in [`docs/developer/`](docs/developer/).
+
+This includes documentation of the landing-page architecture, validation, deployment, and migration from the legacy landing-page model.
 
 ## Citation
 
-If you use the SciLifeLab Course Page Template, please see [`CITATION.cff`](CITATION.cff) for citation information.
+If you use the SciLifeLab Course Page Template, please cite as 
+
+Ineke Luijten, Nina Norgren & Dimitris Panouris (2026). The SciLifeLab Course Webpage Template (v1.0.0-alpha). Zenodo. https://doi.org/XX.XXXX/zenodo.XXXXX
 
 ## Licence
 
-[Your appropriate licence statement.]
+Unless otherwise stated, the SciLifeLab Course Page Template is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) licence](https://creativecommons.org/licenses/by/4.0/).
 
-
-
-
-
-SciLifeLab Course Page Template
-A Quarto-based template for creating and publishing reusable SciLifeLab training materials.
-New to the template? Start with the [SciLifeLab Course Page Template User Guide].
-The user guide explains how to set up a course, customise the landing page, create and manage course instances, and prepare training materials for publication and reuse.
-Then perhaps Development and maintenance:
-Technical documentation for developers and maintainers of the template is available in docs/developer/.
