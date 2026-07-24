@@ -10,7 +10,6 @@ on:
       - '_quarto.yml'
       - '_sections/**'
       - 'data/**'
-      - 'docs/user-guide'
       - 'img/**'
       - 'index.qmd'
       - 'requirements*.txt'
@@ -51,10 +50,6 @@ jobs:
         run: python -m pytest -q
 
       - name: Render landing
-        run: quarto render
-
-      - name: Render user guide
-        working-directory: docs/user-guide
         run: quarto render
 
       - name: Assert rendered output has no raw data references

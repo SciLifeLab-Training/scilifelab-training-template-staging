@@ -9,7 +9,6 @@ on:
       - '_quarto.yml'
       - '_sections/**'
       - 'data/**'
-      - 'docs/user-guide'
       - 'img/**'
       - 'index.qmd'
       - 'requirements.txt'
@@ -52,10 +51,6 @@ jobs:
 
       - name: Render landing
         run: quarto render
-      
-      - name: Render user guide
-        working-directory: docs/user-guide
-        run: quarto render
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
@@ -83,10 +78,6 @@ jobs:
             fi
           done
 
-          # Publish the rendered user guide to its own subdirectory.
-          mkdir -p gh-pages/user-guide
-          rsync -a --delete docs/user-guide/_book/ gh-pages/user-guide/
-
           # Remove previously leaked raw config artifacts.
           rm -rf gh-pages/data
           rm -f gh-pages/index.md gh-pages/_config.yml
@@ -113,7 +104,7 @@ jobs:
           git config user.name "gh_action"
 
           git add index.html styles.css .nojekyll
-          for path in site_libs index_files img user-guide; do
+          for path in site_libs index_files img; do
             if [ -e "$path" ]; then
               git add --all "$path"
             fi

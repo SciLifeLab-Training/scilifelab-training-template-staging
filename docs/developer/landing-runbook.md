@@ -1,8 +1,8 @@
 # Landing Page Maintenance Runbook
 
-This document describes the technical architecture, local validation, deployment, and recovery procedures for the landing page on the `main` branch.
+This document describes the technical architecture, local validation, deployment, and recovery procedures for the landing page on the main branch.
 
-It is intended for **developers and maintainers of the SciLifeLab Course Page Template**. Instructions for course organisers using the template are provided in the [user guide](docs/user-guide).
+It is intended for developers and maintainers of the SciLifeLab Course Page Template. Instructions for course organisers using the template are provided in the user guide.
 
 ## 1. Architecture overview
 

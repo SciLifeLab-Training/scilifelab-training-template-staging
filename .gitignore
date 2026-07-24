@@ -2,10 +2,10 @@
 /.tools/
 /_generated/
 /_site/
-/docs/user-guide/_book/
 /course_page_redesign/
 /PLAN_*
 /PLAN-*
 __pycache__/
 *.egg-info/
 .venv/
+.DS_Store
