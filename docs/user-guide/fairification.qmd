@@ -1,0 +1,152 @@
+---
+title: "FAIRification and publishing your course"
+---
+<img src="/images/SciLifeLab_symbol_green-2048x1950.png"
+     class="guide-logo">
+
+<br>
+
+Make the materials Findable, Accessible, Interoperable and Reusable, with 
+
+- licensing
+- [citation metadata](#make-your-materials-easy-to-cite)
+- ORCIDs
+- versioning/releases
+- repository metadata
+
+## Licensing your training materials
+
+## Make your materials easy to cite
+To make your training easier to cite, you can provide citation information in a `CITATION.cff` file. This file contains structured information about how your training materials should be cited, including the course title, authors, [ORCID identifiers](https://orcid.org), licence, and links to the course repository and website.
+
+### Create the citation file for your course
+
+The SciLifeLab Course Page Template already contains a `CITATION.cff` file in the root of the repository on the `main` branch. This file describes the **template itself**. When you use the template for your own course, replace the contents of `CITATION.cff` with citation information for your own training materials.
+
+1. In the main branch, open `CITATION.cff`.
+2. Delete the existing contents of the file.
+3. Copy and paste the following starter text:
+
+```yaml
+cff-version: 1.2.0
+message: "If you use these training materials, please cite them as below."
+
+title: "COURSE TITLE"
+
+authors:
+  - family-names: "SURNAME"
+    given-names: "GIVEN NAME"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
+license: CC-BY-4.0
+
+repository-code: "https://github.com/ORGANISATION/REPOSITORY"
+url: "https://ORGANISATION.github.io/REPOSITORY/"
+
+references:
+  - type: software
+    title: "SciLifeLab Course Page Template"
+    repository-code: "PERMANENT TEMPLATE REPOSITORY URL"
+```
+
+4. Replace the placeholder values with information about your course.
+
+| Field | What to enter |
+|---|---|
+| `title` | The title of your course or training materials. |
+| `family-names` | The author's family name or surname. |
+| `given-names` | The author's given name(s). |
+| `orcid` | The author's ORCID identifier, if they have one. |
+| `license` | The licence under which the training materials are made available. |
+| `repository-code` | The URL of the GitHub repository containing your course materials. |
+| `url` | The URL of the published course website. |
+
+::: {.callout-important}
+Keep:
+
+```yaml
+cff-version: 1.2.0
+```
+
+unchanged. This is the version of the **Citation File Format specification**, not the version of your course.
+:::
+
+
+### Add multiple authors
+
+Add a separate entry under `authors` for each person who should be credited as an author of the training materials.
+
+For example:
+
+```yaml
+authors:
+  - family-names: "Smith"
+    given-names: "Anna"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
+  - family-names: "Jones"
+    given-names: "David"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+```
+
+If an author does not have an ORCID, simply omit the `orcid` line:
+
+```yaml
+authors:
+  - family-names: "Jones"
+    given-names: "David"
+```
+
+::: {.callout-tip}
+[ORCID](https://orcid.org) provides researchers with a persistent identifier that distinguishes them from other researchers. If your contributors have ORCID identifiers, include them in `CITATION.cff`.
+:::
+
+### Acknowledge this template in your course
+
+The starter file contains the following entry:
+
+```yaml
+references:
+  - type: software
+    title: "SciLifeLab Course Page Template"
+    repository-code: "PERMANENT TEMPLATE REPOSITORY URL"
+```
+
+Keep this entry when adapting `CITATION.cff` for your course. It acknowledges the SciLifeLab Course Page Template as the resource used to create your course website.
+
+
+### Citation files for individual course instances
+
+How you manage `CITATION.cff` depends on how you publish your course materials.
+
+If your course is maintained as one continuously updated resource, you can maintain the citation information in the main branch.
+
+If individual course instances are released separately (in this template by adding and publishing branches), their citation information may also differ. For example, different instances may have different contributors.
+
+In this case, update `CITATION.cff` in the specific course-instance branch before creating the release. This allows the citation metadata for that release to reflect the people and materials associated with that particular course instance.
+
+::: {.callout-tip}
+Before publishing a course instance, check that `CITATION.cff` contains the correct title, authors, ORCIDs, licence, repository URL, and course website URL for the materials you are releasing.
+:::
+
+::: {.quick-reference}
+
+<span class="quick-reference-title">Quick reference</span>    
+<span class="quick-reference-subtitle"> Make your course citable </span>
+
+
+| To... | File | Edit |
+|---|---|---|
+| Add citation information for your course | `CITATION.cff` | Replace the template citation metadata with the starter CFF and enter your course information. |
+| Add an author | `CITATION.cff` | Add another entry under `authors`. |
+| Add an ORCID | `CITATION.cff` | Add the author's ORCID using the `orcid` field. |
+| Credit an author without an ORCID | `CITATION.cff` | Include their name and omit the `orcid` field. |
+| Cite a particular course instance | `CITATION.cff` in the course-instance branch | Update the citation metadata before creating the release. |
+
+:::
+
+## Publishing course materials on Zenodo
+### Creating a release
+## Adding contributors and ORCIDs
+## Adding a DOI to your course page
+

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Getting started – Course Page Template: User Guide</title>
+<title>4&nbsp; FAIRification and publishing your course – Course Page Template: User Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./landing-page.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./landing-page.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting-started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fairification.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">FAIRification and publishing your course</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -149,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./getting-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
@@ -161,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fairification.html" class="sidebar-item-text sidebar-link">
+  <a href="./fairification.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">FAIRification and publishing your course</span></span></a>
   </div>
 </li>
@@ -176,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">FAIRification and publishing your course</span></h1>
 </div>
 
 
@@ -193,14 +192,126 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This guide assumes you have:</p>
+<p><img src="./images/SciLifeLab_symbol_green-2048x1950.png" class="guide-logo"></p>
+<p><br></p>
+<p>Make the materials Findable, Accessible, Interoperable and Reusable, with</p>
 <ul>
-<li>cloned the repository</li>
-<li>created a Python virtual environment</li>
-<li>installed the project dependencies</li>
+<li>licensing</li>
+<li><a href="#make-your-materials-easy-to-cite">citation metadata</a></li>
+<li>ORCIDs</li>
+<li>versioning/releases</li>
+<li>repository metadata</li>
 </ul>
-<p>To preview the landing page locally:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="licensing-your-training-materials" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="licensing-your-training-materials"><span class="header-section-number">4.1</span> Licensing your training materials</h2>
+</section>
+<section id="make-your-materials-easy-to-cite" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="make-your-materials-easy-to-cite"><span class="header-section-number">4.2</span> Make your materials easy to cite</h2>
+<p>To make your training easier to cite, you can provide citation information in a <code>CITATION.cff</code> file. This file contains structured information about how your training materials should be cited, including the course title, authors, <a href="https://orcid.org">ORCID identifiers</a>, licence, and links to the course repository and website.</p>
+<section id="create-the-citation-file-for-your-course" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="create-the-citation-file-for-your-course"><span class="header-section-number">4.2.1</span> Create the citation file for your course</h3>
+<p>The SciLifeLab Course Page Template already contains a <code>CITATION.cff</code> file in the root of the repository on the <code>main</code> branch. This file describes the <strong>template itself</strong>. When you use the template for your own course, replace the contents of <code>CITATION.cff</code> with citation information for your own training materials.</p>
+<ol type="1">
+<li>In the main branch, open <code>CITATION.cff</code>.</li>
+<li>Delete the existing contents of the file.</li>
+<li>Copy and paste the following starter text:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"If you use these training materials, please cite them as below."</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"COURSE TITLE"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"SURNAME"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"GIVEN NAME"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0000-0000-0000"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span><span class="kw">:</span><span class="at"> CC-BY-4.0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/ORGANISATION/REPOSITORY"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://ORGANISATION.github.io/REPOSITORY/"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">references</span><span class="kw">:</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> software</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"SciLifeLab Course Page Template"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"PERMANENT TEMPLATE REPOSITORY URL"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Replace the placeholder values with information about your course.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>What to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>title</code></td>
+<td>The title of your course or training materials.</td>
+</tr>
+<tr class="even">
+<td><code>family-names</code></td>
+<td>The author’s family name or surname.</td>
+</tr>
+<tr class="odd">
+<td><code>given-names</code></td>
+<td>The author’s given name(s).</td>
+</tr>
+<tr class="even">
+<td><code>orcid</code></td>
+<td>The author’s ORCID identifier, if they have one.</td>
+</tr>
+<tr class="odd">
+<td><code>license</code></td>
+<td>The licence under which the training materials are made available.</td>
+</tr>
+<tr class="even">
+<td><code>repository-code</code></td>
+<td>The URL of the GitHub repository containing your course materials.</td>
+</tr>
+<tr class="odd">
+<td><code>url</code></td>
+<td>The URL of the published course website.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Keep:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>unchanged. This is the version of the <strong>Citation File Format specification</strong>, not the version of your course.</p>
+</div>
+</div>
+</section>
+<section id="add-multiple-authors" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="add-multiple-authors"><span class="header-section-number">4.2.2</span> Add multiple authors</h3>
+<p>Add a separate entry under <code>authors</code> for each person who should be credited as an author of the training materials.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Smith"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Anna"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0000-0000-0000"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jones"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"David"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0000-0000-0000"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If an author does not have an ORCID, simply omit the <code>orcid</code> line:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jones"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"David"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -211,199 +322,98 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Use a white logo if possible.</p>
+<p><a href="https://orcid.org">ORCID</a> provides researchers with a persistent identifier that distinguishes them from other researchers. If your contributors have ORCID identifiers, include them in <code>CITATION.cff</code>.</p>
 </div>
 </div>
-<section id="the-scilifelab-course-template" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> The SciLifeLab Course Template</h1>
-<p>This repository publishes one website with two layers:</p>
-<ul>
-<li>the landing page at the root</li>
-<li>one subdirectory per course instance</li>
-</ul>
-<p>Examples:</p>
-<ul>
-<li><code>main</code> publishes the landing page to <code>/</code></li>
-<li><code>release-0000</code> publishes the course instance to <code>/0000/</code></li>
-<li><code>release-2505</code> publishes the course instance to <code>/2505/</code></li>
-</ul>
-<section id="the-simple-model" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="the-simple-model"><span class="header-section-number">3.1</span> The Simple Model</h2>
-<ul>
-<li><code>main</code> = landing page source</li>
-<li><code>release-YYMM</code> = one course instance</li>
-<li><code>gh-pages</code> = published output only</li>
-</ul>
-<p>Use <code>main</code> when you want to change the landing page.</p>
-<p>Use a <code>release-YYMM</code> branch when you want to change the actual course materials for one run.</p>
-<p>Do not work directly on <code>gh-pages</code> unless you are recovering from a deployment problem.</p>
 </section>
-<section id="what-gets-deployed" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="what-gets-deployed"><span class="header-section-number">3.2</span> What Gets Deployed</h2>
-<ol type="1">
-<li>Push to <code>main</code>
-<ul>
-<li>GitHub Actions renders the landing page.</li>
-<li>The landing is published to the root of <code>gh-pages</code>.</li>
-</ul></li>
-<li>Push to <code>release-YYMM</code>
-<ul>
-<li>GitHub Actions renders that course instance.</li>
-<li>The instance is published to <code>gh-pages/YYMM/</code>.</li>
-</ul></li>
-</ol>
-<p>The landing page does not auto-discover release branches. If you create a new instance branch, you must also update <code>data/instances.yml</code> on <code>main</code> if you want that instance to appear on the landing page.</p>
+<section id="acknowledge-this-template-in-your-course" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="acknowledge-this-template-in-your-course"><span class="header-section-number">4.2.3</span> Acknowledge this template in your course</h3>
+<p>The starter file contains the following entry:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">references</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> software</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"SciLifeLab Course Page Template"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"PERMANENT TEMPLATE REPOSITORY URL"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Keep this entry when adapting <code>CITATION.cff</code> for your course. It acknowledges the SciLifeLab Course Page Template as the resource used to create your course website.</p>
 </section>
-<section id="which-files-to-edit" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="which-files-to-edit"><span class="header-section-number">3.3</span> Which Files To Edit</h2>
-<section id="landing-page-on-main" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="landing-page-on-main"><span class="header-section-number">3.3.1</span> Landing page on <code>main</code></h3>
-<p>Edit these files for most landing-page changes:</p>
-<ul>
-<li><code>index.qmd</code>: top-level page shell</li>
-<li><code>_sections/*.qmd</code>: authored landing sections</li>
-<li><code>styles.css</code>: landing design and layout</li>
-<li><code>data/instances.yml</code>: current/previous instance links and visibility</li>
-<li><code>data/ui.yml</code>: landing UI labels</li>
-</ul>
-<p>Dynamic partials are generated automatically:</p>
-<ul>
-<li><code>_generated/hero-actions.qmd</code></li>
-<li><code>_generated/instances-band.qmd</code></li>
-</ul>
-<p>Do not edit <code>_generated/*</code> manually.</p>
-</section>
-<section id="course-instance-on-release-yymm" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="course-instance-on-release-yymm"><span class="header-section-number">3.3.2</span> Course instance on <code>release-YYMM</code></h3>
-<p>Edit the Quarto course files on that branch:</p>
-<ul>
-<li>course <code>.qmd</code> pages</li>
-<li>branch-local <code>_quarto.yml</code></li>
-<li>images and other branch-local course assets</li>
-</ul>
-</section>
-</section>
-<section id="common-workflows" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="common-workflows"><span class="header-section-number">3.4</span> Common Workflows</h2>
-<section id="change-the-landing-page" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="change-the-landing-page"><span class="header-section-number">3.4.1</span> 1. Change the landing page</h3>
-<ol type="1">
-<li>Work on <code>main</code>.</li>
-<li>Edit the landing sections, styles, or landing data.</li>
-<li>Run local checks:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .venv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--upgrade</span> pip</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-r</span> requirements-dev.txt</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest <span class="at">-q</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li>Push <code>main</code>.</li>
-<li>GitHub Actions publishes the updated landing root.</li>
-</ol>
-</section>
-<section id="create-a-new-course-instance" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="create-a-new-course-instance"><span class="header-section-number">3.4.2</span> 2. Create a new course instance</h3>
-<ol type="1">
-<li>Create a new branch from <code>release-0000</code>.</li>
-<li>Name it <code>release-YYMM</code>, for example <code>release-2505</code>.</li>
-<li>Update the course content on that branch.</li>
-<li>Push the branch.</li>
-<li>GitHub Actions publishes that instance to <code>gh-pages/YYMM/</code>.</li>
-<li>Update <code>data/instances.yml</code> on <code>main</code> so the landing page links to it.</li>
-</ol>
-</section>
-<section id="update-an-existing-course-instance" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="update-an-existing-course-instance"><span class="header-section-number">3.4.3</span> 3. Update an existing course instance</h3>
-<ol type="1">
-<li>Checkout the relevant <code>release-YYMM</code> branch.</li>
-<li>Edit the course materials.</li>
-<li>Push the branch.</li>
-<li>GitHub Actions republishes only that instance directory.</li>
-</ol>
-</section>
-<section id="change-which-instance-is-current-on-the-landing-page" class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="change-which-instance-is-current-on-the-landing-page"><span class="header-section-number">3.4.4</span> 4. Change which instance is current on the landing page</h3>
-<p>Edit <code>data/instances.yml</code> on <code>main</code>.</p>
-<p>Rules enforced by validation:</p>
-<ul>
-<li>exactly one instance must have <code>status: current</code></li>
-<li>the current instance must have <code>visible: true</code></li>
-<li>relative instance URLs must match the slug</li>
-</ul>
+<section id="citation-files-for-individual-course-instances" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="citation-files-for-individual-course-instances"><span class="header-section-number">4.2.4</span> Citation files for individual course instances</h3>
+<p>How you manage <code>CITATION.cff</code> depends on how you publish your course materials.</p>
+<p>If your course is maintained as one continuously updated resource, you can maintain the citation information in the main branch.</p>
+<p>If individual course instances are released separately (in this template by adding and publishing branches), their citation information may also differ. For example, different instances may have different contributors.</p>
+<p>In this case, update <code>CITATION.cff</code> in the specific course-instance branch before creating the release. This allows the citation metadata for that release to reflect the people and materials associated with that particular course instance.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before publishing a course instance, check that <code>CITATION.cff</code> contains the correct title, authors, ORCIDs, licence, repository URL, and course website URL for the materials you are releasing.</p>
+</div>
+</div>
+<div class="quick-reference">
+<p><span class="quick-reference-title">Quick reference</span><br>
+<span class="quick-reference-subtitle"> Make your course citable </span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>To…</th>
+<th>File</th>
+<th>Edit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Add citation information for your course</td>
+<td><code>CITATION.cff</code></td>
+<td>Replace the template citation metadata with the starter CFF and enter your course information.</td>
+</tr>
+<tr class="even">
+<td>Add an author</td>
+<td><code>CITATION.cff</code></td>
+<td>Add another entry under <code>authors</code>.</td>
+</tr>
+<tr class="odd">
+<td>Add an ORCID</td>
+<td><code>CITATION.cff</code></td>
+<td>Add the author’s ORCID using the <code>orcid</code> field.</td>
+</tr>
+<tr class="even">
+<td>Credit an author without an ORCID</td>
+<td><code>CITATION.cff</code></td>
+<td>Include their name and omit the <code>orcid</code> field.</td>
+</tr>
+<tr class="odd">
+<td>Cite a particular course instance</td>
+<td><code>CITATION.cff</code> in the course-instance branch</td>
+<td>Update the citation metadata before creating the release.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
-<section id="how-the-landing-is-built" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="how-the-landing-is-built"><span class="header-section-number">3.5</span> How The Landing Is Built</h2>
-<p>The landing page is built in three layers:</p>
-<ol type="1">
-<li>Authored content
-<ul>
-<li><code>index.qmd</code></li>
-<li><code>_sections/*.qmd</code></li>
-</ul></li>
-<li>Data and generated fragments
-<ul>
-<li><code>data/instances.yml</code></li>
-<li><code>data/ui.yml</code></li>
-<li><code>scripts/generate_landing.py</code></li>
-<li><code>_generated/*.qmd</code></li>
-</ul></li>
-<li>Presentation
-<ul>
-<li><code>styles.css</code></li>
-</ul></li>
-</ol>
-<p>Render flow:</p>
-<ol type="1">
-<li><code>quarto render</code> starts</li>
-<li>Quarto runs <code>scripts/generate_landing.py</code> as a pre-render step</li>
-<li>the generator validates YAML data and writes <code>_generated/*.qmd</code></li>
-<li><code>index.qmd</code> includes the authored sections</li>
-<li>those sections include the generated fragments where needed</li>
-<li>Quarto writes the final site to <code>_site/</code></li>
-</ol>
+<section id="publishing-course-materials-on-zenodo" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="publishing-course-materials-on-zenodo"><span class="header-section-number">4.3</span> Publishing course materials on Zenodo</h2>
+<section id="creating-a-release" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="creating-a-release"><span class="header-section-number">4.3.1</span> Creating a release</h3>
 </section>
-<section id="github-actions" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="github-actions"><span class="header-section-number">3.6</span> GitHub Actions</h2>
-<ul>
-<li><code>.github/workflows/validate-landing.yml</code>
-<ul>
-<li>runs on pull requests to <code>main</code></li>
-<li>runs tests, renders the landing, and checks that no raw YAML leaks into <code>_site</code></li>
-</ul></li>
-<li><code>.github/workflows/deploy-landing.yml</code>
-<ul>
-<li>runs on push to <code>main</code></li>
-<li>publishes only landing-owned root files to <code>gh-pages</code></li>
-</ul></li>
-<li><code>.github/workflows/main.yml</code> on <code>release-*</code> branches
-<ul>
-<li>runs on push to release branches</li>
-<li>publishes only the matching instance directory to <code>gh-pages</code></li>
-</ul></li>
-</ul>
 </section>
-<section id="important-rules" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="important-rules"><span class="header-section-number">3.7</span> Important Rules</h2>
-<ul>
-<li><code>gh-pages</code> is machine-managed output</li>
-<li>keep <code>.nojekyll</code> on <code>gh-pages</code></li>
-<li>never use a root-level deploy sync like <code>rsync -a --delete _site/ gh-pages/</code></li>
-<li>keep raw YAML out of published output</li>
-<li>update <code>data/instances.yml</code> on <code>main</code> when instance visibility changes</li>
-</ul>
+<section id="adding-contributors-and-orcids" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="adding-contributors-and-orcids"><span class="header-section-number">4.4</span> Adding contributors and ORCIDs</h2>
 </section>
-<section id="additional-docs" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="additional-docs"><span class="header-section-number">3.8</span> Additional Docs</h2>
-<ul>
-<li><code>docs/landing-runbook.md</code></li>
-<li><code>docs/landing-migration-map.md</code></li>
-</ul>
+<section id="adding-a-doi-to-your-course-page" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="adding-a-doi-to-your-course-page"><span class="header-section-number">4.5</span> Adding a DOI to your course page</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -829,14 +839,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./landing-page.html" class="pagination-link" aria-label="Landing page">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Landing page</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./landing-page.html" class="pagination-link" aria-label="Landing page">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Landing page</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

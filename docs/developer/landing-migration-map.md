@@ -1,36 +1,53 @@
 # Landing Migration Map
 
-This map documents how legacy `data/landing.yml` fields map to the current Quarto-first landing model.
+This document records how the legacy `data/landing.yml` configuration maps to the current Quarto-first landing-page architecture.
+
+It is retained as a reference for developers maintaining or migrating the template. For the current landing-page architecture, validation, and deployment model, see the [Landing Page Maintenance Runbook](docs/developer/landing-runbook.md).
 
 ## Legacy to new ownership
 
-| Legacy field | New source of truth | Notes |
-| --- | --- | --- |
-| `course.title` | `_sections/hero.qmd` (`<h1>`) | Static authored copy. |
-| `course.subtitle` | `_sections/hero.qmd` (`<p class="hero__subtitle">`) | Static authored copy. |
-| `course.logo` | `_sections/hero.qmd` (`<img src=...>`) | Static authored asset reference. |
-| `hero_actions[0].label` | `data/ui.yml` (`hero_view_current_label`) | Label is editable without Python changes. |
-| `hero_actions[0].href` | `data/instances.yml` current `instance_url` | Derived dynamically; no manual duplication. |
-| `hero_actions[0].style` | `scripts/generate_landing.py` template class (`hero-cta--secondary`) | Presentation class is fixed in generator output. |
-| `hero_actions[1].label` | `data/ui.yml` (`hero_registration_open_label`) | Used only when current instance has registration URL. |
-| `hero_actions[1].href` | `data/instances.yml` current `registration_url` | Button omitted when empty. |
-| `hero_actions[1].style` | `scripts/generate_landing.py` template class (`hero-cta--primary`) | Presentation class is fixed in generator output. |
-| `instances.title` | `data/ui.yml` (`instances_band_title`) | Controls the banner heading above the instance pills. |
-| `cards[*]` content | `_sections/top-cards.qmd` | Static authored copy/structure. |
-| `founders[*]` | `_sections/bottom-cards.qmd` | Static authored copy/structure. |
-| `contributors[*]` | `_sections/bottom-cards.qmd` | Static authored copy/structure. |
-| `footer.license` | `_sections/footer.qmd` | Static authored copy. |
-| `footer.built_with` | `_sections/footer.qmd` | Static authored copy. |
-| `footer.github_url` | `_sections/footer.qmd` | Static authored URL. |
+| Legacy field | Current source of truth | Notes |
+|---|---|---|
+| `course.title` | `_sections/hero.qmd` (`.hero__title`) | Static authored copy. |
+| `course.subtitle` | `_sections/hero.qmd` (`.hero__subtitle`) | Static authored copy. |
+| `course.logo` | `_sections/hero.qmd` (`.hero__brand`) | Static authored asset reference. |
+| `hero_actions[0].label` | `data/ui.yml` (`hero_view_current_label`) | Label for the current course instance button. |
+| `hero_actions[0].href` | `data/instances.yml` current `instance_url` | Derived dynamically from the current instance; button is displayed when `show_in_hero: true`. |
+| `hero_actions[0].style` | `scripts/generate_landing.py` template class (`hero-cta--primary`) | Presentation class is fixed in generator output. |
+| `hero_actions[1].label` | `data/ui.yml` (`hero_registration_open_label`) | Label for the registration button. |
+| `hero_actions[1].href` | `data/instances.yml` current `registration_url` | Derived dynamically from the current instance; button is omitted when `registration_url` is empty. |
+| `hero_actions[1].style` | `scripts/generate_landing.py` template class (`hero-cta--secondary`) | Presentation class is fixed in generator output. |
+| `instances.title` | `data/ui.yml` (`instances_band_title`) | Controls the heading in the *All course instances* banner. |
+| `cards[*]` content | `_sections/top-cards.qmd` | Course content, learning outcomes, topics covered, and keywords are now authored directly in the card structure. |
+| `founders[*]` | `_sections/bottom-cards.qmd` | Course founders are now authored directly in the card structure. |
+| `contributors[*]` | `_sections/bottom-cards.qmd` | Course contributors are now authored directly in the card structure. |
+| `footer.license` | `_sections/footer.qmd` (`.landing-footer__meta`) | Licence text and URL are authored directly in the footer. |
+| `footer.built_with` | `_sections/footer.qmd` (`.landing-footer__meta`) | Hosting and build information is authored directly in the footer. |
+| `footer.github_url` | `_sections/footer.qmd` (`.landing-footer__actions`) | Repository URL is set directly in the GitHub image link (`href`). |
 
-## New dynamic-only labels
+## New configuration fields
 
-These labels did not exist as explicit legacy keys but are now configurable in `data/ui.yml`:
+The current landing-page model includes configuration options that did not have equivalent explicit keys in the legacy `data/landing.yml`.
 
-- `instances_band_title`
+### `data/ui.yml`
+
+- `instances_band_title` — controls the title displayed in the *All course instances* banner.
+
+### `data/instances.yml`
+
+- `show_in_hero` — controls whether the current course instance is displayed as an action button in the hero.
+- `registration_url` — controls the registration link. If the value is empty, the registration button is not generated.
 
 ## Removed legacy file
 
-- `data/landing.yml` is intentionally removed.
-- Landing copy now lives in `_sections/*.qmd`.
-- Dynamic elements are generated into `_generated/*.qmd` from validated metadata.
+`data/landing.yml` has been intentionally removed from the current architecture.
+
+Its responsibilities are now divided between:
+
+- `_sections/*.qmd` for authored landing-page content;
+- `data/instances.yml` for course-instance configuration;
+- `data/ui.yml` for configurable interface labels;
+- `scripts/generate_landing.py` for validation and dynamic generation;
+- `_generated/*.qmd` for generated landing-page fragments.
+
+Files in `_generated/` are generated automatically and should not be edited manually.

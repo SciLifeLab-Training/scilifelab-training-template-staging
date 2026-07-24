@@ -607,7 +607,7 @@ represents May 2026.
 
 ::: {.quick-reference}
 
-<span class="quick-reference-title">Quick reference</span>
+<span class="quick-reference-title">Quick reference</span>  
 <span class="quick-reference-subtitle"> Manage course instances </span>  
 
 

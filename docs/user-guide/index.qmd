@@ -1,5 +1,5 @@
 ---
-title: "Course page template: User guide"
+title: "Introduction"
 ---
 <img src="/images/SciLifeLab_symbol_green-2048x1950.png"
      class="guide-logo">
