@@ -6,6 +6,7 @@ format:
 ---
 
 :::{.landing-shell}
+{{< include _sections/template-banner.qmd >}}
 {{< include _sections/hero.qmd >}}
 {{< include _sections/top-cards.qmd >}}
 {{< include _sections/instances-band.qmd >}}
