@@ -65,7 +65,7 @@ This includes documentation of the landing-page architecture, validation, deploy
 
 ## Citation
 
-If you use the SciLifeLab Course Page Template, please cite as 
+If you use the SciLifeLab Course Webpage Template, please cite as 
 
 Ineke Luijten, Nina Norgren & Dimitris Panouris (2026). The SciLifeLab Course Webpage Template (v1.0.0-alpha). Zenodo. https://doi.org/XX.XXXX/zenodo.XXXXX
 
