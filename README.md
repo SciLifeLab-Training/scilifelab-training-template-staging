@@ -2,6 +2,10 @@
 
 The SciLifeLab Course Webpage Template is a Quarto-based template for creating, publishing, and maintaining reusable training materials with GitHub Pages.
 
+The published template is available at:
+
+**[SciLifeLab Course Webpage Template](https://scilifelab-training.github.io/scilifelab-training-template-staging/)**
+
 The template provides:
 
 - a landing page for general information about a course;
@@ -22,6 +26,8 @@ The User Guide provides step-by-step instructions for:
 - preparing training materials for publication, citation, and reuse.
 
 ## Working locally
+
+-->  For detailed setup and step-by-step editing instructions, see the [User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/).
 
 The website is built with [Quarto](https://quarto.org/).
 
@@ -50,8 +56,6 @@ Or preview it locally with:
 ```bash
 quarto preview
 ```
-
-For complete setup and step-by-step editing instructions, see the [User Guide](https://scilifelab-training.github.io/scilifelab-course-webpage-template-user-guide/).
 
 ## Development and maintenance
 
