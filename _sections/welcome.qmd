@@ -7,5 +7,5 @@ The welcome message below is author editable.
 
 {{< include _generated/welcome.qmd >}}
 
+Welcome to this course. During these days you will...
 
-# Welcome TEST 12345

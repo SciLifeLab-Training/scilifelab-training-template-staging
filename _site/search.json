@@ -4,20 +4,13 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "This is the generated navbar.\nThis is manual navbar content."
+    "text": "Course: Course title\nThis is manual navbar content."
   },
   {
-    "objectID": "index.html#generated-navbar",
-    "href": "index.html#generated-navbar",
+    "objectID": "index.html#course-subtitle",
+    "href": "index.html#course-subtitle",
     "title": "Home",
-    "section": "",
-    "text": "This is the generated navbar.\nThis is manual navbar content."
-  },
-  {
-    "objectID": "index.html#generated-welcome",
-    "href": "index.html#generated-welcome",
-    "title": "Home",
-    "section": "Generated Welcome",
-    "text": "Generated Welcome\nThis text is generated."
+    "section": "Course subtitle",
+    "text": "Course subtitle\nDates: 2026-10-12 – 2026-10-15 Location: SciLifeLab Stockholm"
   }
 ]

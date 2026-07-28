@@ -10,3 +10,4 @@ Generated from:
 {{< include _generated/navbar.qmd >}}
 
 This is manual navbar content.
+

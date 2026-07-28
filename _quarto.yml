@@ -4,10 +4,9 @@ project:
 
   render:
     - index.qmd
-
+  
   pre-render:
     - .venv/bin/python scripts/render_course.py
-
 
   resources:
     - img
