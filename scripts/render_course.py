@@ -5,7 +5,10 @@ from validators import validate_course, validate_website
 from writer import write_partial
 
 from renderers.welcome import render_welcome
-from renderers.navbar import render_navbar
+from renderers.navbar import (
+    render_navbar_meta,
+    render_navbar_links,
+)
 
 
 def main():
@@ -20,8 +23,13 @@ def main():
     )
 
     write_partial(
-        "navbar.qmd",
-        render_navbar(course, website),
+    "navbar_meta.qmd",
+    render_navbar_meta(course),
+    )
+
+    write_partial(
+    "navbar_links.qmd",
+    render_navbar_links(website),
     )
 
 

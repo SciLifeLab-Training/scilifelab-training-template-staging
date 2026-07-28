@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Quarto overrides
+   ========================================================================== */
+
+#title-block-header {
+    display: none;
+}
+
+#quarto-content,
+main.content,
+.quarto-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+main.content {
+    display: block;
+    min-height: 100vh;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+}
+
+.course-shell {
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #045c64 0%,
+            #0d6d75 55%,
+            #045c64 100%
+        );
+
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+
+    display: grid;
+
+    grid-template-rows: auto auto;
+}
+
+/* keep the navbar centered on large screens */
+.navbar-top,
+.navbar-menu {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-left: 3rem;
+
+    padding-right: 3rem;
+}
+
+/* ---------------- top row ---------------- */
+
+.navbar-top {
+
+    display: grid;
+
+    grid-template-columns: 90px auto;
+
+    align-items: center;
+
+    column-gap: 2.3rem;
+
+    padding-top: 1.35rem;
+
+    padding-bottom: 1.15rem;
+}
+
+.navbar-brand {
+
+    flex: none;
+}
+
+.navbar-brand p {
+
+    margin: 0;
+}
+
+.course-navbar-logo {
+
+    display: block;
+
+    width: 60px;
+
+    object-fit: contain;
+}
+
+/* ---------------- title + meta ---------------- */
+
+.navbar-title {
+
+    font-size: 1.65rem;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin: 0;
+}
+
+.navbar-course p {
+
+    margin: .35rem 0 0;
+
+    color: rgba(255,255,255,.92);
+
+    font-size: 1rem;
+}
+
+/* ---------------- navigation ---------------- */
+
+.navbar-menu {
+
+    grid-row: 2;
+
+    display: flex;
+
+    gap: 2rem;
+
+    padding: .9rem 2rem 1rem;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    max-width: 1350px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+.navbar-menu p {
+
+    margin: 0;
+
+    display: flex;
+
+    gap: 2rem;
+}
+
+.navbar-link {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.navbar-link:hover {
+
+    color: white;
+
+    opacity: .8;
+
+    text-decoration: none;
+}

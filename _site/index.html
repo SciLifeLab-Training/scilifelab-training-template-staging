@@ -108,38 +108,42 @@ Presentation and page structure are maintained here.
 
 Component rendering is handled separately by the Python renderer.
 -->
-<!--
-Site navigation.
-
-This component includes the generated navigation bar.
-
-Generated from:
-- course.yml
-- website.yml
--->
-<section id="navbar" class="level1">
-<h1>Navbar</h1>
-<p>Course: <strong>Course title</strong></p>
-<p>This is manual navbar content.</p>
+<div class="course-shell">
+<div class="navbar">
+<div class="navbar-top">
+<div class="navbar-brand">
+<p><img src="img/scilifelab-logo-neg.png" class="course-navbar-logo"></p>
+</div>
+<div class="navbar-course">
+<h1 class="navbar-title">
+Course title
+</h1>
+<p class="navbar-meta">
+12 Oct 2026 – 15 Oct 2026 &nbsp;&nbsp;•&nbsp;&nbsp; SciLifeLab Stockholm
+</p>
+</div>
+</div>
+<div class="navbar-menu">
+<p><a class="navbar-link" href="./index.html">Overview</a> <a class="navbar-link" href="schedule.qmd">Schedule</a> <a class="navbar-link" href="practical.qmd">Practical info</a> <a class="navbar-link" href="team.qmd">Team</a></p>
+</div>
+</div>
 <!--
 Welcome section.
 
 The course title and delivery information are generated.
 The welcome message below is author editable.
 -->
-</section>
 <section id="course-title" class="level1">
 <h1>Course title</h1>
 <section id="course-subtitle" class="level2">
 <h2 class="anchored" data-anchor-id="course-subtitle">Course subtitle</h2>
 <p><strong>Dates:</strong> 2026-10-12 – 2026-10-15 <strong>Location:</strong> SciLifeLab Stockholm</p>
+<p>Welcome to this course. During these days you will…</p>
 </section>
 </section>
-<section id="welcome-test-12345" class="level1">
-<h1>Welcome TEST 12345</h1>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

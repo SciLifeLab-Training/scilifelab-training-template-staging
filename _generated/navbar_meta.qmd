@@ -1,0 +1,7 @@
+<h1 class="navbar-title">Course title</h1>
+
+<p class="navbar-meta">
+12 Oct 2026 – 15 Oct 2026
+&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+SciLifeLab Stockholm
+</p>

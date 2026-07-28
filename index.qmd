@@ -1,5 +1,6 @@
 ---
 title: Home
+title-block: false
 ---
 
 <!--
@@ -11,6 +12,10 @@ Presentation and page structure are maintained here.
 Component rendering is handled separately by the Python renderer.
 --> 
 
+::: {.course-shell}
+
 {{< include _sections/navbar.qmd >}}
 
 {{< include _sections/welcome.qmd >}}
+
+:::

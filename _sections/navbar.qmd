@@ -1,13 +1,25 @@
-<!--
-Site navigation.
+::: {.navbar}
 
-This component includes the generated navigation bar.
+::: {.navbar-top}
 
-Generated from:
-- course.yml
-- website.yml
--->
-{{< include _generated/navbar.qmd >}}
+::: {.navbar-brand}
 
-This is manual navbar content.
+<img src="img/scilifelab-logo-neg.png" class="course-navbar-logo">
 
+:::
+
+::: {.navbar-course}
+
+{{< include _generated/navbar_meta.qmd >}}
+
+:::
+
+:::
+
+::: {.navbar-menu}
+
+{{< include _generated/navbar_links.qmd >}}
+
+:::
+
+:::
