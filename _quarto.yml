@@ -1,10 +1,14 @@
 project:
-  type: default
+  type: website
   output-dir: _site
+
   render:
     - index.qmd
+
   pre-render:
-    - python scripts/generate_landing.py
+    - .venv/bin/python scripts/render_course.py
+
+
   resources:
     - img
 
@@ -17,3 +21,7 @@ format:
 
 execute:
   freeze: auto
+
+
+
+

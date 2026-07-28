@@ -1,15 +1,14 @@
 ---
-format:
-  html:
-    toc: false
-    page-layout: full
+title: Home
 ---
 
-:::{.landing-shell}
-{{< include _sections/template-banner.qmd >}}
-{{< include _sections/hero.qmd >}}
-{{< include _sections/top-cards.qmd >}}
-{{< include _sections/instances-band.qmd >}}
-{{< include _sections/bottom-cards.qmd >}}
-{{< include _sections/footer.qmd >}}
-:::
+<!--
+Homepage composition.
+
+This page assembles the homepage from reusable components.
+Presentation and page structure are maintained here.
+
+Component rendering is handled separately by the Python renderer.
+--> 
+
+{{< include _sections/welcome.qmd >}}
