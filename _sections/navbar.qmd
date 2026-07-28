@@ -1,0 +1,11 @@
+<!--
+Site navigation.
+
+This component includes the generated navigation bar.
+
+Generated from:
+- course.yml
+- website.yml
+-->
+
+Placeholder for navbar component.

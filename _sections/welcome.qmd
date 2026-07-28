@@ -1,0 +1,13 @@
+<!--
+Welcome section.
+
+The course title and delivery information are generated.
+The welcome message below is author editable.
+-->
+
+{{< include ../_generated/welcome.qmd >}}
+
+
+# Welcome
+
+This text is authored.

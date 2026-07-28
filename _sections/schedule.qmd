@@ -1,0 +1,9 @@
+<!--
+Course schedule.
+
+The schedule is generated from schedule.yml.
+-->
+
+# Schedule
+hello from the schedule page! 
+

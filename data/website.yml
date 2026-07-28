@@ -1,0 +1,19 @@
+navigation:
+  content_label: "Course Content"
+
+pages:
+  schedule: true
+  practical: true
+  precourse: false
+  resources: false
+  faq: false
+  team_page: true
+
+homepage:
+  announcements: true
+  upcoming: true
+
+registration:
+  enabled: false
+  label: "Register now"
+  url:

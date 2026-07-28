@@ -1,0 +1,9 @@
+<!--
+Course announcements.
+
+This content is maintained manually.
+-->
+
+## Announcements
+
+Add course announcements here.

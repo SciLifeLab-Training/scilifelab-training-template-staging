@@ -1,0 +1,9 @@
+<!--
+Practical information.
+
+This page is maintained manually.
+-->
+
+# Practical Information
+
+Replace this placeholder with practical information for course participants.

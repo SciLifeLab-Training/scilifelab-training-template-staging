@@ -1,0 +1,22 @@
+events:
+
+  - title: "Welcome"
+
+    type: lecture
+
+    group: "Day 1"
+
+    start: 2026-01-01T09:00:00
+
+    end: 2026-01-01T09:30:00
+
+    all_day: false
+
+    location: ""
+
+    people:
+      - Jane Doe
+
+    description: ""
+
+    content:

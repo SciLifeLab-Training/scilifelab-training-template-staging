@@ -1,0 +1,7 @@
+<!--
+Homepage team preview.
+
+Generated from team.yml.
+-->
+
+Placeholder for team preview component.

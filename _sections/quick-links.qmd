@@ -1,0 +1,8 @@
+<!--
+Quick links.
+
+Navigation cards are generated.
+Descriptions and layout are author editable.
+-->
+
+Placeholder for the quick links component.

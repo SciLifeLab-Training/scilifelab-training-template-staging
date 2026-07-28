@@ -1,0 +1,7 @@
+<!--
+Upcoming event.
+
+Generated from schedule.yml.
+-->
+
+Placeholder for upcoming component.

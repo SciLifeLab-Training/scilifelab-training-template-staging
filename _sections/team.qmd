@@ -1,0 +1,9 @@
+<!--
+Course team.
+
+Generated from team.yml.
+-->
+
+# Team
+
+Placeholder for team page.

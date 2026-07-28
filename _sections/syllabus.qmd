@@ -1,0 +1,9 @@
+<!--
+Course syllabus.
+
+Generated from course.yml.
+-->
+
+# Syllabus
+
+Placeholder for syllabus page.

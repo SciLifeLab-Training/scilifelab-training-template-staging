@@ -1,0 +1,9 @@
+<!--
+Additional learning resources.
+
+This page is maintained manually.
+-->
+
+# Resources
+
+Replace this placeholder with additional learning resources.
