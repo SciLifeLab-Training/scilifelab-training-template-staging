@@ -11,4 +11,6 @@ Presentation and page structure are maintained here.
 Component rendering is handled separately by the Python renderer.
 --> 
 
+{{< include _sections/navbar.qmd >}}
+
 {{< include _sections/welcome.qmd >}}

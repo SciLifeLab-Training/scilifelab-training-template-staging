@@ -7,5 +7,6 @@ Generated from:
 - course.yml
 - website.yml
 -->
+{{< include _generated/navbar.qmd >}}
 
-Placeholder for navbar component.
+This is manual navbar content.

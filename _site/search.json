@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This is the generated navbar.\nThis is manual navbar content."
+  },
+  {
+    "objectID": "index.html#generated-navbar",
+    "href": "index.html#generated-navbar",
+    "title": "Home",
+    "section": "",
+    "text": "This is the generated navbar.\nThis is manual navbar content."
+  },
+  {
+    "objectID": "index.html#generated-welcome",
+    "href": "index.html#generated-welcome",
+    "title": "Home",
+    "section": "Generated Welcome",
+    "text": "Generated Welcome\nThis text is generated."
+  }
+]
