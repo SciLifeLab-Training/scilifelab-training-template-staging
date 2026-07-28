@@ -1,4 +1,10 @@
 /* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap");
+
+/* ==========================================================================
    Quarto overrides
    ========================================================================== */
 
@@ -6,17 +12,23 @@
     display: none;
 }
 
-#quarto-content,
-main.content,
-.quarto-container {
-    max-width: none;
-    margin: 0;
-    padding: 0;
+#quarto-content {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 main.content {
     display: block;
     min-height: 100vh;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.quarto-container {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 html {
@@ -24,14 +36,12 @@ html {
 }
 
 body {
-
     margin: 0;
     min-height: 100vh;
     font-family: "Lato", "Helvetica Neue", sans-serif;
 }
 
 .course-shell {
-
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -39,11 +49,15 @@ body {
 }
 
 /* ==========================================================================
-   Navbar
+   Course header
    ========================================================================== */
 
-.navbar {
+.course-navbar {
     width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
 
     background:
         linear-gradient(
@@ -55,127 +69,143 @@ body {
 
     color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,.12);
-
-    display: grid;
-
-    grid-template-rows: auto auto;
 }
 
-/* keep the navbar centered on large screens */
-.navbar-top,
-.navbar-menu {
 
+/* ==========================================================================
+   Top row
+   ========================================================================== */
+
+.course-navbar-layout {
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    column-gap: 2rem;
+    align-items: start;
+
+    width: 100%;
     max-width: 1400px;
-
     margin: 0 auto;
-
-    padding-left: 3rem;
-
-    padding-right: 3rem;
+    box-sizing: border-box;
+    padding: 0.4rem 1.25rem;
 }
 
-/* ---------------- top row ---------------- */
 
-.navbar-top {
+/* ==========================================================================
+   Logo
+   ========================================================================== */
 
-    display: grid;
-
-    grid-template-columns: 90px auto;
-
-    align-items: center;
-
-    column-gap: 2.3rem;
-
-    padding-top: 1.35rem;
-
-    padding-bottom: 1.15rem;
+.course-navbar-brand {
+    justify-self: end;
+    align-self: start;
 }
 
-.navbar-brand {
 
-    flex: none;
-}
-
-.navbar-brand p {
-
+.course-navbar-brand p {
     margin: 0;
 }
 
 .course-navbar-logo {
-
     display: block;
-
-    width: 60px;
-
-    object-fit: contain;
+    width: 55px;
+    padding-top: 0.6rem;
 }
 
-/* ---------------- title + meta ---------------- */
+.course-navbar-content {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
 
-.navbar-title {
+    padding-left: 1.2rem;
+}
 
-    font-size: 1.65rem;
 
-    font-weight: 700;
+/* ==========================================================================
+   Title
+   ========================================================================== */
 
-    line-height: 1.1;
+.course-navbar-title {
 
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding-top: 0.8rem;
+
+}
+
+.course-navbar-title h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.course-navbar-menu {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    padding: 1.2rem 2.5rem 1rem;
+}
+
+.course-navbar-links {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.75rem;
+    align-items: center;
+}
+
+.course-navbar-links p {
+
+    display: flex;
+    gap: 2.75rem;
     margin: 0;
 }
 
-.navbar-course p {
+.course-navbar-link {
+    position: relative;
 
-    margin: .35rem 0 0;
+    color: rgba(255,255,255,.9);
 
-    color: rgba(255,255,255,.92);
+    text-decoration: none;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
 }
 
-/* ---------------- navigation ---------------- */
+.course-navbar-link:hover {
+    color: white;
+    transform: translateY(-1px);
+}
 
-.navbar-menu {
+.course-navbar-link::after {
+    content: "";
 
-    grid-row: 2;
+    position: absolute;
 
-    display: flex;
-
-    gap: 2rem;
-
-    padding: .9rem 2rem 1rem;
-
-    border-top: 1px solid rgba(255,255,255,.15);
-
-    max-width: 1350px;
+    left: 0;
+    bottom: -6px;
 
     width: 100%;
+    height: 0.7px;
 
-    margin: 0 auto;
+    background: #3f8d94;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform .2s ease;
 }
 
-.navbar-menu p {
-
-    margin: 0;
-
-    display: flex;
-
-    gap: 2rem;
-}
-
-.navbar-link {
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 600;
-}
-
-.navbar-link:hover {
-
-    color: white;
-
-    opacity: .8;
-
-    text-decoration: none;
+.course-navbar-link:hover::after {
+    transform: scaleX(1);
 }

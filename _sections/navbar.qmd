@@ -1,14 +1,10 @@
-::: {.navbar}
+::: {.course-navbar}
 
-::: {.navbar-top}
+::: {.course-navbar-layout}
 
-::: {.navbar-brand}
+::: {.course-navbar-content}
 
-<img src="img/scilifelab-logo-neg.png" class="course-navbar-logo">
-
-:::
-
-::: {.navbar-course}
+::: {.course-navbar-title}
 
 {{< include _generated/navbar_meta.qmd >}}
 
@@ -16,9 +12,24 @@
 
 :::
 
-::: {.navbar-menu}
+::: {.course-navbar-brand}
+
+<img src="img/scilifelab-logo-neg.png" class="course-navbar-logo">
+
+:::
+
+:::
+
+::: {.course-navbar-divider}
+:::
+
+::: {.course-navbar-menu}
+
+::: {.course-navbar-links}
 
 {{< include _generated/navbar_links.qmd >}}
+
+:::
 
 :::
 
