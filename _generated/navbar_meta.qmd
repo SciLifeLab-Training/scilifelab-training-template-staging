@@ -1,1 +1,1 @@
-<h1 class="course-navbar-title">Course title</h1>
+<h1 class="course-navbar-title">Open Science in the Swedish Context</h1>

@@ -1,3 +1,0 @@
-# Navbar
-
-Course: **Course title**

@@ -1,11 +1,24 @@
-<!--
-Welcome section.
+::: {.course-welcome}
 
-The course title and delivery information are generated.
-The welcome message below is author editable.
--->
+::: {.course-welcome-layout}
+
+::: {.course-welcome-text}
 
 {{< include _generated/welcome.qmd >}}
 
-Welcome to this course. During these days you will...
+## Welcome to the course
 
+Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course.
+Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course.
+
+:::
+
+::: {.course-welcome-image}
+
+![](img/welcome-graphic-placeholder.png)
+
+:::
+
+:::
+
+:::

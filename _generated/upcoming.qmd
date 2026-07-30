@@ -1,0 +1,29 @@
+<div class="course-upcoming-card">
+
+<div class="course-upcoming-day">
+<div class="course-upcoming-weekday">MONDAY</div>
+<div class="course-upcoming-date">12</div>
+<div class="course-upcoming-month">MAY</div>
+</div>
+
+<div class="course-upcoming-details">
+
+<div class="course-upcoming-top">
+<span class="course-upcoming-time">09:00–10:30</span>
+<span class="course-upcoming-type">Lecture</span>
+</div>
+
+<h3 class="course-upcoming-title">The why, what and how of Open Science</h3>
+
+<div class="course-upcoming-speaker">Anna Nilsson</div>
+
+<div class="course-upcoming-location">Aula Medica, Karolinska Institutet</div>
+
+</div>
+
+<div class="course-upcoming-status">
+<div class="course-upcoming-countdown">Starts in 2 days</div>
+<a href="schedule.qmd">Full schedule →</a>
+</div>
+
+</div>

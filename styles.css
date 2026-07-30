@@ -39,6 +39,7 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-size: 0.90rem;
 }
 
 .course-shell {
@@ -128,15 +129,15 @@ body {
     display: flex;
     align-items: center;
     min-height: 60px;
-    padding-top: 0.8rem;
+    padding-top: 0.6rem;
 
 }
 
 .course-navbar-title h1 {
     margin: 0;
-    font-size: 1.9rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -149,7 +150,7 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
 
-    padding: 1.2rem 2.5rem 1rem;
+    padding: 0.8rem 2.5rem 1.2rem;
 }
 
 .course-navbar-links {
@@ -209,3 +210,157 @@ body {
 .course-navbar-link:hover::after {
     transform: scaleX(1);
 }
+
+
+/* ==========================================================================
+   Welcome
+   ========================================================================== */
+
+.course-welcome-layout {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.course-welcome {
+    padding: 1.0rem 2.5rem;
+}
+
+.course-welcome h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+
+    max-width: 24ch;
+}
+
+.course-welcome-meta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.0rem;
+}
+
+.course-welcome-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #555;
+    font-size: 0.80rem;
+}
+
+.course-welcome-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.course-welcome h2 {
+    color: #045c64;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.course-welcome-item i {
+    color: #9cc31c; /* SciLifeLab lime */
+}
+
+.course-welcome p {
+    max-width: 55ch;
+}
+
+.course-welcome-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* ==========================================================================
+   Upcoming card
+   ========================================================================== */
+
+.course-upcoming {
+    padding: 1.5rem 2.5rem 0;
+}
+
+.course-upcoming-content {
+    border-top: 1px solid #ececec;
+    padding-top: 1.5rem;
+ /* Pull divider to the top of the section spacing */
+    margin-top: -2rem;
+}
+
+.course-section-label {
+    color: #045c64;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.course-upcoming-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 90px 1fr 150px;
+    gap: 2rem;
+
+    width: 100%;
+
+    padding: 1.5rem 2rem;
+
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,.03);
+}
+
+.course-upcoming-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+
+    width: 4px;
+
+    background: #9cc31c;
+    border-radius: 8px 0 0 8px;
+}
+
+.course-upcoming-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 0.80rem;
+    font-weight: 400;
+}
+
+.course-upcoming-date {
+    color: #045c64;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0.15rem 0;
+}
+
+.course-upcoming-month {
+    color: #333;
+    font-size: 0.80rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+

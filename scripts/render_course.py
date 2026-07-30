@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 
-from loaders import load_course, load_website
-from validators import validate_course, validate_website
+from loaders import (
+    load_course,
+    load_website,
+    load_schedule,
+)
+
+from validators import (
+    validate_course,
+    validate_website,
+    validate_schedule,
+)
 from writer import write_partial
 
 from renderers.welcome import render_welcome
@@ -9,6 +18,7 @@ from renderers.navbar import (
     render_navbar_meta,
     render_navbar_links,
 )
+from renderers.upcoming import render_upcoming
 
 
 def main():
@@ -16,6 +26,7 @@ def main():
 
     course = validate_course(load_course())
     website = validate_website(load_website())
+    events = validate_schedule(load_schedule())
 
     write_partial(
         "welcome.qmd",
@@ -32,6 +43,10 @@ def main():
     render_navbar_links(website),
     )
 
+    write_partial(
+    "upcoming.qmd",
+    render_upcoming(events),
+)
 
 if __name__ == "__main__":
     main()

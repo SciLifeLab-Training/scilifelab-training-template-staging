@@ -1,24 +1,29 @@
+from utils import format_date
+
+
 def render_welcome(course):
 
     title = course["title"]
-    subtitle = course.get("subtitle")
-    start = course.get("start_date")
-    end = course.get("end_date")
-    location = course.get("location")
 
-    lines = [
-        f"# {title}",
-    ]
+    start = format_date(course["start_date"])
+    end = format_date(course["end_date"])
 
-    if subtitle:
-        lines.append("")
-        lines.append(f"## {subtitle}")
+    location = course["location"]
 
-    if start or end:
-        lines.append("")
-        lines.append(f"**Dates:** {start} – {end}")
+    return f"""
+# {title}
 
-    if location:
-        lines.append(f"**Location:** {location}")
+<div class="course-welcome-meta">
 
-    return "\n".join(lines) + "\n"
+<span class="course-welcome-item">
+<i class="bi bi-calendar2-event"></i>
+{start} – {end}
+</span>
+
+<span class="course-welcome-item">
+<i class="bi bi-geo-alt"></i>
+{location}
+</span>
+
+</div>
+""".strip()

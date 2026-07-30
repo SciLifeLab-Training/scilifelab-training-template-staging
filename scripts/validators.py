@@ -15,3 +15,10 @@ def validate_course(course):
 
 def validate_website(website):
     return website
+
+def validate_schedule(events):
+
+    if not isinstance(events, list):
+        raise ValueError("schedule.yml must contain an 'events' list")
+
+    return events

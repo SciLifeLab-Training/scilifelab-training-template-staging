@@ -1,6 +1,15 @@
-# Course title
+# Open Science in the Swedish Context
 
-## Course subtitle
+<div class="course-welcome-meta">
 
-**Dates:** 2026-10-12 – 2026-10-15
-**Location:** SciLifeLab Stockholm
+<span class="course-welcome-item">
+<i class="bi bi-calendar2-event"></i>
+12 Oct 2026 – 15 Oct 2026
+</span>
+
+<span class="course-welcome-item">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Stockholm
+</span>
+
+</div>

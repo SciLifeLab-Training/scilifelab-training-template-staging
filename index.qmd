@@ -18,4 +18,6 @@ Component rendering is handled separately by the Python renderer.
 
 {{< include _sections/welcome.qmd >}}
 
+{{< include _sections/upcoming.qmd >}}
+
 :::

@@ -1,7 +1,13 @@
-<!--
-Upcoming event.
+::: {.course-upcoming}
 
-Generated from schedule.yml.
--->
+<div class="course-upcoming-content">
 
-Placeholder for upcoming component.
+<div class="course-section-label">
+NEXT UP
+</div>
+
+{{< include _generated/upcoming.qmd >}}
+
+</div>
+
+:::
