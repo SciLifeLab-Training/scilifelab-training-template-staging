@@ -1,20 +1,12 @@
 team:
 
   - name: "Jane Doe"
-
     roles:
       - Course lead
-
     job_title: ""
-
     affiliation: ""
-
     email: ""
-
     orcid: ""
-
     linkedin: ""
-
     github: ""
-
     image: ""

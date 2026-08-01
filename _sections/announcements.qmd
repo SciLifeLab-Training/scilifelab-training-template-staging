@@ -1,9 +1,42 @@
-<!--
-Course announcements.
+::: {.course-announcements}
 
-This content is maintained manually.
--->
+<div class="course-announcements-content">
 
-## Announcements
+<div class="course-section-label">
+COURSE ANNOUNCEMENTS
+</div>
 
-Add course announcements here.
+::: {.course-announcement}
+<div class="course-announcement-date">
+10 May
+</div>
+
+<h3 class="course-announcement-title">
+Remember to bring your laptop
+</h3>
+
+Please bring your laptop to all workshop sessions.
+
+:::
+
+::: {.course-announcement}
+<div class="course-announcement-date">
+4 May
+</div>
+
+<h3 class="course-announcement-title">
+Pre-course material is now available 
+</h3>
+
+You can now access the reading in the Course content section.
+:::
+
+<a class="course-announcements-link" href="announcements.qmd">
+View all announcements →
+</a>
+
+</div>
+
+:::
+
+

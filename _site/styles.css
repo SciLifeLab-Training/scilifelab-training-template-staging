@@ -675,7 +675,7 @@ body {
 
     text-decoration: none;
 
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
@@ -704,9 +704,8 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1.1rem;
-  margin-top: auto;
-  padding: 0.75rem clamp(0.75rem, 2vw, 1rem);
+  margin-top: 2rem;
+  padding: 0.45rem clamp(0.75rem, 2vw, 1rem);
   background: #b8b8b8;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
@@ -718,20 +717,22 @@ body {
 
 /* Position the footer metadata and allow it to use the available width. */
 .landing-footer__meta {
-  flex: 1 1 auto;
-  display: grid;
-  align-content: center;
-  min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Typography used for licence and build information. */
 .landing-footer__meta p {
-  font-size: 0.7rem;
-  line-height: 1.15;
-  color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 1.25;
+    color: rgba(255,255,255,.9);
 }
 
-
+.landing-footer__meta p + p {
+    margin-top: 0.45rem;
+}
 /* ==========================================================================
    Footer repository link
    ========================================================================== */
@@ -758,6 +759,9 @@ body {
   display: block;
   height: 2rem;
   width: auto;
+
+  position: relative;
+  top: 9px;
 }
 
 /* Keep links visible against the footer background. */
@@ -771,3 +775,110 @@ body {
   color: #045c64;
 }
 
+/* ==========================================================================
+   Course announcements
+   ========================================================================== */
+/*
+ * Wrapper around the homepage announcements section.
+ * Aligns the content with the rest of the homepage.
+ */
+.course-announcements {
+    padding: 2rem 2.5rem 0;
+}
+
+/*
+ * Individual announcement displayed in the homepage timeline.
+ */
+.course-announcement {
+    position: relative;
+
+    padding-left: 1.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.course-announcements .course-section-label {
+    margin-bottom: 1.5rem;
+}
+
+.course-announcements-content {
+    border-top: 1px solid #ececec;
+    padding-top: 1.5rem;
+    margin-top: -2rem;
+}
+
+.course-announcement::before {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: 0.7rem;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #e5e5e5;
+}
+
+.course-announcement::after {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    top: 0.35rem;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #9cc31c;
+}
+
+.course-announcement-date {
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.course-announcement-title {
+    margin: 0 0 0.3rem;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: #333;
+}
+
+.course-announcement p {
+    margin: 0;
+
+    color: #666;
+    font-size: 0.80rem;
+    line-height: 1.5;
+
+    max-width: 55ch;
+}
+
+.course-announcement:last-of-type::before {
+    bottom: 1.2rem;
+}
+
+.course-announcements-link {
+    display: inline-block;
+
+    margin-top: 0.5rem;
+
+    color: #045c64;
+
+    font-size: 0.80rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.course-announcements-link:hover {
+    text-decoration: underline;
+}
