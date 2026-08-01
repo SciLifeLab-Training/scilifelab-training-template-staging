@@ -2,39 +2,70 @@
    Fonts
    ========================================================================== */
 
+/*
+ * Imports the Lato font family used throughout the course website.
+ */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap");
+
 
 /* ==========================================================================
    Quarto overrides
    ========================================================================== */
 
+/*
+ * Removes Quarto's default page title since the course header renders its own.
+ */
 #title-block-header {
     display: none;
 }
 
+/*
+ * Allows the course layout to span the full browser width without Quarto margins.
+ */
 #quarto-content {
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
+/*
+ * Allow the course content to occupy the full height of Quarto's page grid.
+ */
+#quarto-content.page-rows-contents > main.content {
+    grid-row: content-top / page-bottom;
+}
+
+
+/*
+ * Removes Quarto's default content spacing and ensures the page fills the viewport.
+ */
 main.content {
-    display: block;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 
     margin: 0 !important;
     padding: 0 !important;
 }
 
+/*
+ * Removes the default container spacing applied by Quarto.
+ */
 .quarto-container {
     margin: 0 !important;
     padding: 0 !important;
 }
 
+/*
+ * Allows the page to occupy the full height of the browser window.
+ */
 html {
     min-height: 100%;
 }
 
+/*
+ * Defines the global typography and removes the browser's default page margin.
+ */
 body {
     margin: 0;
     min-height: 100vh;
@@ -42,17 +73,24 @@ body {
     font-size: 0.90rem;
 }
 
+/*
+ * Provides the main flex container that stacks the header and page sections vertically.
+ */
 .course-shell {
-    width: 100%;
-    min-height: 100vh;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
+
 
 /* ==========================================================================
    Course header
    ========================================================================== */
 
+/*
+ * Creates the full-width course header containing the title, branding and navigation.
+ */
 .course-navbar {
     width: 100%;
     position: relative;
@@ -77,6 +115,9 @@ body {
    Top row
    ========================================================================== */
 
+/*
+ * Arranges the course title and logo into a two-column layout within the header.
+ */
 .course-navbar-layout {
     display: grid;
     grid-template-columns: 1fr 70px;
@@ -95,22 +136,32 @@ body {
    Logo
    ========================================================================== */
 
+/*
+ * Aligns the SciLifeLab logo to the top-right corner of the header.
+ */
 .course-navbar-brand {
     justify-self: end;
     align-self: start;
 }
 
-
+/*
+ * Removes the default paragraph spacing around the logo inserted by Quarto.
+ */
 .course-navbar-brand p {
     margin: 0;
 }
-
+/*
+ * Controls the displayed size and spacing of the SciLifeLab logo.
+ */
 .course-navbar-logo {
     display: block;
     width: 55px;
     padding-top: 0.6rem;
 }
 
+/*
+ * Stacks the course title and navigation beneath one another.
+ */
 .course-navbar-content {
     display: flex;
     flex-direction: column;
@@ -119,31 +170,38 @@ body {
     padding-left: 1.2rem;
 }
 
-
 /* ==========================================================================
    Title
    ========================================================================== */
 
+/*
+ * Positions the course title within the left-hand side of the header.
+ */
 .course-navbar-title {
-
     display: flex;
     align-items: center;
     min-height: 60px;
     padding-top: 0.6rem;
-
 }
 
+/*
+ * Defines the typography for the course title displayed in the header.
+ */
 .course-navbar-title h1 {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
 }
+
 
 /* ==========================================================================
    Navigation
    ========================================================================== */
 
+/*
+ * Constrains the navigation to the same width as the header content and adds spacing below the title.
+ */
 .course-navbar-menu {
     width: 100%;
     max-width: 1400px;
@@ -153,21 +211,28 @@ body {
     padding: 0.8rem 2.5rem 1.2rem;
 }
 
+/*
+ * Arranges the navigation links in a horizontal row that wraps on smaller screens.
+ */
 .course-navbar-links {
-
     display: flex;
     flex-wrap: wrap;
     gap: 2.75rem;
     align-items: center;
 }
 
+/*
+ * Removes the default paragraph styling applied by Quarto while preserving the link layout.
+ */
 .course-navbar-links p {
-
     display: flex;
     gap: 2.75rem;
     margin: 0;
 }
 
+/*
+ * Styles each navigation link within the course header.
+ */
 .course-navbar-link {
     position: relative;
 
@@ -183,32 +248,12 @@ body {
         transform .2s ease;
 }
 
+/*
+ * Highlights the navigation link when the user hovers over it.
+ */
 .course-navbar-link:hover {
     color: white;
     transform: translateY(-1px);
-}
-
-.course-navbar-link::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -6px;
-
-    width: 100%;
-    height: 0.7px;
-
-    background: #3f8d94;
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: transform .2s ease;
-}
-
-.course-navbar-link:hover::after {
-    transform: scaleX(1);
 }
 
 
@@ -216,6 +261,9 @@ body {
    Welcome
    ========================================================================== */
 
+/*
+ * Creates a two-column layout for the welcome text and supporting image.
+ */
 .course-welcome-layout {
     display: grid;
     grid-template-columns: 3fr 3fr;
@@ -223,10 +271,16 @@ body {
     align-items: start;
 }
 
+/*
+ * Adds consistent spacing around the welcome section.
+ */
 .course-welcome {
     padding: 1.0rem 2.5rem;
 }
 
+/*
+ * Defines the main course heading displayed at the top of the welcome section.
+ */
 .course-welcome h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -236,6 +290,9 @@ body {
     max-width: 24ch;
 }
 
+/*
+ * Arranges the course metadata, such as dates and location, in a horizontal row.
+ */
 .course-welcome-meta {
     display: flex;
     gap: 2rem;
@@ -243,6 +300,9 @@ body {
     margin-bottom: 1.0rem;
 }
 
+/*
+ * Aligns an individual metadata item with its accompanying icon.
+ */
 .course-welcome-item {
     display: flex;
     align-items: center;
@@ -251,11 +311,17 @@ body {
     font-size: 0.80rem;
 }
 
+/*
+ * Controls the displayed size of custom icons used within the metadata row.
+ */
 .course-welcome-icon {
     width: 18px;
     height: 18px;
 }
 
+/*
+ * Styles the introductory heading shown beneath the course metadata.
+ */
 .course-welcome h2 {
     color: #045c64;
     font-size: 1.2rem;
@@ -266,36 +332,54 @@ body {
     padding-bottom: 0;
 }
 
+/*
+ * Applies the SciLifeLab accent colour to Bootstrap icons used in the metadata.
+ */
 .course-welcome-item i {
     color: #9cc31c; /* SciLifeLab lime */
 }
 
+/*
+ * Limits the line length of the welcome text to improve readability.
+ */
 .course-welcome p {
     max-width: 55ch;
 }
 
+/*
+ * Aligns the welcome illustration alongside the introductory text.
+ */
 .course-welcome-image {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-
 /* ==========================================================================
    Upcoming card
    ========================================================================== */
 
+/*
+ * Adds spacing around the upcoming event section.
+ */
 .course-upcoming {
     padding: 1.5rem 2.5rem 0;
 }
 
+/*
+ * Separates the welcome section from the upcoming event card with a subtle divider.
+ */
 .course-upcoming-content {
     border-top: 1px solid #ececec;
     padding-top: 1.5rem;
- /* Pull divider to the top of the section spacing */
+
+    /* Pull divider to the top of the section spacing. */
     margin-top: -2rem;
 }
 
+/*
+ * Styles the section label displayed above the upcoming event card.
+ */
 .course-section-label {
     color: #045c64;
     font-size: 0.85rem;
@@ -304,12 +388,15 @@ body {
     text-transform: uppercase;
 }
 
+/*
+ * Creates the summary card highlighting the next scheduled course event.
+ */
 .course-upcoming-card {
     position: relative;
 
     display: grid;
-    grid-template-columns: 90px 1fr 150px;
-    gap: 2rem;
+    grid-template-columns: 80px 1fr 150px;
+    gap: 3rem;
 
     width: 100%;
 
@@ -322,6 +409,9 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,.03);
 }
 
+/*
+ * Adds the SciLifeLab accent stripe to the left edge of the event card.
+ */
 .course-upcoming-card::before {
     content: "";
 
@@ -337,7 +427,12 @@ body {
     border-radius: 8px 0 0 8px;
 }
 
+/*
+ * Arranges the event date as a vertically centred column.
+ */
 .course-upcoming-day {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -348,6 +443,23 @@ body {
     font-weight: 400;
 }
 
+/*
+ * Draws a divider between the date column and the event details.
+ */
+.course-upcoming-day::after {
+    content: "";
+    position: absolute;
+    right: -1rem;
+    top: 5%;
+    bottom: 5%;
+    width: 1px;
+
+    background: #ececec;
+}
+
+/*
+ * Emphasises the day of the month within the date column.
+ */
 .course-upcoming-date {
     color: #045c64;
     font-size: 2rem;
@@ -356,11 +468,306 @@ body {
     margin: 0.15rem 0;
 }
 
+/*
+ * Displays the month beneath the event date.
+ */
 .course-upcoming-month {
     color: #333;
     font-size: 0.80rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+}
+
+/*
+ * Displays the scheduled start time for the upcoming event.
+ */
+.course-upcoming-time {
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/*
+ * Highlights the event type using a coloured badge.
+ */
+.course-upcoming-type {
+    display: inline-block;
+
+    padding: 0.2rem 0.6rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    border-radius: 999px;
+    margin-left: 1rem;
+}
+/*
+ * Applies a distinct colour scheme to each event type.
+ */
+
+.course-type-lecture {
+    background: #e8f3f4;
+    color: #045c64;
+}
+
+.course-type-workshop {
+    background: #eef6e8;
+    color: #5f7f15;
+}
+
+.course-type-practical {
+    background: #fff2dc;
+    color: #9b6200;
+}
+
+.course-type-discussion {
+    background: #f3e8f8;
+    color: #6b3f8f;
+}
+
+.course-type-keynote {
+    background: #ececec;
+    color: #555;
+}
+
+/*
+ * Styles the title of the upcoming event.
+ */
+.course-upcoming-title {
+    margin: 0.75rem 0;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.35;
+
+    color: #222;
+}
+
+/*
+ * Aligns the presenter and location metadata beneath the event title.
+ */
+.course-upcoming-speaker,
+.course-upcoming-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: #777;
+    font-size: 0.80rem;
+
+    margin-top: 0.35rem;
+}
+
+/*
+ * Arranges the countdown and schedule link within the right-hand column of the card.
+ */
+.course-upcoming-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/*
+ * Displays the relative time remaining until the event begins.
+ */
+.course-upcoming-countdown {
+    font-size: 0.80rem;
+    color: #555;
+}
+
+/*
+ * Styles the link to the complete course schedule.
+ */
+.course-upcoming-link {
+    color: #045c64;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*
+ * Underlines the schedule link when hovered.
+ */
+.course-upcoming-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Course links
+   ========================================================================== */
+
+/*
+ * Wrapper around the homepage quick links section.
+ * Keeps the content aligned with the rest of the homepage.
+ */
+.course-links {
+    padding: 2rem 2.5rem 0;
+}
+
+/*
+ * Display the quick links as a responsive two-column grid.
+ */
+.course-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 0.5rem;
+}
+
+/*
+ * Layout for an individual quick link card.
+ */
+.course-link-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.8rem;
+
+    padding: 1rem 0;
+
+    border-top: 1px solid #ececec;
+}
+
+/*
+ * Styles the Bootstrap icon displayed beside each quick link.
+ */
+.course-link-icon {
+    color: #9cc31c;
+    font-size: 1.7rem;
+
+    flex-shrink: 0;
+
+    margin-top: 0.15rem;
+}
+
+/*
+ * Holds the title, description and link for each quick link.
+ */
+.course-link-content {
+    flex: 1;
+}
+
+/*
+ * Styles the title of the course link.
+ */
+.course-link-content h3 {
+    margin: 0 0 0.35rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #045c64;
+}
+
+.course-link-content p {
+    margin: 0 0 0.45rem;
+    font-size: 0.80rem;
+}
+
+/*
+ * Styles the links.
+ */
+.course-link-content a {
+    color: #045c64;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/*
+ * Underlines the quick links link when hovered.
+ */
+.course-link-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+/*
+ * Landing-page footer containing licence/build information on the left and
+ * the repository link on the right.
+ *
+ * The footer background can be changed with --lp-footer-bg in :root.
+ */
+.landing-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: auto;
+  padding: 0.75rem clamp(0.75rem, 2vw, 1rem);
+  background: #b8b8b8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================================================
+   Footer text
+   ========================================================================== */
+
+/* Position the footer metadata and allow it to use the available width. */
+.landing-footer__meta {
+  flex: 1 1 auto;
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+
+/* Typography used for licence and build information. */
+.landing-footer__meta p {
+  font-size: 0.7rem;
+  line-height: 1.15;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ==========================================================================
+   Footer repository link
+   ========================================================================== */
+
+/* Position the repository link on the right side of the footer. */
+.landing-footer__actions {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.landing-footer__image-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+/*
+ * Control the displayed size of the repository image/logo.
+ * Increase or decrease height to change its size.
+ */
+.landing-footer__image {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
+
+/* Keep links visible against the footer background. */
+.landing-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Change footer link colour on hover. */
+.landing-footer a:hover {
+  color: #045c64;
 }
 

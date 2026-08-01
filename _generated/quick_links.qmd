@@ -1,0 +1,70 @@
+<div class="course-links-grid">
+<div class="course-link-card">
+
+<i class="bi bi-calendar2-event course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Schedule</h3>
+
+<p>Full course programme</p>
+
+<a href="schedule.qmd">
+View schedule →
+</a>
+
+</div>
+
+</div>
+<div class="course-link-card">
+
+<i class="bi bi-folder course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Course content</h3>
+
+<p>Slides, exercises and resources</p>
+
+<a href="syllabus.qmd">
+View course content →
+</a>
+
+</div>
+
+</div>
+<div class="course-link-card">
+
+<i class="bi bi-geo-alt course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Practical information</h3>
+
+<p>Location, travel and contact information</p>
+
+<a href="practical.qmd">
+View practical information →
+</a>
+
+</div>
+
+</div>
+<div class="course-link-card">
+
+<i class="bi bi-people course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Course team</h3>
+
+<p>Meet the instructors</p>
+
+<a href="team.qmd">
+View course team →
+</a>
+
+</div>
+
+</div>
+</div>

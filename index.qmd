@@ -20,4 +20,8 @@ Component rendering is handled separately by the Python renderer.
 
 {{< include _sections/upcoming.qmd >}}
 
+{{< include _sections/quick-links.qmd >}}
+
+{{< include _sections/footer.qmd >}}
+
 :::

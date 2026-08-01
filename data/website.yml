@@ -4,16 +4,66 @@ website:
     content_label: "Course Content"
 
   pages:
-    schedule: true
-    practical: true
-    precourse: false
-    resources: false
-    faq: false
-    team_page: true
+
+    schedule:
+      enabled: true
+      title: "Schedule"
+      description: "Full course programme"
+      icon: "calendar2-event"
+      href: "schedule.qmd"
+
+    content:
+      enabled: true
+      title: "Course content"
+      description: "Slides, exercises and resources"
+      icon: "folder"
+      href: "syllabus.qmd"
+
+    practical:
+      enabled: true
+      title: "Practical information"
+      description: "Location, travel and contact information"
+      icon: "geo-alt"
+      href: "practical.qmd"
+
+    team:
+      enabled: true
+      title: "Course team"
+      description: "Meet the instructors"
+      icon: "people"
+      href: "team.qmd"
+
+    precourse:
+      enabled: false
+      title: "Before the course"
+      description: "Preparation and pre-course material"
+      icon: "clipboard-check"
+      href: "precourse.qmd"
+
+    resources:
+      enabled: false
+      title: "Resources"
+      description: "Additional reading and useful links"
+      icon: "bookshelf"
+      href: "resources.qmd"
+
+    faq:
+      enabled: false
+      title: "FAQ"
+      description: "Frequently asked questions"
+      icon: "question-circle"
+      href: "faq.qmd"
 
   homepage:
+
     announcements: true
     upcoming: true
+
+    quick_links:
+      - schedule
+      - content
+      - practical
+      - team
 
   registration:
     enabled: false

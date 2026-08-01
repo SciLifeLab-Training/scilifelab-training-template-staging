@@ -20,6 +20,8 @@ from renderers.navbar import (
 )
 from renderers.upcoming import render_upcoming
 
+from renderers.quick_links import render_quick_links
+
 
 def main():
     print("Running course renderer...")
@@ -46,6 +48,11 @@ def main():
     write_partial(
     "upcoming.qmd",
     render_upcoming(events),
+)
+
+    write_partial(
+    "quick_links.qmd",
+    render_quick_links(website),
 )
 
 if __name__ == "__main__":

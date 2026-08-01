@@ -1,8 +1,9 @@
-<!--
-Quick links.
+::: {.course-links}
 
-Navigation cards are generated.
-Descriptions and layout are author editable.
--->
+<div class="course-section-label">
+COURSE LINKS
+</div>
 
-Placeholder for the quick links component.
+{{< include _generated/quick_links.qmd >}}
+
+:::

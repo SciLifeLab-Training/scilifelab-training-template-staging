@@ -1,4 +1,5 @@
 <a class="course-navbar-link" href="index.qmd">Overview</a>
 <a class="course-navbar-link" href="schedule.qmd">Schedule</a>
 <a class="course-navbar-link" href="practical.qmd">Practical info</a>
-<a class="course-navbar-link" href="team.qmd">Team</a>
+<a class="course-navbar-link" href="resources.qmd">Resources</a>
+<a class="course-navbar-link" href="faq.qmd">FAQ</a>
