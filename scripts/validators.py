@@ -39,3 +39,29 @@ def validate_schedule(events):
         raise ValueError("schedule.yml must contain an 'events' list")
 
     return events
+
+
+def validate_team(team):
+
+    if not isinstance(team, list):
+        raise ValueError("team.yml must contain a 'team' list")
+
+    required = [
+        "name",
+        "roles",
+        "affiliation",
+        "image",
+    ]
+
+    for member in team:
+
+        member_name = member.get("name", "<unnamed member>")
+
+        for field in required:
+
+            if not member.get(field):
+                raise ValueError(
+                    f"Team member '{member_name}' is missing '{field}'"
+                )
+
+    return team

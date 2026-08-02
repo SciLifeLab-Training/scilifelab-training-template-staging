@@ -1,0 +1,50 @@
+<div class="course-team-member">
+
+<img
+    class="course-team-photo"
+    src="img/photos/InekeLuijten.png"
+    alt="Jane Doe">
+
+<div class="course-team-details">
+
+<div class="course-team-name">
+Jane Doe
+</div>
+
+<div class="course-team-role">
+Course lead
+</div>
+
+<div class="course-team-affiliation">
+NBIS
+</div>
+
+</div>
+
+</div>
+
+
+<div class="course-team-member">
+
+<img
+    class="course-team-photo"
+    src="img/photos/ElinKronander.png"
+    alt="John Smith">
+
+<div class="course-team-details">
+
+<div class="course-team-name">
+John Smith
+</div>
+
+<div class="course-team-role">
+Instructor
+</div>
+
+<div class="course-team-affiliation">
+SciLifeLab
+</div>
+
+</div>
+
+</div>

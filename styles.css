@@ -128,7 +128,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0.4rem 1.25rem;
+    padding: 0.2rem 1.25rem;
 }
 
 
@@ -156,7 +156,7 @@ body {
 .course-navbar-logo {
     display: block;
     width: 55px;
-    padding-top: 0.6rem;
+    padding-top: 0.3rem;
 }
 
 /*
@@ -165,7 +165,7 @@ body {
 .course-navbar-content {
     display: flex;
     flex-direction: column;
-    gap: .75rem;
+    gap: .45rem;
 
     padding-left: 1.2rem;
 }
@@ -180,8 +180,8 @@ body {
 .course-navbar-title {
     display: flex;
     align-items: center;
-    min-height: 60px;
-    padding-top: 0.6rem;
+    min-height: 50px;
+    padding-top: 0.3rem;
 }
 
 /*
@@ -189,7 +189,7 @@ body {
  */
 .course-navbar-title h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.3;
 }
@@ -208,7 +208,7 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
 
-    padding: 0.8rem 2.5rem 1.2rem;
+    padding: 0.5rem 2.5rem 0.8rem;
 }
 
 /*
@@ -235,27 +235,38 @@ body {
  */
 .course-navbar-link {
     position: relative;
-
     color: rgba(255,255,255,.9);
-
     text-decoration: none;
-
-    font-size: 0.95rem;
-    font-weight: 400;
-
-    transition:
-        color .2s ease,
-        transform .2s ease;
+    font-size: 0.90rem;
+    font-weight: 600;
 }
 
-/*
- * Highlights the navigation link when the user hovers over it.
- */
-.course-navbar-link:hover {
+.course-navbar-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 0.9px;
+    background: #347F85;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease;
+}
+
+.course-navbar-link:hover::after {
+    transform: scaleX(1);
+}
+
+.course-navbar-link-active {
     color: white;
-    transform: translateY(-1px);
+    font-weight: 600;
 }
 
+.course-navbar-link-active::after {
+    transform: scaleX(1);
+}
 
 /* ==========================================================================
    Welcome
@@ -616,6 +627,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2.5rem;
     row-gap: 0.5rem;
+    border-bottom: 1px solid #ececec;
 }
 
 /*
@@ -688,6 +700,202 @@ body {
 
 
 
+/* ==========================================================================
+   Homepage bottom layout
+   ========================================================================== */
+
+/*
+ * Displays the announcements and team preview side by side.
+ */
+.course-home-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 0.5rem;
+
+}
+
+/* ==========================================================================
+   Course announcements
+   ========================================================================== */
+/*
+ * Wrapper around the homepage announcements section.
+ * Aligns the content with the rest of the homepage.
+ */
+.course-announcements {
+    padding: 2rem 2.5rem 0;
+}
+
+/*
+ * Individual announcement displayed in the homepage timeline.
+ */
+.course-announcement {
+    position: relative;
+
+    padding-left: 1.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.course-announcements .course-section-label {
+    margin-bottom: 1.5rem;
+}
+
+.course-announcements-content {
+    padding-top: 1.5rem;
+    margin-top: -2rem;
+}
+
+.course-announcement::before {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: 0.7rem;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #e5e5e5;
+}
+
+.course-announcement::after {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    top: 0.35rem;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #9cc31c;
+}
+
+.course-announcement-date {
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.course-announcement-title {
+    margin: 0 0 0.3rem;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: #333;
+}
+
+.course-announcement p {
+    margin: 0;
+
+    color: #666;
+    font-size: 0.80rem;
+    line-height: 1.5;
+
+    max-width: 55ch;
+}
+
+.course-announcement:last-of-type::before {
+    bottom: 1.2rem;
+}
+
+.course-announcements-link {
+    display: inline-block;
+
+    margin-top: 0.5rem;
+
+    color: #045c64;
+
+    font-size: 0.80rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.course-announcements-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Course team
+   ========================================================================== */
+
+/*
+ * Wrapper around the homepage course team section.
+ * Aligns the section with the rest of the homepage.
+ */
+.course-team {
+    padding: 2rem 2.5rem 0;
+}
+
+.course-team-content {
+    padding-top: 1.5rem;
+    margin-top: -2rem;
+}
+
+.course-team-member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.course-team-photo {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+.course-team-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.course-team-details p {
+    margin: 0;
+}
+
+.course-team-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.course-team-role {
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.course-team-affiliation {
+    font-size: 0.80rem;
+    margin: 0;
+}
+
+.course-team-link {
+    color: #045c64;
+
+    font-size: 0.80rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.course-team-link:hover {
+    text-decoration: underline;
+}
 
 
 /* ==========================================================================
@@ -773,112 +981,4 @@ body {
 /* Change footer link colour on hover. */
 .landing-footer a:hover {
   color: #045c64;
-}
-
-/* ==========================================================================
-   Course announcements
-   ========================================================================== */
-/*
- * Wrapper around the homepage announcements section.
- * Aligns the content with the rest of the homepage.
- */
-.course-announcements {
-    padding: 2rem 2.5rem 0;
-}
-
-/*
- * Individual announcement displayed in the homepage timeline.
- */
-.course-announcement {
-    position: relative;
-
-    padding-left: 1.8rem;
-    padding-bottom: 0.8rem;
-}
-
-.course-announcements .course-section-label {
-    margin-bottom: 1.5rem;
-}
-
-.course-announcements-content {
-    border-top: 1px solid #ececec;
-    padding-top: 1.5rem;
-    margin-top: -2rem;
-}
-
-.course-announcement::before {
-    content: "";
-
-    position: absolute;
-
-    left: 7px;
-    top: 0.7rem;
-    bottom: 0;
-
-    width: 1px;
-
-    background: #e5e5e5;
-}
-
-.course-announcement::after {
-    content: "";
-
-    position: absolute;
-
-    left: 3px;
-    top: 0.35rem;
-
-    width: 9px;
-    height: 9px;
-
-    border-radius: 50%;
-
-    background: #9cc31c;
-}
-
-.course-announcement-date {
-    font-size: 0.80rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.25rem;
-}
-
-.course-announcement-title {
-    margin: 0 0 0.3rem;
-
-    font-size: 0.85rem;
-    font-weight: 600;
-
-    color: #333;
-}
-
-.course-announcement p {
-    margin: 0;
-
-    color: #666;
-    font-size: 0.80rem;
-    line-height: 1.5;
-
-    max-width: 55ch;
-}
-
-.course-announcement:last-of-type::before {
-    bottom: 1.2rem;
-}
-
-.course-announcements-link {
-    display: inline-block;
-
-    margin-top: 0.5rem;
-
-    color: #045c64;
-
-    font-size: 0.80rem;
-    font-weight: 600;
-
-    text-decoration: none;
-}
-
-.course-announcements-link:hover {
-    text-decoration: underline;
 }

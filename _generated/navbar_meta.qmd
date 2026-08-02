@@ -1,1 +1,3 @@
-<h1 class="course-navbar-title">Long course title for testing purposes</h1>
+<div class="course-navbar-title">
+<h1>Long course title for testing purposes</h1>
+</div>

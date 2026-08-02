@@ -1,7 +1,17 @@
-<!--
-Homepage team preview.
+::: {.course-team}
 
-Generated from team.yml.
--->
+<div class="course-team-content">
 
-Placeholder for team preview component.
+<div class="course-section-label">
+COURSE TEAM
+</div>
+
+{{< include _generated/team.qmd >}}
+
+<a class="course-team-link" href="team.qmd">
+View full team →
+</a>
+
+</div>
+
+:::

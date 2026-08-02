@@ -22,7 +22,13 @@ Component rendering is handled separately by the Python renderer.
 
 {{< include _sections/quick-links.qmd >}}
 
+::: {.course-home-bottom}
+
 {{< include _sections/announcements.qmd >}}
+
+{{< include _sections/team-preview.qmd >}}
+
+:::
 
 {{< include _sections/footer.qmd >}}
 

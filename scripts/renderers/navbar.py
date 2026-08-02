@@ -1,14 +1,15 @@
-
 def render_navbar_meta(course):
 
     title = course["title"]
 
     return f"""
-<h1 class="course-navbar-title">{title}</h1>
+<div class="course-navbar-title">
+<h1>{title}</h1>
+</div>
 """.strip()
 
 
-def render_navbar_links(website):
+def render_navbar_links(website, current_page):
 
     pages = website["pages"]
 
@@ -35,8 +36,13 @@ def render_navbar_links(website):
 
     for title, page in links:
 
+        classes = "course-navbar-link"
+
+        if page == current_page:
+            classes += " course-navbar-link-active"
+
         html.append(
-            f'<a class="course-navbar-link" href="{page}">{title}</a>'
+            f'<a class="{classes}" href="{page}">{title}</a>'
         )
 
     return "\n".join(html)

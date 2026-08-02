@@ -21,3 +21,6 @@ def load_website():
 
 def load_schedule():
     return load_yaml("schedule.yml")["events"]
+
+def load_team():
+    return load_yaml("team.yml")["team"]
