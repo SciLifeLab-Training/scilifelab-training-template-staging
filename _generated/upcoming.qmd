@@ -1,7 +1,7 @@
 <div class="course-upcoming-card">
 
 <div class="course-upcoming-day">
-<div class="course-upcoming-weekday">MONDAY</div>
+<div class="course-upcoming-weekday">DAY 1</div>
 <div class="course-upcoming-date">30</div>
 <div class="course-upcoming-month">JUN</div>
 </div>

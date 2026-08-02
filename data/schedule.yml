@@ -2,9 +2,45 @@ events:
 
   - title: "Test title for mockup"
     type: practical
-    group: "Monday"
+    group: "Day 1"
     start: 2026-06-30T09:00:00
     end: 2026-06-30T10:30:00
+    all_day: false
+    location: "SciLifeLab Solna"
+    people:
+      - Jane Doe
+    description: ""
+    content:
+
+  - title: "Test title for mockup 2"
+    type: lecture
+    group: "Day 1"
+    start: 2026-06-30T11:00:00
+    end: 2026-06-30T12:00:00
+    all_day: false
+    location: "SciLifeLab Solna"
+    people:
+      - Jane Doe
+    description: ""
+    content:
+
+  - title: "Test title for mockup 3"
+    type: break
+    group: "Day 1"
+    start: 2026-06-30T12:00:00
+    end: 2026-06-30T13:00:00
+    all_day: false
+    location: "SciLifeLab Solna"
+    people:
+      - Jane Doe
+    description: ""
+    content:
+
+  - title: "Test title for mockup 4"
+    type: practical
+    group: "Day 2"
+    start: 2026-07-01T09:00:00
+    end: 2026-07-01T10:30:00
     all_day: false
     location: "SciLifeLab Solna"
     people:

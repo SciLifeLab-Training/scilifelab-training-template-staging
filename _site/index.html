@@ -32,7 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -129,7 +128,7 @@ Long course title for testing purposes
 </div>
 <div class="course-navbar-menu">
 <div class="course-navbar-links">
-<p><a class="course-navbar-link course-navbar-link-active" href="./index.html">Overview</a> <a class="course-navbar-link" href="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="practical.qmd">Practical info</a> <a class="course-navbar-link" href="resources.qmd">Resources</a> <a class="course-navbar-link" href="faq.qmd">FAQ</a></p>
+<p><a class="course-navbar-link course-navbar-link-active" href="./index.html">Overview</a> <a class="course-navbar-link" href="./schedule.html">Schedule</a> <a class="course-navbar-link" href="practical.qmd">Practical info</a> <a class="course-navbar-link" href="resources.qmd">Resources</a> <a class="course-navbar-link" href="faq.qmd">FAQ</a></p>
 </div>
 </div>
 </div>
@@ -142,7 +141,7 @@ Long course title for testing purposes
 <p><span class="course-welcome-item"> <i class="bi bi-geo-alt"></i> SciLifeLab Stockholm </span></p>
 </div>
 <section id="welcome-to-the-course" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-the-course">Welcome to the course</h2>
+<h2 data-anchor-id="welcome-to-the-course">Welcome to the course</h2>
 <p>Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course. Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course.</p>
 </section>
 </section>
@@ -159,7 +158,7 @@ Long course title for testing purposes
 <div class="course-upcoming-card">
 <div class="course-upcoming-day">
 <div class="course-upcoming-weekday">
-MONDAY
+DAY 1
 </div>
 <div class="course-upcoming-date">
 30
@@ -172,7 +171,7 @@ JUN
 <div class="course-upcoming-top">
 <span class="course-upcoming-time">09:00–10:30</span> <span class="course-upcoming-type course-type-practical">Practical</span>
 </div>
-<h3 class="course-upcoming-title anchored">
+<h3 class="course-upcoming-title">
 Test title for mockup
 </h3>
 <div class="course-upcoming-speaker">
@@ -186,7 +185,7 @@ Test title for mockup
 <div class="course-upcoming-countdown">
 Starts in 2 days
 </div>
-<p><a class="course-upcoming-link" href="schedule.qmd">Full schedule →</a></p>
+<p><a class="course-upcoming-link" href="./schedule.html">Full schedule →</a></p>
 </div>
 </div>
 </div>
@@ -199,19 +198,19 @@ Starts in 2 days
 <div class="course-link-card">
 <p><i class="bi bi-calendar2-event course-link-icon"></i></p>
 <div class="course-link-content">
-<h3 class="anchored">
+<h3>
 Schedule
 </h3>
 <p>
 Full course programme
 </p>
-<p><a href="schedule.qmd"> View schedule → </a></p>
+<p><a href="./schedule.html"> View schedule → </a></p>
 </div>
 </div>
 <div class="course-link-card">
 <p><i class="bi bi-folder course-link-icon"></i></p>
 <div class="course-link-content">
-<h3 class="anchored">
+<h3>
 Course content
 </h3>
 <p>
@@ -223,7 +222,7 @@ Slides, exercises and resources
 <div class="course-link-card">
 <p><i class="bi bi-geo-alt course-link-icon"></i></p>
 <div class="course-link-content">
-<h3 class="anchored">
+<h3>
 Practical information
 </h3>
 <p>
@@ -235,7 +234,7 @@ Location, travel and contact information
 <div class="course-link-card">
 <p><i class="bi bi-people course-link-icon"></i></p>
 <div class="course-link-content">
-<h3 class="anchored">
+<h3>
 Course team
 </h3>
 <p>
@@ -256,7 +255,7 @@ Meet the instructors
 <div class="course-announcement-date">
 <p>10 May</p>
 </div>
-<h3 class="course-announcement-title anchored">
+<h3 class="course-announcement-title">
 Remember to bring your laptop
 </h3>
 <p>Please bring your laptop to all workshop sessions.</p>
@@ -265,7 +264,7 @@ Remember to bring your laptop
 <div class="course-announcement-date">
 <p>4 May</p>
 </div>
-<h3 class="course-announcement-title anchored">
+<h3 class="course-announcement-title">
 Pre-course material is now available
 </h3>
 <p>You can now access the reading in the Course content section.</p>
@@ -344,13 +343,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

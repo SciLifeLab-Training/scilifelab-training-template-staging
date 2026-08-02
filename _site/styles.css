@@ -982,3 +982,68 @@ body {
 .landing-footer a:hover {
   color: #045c64;
 }
+
+
+
+
+/* ==========================================================================
+   SCHEDULE PAGE
+   ========================================================================== */
+
+.course-schedule {
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 2rem;
+
+    max-width: 1400px;
+    margin: 2rem auto;
+
+    padding: 0 2.5rem;
+}
+
+.course-schedule-details {
+
+    display:flex;
+    flex-direction:column;
+}
+
+.course-schedule-sidebar {
+
+    position: sticky;
+    top: 2rem;
+
+    align-self: start;
+}
+
+.course-schedule-timeline {
+
+    min-width: 0;
+}
+
+.course-schedule-event {
+
+    display: grid;
+
+    grid-template-columns:
+        140px
+        minmax(0,1fr)
+        220px;
+
+    column-gap: 2rem;
+
+    padding: 1.1rem 0;
+
+    border-top: 1px solid #ececec;
+}
+
+.course-schedule-day-link {
+    border-bottom: 1px solid #ececec;
+}
+
+.course-schedule-day-link a {
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}

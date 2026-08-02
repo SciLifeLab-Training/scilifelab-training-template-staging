@@ -24,6 +24,7 @@ from renderers.navbar import (
 from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
 from renderers.team import render_team
+from renderers.schedule import render_schedule
 
 
 def main():
@@ -67,6 +68,11 @@ def main():
         render_team(team),
     )
 
+    write_partial(
+    "schedule.qmd",
+    render_schedule(events),
+)
 
 if __name__ == "__main__":
     main()
+
