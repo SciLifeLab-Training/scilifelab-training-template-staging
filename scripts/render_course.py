@@ -46,12 +46,9 @@ def main():
     )
 
     write_partial(
-    "navbar_links.qmd",
-    render_navbar_links(
-        website,
-        current_page="index.qmd",
-    ),
-)
+        "navbar_links.qmd",
+        render_navbar_links(website),
+    )
 
     write_partial(
         "upcoming.qmd",
@@ -70,7 +67,7 @@ def main():
 
     write_partial(
     "schedule.qmd",
-    render_schedule(events),
+    render_schedule(events, course),
 )
 
 if __name__ == "__main__":

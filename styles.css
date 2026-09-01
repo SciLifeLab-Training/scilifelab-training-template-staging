@@ -2,70 +2,37 @@
    Fonts
    ========================================================================== */
 
-/*
- * Imports the Lato font family used throughout the course website.
- */
+/* Imports the Lato font family used throughout the course website */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap");
+
+
+/* ==========================================================================
+   Global variables
+   ========================================================================== */
+
+/* Defines shared layout values used across the course website */
+:root {
+    --course-content-width: 1400px;
+    --course-content-padding: 2.5rem;
+}
 
 
 /* ==========================================================================
    Quarto overrides
    ========================================================================== */
 
-/*
- * Removes Quarto's default page title since the course header renders its own.
- */
+/* Hides Quarto's default title block because page titles are rendered as part of the course website components instead */
 #title-block-header {
     display: none;
 }
 
-/*
- * Allows the course layout to span the full browser width without Quarto margins.
- */
-#quarto-content {
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/*
- * Allow the course content to occupy the full height of Quarto's page grid.
- */
-#quarto-content.page-rows-contents > main.content {
-    grid-row: content-top / page-bottom;
-}
 
 
-/*
- * Removes Quarto's default content spacing and ensures the page fills the viewport.
- */
-main.content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* ==========================================================================
+   Base page
+   ========================================================================== */
 
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/*
- * Removes the default container spacing applied by Quarto.
- */
-.quarto-container {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/*
- * Allows the page to occupy the full height of the browser window.
- */
-html {
-    min-height: 100%;
-}
-
-/*
- * Defines the global typography and removes the browser's default page margin.
- */
+/* Removes the browser's default body margin and establishes Lato as the default font for the website*/
 body {
     margin: 0;
     min-height: 100vh;
@@ -73,30 +40,76 @@ body {
     font-size: 0.90rem;
 }
 
-/*
- * Provides the main flex container that stacks the header and page sections vertically.
- */
-.course-shell {
-    flex: 1;
+#quarto-content {
+    width: 100%;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    min-height: 100vh;
+}
+
+#quarto-content.page-rows-contents {
+    grid-template-rows: [content-top] 1fr [content-bottom];
+}
+
+#quarto-content.page-rows-contents > main.content {
+    grid-row: content-top;
+    min-height: 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+}
+
+#quarto-content main.content {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 
 /* ==========================================================================
-   Course header
+   Shared page content
    ========================================================================== */
 
-/*
- * Creates the full-width course header containing the title, branding and navigation.
- */
-.course-navbar {
+/* Gives the main course content areas a shared maximum width and horizontal alignment*/
+.course-page-header,
+.course-welcome,
+.course-links,
+.course-announcements,
+.course-team,
+.course-schedule {
     width: 100%;
-    position: relative;
+    max-width: var(--course-content-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
 
+/* Provides the standard horizontal and vertical spacing for page headers */
+.course-page-header {
+    padding: 1rem var(--course-content-padding);
+}
+
+
+/* ==========================================================================
+   Course page shell
+   ========================================================================== */
+
+/* Provides the main vertical layout for each course page.The minimum height allows the page content to fill the viewport when the page is shorter than the available screen height */
+.course-shell {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+/* ==========================================================================
+   COURSE NAVBAR
+   ========================================================================== */
+
+/* Provides the full-width teal gradient background for the course navbar. The rounded bottom corners visually separate the navbar from the page content below it */
+.course-navbar {
+    width: 100%;
 
     background:
         linear-gradient(
@@ -107,174 +120,150 @@ body {
         );
 
     color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    border-radius: 0 0 5px 5px;
 }
 
-
-/* ==========================================================================
-   Top row
-   ========================================================================== */
-
-/*
- * Arranges the course title and logo into a two-column layout within the header.
- */
+/* Arranges the course title, navigation menu, and SciLifeLab logo into a two-column layout. The title and menu occupy the left column while the logo occupies the right column */
 .course-navbar-layout {
     display: grid;
-    grid-template-columns: 1fr 70px;
-    column-gap: 2rem;
-    align-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
 
     width: 100%;
-    max-width: 1400px;
+    max-width: var(--course-content-width);
+
     margin: 0 auto;
+    padding: 1rem var(--course-content-padding);
+
     box-sizing: border-box;
-    padding: 0.2rem 1.25rem;
 }
 
+/* Allows the title and navigation menu to participate directly in the navbar grid rather than being treated as a single grid item */
+.course-navbar-content {
+    display: contents;
+}
 
-/* ==========================================================================
-   Logo
-   ========================================================================== */
+/* ======= Course title ========= */
 
-/*
- * Aligns the SciLifeLab logo to the top-right corner of the header.
- */
+/* Places the course title in the upper-left area of the navbar */
+.course-navbar-title {
+    grid-column: 1;
+    grid-row: 1;
+
+    justify-self: start;
+    align-self: center;
+}
+
+/* Styles the course title displayed in the navbar */
+.course-navbar-title h1 {
+    margin: 0;
+
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+}
+
+/* ======= Course logo ========= */
+
+/* Places the logo in the upper-right area of the navbar */
 .course-navbar-brand {
+    grid-column: 2;
+    grid-row: 1;
+
     justify-self: end;
     align-self: start;
 }
 
-/*
- * Removes the default paragraph spacing around the logo inserted by Quarto.
- */
+/* Removes the default paragraph spacing that Quarto may add around the logo element */
 .course-navbar-brand p {
     margin: 0;
 }
-/*
- * Controls the displayed size and spacing of the SciLifeLab logo.
- */
+
+/* Controls the displayed size of the SciLifeLab logo while preserving its original aspect ratio */
 .course-navbar-logo {
     display: block;
-    width: 55px;
-    padding-top: 0.3rem;
+    width: 180px;
+    height: auto;
 }
 
-/*
- * Stacks the course title and navigation beneath one another.
- */
-.course-navbar-content {
-    display: flex;
-    flex-direction: column;
-    gap: .45rem;
+/* ======= Navigation menu ========= */
 
-    padding-left: 1.2rem;
-}
-
-/* ==========================================================================
-   Title
-   ========================================================================== */
-
-/*
- * Positions the course title within the left-hand side of the header.
- */
-.course-navbar-title {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    padding-top: 0.3rem;
-}
-
-/*
- * Defines the typography for the course title displayed in the header.
- */
-.course-navbar-title h1 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
-
-/*
- * Constrains the navigation to the same width as the header content and adds spacing below the title.
- */
+/* Places the navigation menu below the course title in the left column of the navbar */
 .course-navbar-menu {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    grid-column: 1;
+    grid-row: 2;
 
-    padding: 0.5rem 2.5rem 0.8rem;
+    justify-self: start;
+
+    padding-top: 0.85rem;
 }
 
-/*
- * Arranges the navigation links in a horizontal row that wraps on smaller screens.
- */
+/* Displays the navigation links horizontally with consistent spacing */
 .course-navbar-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.75rem;
     align-items: center;
+
+    margin: 0;
+    padding: 0;
 }
 
-/*
- * Removes the default paragraph styling applied by Quarto while preserving the link layout.
- */
+/* Quarto may wrap the navigation links in a paragraph. This makes that wrapper behave like the navigation link container and removes its default paragraph spacing */
 .course-navbar-links p {
     display: flex;
-    gap: 2.75rem;
+    align-items: center;
+
+    gap: 2.5rem;
+
     margin: 0;
+    padding: 0;
 }
 
-/*
- * Styles each navigation link within the course header.
- */
+/* ======= Individual navigation links ========= */
+
+/* Defines the typography and appearance shared by all navbar links */
 .course-navbar-link {
-    position: relative;
-    color: rgba(255,255,255,.9);
+    display: inline-block;
+
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 0.80rem;
+    font-weight: 400;
+    line-height: 0.8;
+
     text-decoration: none;
-    font-size: 0.90rem;
-    font-weight: 600;
+    border-radius: 6px;
+
+    transition:
+        color 0.15s ease,
+        background-color 0.15s ease;
+}
+/* Brightens navigation links when the pointer is over them */
+.course-navbar-link:hover {
+    color: white;
 }
 
-.course-navbar-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 0.9px;
-    background: #347F85;
+/* ======= Active navigation link ========= */
 
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .2s ease;
-}
-
-.course-navbar-link:hover::after {
-    transform: scaleX(1);
-}
-
+/* Highlights the page currently being viewed in the navigation menu */
 .course-navbar-link-active {
+    padding: 0.45rem 0.85rem;
+
     color: white;
     font-weight: 600;
+
+    background: #43858B;
+    border-radius: 6px;
 }
 
-.course-navbar-link-active::after {
-    transform: scaleX(1);
-}
 
 /* ==========================================================================
-   Welcome
+   WELCOME SECTION
    ========================================================================== */
 
-/*
- * Creates a two-column layout for the welcome text and supporting image.
- */
+/* Creates a two-column layout for the welcome text and supporting image */
 .course-welcome-layout {
     display: grid;
     grid-template-columns: 3fr 3fr;
@@ -282,16 +271,12 @@ body {
     align-items: start;
 }
 
-/*
- * Adds consistent spacing around the welcome section.
- */
+/* Adds consistent spacing around the welcome section */
 .course-welcome {
-    padding: 1.0rem 2.5rem;
+    padding: 1rem var(--course-content-padding);
 }
 
-/*
- * Defines the main course heading displayed at the top of the welcome section.
- */
+/* Styles the main course heading displayed at the top of the welcome section */
 .course-welcome h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -301,9 +286,7 @@ body {
     max-width: 24ch;
 }
 
-/*
- * Arranges the course metadata, such as dates and location, in a horizontal row.
- */
+/* Arranges the course metadata, such as dates and location, in a horizontal row */
 .course-welcome-meta {
     display: flex;
     gap: 2rem;
@@ -311,9 +294,7 @@ body {
     margin-bottom: 1.0rem;
 }
 
-/*
- * Aligns an individual metadata item with its accompanying icon.
- */
+/* Aligns an individual metadata item with its accompanying icon */
 .course-welcome-item {
     display: flex;
     align-items: center;
@@ -322,17 +303,13 @@ body {
     font-size: 0.80rem;
 }
 
-/*
- * Controls the displayed size of custom icons used within the metadata row.
- */
+/* Controls the displayed size of custom icons used within the metadata row */
 .course-welcome-icon {
     width: 18px;
     height: 18px;
 }
 
-/*
- * Styles the introductory heading shown beneath the course metadata.
- */
+/* Styles the introductory heading shown beneath the course metadata */
 .course-welcome h2 {
     color: #045c64;
     font-size: 1.2rem;
@@ -343,23 +320,17 @@ body {
     padding-bottom: 0;
 }
 
-/*
- * Applies the SciLifeLab accent colour to Bootstrap icons used in the metadata.
- */
+/* Applies the SciLifeLab accent colour to Bootstrap icons used in the metadata */
 .course-welcome-item i {
     color: #9cc31c; /* SciLifeLab lime */
 }
 
-/*
- * Limits the line length of the welcome text to improve readability.
- */
+/* Limits the line length of the welcome text to improve readability */
 .course-welcome p {
     max-width: 55ch;
 }
 
-/*
- * Aligns the welcome illustration alongside the introductory text.
- */
+/* Aligns the welcome illustration alongside the introductory text */
 .course-welcome-image {
     display: flex;
     justify-content: center;
@@ -367,19 +338,10 @@ body {
 }
 
 /* ==========================================================================
-   Upcoming card
+   UPCOMING SECTION
    ========================================================================== */
 
-/*
- * Adds spacing around the upcoming event section.
- */
-.course-upcoming {
-    padding: 1.5rem 2.5rem 0;
-}
-
-/*
- * Separates the welcome section from the upcoming event card with a subtle divider.
- */
+   /* Separates the welcome section from the upcoming event card with a subtle divider */
 .course-upcoming-content {
     border-top: 1px solid #ececec;
     padding-top: 1.5rem;
@@ -388,9 +350,12 @@ body {
     margin-top: -2rem;
 }
 
-/*
- * Styles the section label displayed above the upcoming event card.
- */
+/* Adds spacing around the upcoming event section */
+.course-upcoming {
+    padding: 1.5rem 2.5rem 0;
+}
+
+/* Styles the section label displayed above the upcoming event card */
 .course-section-label {
     color: #045c64;
     font-size: 0.85rem;
@@ -399,9 +364,7 @@ body {
     text-transform: uppercase;
 }
 
-/*
- * Creates the summary card highlighting the next scheduled course event.
- */
+/* Creates the summary card highlighting the next scheduled course event */
 .course-upcoming-card {
     position: relative;
 
@@ -410,7 +373,6 @@ body {
     gap: 3rem;
 
     width: 100%;
-
     padding: 1.5rem 2rem;
 
     background: white;
@@ -420,9 +382,7 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,.03);
 }
 
-/*
- * Adds the SciLifeLab accent stripe to the left edge of the event card.
- */
+/* Adds the accent stripe to the left edge of the event card */
 .course-upcoming-card::before {
     content: "";
 
@@ -438,9 +398,7 @@ body {
     border-radius: 8px 0 0 8px;
 }
 
-/*
- * Arranges the event date as a vertically centred column.
- */
+/* Arranges the event date as a vertically centered column */
 .course-upcoming-day {
     position: relative;
 
@@ -454,9 +412,25 @@ body {
     font-weight: 400;
 }
 
-/*
- * Draws a divider between the date column and the event details.
- */
+/* Styles the day of the month within the date column */
+.course-upcoming-date {
+    color: #045c64;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0.15rem 0;
+}
+
+/* Styles the month beneath the event date */
+.course-upcoming-month {
+    color: #333;
+    font-size: 0.80rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Draws a divider between the date column and the event details */
 .course-upcoming-day::after {
     content: "";
     position: absolute;
@@ -468,43 +442,17 @@ body {
     background: #ececec;
 }
 
-/*
- * Emphasises the day of the month within the date column.
- */
-.course-upcoming-date {
-    color: #045c64;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin: 0.15rem 0;
-}
-
-/*
- * Displays the month beneath the event date.
- */
-.course-upcoming-month {
-    color: #333;
-    font-size: 0.80rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-/*
- * Displays the scheduled start time for the upcoming event.
- */
-.course-upcoming-time {
+/* Displays the scheduled start time for the upcoming event */
+.course-upcoming-time,
+.course-schedule-time {
     font-size: 0.80rem;
     font-weight: 600;
     color: #555;
 }
 
-/*
- * Highlights the event type using a coloured badge.
- */
+/* Highlights the event type using a coloured badge */
 .course-upcoming-type {
     display: inline-block;
-
     padding: 0.2rem 0.6rem;
 
     font-size: 0.75rem;
@@ -513,9 +461,8 @@ body {
     border-radius: 999px;
     margin-left: 1rem;
 }
-/*
- * Applies a distinct colour scheme to each event type.
- */
+
+/* Applies a distinct colour scheme to each event type */
 
 .course-type-lecture {
     background: #e8f3f4;
@@ -542,22 +489,21 @@ body {
     color: #555;
 }
 
-/*
- * Styles the title of the upcoming event.
- */
+.course-type-break {
+    background: #eceff1;
+    color: #5f6b72;
+}
+
+/* Styles the title of the upcoming event */
 .course-upcoming-title {
     margin: 0.75rem 0;
-
     font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.35;
-
     color: #222;
 }
 
-/*
- * Aligns the presenter and location metadata beneath the event title.
- */
+/* Aligns the presenter and location metadata beneath the event title */
 .course-upcoming-speaker,
 .course-upcoming-location {
     display: flex;
@@ -570,9 +516,7 @@ body {
     margin-top: 0.35rem;
 }
 
-/*
- * Arranges the countdown and schedule link within the right-hand column of the card.
- */
+/* Arranges the countdown and schedule link within the right-hand column of the card */
 .course-upcoming-status {
     display: flex;
     flex-direction: column;
@@ -581,17 +525,13 @@ body {
     text-align: right;
 }
 
-/*
- * Displays the relative time remaining until the event begins.
- */
+/* Styles the relative time remaining until the event begins */
 .course-upcoming-countdown {
     font-size: 0.80rem;
     color: #555;
 }
 
-/*
- * Styles the link to the complete course schedule.
- */
+/* Styles the link to the full course schedule */
 .course-upcoming-link {
     color: #045c64;
     font-size: 0.85rem;
@@ -599,29 +539,22 @@ body {
     text-decoration: none;
 }
 
-/*
- * Underlines the schedule link when hovered.
- */
+/* Underlines the schedule link when hovered */
 .course-upcoming-link:hover {
     text-decoration: underline;
 }
 
 
 /* ==========================================================================
-   Course links
+   QUICK COURSE LINKS SECTION
    ========================================================================== */
 
-/*
- * Wrapper around the homepage quick links section.
- * Keeps the content aligned with the rest of the homepage.
- */
+/* Wrapper around the homepage quick links section. Keeps the content aligned with the rest of the homepage */
 .course-links {
     padding: 2rem 2.5rem 0;
 }
 
-/*
- * Display the quick links as a responsive two-column grid.
- */
+/* Display the quick links as a responsive two-column grid */
 .course-links-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -630,9 +563,7 @@ body {
     border-bottom: 1px solid #ececec;
 }
 
-/*
- * Layout for an individual quick link card.
- */
+/* Layout for an individual quick link card */
 .course-link-card {
     display: flex;
     align-items: flex-start;
@@ -643,34 +574,24 @@ body {
     border-top: 1px solid #ececec;
 }
 
-/*
- * Styles the Bootstrap icon displayed beside each quick link.
- */
+/* Styles the Bootstrap icon displayed to the left of each quick link */
 .course-link-icon {
     color: #9cc31c;
     font-size: 1.7rem;
-
     flex-shrink: 0;
-
     margin-top: 0.15rem;
 }
 
-/*
- * Holds the title, description and link for each quick link.
- */
+/* Holds the title, description and link for each quick link */
 .course-link-content {
     flex: 1;
 }
 
-/*
- * Styles the title of the course link.
- */
+/* Styles the title of the course link */
 .course-link-content h3 {
     margin: 0 0 0.35rem;
-
     font-size: 0.9rem;
     font-weight: 600;
-
     color: #045c64;
 }
 
@@ -679,9 +600,7 @@ body {
     font-size: 0.80rem;
 }
 
-/*
- * Styles the links.
- */
+/*Styles the links */
 .course-link-content a {
     color: #045c64;
 
@@ -691,44 +610,35 @@ body {
     font-weight: 600;
 }
 
-/*
- * Underlines the quick links link when hovered.
- */
+/* Underlines the quick links link when hovered */
 .course-link-content a:hover {
     text-decoration: underline;
 }
 
 
-
 /* ==========================================================================
-   Homepage bottom layout
+   COURSE ANNOUNCEMENTS SECTION
    ========================================================================== */
 
-/*
- * Displays the announcements and team preview side by side.
- */
+/* ======= Homepage bottom layout ========= */
+
+/* Displays the announcements and team preview side by side */
 .course-home-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 0.5rem;
-
+    margin-bottom: 2rem;
 }
 
-/* ==========================================================================
-   Course announcements
-   ========================================================================== */
-/*
- * Wrapper around the homepage announcements section.
- * Aligns the content with the rest of the homepage.
- */
+/* ======= Course announcements ========= */
+
+/* Wrapper around the homepage announcements section. Aligns the content with the rest of the homepage */
 .course-announcements {
     padding: 2rem 2.5rem 0;
 }
 
-/*
- * Individual announcement displayed in the homepage timeline.
- */
+/* Individual announcement displayed in the homepage timeline */
 .course-announcement {
     position: relative;
 
@@ -824,13 +734,10 @@ body {
 
 
 /* ==========================================================================
-   Course team
+   COURSE TEAM SECTION
    ========================================================================== */
 
-/*
- * Wrapper around the homepage course team section.
- * Aligns the section with the rest of the homepage.
- */
+/* Wrapper around the homepage course team section. Aligns the section with the rest of the homepage */
 .course-team {
     padding: 2rem 2.5rem 0;
 }
@@ -898,42 +805,33 @@ body {
 }
 
 
+
 /* ==========================================================================
-   Footer
+   FOOTER
    ========================================================================== */
 
-/*
- * Landing-page footer containing licence/build information on the left and
- * the repository link on the right.
- *
- * The footer background can be changed with --lp-footer-bg in :root.
- */
+/* Landing-page footer containing licence/build information on the left and the repository link on the right */
 .landing-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 0.45rem clamp(0.75rem, 2vw, 1rem);
   background: #b8b8b8;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ==========================================================================
-   Footer text
-   ========================================================================== */
-
-/* Position the footer metadata and allow it to use the available width. */
+/* Position the footer text and allow it to use the available width. */
 .landing-footer__meta {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Typography used for licence and build information. */
+/* Style footer text */
 .landing-footer__meta p {
     margin: 0;
-    font-size: 0.65rem;
+    font-size: 0.70rem;
     line-height: 1.25;
     color: rgba(255,255,255,.9);
 }
@@ -941,9 +839,6 @@ body {
 .landing-footer__meta p + p {
     margin-top: 0.45rem;
 }
-/* ==========================================================================
-   Footer repository link
-   ========================================================================== */
 
 /* Position the repository link on the right side of the footer. */
 .landing-footer__actions {
@@ -959,10 +854,7 @@ body {
   margin-top: 0;
 }
 
-/*
- * Control the displayed size of the repository image/logo.
- * Increase or decrease height to change its size.
- */
+/* Style the displayed size of the repository image/logo*/
 .landing-footer__image {
   display: block;
   height: 2rem;
@@ -984,66 +876,346 @@ body {
 }
 
 
-
-
 /* ==========================================================================
    SCHEDULE PAGE
    ========================================================================== */
 
 .course-schedule {
-
     display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
 
     gap: 2rem;
 
-    max-width: 1400px;
+    width: 100%;
+    max-width: var(--course-content-width);
     margin: 2rem auto;
 
-    padding: 0 2.5rem;
+    padding: 0 var(--course-content-padding);
+
+    box-sizing: border-box;
 }
 
 .course-schedule-details {
-
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 .course-schedule-sidebar {
-
-    position: sticky;
-    top: 2rem;
-
     align-self: start;
 }
 
-.course-schedule-timeline {
-
-    min-width: 0;
+.course-page-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: #555;
+    font-size: 0.80rem;
 }
 
-.course-schedule-event {
+.course-page-meta .course-welcome-item {
+    display: inline-flex;
+    align-items: center;
+}
 
+/* ==========================================================================
+   Day visibility
+   ========================================================================== */
+
+.course-schedule-day {
+    display: none;
+}
+
+.course-schedule-day.is-active {
+    display: block !important;
+}
+
+/* ==========================================================================
+   Schedule day selector
+   ========================================================================== */
+
+.course-schedule-day-link {
+    display: block;
+
+    width: 170px;
+    box-sizing: border-box;
+
+    padding: 0.9rem 0.75rem 0.25rem 0.75rem;
+
+    border: none;
+    border-bottom: 1px solid #ececec;
+
+    background: transparent;
+
+    text-align: left;
+    color: #333;
+
+    cursor: pointer;
+    font-family: inherit;
+
+    line-height: 1.3;
+}
+
+
+/* Day name */
+
+.course-schedule-day-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Date */
+
+.course-schedule-day-date {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #666;
+}
+
+
+/* Hover */
+
+.course-schedule-day-link:hover {
+    color: #045c64;
+}
+
+
+/* Active day */
+
+.course-schedule-day-link.is-active {
+    background: #43858B;
+    color: white;
+
+    border-radius: 6px;
+}
+
+
+/* Active day text */
+
+.course-schedule-day-link.is-active .course-schedule-day-name {
+    color: white;
+    font-weight: 600;
+}
+
+.course-schedule-day-link.is-active .course-schedule-day-date {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* Keep active item white on hover */
+
+.course-schedule-day-link.is-active:hover {
+    color: white;
+}
+
+
+
+/* ==========================================================================
+   Schedule timeline
+   ========================================================================== */
+.course-schedule-timeline {
+    position: relative;
+
+    min-width: 0;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+.course-schedule-day {
+    position: relative;
+}
+
+
+.course-schedule-day::before {
+    content: "";
+
+    position: absolute;
+
+    left: 170px;
+
+    top: 5.3rem;
+    bottom: 6rem;
+
+    width: 1.5px;
+
+    background: #d9e5e6;
+
+    z-index: 0;
+}
+
+/* Day heading */
+
+.course-schedule-day-heading {
+    margin: 0;
+
+    padding: 1.5rem 2rem 1.25rem;
+
+    border-bottom: none;
+
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+
+/* Events */
+
+.course-schedule-event {
     display: grid;
 
     grid-template-columns:
         140px
-        minmax(0,1fr)
+        minmax(0, 1fr)
         220px;
 
     column-gap: 2rem;
 
-    padding: 1.1rem 0;
-
-    border-top: 1px solid #ececec;
+    padding: 0.9rem 2rem 0.10rem;
 }
 
-.course-schedule-day-link {
-    border-bottom: 1px solid #ececec;
+.course-schedule-separator {
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 1px;
+
+    background: #e5e5e5;
 }
 
-.course-schedule-day-link a {
-    display:block;
-    text-decoration:none;
-    color:inherit;
+/* Event type */
+
+.course-schedule .course-upcoming-type {
+    margin-left: 0;
+}
+
+
+/* Event title */
+
+.course-schedule .course-schedule-title {
+    margin: 0.25rem 0 0.45rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.55;
+
+    color: #222;
+}
+
+
+/* Speaker */
+
+.course-schedule-speaker {
+    color: #777;
+    font-size: 0.80rem;
+    line-height: 1.2;
+}
+
+
+/* Time */
+
+.course-schedule-time {
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2;
+}
+
+
+/* Location */
+
+.course-schedule-location {
+    color: #777;
+    font-size: 0.80rem;
+    line-height: 1.2;
+}
+
+.course-schedule-location-column {
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+
+/* ==========================================================================
+   Event timeline
+   ========================================================================== */
+
+.course-schedule-event {
+    position: relative;
+}
+
+/* Timeline dot */
+
+.course-schedule-event::after {
+    content: "";
+
+    position: absolute;
+
+    left: 164px;
+    top: 0.95rem;
+
+    width: 14px;
+    height: 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background: #045c64;
+
+    border: 2px solid white;
+
+    z-index: 2;
+}
+
+
+/* Last event: stop the line at the bottom of the dot */
+
+.course-schedule-event:last-child::before {
+    display: none;
+}
+
+
+/* Keep event content above timeline */
+
+.course-schedule-time,
+.course-schedule-details,
+.course-schedule-location-column {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Dot colours */
+
+.course-schedule-event:has(.course-type-lecture)::after {
+    background: #045c64;
+}
+
+.course-schedule-event:has(.course-type-workshop)::after {
+    background: #6b3f8f;
+}
+
+.course-schedule-event:has(.course-type-practical)::after {
+    background: #9b6200;
+}
+
+.course-schedule-event:has(.course-type-break)::after {
+    background: #8b9398;
+}
+
+.course-schedule-event:has(.course-type-keynote)::after {
+    background: #555;
+}
+
+.course-schedule-event:has(.course-type-welcome)::after {
+    background: #6b3f8f;
+}
+
+.course-schedule-event:has(.course-type-lunch)::after {
+    background: #8ab51b;
 }

@@ -12,6 +12,13 @@ Presentation and page structure are maintained here.
 
 Component rendering is handled separately by the Python renderer.
 --> 
+---
+title: Home
+title-block: false
+anchor-sections: false
+---
+
+
 
 ::: {.course-shell}
 

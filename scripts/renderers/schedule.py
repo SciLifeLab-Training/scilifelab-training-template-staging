@@ -1,6 +1,8 @@
 from collections import OrderedDict
 
-# Month abbreviations used throughout the course website.
+from utils import format_date
+
+
 MONTHS = [
     "JAN", "FEB", "MAR", "APR",
     "MAY", "JUN", "JUL", "AUG",
@@ -8,15 +10,47 @@ MONTHS = [
 ]
 
 
-def render_schedule(events):
+def render_schedule(events, course):
 
     if not events:
         return ""
 
-    # Sort events chronologically.
+    # ------------------------------------------------------------------
+    # Course metadata
+    # ------------------------------------------------------------------
+
+    start = format_date(course["start_date"])
+    end = format_date(course["end_date"])
+    location = course["location"]
+
+    page_header = f"""
+<div class="course-page-header">
+
+<h1>Schedule</h1>
+
+<div class="course-page-meta">
+
+<span class="course-welcome-item">
+<i class="bi bi-calendar2-event"></i>
+{start} – {end}
+</span>
+
+<span class="course-welcome-item">
+<i class="bi bi-geo-alt"></i>
+{location}
+</span>
+
+</div>
+
+</div>
+""".strip()
+
+    # ------------------------------------------------------------------
+    # Group events by course day
+    # ------------------------------------------------------------------
+
     events = sorted(events, key=lambda event: event["start"])
 
-    # Group events by course day while preserving order.
     grouped = OrderedDict()
 
     for event in events:
@@ -28,16 +62,7 @@ def render_schedule(events):
 
         grouped[group].append(event)
 
-    #
-    # Sidebar
-    #
-
     sidebar = []
-
-    #
-    # Timeline
-    #
-
     timeline = []
 
     for group, day_events in grouped.items():
@@ -50,15 +75,16 @@ def render_schedule(events):
 
         day_id = group.lower().replace(" ", "-")
 
-        #
-        # Sidebar entry
-        #
+        # --------------------------------------------------------------
+        # Sidebar
+        # --------------------------------------------------------------
 
         sidebar.append(
-    f"""
-<div class="course-schedule-day-link">
-
-<a href="#{day_id}">
+            f"""
+<button
+    type="button"
+    class="course-schedule-day-link"
+    data-day="{day_id}">
 
 <div class="course-schedule-day-name">
 {group}
@@ -68,24 +94,22 @@ def render_schedule(events):
 {weekday}, {month} {day}
 </div>
 
-</a>
-
-</div>
+</button>
 """
-)
+        )
 
-        #
+        # --------------------------------------------------------------
         # Events
-        #
+        # --------------------------------------------------------------
 
         rows = []
 
-        for event in day_events:
+        for index, event in enumerate(day_events):
 
-            start = event["start"]
-            end = event["end"]
+            start_time = event["start"]
+            end_time = event["end"]
 
-            time = f"{start:%H:%M}–{end:%H:%M}"
+            time = f"{start_time:%H:%M}–{end_time:%H:%M}"
 
             event_type = event["type"].replace("_", " ").title()
             event_class = event["type"].lower()
@@ -111,9 +135,19 @@ def render_schedule(events):
 </div>
 """
 
+            separator_html = ""
+
+            if index > 0:
+                separator_html = """
+<div class="course-schedule-separator"></div>
+"""
+
+
             rows.append(
                 f"""
 <div class="course-schedule-event">
+
+{separator_html}
 
 <div class="course-schedule-time">
 {time}
@@ -121,7 +155,7 @@ def render_schedule(events):
 
 <div class="course-schedule-details">
 
-<span class="course-schedule-type course-schedule-type-{event_class}">
+<span class="course-upcoming-type course-type-{event_class}">
 {event_type}
 </span>
 
@@ -159,7 +193,7 @@ class="course-schedule-day">
 """
         )
 
-    return f"""
+    schedule = f"""
 <div class="course-schedule">
 
 <div class="course-schedule-sidebar">
@@ -175,4 +209,10 @@ class="course-schedule-day">
 </div>
 
 </div>
+""".strip()
+
+    return f"""
+{page_header}
+
+{schedule}
 """.strip()

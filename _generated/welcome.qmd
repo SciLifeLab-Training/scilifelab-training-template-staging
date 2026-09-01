@@ -1,4 +1,4 @@
-# Long course title for testing purposes
+# Open Science in the Swedish Context
 
 <div class="course-welcome-meta">
 

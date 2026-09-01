@@ -1,3 +1,3 @@
 <div class="course-navbar-title">
-<h1>Long course title for testing purposes</h1>
+<h1>Open Science in the Swedish Context</h1>
 </div>

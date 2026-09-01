@@ -114,28 +114,48 @@ Component rendering is handled separately by the Python renderer.
 <div class="course-navbar-title">
 <div class="course-navbar-title">
 <h1>
-Long course title for testing purposes
+Open Science in the Swedish Context
 </h1>
+</div>
+</div>
+<div class="course-navbar-menu">
+<div class="course-navbar-links">
+<p><a class="course-navbar-link" href="./index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="./schedule.html" data-page="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="practical.qmd" data-page="practical.qmd">Practical info</a> <a class="course-navbar-link" href="resources.qmd" data-page="resources.qmd">Resources</a> <a class="course-navbar-link" href="faq.qmd" data-page="faq.qmd">FAQ</a></p>
 </div>
 </div>
 </div>
 <div class="course-navbar-brand">
-<p><img src="img/scilifelab-logo-neg.png" class="course-navbar-logo"></p>
+<p><img src="img/scilifelab-logo-full-neg.png" class="course-navbar-logo"></p>
 </div>
 </div>
-<div class="course-navbar-divider">
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-</div>
-<div class="course-navbar-menu">
-<div class="course-navbar-links">
-<p><a class="course-navbar-link course-navbar-link-active" href="./index.html">Overview</a> <a class="course-navbar-link" href="./schedule.html">Schedule</a> <a class="course-navbar-link" href="practical.qmd">Practical info</a> <a class="course-navbar-link" href="resources.qmd">Resources</a> <a class="course-navbar-link" href="faq.qmd">FAQ</a></p>
-</div>
-</div>
-</div>
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+
+        const page = link.dataset.page;
+
+        const expectedPage =
+            page === "index.qmd"
+                ? "index.html"
+                : page.replace(".qmd", ".html");
+
+        if (expectedPage === currentPage) {
+            link.classList.add("course-navbar-link-active");
+        }
+
+    });
+
+});
+</script>
 <div class="course-welcome">
 <div class="course-welcome-layout">
-<section id="long-course-title-for-testing-purposes" class="level1 course-welcome-text">
-<h1>Long course title for testing purposes</h1>
+<section id="open-science-in-the-swedish-context" class="level1 course-welcome-text">
+<h1>Open Science in the Swedish Context</h1>
 <div class="course-welcome-meta">
 <p><span class="course-welcome-item"> <i class="bi bi-calendar2-event"></i> 12 Oct 2026 – 17 Oct 2026 </span></p>
 <p><span class="course-welcome-item"> <i class="bi bi-geo-alt"></i> SciLifeLab Stockholm </span></p>

@@ -11,6 +11,7 @@ project:
 
   resources:
     - img
+    - js
 
 format:
   html:

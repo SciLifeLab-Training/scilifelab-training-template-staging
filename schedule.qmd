@@ -2,21 +2,15 @@
 title: Schedule
 title-block: false
 anchor-sections: false
+
+include-in-header:
+  - text: |
+      <script src="js/schedule.js"></script>
 ---
 
 ::: {.course-shell}
 
 {{< include _sections/navbar.qmd >}}
-
-<div class="course-page-header">
-
-<h1>Schedule</h1>
-
-<div class="course-page-meta">
-12–16 May 2026 • SciLifeLab Solna
-</div>
-
-</div>
 
 {{< include _generated/schedule.qmd >}}
 

@@ -1,11 +1,32 @@
+<div class="course-page-header">
+
+<h1>Schedule</h1>
+
+<div class="course-page-meta">
+
+<span class="course-welcome-item">
+<i class="bi bi-calendar2-event"></i>
+12 Oct 2026 – 17 Oct 2026
+</span>
+
+<span class="course-welcome-item">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Stockholm
+</span>
+
+</div>
+
+</div>
+
 <div class="course-schedule">
 
 <div class="course-schedule-sidebar">
 
 
-<div class="course-schedule-day-link">
-
-<a href="#day-1">
+<button
+    type="button"
+    class="course-schedule-day-link"
+    data-day="day-1">
 
 <div class="course-schedule-day-name">
 Day 1
@@ -15,13 +36,12 @@ Day 1
 Tuesday, Jun 30
 </div>
 
-</a>
+</button>
 
-</div>
-
-<div class="course-schedule-day-link">
-
-<a href="#day-2">
+<button
+    type="button"
+    class="course-schedule-day-link"
+    data-day="day-2">
 
 <div class="course-schedule-day-name">
 Day 2
@@ -31,9 +51,22 @@ Day 2
 Wednesday, Jul 1
 </div>
 
-</a>
+</button>
 
+<button
+    type="button"
+    class="course-schedule-day-link"
+    data-day="day-3">
+
+<div class="course-schedule-day-name">
+Day 3
 </div>
+
+<div class="course-schedule-day-date">
+Thursday, Jul 2
+</div>
+
+</button>
 
 
 </div>
@@ -52,13 +85,15 @@ Day 1 – Tuesday, Jun 30
 
 <div class="course-schedule-event">
 
+
+
 <div class="course-schedule-time">
 09:00–10:30
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-schedule-type course-schedule-type-practical">
+<span class="course-upcoming-type course-type-practical">
 Practical
 </span>
 
@@ -89,13 +124,17 @@ SciLifeLab Solna
 
 <div class="course-schedule-event">
 
+
+<div class="course-schedule-separator"></div>
+
+
 <div class="course-schedule-time">
 11:00–12:00
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-schedule-type course-schedule-type-lecture">
+<span class="course-upcoming-type course-type-lecture">
 Lecture
 </span>
 
@@ -103,10 +142,6 @@ Lecture
 Test title for mockup 2
 </h3>
 
-
-<div class="course-schedule-speaker">
-Jane Doe
-</div>
 
 
 </div>
@@ -126,13 +161,17 @@ SciLifeLab Solna
 
 <div class="course-schedule-event">
 
+
+<div class="course-schedule-separator"></div>
+
+
 <div class="course-schedule-time">
 12:00–13:00
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-schedule-type course-schedule-type-break">
+<span class="course-upcoming-type course-type-break">
 Break
 </span>
 
@@ -175,18 +214,153 @@ Day 2 – Wednesday, Jul 1
 
 <div class="course-schedule-event">
 
+
+
 <div class="course-schedule-time">
 09:00–10:30
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-schedule-type course-schedule-type-practical">
-Practical
+<span class="course-upcoming-type course-type-keynote">
+Keynote
 </span>
 
 <h3 class="course-schedule-title">
 Test title for mockup 4
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Solna
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+10:30–12:30
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-workshop">
+Workshop
+</span>
+
+<h3 class="course-schedule-title">
+Test title for mockup 5
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Solna
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+12:30–13:30
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-break">
+Break
+</span>
+
+<h3 class="course-schedule-title">
+Test title for mockup 6
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Solna
+</div>
+
+
+</div>
+
+</div>
+
+
+</section>
+
+<section
+id="day-3"
+class="course-schedule-day">
+
+<h2 class="course-schedule-day-heading">
+Day 3 – Thursday, Jul 2
+</h2>
+
+
+<div class="course-schedule-event">
+
+
+
+<div class="course-schedule-time">
+09:30–12:30
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-workshop">
+Workshop
+</span>
+
+<h3 class="course-schedule-title">
+Test title for mockup 7
 </h3>
 
 
