@@ -1,14 +1,64 @@
-def render_quick_links(website):
-    """Render the homepage quick links section."""
+from pathlib import Path
+
+
+def render_quick_links(website, schedule_events):
+
+    """Render up to four homepage quick links."""
 
     pages = website["pages"]
-    quick_links = website["homepage"]["quick_links"]
+
+    priority = [
+        "content",
+        "syllabus",
+        "schedule",
+        "practical",
+        "resources",
+        "precourse",
+        "faq",
+    ]
 
     cards = []
 
-    for key in quick_links:
+    for key in priority:
+
+        if len(cards) >= 4:
+            break
 
         page = pages[key]
+
+        # Schedule is available only when events exist.
+        if key == "schedule":
+
+            if not schedule_events:
+                continue
+
+        # Course Content and Course Syllabus are always available.
+        elif key in ["content", "syllabus"]:
+
+            pass
+
+        # All other pages are available only when
+        # their QMD file contains meaningful body content.
+        else:
+
+            path = Path(page["href"])
+
+            if not path.exists():
+                continue
+
+            content = path.read_text(encoding="utf-8")
+
+            # Remove YAML front matter.
+            if content.startswith("---"):
+
+                parts = content.split("---", 2)
+
+                if len(parts) == 3:
+                    content = parts[2]
+
+            # Ignore whitespace-only pages.
+            if not content.strip():
+                continue
 
         cards.append(
             f"""
@@ -31,6 +81,9 @@ View {page["title"].lower()} →
 </div>
 """.strip()
         )
+
+    if not cards:
+        return ""
 
     return (
         '<div class="course-links-grid">\n'

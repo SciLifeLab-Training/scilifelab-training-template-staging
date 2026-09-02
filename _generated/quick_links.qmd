@@ -1,6 +1,40 @@
 <div class="course-links-grid">
 <div class="course-link-card">
 
+<i class="bi bi-folder course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Course content</h3>
+
+<p>Slides, exercises and resources</p>
+
+<a href="content/overview.qmd">
+View course content →
+</a>
+
+</div>
+
+</div>
+<div class="course-link-card">
+
+<i class="bi bi-journal-text course-link-icon"></i>
+
+<div class="course-link-content">
+
+<h3>Course syllabus</h3>
+
+<p>Course structure, learning objectives and schedule</p>
+
+<a href="syllabus.qmd">
+View course syllabus →
+</a>
+
+</div>
+
+</div>
+<div class="course-link-card">
+
 <i class="bi bi-calendar2-event course-link-icon"></i>
 
 <div class="course-link-content">
@@ -18,23 +52,6 @@ View schedule →
 </div>
 <div class="course-link-card">
 
-<i class="bi bi-folder course-link-icon"></i>
-
-<div class="course-link-content">
-
-<h3>Course content</h3>
-
-<p>Slides, exercises and resources</p>
-
-<a href="syllabus.qmd">
-View course content →
-</a>
-
-</div>
-
-</div>
-<div class="course-link-card">
-
 <i class="bi bi-geo-alt course-link-icon"></i>
 
 <div class="course-link-content">
@@ -43,25 +60,8 @@ View course content →
 
 <p>Location, travel and contact information</p>
 
-<a href="practical.qmd">
+<a href="practicalinfo.qmd">
 View practical information →
-</a>
-
-</div>
-
-</div>
-<div class="course-link-card">
-
-<i class="bi bi-people course-link-icon"></i>
-
-<div class="course-link-content">
-
-<h3>Course team</h3>
-
-<p>Meet the instructors</p>
-
-<a href="team.qmd">
-View course team →
 </a>
 
 </div>

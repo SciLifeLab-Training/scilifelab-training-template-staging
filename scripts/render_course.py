@@ -5,6 +5,7 @@ from loaders import (
     load_website,
     load_schedule,
     load_team,
+    load_announcements,
 )
 
 from validators import (
@@ -23,6 +24,7 @@ from renderers.navbar import (
 )
 from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
+from renderers.announcements import render_announcements
 from renderers.team import render_team
 from renderers.schedule import render_schedule
 
@@ -34,6 +36,7 @@ def main():
     website = validate_website(load_website())
     events = validate_schedule(load_schedule())
     team = validate_team(load_team())
+    announcements = load_announcements()
 
     write_partial(
         "welcome.qmd",
@@ -57,7 +60,12 @@ def main():
 
     write_partial(
         "quick_links.qmd",
-        render_quick_links(website),
+        render_quick_links(website, events),
+    )
+
+    write_partial(
+        "announcements.qmd",
+        render_announcements(announcements),
     )
 
     write_partial(
@@ -69,6 +77,7 @@ def main():
     "schedule.qmd",
     render_schedule(events, course),
 )
+    
 
 if __name__ == "__main__":
     main()

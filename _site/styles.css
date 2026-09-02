@@ -677,7 +677,6 @@ body {
     text-decoration: underline;
 }
 
-
 /* ==========================================================================
    COURSE ANNOUNCEMENTS SECTION
    ========================================================================== */
@@ -693,28 +692,39 @@ body {
     margin-bottom: 2rem;
 }
 
+
 /* ======= Course announcements ========= */
 
-/* Wrapper around the homepage announcements section. Aligns the content with the rest of the homepage */
+/* Wrapper around the homepage announcements section */
 .course-announcements {
     padding: 2rem 2.5rem 0;
 }
 
-/* Individual announcement displayed in the homepage timeline */
-.course-announcement {
-    position: relative;
-
-    padding-left: 1.8rem;
-    padding-bottom: 0.8rem;
+/* Content wrapper */
+.course-announcements-content {
+    padding-top: 1.5rem;
+    margin-top: -2rem;
 }
 
+/* Section label */
 .course-announcements .course-section-label {
     margin-bottom: 1.5rem;
 }
 
-.course-announcements-content {
-    padding-top: 1.5rem;
-    margin-top: -2rem;
+
+/* ======= Individual announcements ========= */
+
+.course-announcement {
+    position: relative;
+
+    padding-left: 1.8rem;
+    padding-bottom: 0.45rem;
+
+    color: #666;
+    font-size: 0.80rem;
+    line-height: 1.4;
+
+    max-width: 55ch;
 }
 
 .course-announcement::before {
@@ -747,15 +757,22 @@ body {
     background: #9cc31c;
 }
 
+
+/* ======= Announcement date ========= */
+
 .course-announcement-date {
     font-size: 0.80rem;
     font-weight: 600;
-    color: #333;
-    margin-bottom: 0.25rem;
+    color: #aa1010;
+
+    margin-bottom: 0.1rem;
 }
 
+
+/* ======= Announcement title ========= */
+
 .course-announcement-title {
-    margin: 0 0 0.3rem;
+    margin: 0 0 0.15rem;
 
     font-size: 0.85rem;
     font-weight: 600;
@@ -763,19 +780,36 @@ body {
     color: #333;
 }
 
+
+/* ======= Announcement text ========= */
+
 .course-announcement p {
     margin: 0;
 
     color: #666;
     font-size: 0.80rem;
-    line-height: 1.5;
-
-    max-width: 55ch;
+    line-height: 1.4;
 }
+
+
+/* ======= Last announcement ========= */
 
 .course-announcement:last-of-type::before {
-    bottom: 1.2rem;
+    bottom: 0.8rem;
 }
+
+/* ======= Empty state ========= */
+
+.course-announcement-empty {
+    padding-left: 1.8rem;
+
+    color: #666;
+    font-size: 0.80rem;
+    line-height: 1.5;
+}
+
+
+/* ======= View all link ========= */
 
 .course-announcements-link {
     display: inline-block;
@@ -793,7 +827,6 @@ body {
 .course-announcements-link:hover {
     text-decoration: underline;
 }
-
 
 /* ==========================================================================
    COURSE TEAM SECTION

@@ -24,3 +24,10 @@ def load_schedule():
 
 def load_team():
     return load_yaml("team.yml")["team"]
+
+def load_announcements():
+
+    with open("data/announcements.yml", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+
+    return data.get("announcements", [])

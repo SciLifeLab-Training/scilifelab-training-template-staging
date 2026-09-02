@@ -1,0 +1,53 @@
+::: {.course-announcements}
+
+<div class="course-announcements-content">
+
+<div class="course-section-label">
+
+COURSE ANNOUNCEMENTS
+
+</div>
+
+<div class="course-announcement">
+
+<div class="course-announcement-date">
+
+10 May
+
+</div>
+
+<h3 class="course-announcement-title">
+
+Remember to bring your laptop
+
+</h3>
+
+Please bring your laptop to all workshop sessions.
+
+</div><div class="course-announcement">
+
+<div class="course-announcement-date">
+
+4 May
+
+</div>
+
+<h3 class="course-announcement-title">
+
+Pre-course material is now available
+
+</h3>
+
+You can now access the reading in the Course content section.
+
+</div>
+
+<a class="course-announcements-link" href="announcements.qmd">
+
+View all announcements →
+
+</a>
+
+</div>
+
+:::
