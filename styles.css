@@ -120,7 +120,6 @@ body {
         );
 
     color: white;
-    border-radius: 0 0 5px 5px;
 }
 
 /* Arranges the course title, navigation menu, and SciLifeLab logo into a two-column layout. The title and menu occupy the left column while the logo occupies the right column */
@@ -273,7 +272,20 @@ body {
 
 /* Adds consistent spacing around the welcome section */
 .course-welcome {
+    position: relative;
     padding: 1rem var(--course-content-padding);
+}
+
+.course-welcome::after {
+    content: "";
+
+    position: absolute;
+    left: 2.5rem;
+    right: 2.5rem;
+    bottom: 0;
+
+    height: 1px;
+    background: #ececec;
 }
 
 /* Styles the main course heading displayed at the top of the welcome section */
@@ -341,17 +353,8 @@ body {
    UPCOMING SECTION
    ========================================================================== */
 
-   /* Separates the welcome section from the upcoming event card with a subtle divider */
-.course-upcoming-content {
-    border-top: 1px solid #ececec;
-    padding-top: 1.5rem;
-
-    /* Pull divider to the top of the section spacing. */
-    margin-top: -2rem;
-}
-
 /* Adds spacing around the upcoming event section */
-.course-upcoming {
+.course-upcoming-section {
     padding: 1.5rem 2.5rem 0;
 }
 
@@ -462,7 +465,9 @@ body {
     margin-left: 1rem;
 }
 
-/* Applies a distinct colour scheme to each event type */
+/* ==========================================================================
+   EVENT TYPE BADGES
+   ========================================================================== */
 
 .course-type-lecture {
     background: #e8f3f4;
@@ -484,14 +489,59 @@ body {
     color: #6b3f8f;
 }
 
-.course-type-keynote {
-    background: #ececec;
-    color: #555;
-}
-
 .course-type-break {
     background: #eceff1;
     color: #5f6b72;
+}
+
+.course-type-welcome {
+    background: #e8f3f4;
+    color: #045c64;
+}
+
+.course-type-lunch {
+    background: #eef6e8;
+    color: #5f7f15;
+}
+
+.course-type-presentation {
+    background: #e9eef8;
+    color: #405a8a;
+}
+
+.course-type-assessment {
+    background: #f8e8e8;
+    color: #9a4040;
+}
+
+.course-type-group-work {
+    background: #f3e8f8;
+    color: #6b3f8f;
+}
+
+.course-type-exercise {
+    background: #fff2dc;
+    color: #9b6200;
+}
+
+.course-type-consultation {
+    background: #e8f1f7;
+    color: #416b85;
+}
+
+.course-type-quiz {
+    background: #f0eaf7;
+    color: #704c91;
+}
+
+.course-type-feedback {
+    background: #e8f4ed;
+    color: #39704f;
+}
+
+.course-type-seminar {
+    background: #ececec;
+    color: #555;
 }
 
 /* Styles the title of the upcoming event */
@@ -501,6 +551,18 @@ body {
     font-weight: 600;
     line-height: 1.35;
     color: #222;
+}
+
+.course-upcoming-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.course-upcoming-title a:hover {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 /* Aligns the presenter and location metadata beneath the event title */
@@ -974,17 +1036,17 @@ body {
 
 /* Hover */
 
-.course-schedule-day-link:hover {
-    color: #045c64;
+.course-schedule-day-link {
+    transition: transform 0.2s ease;
 }
 
-
+.course-schedule-day-link:hover {
+    transform: translateY(-2px);
+}
 /* Active day */
 
 .course-schedule-day-link.is-active {
-    background: #43858B;
-    color: white;
-
+    background: #e5e5e5;
     border-radius: 6px;
 }
 
@@ -992,19 +1054,7 @@ body {
 /* Active day text */
 
 .course-schedule-day-link.is-active .course-schedule-day-name {
-    color: white;
     font-weight: 600;
-}
-
-.course-schedule-day-link.is-active .course-schedule-day-date {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-
-/* Keep active item white on hover */
-
-.course-schedule-day-link.is-active:hover {
-    color: white;
 }
 
 
@@ -1190,32 +1240,66 @@ body {
 }
 
 
-/* Dot colours */
+/* ==========================================================================
+   SCHEDULE TIMELINE DOTS
+   ========================================================================== */
 
 .course-schedule-event:has(.course-type-lecture)::after {
     background: #045c64;
 }
 
 .course-schedule-event:has(.course-type-workshop)::after {
-    background: #6b3f8f;
+    background: #5f7f15;
 }
 
 .course-schedule-event:has(.course-type-practical)::after {
     background: #9b6200;
 }
 
-.course-schedule-event:has(.course-type-break)::after {
-    background: #8b9398;
-}
-
-.course-schedule-event:has(.course-type-keynote)::after {
-    background: #555;
-}
-
-.course-schedule-event:has(.course-type-welcome)::after {
+.course-schedule-event:has(.course-type-discussion)::after {
     background: #6b3f8f;
 }
 
+.course-schedule-event:has(.course-type-break)::after {
+    background: #5f6b72;
+}
+
+.course-schedule-event:has(.course-type-welcome)::after {
+    background: #045c64;
+}
+
 .course-schedule-event:has(.course-type-lunch)::after {
-    background: #8ab51b;
+    background: #5f7f15;
+}
+
+.course-schedule-event:has(.course-type-presentation)::after {
+    background: #405a8a;
+}
+
+.course-schedule-event:has(.course-type-assessment)::after {
+    background: #9a4040;
+}
+
+.course-schedule-event:has(.course-type-group-work)::after {
+    background: #6b3f8f;
+}
+
+.course-schedule-event:has(.course-type-exercise)::after {
+    background: #9b6200;
+}
+
+.course-schedule-event:has(.course-type-consultation)::after {
+    background: #416b85;
+}
+
+.course-schedule-event:has(.course-type-quiz)::after {
+    background: #704c91;
+}
+
+.course-schedule-event:has(.course-type-feedback)::after {
+    background: #39704f;
+}
+
+.course-schedule-event:has(.course-type-seminar)::after {
+    background: #555;
 }

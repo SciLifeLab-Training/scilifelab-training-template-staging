@@ -4,15 +4,17 @@
 
 <div class="course-page-meta">
 
+
 <span class="course-welcome-item">
 <i class="bi bi-calendar2-event"></i>
-12 Oct 2026 – 17 Oct 2026
+02 Sep 2026 – 16 Sep 2026
 </span>
 
 <span class="course-welcome-item">
 <i class="bi bi-geo-alt"></i>
 SciLifeLab Stockholm
 </span>
+
 
 </div>
 
@@ -33,7 +35,7 @@ Day 1
 </div>
 
 <div class="course-schedule-day-date">
-Tuesday, Jun 30
+Wednesday, Sep 2
 </div>
 
 </button>
@@ -48,7 +50,7 @@ Day 2
 </div>
 
 <div class="course-schedule-day-date">
-Wednesday, Jul 1
+Thursday, Sep 3
 </div>
 
 </button>
@@ -63,7 +65,22 @@ Day 3
 </div>
 
 <div class="course-schedule-day-date">
-Thursday, Jul 2
+Friday, Sep 4
+</div>
+
+</button>
+
+<button
+    type="button"
+    class="course-schedule-day-link"
+    data-day="follow-up">
+
+<div class="course-schedule-day-name">
+Follow-up
+</div>
+
+<div class="course-schedule-day-date">
+Wednesday, Sep 16
 </div>
 
 </button>
@@ -79,7 +96,7 @@ id="day-1"
 class="course-schedule-day">
 
 <h2 class="course-schedule-day-heading">
-Day 1 – Tuesday, Jun 30
+Day 1 – Wednesday, Sep 2
 </h2>
 
 
@@ -88,48 +105,7 @@ Day 1 – Tuesday, Jun 30
 
 
 <div class="course-schedule-time">
-09:00–10:30
-</div>
-
-<div class="course-schedule-details">
-
-<span class="course-upcoming-type course-type-practical">
-Practical
-</span>
-
-<h3 class="course-schedule-title">
-Test title for mockup
-</h3>
-
-
-<div class="course-schedule-speaker">
-Jane Doe
-</div>
-
-
-</div>
-
-<div class="course-schedule-location-column">
-
-
-<div class="course-schedule-location">
-<i class="bi bi-geo-alt"></i>
-SciLifeLab Solna
-</div>
-
-
-</div>
-
-</div>
-
-<div class="course-schedule-event">
-
-
-<div class="course-schedule-separator"></div>
-
-
-<div class="course-schedule-time">
-11:00–12:00
+09:00–09:45
 </div>
 
 <div class="course-schedule-details">
@@ -139,9 +115,13 @@ Lecture
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 2
+Welcome and Course Introduction
 </h3>
 
+
+<div class="course-schedule-speaker">
+Jane Doe
+</div>
 
 
 </div>
@@ -166,22 +146,22 @@ SciLifeLab Solna
 
 
 <div class="course-schedule-time">
-12:00–13:00
+10:00–11:00
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-upcoming-type course-type-break">
-Break
+<span class="course-upcoming-type course-type-lecture">
+Lecture
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 3
+Introduction to the Research Environment
 </h3>
 
 
 <div class="course-schedule-speaker">
-Jane Doe
+John Smith
 </div>
 
 
@@ -192,7 +172,158 @@ Jane Doe
 
 <div class="course-schedule-location">
 <i class="bi bi-geo-alt"></i>
-SciLifeLab Solna
+Lecture Hall A
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+11:00–11:30
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-break">
+Break
+</span>
+
+<h3 class="course-schedule-title">
+Coffee Break
+</h3>
+
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+11:30–13:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-practical">
+Practical
+</span>
+
+<h3 class="course-schedule-title">
+Hands-on Data Analysis
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe, Alex Johnson
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+Computer Lab
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+13:00–14:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-break">
+Break
+</span>
+
+<h3 class="course-schedule-title">
+Lunch
+</h3>
+
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+SciLifeLab Café
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+14:00–15:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-discussion">
+Discussion
+</span>
+
+<h3 class="course-schedule-title">
+Discussion and Reflection
+</h3>
+
+
+<div class="course-schedule-speaker">
+John Smith
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+Seminar Room 2
 </div>
 
 
@@ -208,7 +339,7 @@ id="day-2"
 class="course-schedule-day">
 
 <h2 class="course-schedule-day-heading">
-Day 2 – Wednesday, Jul 1
+Day 2 – Thursday, Sep 3
 </h2>
 
 
@@ -222,17 +353,17 @@ Day 2 – Wednesday, Jul 1
 
 <div class="course-schedule-details">
 
-<span class="course-upcoming-type course-type-keynote">
-Keynote
+<span class="course-upcoming-type course-type-lecture">
+Lecture
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 4
+Advanced Methods
 </h3>
 
 
 <div class="course-schedule-speaker">
-Jane Doe
+Maria Andersson
 </div>
 
 
@@ -243,7 +374,7 @@ Jane Doe
 
 <div class="course-schedule-location">
 <i class="bi bi-geo-alt"></i>
-SciLifeLab Solna
+Lecture Hall A
 </div>
 
 
@@ -258,22 +389,22 @@ SciLifeLab Solna
 
 
 <div class="course-schedule-time">
-10:30–12:30
+10:45–12:30
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-upcoming-type course-type-workshop">
-Workshop
+<span class="course-upcoming-type course-type-practical">
+Practical
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 5
+Workshop: Building a Workflow
 </h3>
 
 
 <div class="course-schedule-speaker">
-Jane Doe
+Maria Andersson, Alex Johnson
 </div>
 
 
@@ -284,7 +415,7 @@ Jane Doe
 
 <div class="course-schedule-location">
 <i class="bi bi-geo-alt"></i>
-SciLifeLab Solna
+Computer Lab
 </div>
 
 
@@ -299,22 +430,22 @@ SciLifeLab Solna
 
 
 <div class="course-schedule-time">
-12:30–13:30
+14:00–15:00
 </div>
 
 <div class="course-schedule-details">
 
-<span class="course-upcoming-type course-type-break">
-Break
+<span class="course-upcoming-type course-type-discussion">
+Discussion
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 6
+Guest Lecture: From Data to Discovery
 </h3>
 
 
 <div class="course-schedule-speaker">
-Jane Doe
+Sarah Wilson
 </div>
 
 
@@ -325,7 +456,7 @@ Jane Doe
 
 <div class="course-schedule-location">
 <i class="bi bi-geo-alt"></i>
-SciLifeLab Solna
+Auditorium
 </div>
 
 
@@ -341,7 +472,7 @@ id="day-3"
 class="course-schedule-day">
 
 <h2 class="course-schedule-day-heading">
-Day 3 – Thursday, Jul 2
+Day 3 – Friday, Sep 4
 </h2>
 
 
@@ -350,7 +481,90 @@ Day 3 – Thursday, Jul 2
 
 
 <div class="course-schedule-time">
-09:30–12:30
+09:00–12:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-group-work">
+Group-Work
+</span>
+
+<h3 class="course-schedule-title">
+Independent Project Work
+</h3>
+
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+13:00–15:30
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-presentation">
+Presentation
+</span>
+
+<h3 class="course-schedule-title">
+Project Presentations
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+Auditorium
+</div>
+
+
+</div>
+
+</div>
+
+
+</section>
+
+<section
+id="follow-up"
+class="course-schedule-day">
+
+<h2 class="course-schedule-day-heading">
+Follow-up – Wednesday, Sep 16
+</h2>
+
+
+<div class="course-schedule-event">
+
+
+
+<div class="course-schedule-time">
+10:00–12:00
 </div>
 
 <div class="course-schedule-details">
@@ -360,12 +574,90 @@ Workshop
 </span>
 
 <h3 class="course-schedule-title">
-Test title for mockup 7
+Follow-up Workshop
 </h3>
 
 
 <div class="course-schedule-speaker">
-Jane Doe
+John Smith
+</div>
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+Online
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+13:00–15:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-assessment">
+Assessment
+</span>
+
+<h3 class="course-schedule-title">
+Course Assessment
+</h3>
+
+
+
+</div>
+
+<div class="course-schedule-location-column">
+
+
+<div class="course-schedule-location">
+<i class="bi bi-geo-alt"></i>
+Online
+</div>
+
+
+</div>
+
+</div>
+
+<div class="course-schedule-event">
+
+
+<div class="course-schedule-separator"></div>
+
+
+<div class="course-schedule-time">
+14:00–15:00
+</div>
+
+<div class="course-schedule-details">
+
+<span class="course-upcoming-type course-type-consultation">
+Consultation
+</span>
+
+<h3 class="course-schedule-title">
+Final Course Meeting
+</h3>
+
+
+<div class="course-schedule-speaker">
+Jane Doe, Maria Andersson
 </div>
 
 

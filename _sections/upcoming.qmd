@@ -1,13 +1,2 @@
-::: {.course-upcoming}
-
-<div class="course-upcoming-content">
-
-<div class="course-section-label">
-NEXT UP
-</div>
 
 {{< include _generated/upcoming.qmd >}}
-
-</div>
-
-:::

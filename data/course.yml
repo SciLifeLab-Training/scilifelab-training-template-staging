@@ -2,14 +2,14 @@ course:
 
   # Identity
   title: "Open Science in the Swedish Context"
-  subtitle: "Course subtitle"
+  subtitle: "Course subtitle for testing"
   abstract: ""
   description: >
     Brief description of the course.
 
   # Delivery
-  start_date: 2026-10-12
-  end_date: 2026-10-17
+  start_date: "2026-09-02"
+  end_date: "2026-09-16"
   duration: "2 days"
   format: "Instructor-led"
   location: "SciLifeLab Stockholm"

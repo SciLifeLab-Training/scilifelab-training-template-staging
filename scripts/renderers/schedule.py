@@ -19,9 +19,39 @@ def render_schedule(events, course):
     # Course metadata
     # ------------------------------------------------------------------
 
-    start = format_date(course["start_date"])
-    end = format_date(course["end_date"])
-    location = course["location"]
+    start_date = course.get("start_date")
+    end_date = course.get("end_date")
+    location = course.get("location")
+
+    start = format_date(start_date) if start_date else None
+    end = format_date(end_date) if end_date else None
+
+    if start and end:
+        date_text = f"{start} – {end}"
+    elif start:
+        date_text = start
+    elif end:
+        date_text = end
+    else:
+        date_text = None
+
+    meta = ""
+
+    if date_text:
+        meta += f"""
+<span class="course-welcome-item">
+<i class="bi bi-calendar2-event"></i>
+{date_text}
+</span>
+"""
+
+    if location:
+        meta += f"""
+<span class="course-welcome-item">
+<i class="bi bi-geo-alt"></i>
+{location}
+</span>
+"""
 
     page_header = f"""
 <div class="course-page-header">
@@ -30,21 +60,14 @@ def render_schedule(events, course):
 
 <div class="course-page-meta">
 
-<span class="course-welcome-item">
-<i class="bi bi-calendar2-event"></i>
-{start} – {end}
-</span>
-
-<span class="course-welcome-item">
-<i class="bi bi-geo-alt"></i>
-{location}
-</span>
+{meta}
 
 </div>
 
 </div>
 """.strip()
 
+    
     # ------------------------------------------------------------------
     # Group events by course day
     # ------------------------------------------------------------------

@@ -1,3 +1,8 @@
+<!--
+EDIT THIS FILE to customize the course welcome text.
+You can use normal Markdown here.
+-->
+
 ::: {.course-welcome}
 
 ::: {.course-welcome-layout}

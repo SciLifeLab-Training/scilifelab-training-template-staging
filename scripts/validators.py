@@ -2,8 +2,6 @@ def validate_course(course):
 
     required = [
         "title",
-        "start_date",
-        "end_date",
     ]
 
     for field in required:

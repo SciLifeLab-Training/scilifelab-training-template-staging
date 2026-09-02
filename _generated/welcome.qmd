@@ -1,10 +1,11 @@
 # Open Science in the Swedish Context
 
+
 <div class="course-welcome-meta">
 
 <span class="course-welcome-item">
 <i class="bi bi-calendar2-event"></i>
-12 Oct 2026 – 17 Oct 2026
+02 Sep 2026 – 16 Sep 2026
 </span>
 
 <span class="course-welcome-item">
