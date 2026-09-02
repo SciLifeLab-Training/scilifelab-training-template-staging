@@ -1,9 +1,0 @@
-<!--
-Frequently asked questions.
-
-This page is maintained manually.
--->
-
-# Frequently Asked Questions
-
-Replace this placeholder with course FAQs.

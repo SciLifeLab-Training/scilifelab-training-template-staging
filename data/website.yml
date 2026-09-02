@@ -54,6 +54,6 @@ website:
 
   registration:
 
-    enabled: false
-    label: "Register"
-    url: ""
+    enabled: true
+    closing_date: "2026-10-25"
+    url: "https://registration.example.com"

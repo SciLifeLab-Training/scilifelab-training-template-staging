@@ -348,6 +348,67 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+/* ==========================================================================
+   COURSE REGISTRATION
+   ========================================================================== */
+
+.course-registration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 1.5rem 2.5rem;
+    padding: 1rem 1.5rem;
+
+    background: #045C64;
+    border-radius: 6px;
+
+    color: white;
+}
+
+.course-registration-content {
+    gap: 0.15rem;
+    line-height: 1;
+}
+
+.course-registration-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.course-registration-date {
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.course-registration-button {
+    display: flex;
+    align-items: center;
+
+    padding: 0.65rem 1.2rem;
+
+    background: #9cc31c;
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.course-registration-button:hover {
+    background: #8aad18;
+    text-decoration: none;
+}
+
+
 
 /* ==========================================================================
    UPCOMING SECTION
@@ -764,7 +825,7 @@ body {
 /* ======= Announcement date ========= */
 
 .course-announcement-date {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #333;
 
@@ -777,7 +838,7 @@ body {
 .course-announcement-title {
     margin: 0 0 0.15rem;
 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
 
     color: #333;

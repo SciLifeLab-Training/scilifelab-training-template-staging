@@ -1,9 +1,0 @@
-<!--
-Pre-course information.
-
-This page is maintained manually.
--->
-
-# Before the Course
-
-Replace this placeholder with preparation instructions for participants.
