@@ -56,20 +56,9 @@ No active announcements.
             f"""
 <div class="course-announcement">
 
-<div class="course-announcement-date">
-
-{formatted_date}
-
-</div>
-
-<h3 class="course-announcement-title">
-
-{announcement["title"]}
-
-</h3>
-
-{announcement["text"]}
-
+<div class="course-announcement-date">{formatted_date}</div>
+<h3 class="course-announcement-title">{announcement["title"]}</h3>
+<p>{announcement["text"]}</p>
 </div>
 """.strip()
         )

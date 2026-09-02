@@ -10,36 +10,14 @@ COURSE ANNOUNCEMENTS
 
 <div class="course-announcement">
 
-<div class="course-announcement-date">
-
-10 May
-
-</div>
-
-<h3 class="course-announcement-title">
-
-Remember to bring your laptop
-
-</h3>
-
-Please bring your laptop to all workshop sessions.
-
+<div class="course-announcement-date">10 May</div>
+<h3 class="course-announcement-title">Remember to bring your laptop</h3>
+<p>Please bring your laptop to all workshop sessions.</p>
 </div><div class="course-announcement">
 
-<div class="course-announcement-date">
-
-4 May
-
-</div>
-
-<h3 class="course-announcement-title">
-
-Pre-course material is now available
-
-</h3>
-
-You can now access the reading in the Course content section.
-
+<div class="course-announcement-date">4 May</div>
+<h3 class="course-announcement-title">Pre-course material is now available</h3>
+<p>You can now access the reading in the Course content section.</p>
 </div>
 
 <a class="course-announcements-link" href="announcements.qmd">
