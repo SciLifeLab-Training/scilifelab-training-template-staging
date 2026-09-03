@@ -290,7 +290,7 @@ body {
 
 /* Styles the main course heading displayed at the top of the welcome section */
 .course-welcome h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.15;
     margin-bottom: 1.25rem;

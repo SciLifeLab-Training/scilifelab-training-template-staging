@@ -1,8 +1,8 @@
 course:
 
   # Identity
-  title: "Open Science in the Swedish Context"
-  subtitle: "Course subtitle for testing"
+  title: "Mock Course Title — Advanced Methods in Experimental Research"
+  subtitle: "This is placeholder subtitle for testing the landing page layout and responsive behaviour."
   abstract: ""
   description: >
     Brief description of the course.

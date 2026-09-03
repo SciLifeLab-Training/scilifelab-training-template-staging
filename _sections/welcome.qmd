@@ -13,8 +13,7 @@ You can use normal Markdown here.
 
 ## Welcome to the course
 
-Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course.
-Welcome to the course title. Here you will find the schedule, course materials, assignments and practical information for the course.
+In this mock course, you will learn how to design experiments, analyse data, and apply advanced research methods. Here you will find the schedule, course materials, important announcements, and practical information for the course.
 
 :::
 
