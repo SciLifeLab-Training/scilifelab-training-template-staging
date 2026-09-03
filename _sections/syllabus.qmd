@@ -1,5 +1,0 @@
----
-title: "Syllabus"
----
-
-Add the course syllabus here.
