@@ -1,0 +1,3 @@
+<div class="course-navbar-title">
+<h1>Mock course title — Advanced Methods in Experimental Research</h1>
+</div>

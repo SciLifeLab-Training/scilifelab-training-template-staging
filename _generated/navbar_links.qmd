@@ -1,0 +1,5 @@
+<a class="course-navbar-link" href="index.qmd" data-page="index.qmd">Overview</a>
+<a class="course-navbar-link" href="schedule.qmd" data-page="schedule.qmd">Schedule</a>
+<a class="course-navbar-link" href="practical.qmd" data-page="practical.qmd">Practical info</a>
+<a class="course-navbar-link" href="resources.qmd" data-page="resources.qmd">Resources</a>
+<a class="course-navbar-link" href="faq.qmd" data-page="faq.qmd">FAQ</a>

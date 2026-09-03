@@ -1,0 +1,56 @@
+course:
+
+  # Identity
+  title: "Mock Course Title — Advanced Methods in Experimental Research"
+  subtitle: "This is placeholder subtitle for testing the landing page layout and responsive behaviour."
+  abstract: ""
+  description: >
+    Brief description of the course.
+
+  # Delivery
+  start_date: "2026-09-02"
+  end_date: "2026-09-16"
+  duration: "2 days"
+  format: "Instructor-led"
+  location: "SciLifeLab Stockholm"
+  language: "English"
+
+  # Educational
+  target_audience: ""
+  expertise_level: ""
+
+  prerequisites:
+    knowledge:
+      - ""
+    technical:
+      - ""
+
+  learning_outcomes:
+    - ""
+
+  topics:
+    - ""
+
+  # Contact
+  contact_email: "training@example.org"
+
+reuse:
+
+  keywords:
+    - ""
+
+  content_provider: "SciLifeLab"
+
+  licence: "CC BY 4.0"
+
+  doi:
+
+  version: "1.0"
+
+  lifecycle: "draft"
+
+  created:
+
+  published:
+
+  revised:

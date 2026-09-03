@@ -1,0 +1,23 @@
+team:
+
+  - name: "Jane Doe"
+    roles:
+      - Course lead
+    job_title: "Job title"
+    affiliation: "NBIS"
+    email: ""
+    orcid: ""
+    linkedin: ""
+    github: ""
+    image: "img/photos/InekeLuijten.png"
+  
+  - name: "John Smith"
+    roles:
+      - Instructor
+    job_title: "Job title"
+    affiliation: "SciLifeLab"
+    email: ""
+    orcid: ""
+    linkedin: ""
+    github: ""
+    image: "img/photos/ElinKronander.png"

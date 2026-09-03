@@ -1,26 +1,19 @@
 ---
-title: "Schedule"
-author: "John Doe"
-date: today
+title: Schedule
+title-block: false
+anchor-sections: false
+
+include-in-header:
+  - text: |
+      <script src="js/schedule.js"></script>
 ---
 
-<br>
+::: {.course-shell}
 
-##### Date
+{{< include _sections/navbar.qmd >}}
 
-| Time | Session |
-|------|------|
-| 09:00 - 10:15 | [Module 1](module1.qmd) |
-| 10:15 - 10:45 | Coffee break |
-| 10:45 - 12:00 | [Module 2](module2.qmd) |
-| 12:00 - 13:00 | Lunch |
-: {tbl-colwidths="[25,75]"} 
+{{< include _generated/schedule.qmd >}}
 
-<br/>
-     
-##### Date    
+{{< include _sections/footer.qmd >}}
 
-| Time | Topic |
-|------|------|
-| 09:00 - 12:00 | Discussion session |
-: {tbl-colwidths="[25,75]"} 
+:::

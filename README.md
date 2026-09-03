@@ -24,7 +24,7 @@ This branch does **not** control the landing page at the root of the site. The l
 2. Name it `release-YYMM`, for example `release-2505`.
 3. Update the course content in that new branch.
 4. Push the branch.
-5. GitHub Actions renders the course and publishes it to `gh-pages/YYMM/`.
+5. GitHub Actions renders the course and publishes the result to the matching directory on `gh-pages`.
 
 The output directory is derived from the branch name by the release workflow. You do not need to maintain a separate branch-mapping list in `_quarto.yml`.
 
@@ -67,3 +67,4 @@ Examples:
 - `gh-pages` is deployment output only
 - `.nojekyll` is kept by the workflow
 - the landing page branch (`main`) separately controls which instances appear on the landing page
+

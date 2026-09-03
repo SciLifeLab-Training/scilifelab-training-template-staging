@@ -1,0 +1,9 @@
+::: {.course-links}
+
+<div class="course-section-label">
+COURSE LINKS
+</div>
+
+{{< include _generated/quick_links.qmd >}}
+
+:::

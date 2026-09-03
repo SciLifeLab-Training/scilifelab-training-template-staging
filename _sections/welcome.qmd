@@ -1,0 +1,28 @@
+<!--
+EDIT THIS FILE to customize the course welcome text.
+You can use normal Markdown here.
+-->
+
+::: {.course-welcome}
+
+::: {.course-welcome-layout}
+
+::: {.course-welcome-text}
+
+{{< include _generated/welcome.qmd >}}
+
+## Welcome to the course
+
+In this mock course, you will learn how to design experiments, analyse data, and apply advanced research methods. Here you will find the schedule, course materials, important announcements, and practical information for the course.
+
+:::
+
+::: {.course-welcome-image}
+
+![](img/welcome-graphic-placeholder.png)
+
+:::
+
+:::
+
+:::

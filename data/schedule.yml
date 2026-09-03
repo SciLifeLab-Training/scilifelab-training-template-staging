@@ -1,0 +1,187 @@
+events:
+
+  # ------------------------------------------------------------------
+  # DAY 1
+  # ------------------------------------------------------------------
+
+  - title: "Welcome and Course Introduction"
+    type: lecture
+    group: "Day 1"
+    start: 2026-09-02T09:00:00
+    end: 2026-09-02T09:45:00
+    all_day: false
+    location: "SciLifeLab Solna"
+    people:
+      - Jane Doe
+    description: "Introduction to the course, objectives, and practical information."
+    content: content/chapter1.qmd
+
+  - title: "Introduction to the Research Environment"
+    type: lecture
+    group: "Day 1"
+    start: 2026-09-02T10:00:00
+    end: 2026-09-02T11:00:00
+    all_day: false
+    location: "Lecture Hall A"
+    people:
+      - John Smith
+    description: ""
+    content: content/chapter2.qmd
+
+  - title: "Coffee Break"
+    type: break
+    group: "Day 1"
+    start: 2026-09-02T11:00:00
+    end: 2026-09-02T11:30:00
+    all_day: false
+    location: ""
+    people: []
+    description: ""
+    content: ""
+
+  - title: "Hands-on Data Analysis"
+    type: practical
+    group: "Day 1"
+    start: 2026-09-02T11:30:00
+    end: 2026-09-02T13:00:00
+    all_day: false
+    location: "Computer Lab"
+    people:
+      - Jane Doe
+      - Alex Johnson
+    description: "Practical session working with the course dataset."
+    content: content/chapter3.qmd
+
+  - title: "Lunch"
+    type: break
+    group: "Day 1"
+    start: 2026-09-02T13:00:00
+    end: 2026-09-02T14:00:00
+    all_day: false
+    location: "SciLifeLab Café"
+    people: []
+    description: ""
+    content: ""
+
+  - title: "Discussion and Reflection"
+    type: discussion
+    group: "Day 1"
+    start: 2026-09-02T14:00:00
+    end: 2026-09-02T15:00:00
+    all_day: false
+    location: "Seminar Room 2"
+    people:
+      - John Smith
+    description: ""
+    content: ""
+
+
+  # ------------------------------------------------------------------
+  # DAY 2
+  # ------------------------------------------------------------------
+
+  - title: "Advanced Methods"
+    type: lecture
+    group: "Day 2"
+    start: 2026-09-03T09:00:00
+    end: 2026-09-03T10:30:00
+    all_day: false
+    location: "Lecture Hall A"
+    people:
+      - Maria Andersson
+    description: ""
+    content: content/chapter4.qmd
+
+  - title: "Workshop: Building a Workflow"
+    type: practical
+    group: "Day 2"
+    start: 2026-09-03T10:45:00
+    end: 2026-09-03T12:30:00
+    all_day: false
+    location: "Computer Lab"
+    people:
+      - Maria Andersson
+      - Alex Johnson
+    description: ""
+    content: content/chapter5.qmd
+
+  - title: "Guest Lecture: From Data to Discovery"
+    type: discussion
+    group: "Day 2"
+    start: 2026-09-03T14:00:00
+    end: 2026-09-03T15:00:00
+    all_day: false
+    location: "Auditorium"
+    people:
+      - Sarah Wilson
+    description: "Guest presentation followed by questions."
+    content: ""
+
+
+  # ------------------------------------------------------------------
+  # DAY 3
+  # ------------------------------------------------------------------
+
+  - title: "Independent Project Work"
+    type: group-work
+    group: "Day 3"
+    start: 2026-09-04T09:00:00
+    end: 2026-09-04T12:00:00
+    all_day: false
+    location: ""
+    people: []
+    description: "Time for independent work on the course project."
+    content: content/chapter6.qmd
+
+  - title: "Project Presentations"
+    type: presentation
+    group: "Day 3"
+    start: 2026-09-04T13:00:00
+    end: 2026-09-04T15:30:00
+    all_day: false
+    location: "Auditorium"
+    people:
+      - Jane Doe
+    description: ""
+    content: ""
+
+
+  # ------------------------------------------------------------------
+  # LATER IN THE FUTURE
+  # ------------------------------------------------------------------
+
+  - title: "Follow-up Workshop"
+    type: workshop
+    group: "Follow-up"
+    start: 2026-09-16T10:00:00
+    end: 2026-09-16T12:00:00
+    all_day: false
+    location: "Online"
+    people:
+      - John Smith
+    description: "Follow-up workshop several weeks after the main course."
+    content: content/chapter7.qmd
+
+  - title: "Course Assessment"
+    type: assessment
+    group: "Follow-up"
+    start: 2026-09-23T13:00:00
+    end: 2026-09-23T15:00:00
+    all_day: false
+    location: "Online"
+    people: []
+    description: "Final assessment."
+    content: ""
+
+  - title: "Final Course Meeting"
+    type: consultation
+    group: "Follow-up"
+    start: 2026-10-07T14:00:00
+    end: 2026-10-07T15:00:00
+    all_day: false
+    location: "SciLifeLab Solna"
+    people:
+      - Jane Doe
+      - Maria Andersson
+    description: ""
+    content: ""

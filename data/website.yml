@@ -1,0 +1,59 @@
+website:
+
+  navigation:
+    content_label: "Course Content"
+
+  pages:
+
+    content:
+      title: "Course content"
+      description: "Slides, exercises and resources"
+      icon: "folder"
+      href: "content/overview.qmd"
+
+    syllabus:
+      title: "Course syllabus"
+      description: "Course structure, learning objectives and schedule"
+      icon: "journal-text"
+      href: "syllabus.qmd"
+
+    schedule:
+      title: "Schedule"
+      description: "Full course programme"
+      icon: "calendar2-event"
+      href: "schedule.qmd"
+
+    practical:
+      title: "Practical information"
+      description: "Location, travel and contact information"
+      icon: "geo-alt"
+      href: "practicalinfo.qmd"
+
+    resources:
+      title: "Resources"
+      description: "Additional reading and useful links"
+      icon: "bookshelf"
+      href: "resources.qmd"
+
+    precourse:
+      title: "Before the course"
+      description: "Preparation and pre-course material"
+      icon: "clipboard-check"
+      href: "precourse.qmd"
+
+    faq:
+      title: "FAQ"
+      description: "Frequently asked questions"
+      icon: "question-circle"
+      href: "faq.qmd"
+
+  homepage:
+
+    announcements: true
+    upcoming: true
+
+  registration:
+
+    enabled: true
+    closing_date: "2026-10-25"
+    url: "https://registration.example.com"

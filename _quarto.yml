@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: _site
 
 # Release deploy target is derived from the branch name (`release-YYMM` -> `YYMM/`).
 # This file only configures the Quarto course site itself.
@@ -22,12 +23,25 @@ website:
     logo: "img/SciLifeLab_Logotype_NEG.png"
   favicon: "img/SciLifeLab_Logotype_NEG.png"
 
+render:
+  - index.qmd
+  - schedule.qmd
+  - content/overview.qmd
+
+pre-render:
+  - .venv/bin/python scripts/render_course.py
+
+resources:
+  - img
+  - js
+
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    toc: false
+    page-layout: full
 
 execute:
   freeze: auto
