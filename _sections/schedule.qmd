@@ -1,0 +1,6 @@
+---
+pagetitle: "Schedule"
+page-layout: full
+---
+
+{{< include _generated/schedule.qmd >}}

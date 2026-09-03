@@ -1,40 +1,19 @@
 project:
+
   type: website
   output-dir: _site
 
-# Release deploy target is derived from the branch name (`release-YYMM` -> `YYMM/`).
-# This file only configures the Quarto course site itself.
+  render:
+    - index.qmd
+    - schedule.qmd
+    - content/overview.qmd
 
-website:
-  title: "Course Title"
-  sidebar:
-    style: "floating"
-    background: "#F4F6F6"
-    fontsize: 30px
-    search: true
-    contents: 
-      - index.qmd 
-      - schedule.qmd
-      - instructors.qmd
-      - module1.qmd
-      - module2.qmd
-  navbar:
-    background: "#A7C947"
-    logo: "img/SciLifeLab_Logotype_NEG.png"
-  favicon: "img/SciLifeLab_Logotype_NEG.png"
-
-render:
-  - index.qmd
-  - schedule.qmd
-  - content/overview.qmd
-
-pre-render:
-  - .venv/bin/python scripts/render_course.py
-
-resources:
-  - img
-  - js
-
+  pre-render:
+    - .venv/bin/python scripts/render_course.py
+    
+  resources:
+    - img
+    - js
 
 format:
   html:

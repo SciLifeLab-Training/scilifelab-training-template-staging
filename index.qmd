@@ -11,8 +11,6 @@ include-in-header:
 Homepage composition.
 
 This page assembles the homepage from reusable components.
-Presentation and page structure are maintained here.
-
 Component rendering is handled separately by the Python renderer.
 --> 
 
@@ -35,7 +33,7 @@ Component rendering is handled separately by the Python renderer.
 
 {{< include _sections/team-preview.qmd >}}
 
-:::
+::: 
 
 {{< include _sections/footer.qmd >}}
 
