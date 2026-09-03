@@ -9,7 +9,7 @@ project:
     - content/overview.qmd
 
   pre-render:
-    - .venv/bin/python scripts/render_course.py
+    - python scripts/render_course.py
     
   resources:
     - img
