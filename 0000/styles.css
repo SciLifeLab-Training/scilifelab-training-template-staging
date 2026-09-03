@@ -16,6 +16,57 @@
     --course-content-padding: 2.5rem;
 }
 
+.course-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: var(--sl-muted);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.course-meta__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.course-meta__item .bi {
+  color: var(--sl-lime);
+}
+
+
+/* Navbar */
+
+.navbar {
+  border: 0;
+}
+
+.navbar-brand img {
+  max-height: 38px;
+}
+
+.navbar-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 1px solid var(--sl-lime);
+}
+
+
+/* Links */
 
 /* ==========================================================================
    Quarto overrides

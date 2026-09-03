@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "content/overview.html",
-    "href": "content/overview.html",
-    "title": "Course Content",
-    "section": "",
-    "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "content/overview.html#getting-started",
-    "href": "content/overview.html#getting-started",
-    "title": "Course Content",
-    "section": "",
-    "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Course Content",
-    "section": "",
-    "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "faq.html#getting-started",
-    "href": "faq.html#getting-started",
-    "title": "Course Content",
-    "section": "",
-    "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -42,64 +14,22 @@
     "text": "In this mock course, you will learn how to design experiments, analyse data, and apply advanced research methods. Here you will find the schedule, course materials, important announcements, and practical information for the course."
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Course Content",
-    "section": "",
-    "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "resources.html#getting-started",
-    "href": "resources.html#getting-started",
-    "title": "Course Content",
-    "section": "",
-    "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "syllabus.html#getting-started",
-    "href": "syllabus.html#getting-started",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Mock course title — Advanced Methods in Experimental Research\n\n\n\n\n\nOverview Schedule Practical info Resources FAQ\n\n\n\n\n\n\n\n\n\n\n\nSchedule\n\n\n  02 Sep 2026 – 16 Sep 2026 \n  SciLifeLab Stockholm \n\n\n\n\n\n\nDay 1\n\n\nWednesday, Sep 2\n\n\n\n\nDay 2\n\n\nThursday, Sep 3\n\n\n\n\nDay 3\n\n\nFriday, Sep 4\n\n\n\n\nFollow-up\n\n\nWednesday, Sep 16\n\n\n\n\n\n\nDay 1 – Wednesday, Sep 2\n\n\n\n09:00–09:45\n\n\n Lecture \n\nWelcome and Course Introduction\n\n\nJane Doe\n\n\n\n\n SciLifeLab Solna\n\n\n\n\n\n\n\n\n10:00–11:00\n\n\n Lecture \n\nIntroduction to the Research Environment\n\n\nJohn Smith\n\n\n\n\n Lecture Hall A\n\n\n\n\n\n\n\n\n11:00–11:30\n\n\n Break \n\nCoffee Break\n\n\n\n\n\n\n\n\n\n\n\n11:30–13:00\n\n\n Practical \n\nHands-on Data Analysis\n\n\nJane Doe, Alex Johnson\n\n\n\n\n Computer Lab\n\n\n\n\n\n\n\n\n13:00–14:00\n\n\n Break \n\nLunch\n\n\n\n\n SciLifeLab Café\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Discussion \n\nDiscussion and Reflection\n\n\nJohn Smith\n\n\n\n\n Seminar Room 2\n\n\n\n\n\n\nDay 2 – Thursday, Sep 3\n\n\n\n09:00–10:30\n\n\n Lecture \n\nAdvanced Methods\n\n\nMaria Andersson\n\n\n\n\n Lecture Hall A\n\n\n\n\n\n\n\n\n10:45–12:30\n\n\n Practical \n\nWorkshop: Building a Workflow\n\n\nMaria Andersson, Alex Johnson\n\n\n\n\n Computer Lab\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Discussion \n\nGuest Lecture: From Data to Discovery\n\n\nSarah Wilson\n\n\n\n\n Auditorium\n\n\n\n\n\n\nDay 3 – Friday, Sep 4\n\n\n\n09:00–12:00\n\n\n Group-Work \n\nIndependent Project Work\n\n\n\n\n\n\n\n\n\n\n\n13:00–15:30\n\n\n Presentation \n\nProject Presentations\n\n\nJane Doe\n\n\n\n\n Auditorium\n\n\n\n\n\n\nFollow-up – Wednesday, Sep 16\n\n\n\n10:00–12:00\n\n\n Workshop \n\nFollow-up Workshop\n\n\nJohn Smith\n\n\n\n\n Online\n\n\n\n\n\n\n\n\n13:00–15:00\n\n\n Assessment \n\nCourse Assessment\n\n\n\n\n Online\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Consultation \n\nFinal Course Meeting\n\n\nJane Doe, Maria Andersson\n\n\n\n\n SciLifeLab Solna\n\n\n\n\n\n\n\n\nBy SciLifeLab Training Hub. Licensed under CC BY 4.0.\nBuilt with Quarto and hosted on GitHub Pages."
+    "text": "Mock Course Title — Advanced Methods in Experimental Research\n\n\n\n\n\nOverview Schedule Practical info Resources FAQ\n\n\n\n\n\n\n\n\n\n\n\nSchedule\n\n\n  02 Sep 2026 – 16 Sep 2026 \n  SciLifeLab Stockholm \n\n\n\n\n\n\nDay 1\n\n\nWednesday, Sep 2\n\n\n\n\nDay 2\n\n\nThursday, Sep 3\n\n\n\n\nDay 3\n\n\nFriday, Sep 4\n\n\n\n\nFollow-up\n\n\nWednesday, Sep 16\n\n\n\n\n\n\nDay 1 – Wednesday, Sep 2\n\n\n\n09:00–09:45\n\n\n Lecture \n\nWelcome and Course Introduction\n\n\nJane Doe\n\n\n\n\n SciLifeLab Solna\n\n\n\n\n\n\n\n\n10:00–11:00\n\n\n Lecture \n\nIntroduction to the Research Environment\n\n\nJohn Smith\n\n\n\n\n Lecture Hall A\n\n\n\n\n\n\n\n\n11:00–11:30\n\n\n Break \n\nCoffee Break\n\n\n\n\n\n\n\n\n\n\n\n11:30–13:00\n\n\n Practical \n\nHands-on Data Analysis\n\n\nJane Doe, Alex Johnson\n\n\n\n\n Computer Lab\n\n\n\n\n\n\n\n\n13:00–14:00\n\n\n Break \n\nLunch\n\n\n\n\n SciLifeLab Café\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Discussion \n\nDiscussion and Reflection\n\n\nJohn Smith\n\n\n\n\n Seminar Room 2\n\n\n\n\n\n\nDay 2 – Thursday, Sep 3\n\n\n\n09:00–10:30\n\n\n Lecture \n\nAdvanced Methods\n\n\nMaria Andersson\n\n\n\n\n Lecture Hall A\n\n\n\n\n\n\n\n\n10:45–12:30\n\n\n Practical \n\nWorkshop: Building a Workflow\n\n\nMaria Andersson, Alex Johnson\n\n\n\n\n Computer Lab\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Discussion \n\nGuest Lecture: From Data to Discovery\n\n\nSarah Wilson\n\n\n\n\n Auditorium\n\n\n\n\n\n\nDay 3 – Friday, Sep 4\n\n\n\n09:00–12:00\n\n\n Group-Work \n\nIndependent Project Work\n\n\n\n\n\n\n\n\n\n\n\n13:00–15:30\n\n\n Presentation \n\nProject Presentations\n\n\nJane Doe\n\n\n\n\n Auditorium\n\n\n\n\n\n\nFollow-up – Wednesday, Sep 16\n\n\n\n10:00–12:00\n\n\n Workshop \n\nFollow-up Workshop\n\n\nJohn Smith\n\n\n\n\n Online\n\n\n\n\n\n\n\n\n13:00–15:00\n\n\n Assessment \n\nCourse Assessment\n\n\n\n\n Online\n\n\n\n\n\n\n\n\n14:00–15:00\n\n\n Consultation \n\nFinal Course Meeting\n\n\nJane Doe, Maria Andersson\n\n\n\n\n SciLifeLab Solna\n\n\n\n\n\n\n\n\nBy SciLifeLab Training Hub. Licensed under CC BY 4.0.\nBuilt with Quarto and hosted on GitHub Pages."
   },
   {
-    "objectID": "precourse.html",
-    "href": "precourse.html",
+    "objectID": "content/overview.html",
+    "href": "content/overview.html",
     "title": "Course Content",
     "section": "",
     "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
   },
   {
-    "objectID": "precourse.html#getting-started",
-    "href": "precourse.html#getting-started",
-    "title": "Course Content",
-    "section": "",
-    "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "practicalinfo.html",
-    "href": "practicalinfo.html",
-    "title": "Course Content",
-    "section": "",
-    "text": "Welcome to the course materials.\nThis section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.\nReplace this page with an introduction to your course content and add links to the relevant learning materials.\n\n\nUse this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
-  },
-  {
-    "objectID": "practicalinfo.html#getting-started",
-    "href": "practicalinfo.html#getting-started",
+    "objectID": "content/overview.html#getting-started",
+    "href": "content/overview.html#getting-started",
     "title": "Course Content",
     "section": "",
     "text": "Use this page to help learners navigate the course content. For example, you might:\n\nIntroduce the course structure.\nExplain how learners should work through the material.\nLink to the first module or lesson.\nHighlight recommended resources or prerequisites."
