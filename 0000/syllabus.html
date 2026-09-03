@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Title - Home</title>
+<title>Course Title - Syllabus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -58,7 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="js/schedule.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Syllabus</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Home</h1>
+<h1 class="title">Syllabus</h1>
 </div>
 
 
@@ -156,267 +156,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!--
-Homepage composition.
+Course content landing page.
 
-This page assembles the homepage from reusable components.
-Presentation and page structure are maintained here.
+This page introduces the course materials and serves as the entry point to the content/ directory.
 
-Component rendering is handled separately by the Python renderer.
+The organization of the learning material is intentionally flexible and should be adapted to the needs of each course.
 -->
-<div class="course-shell">
-<div class="course-navbar">
-<div class="course-navbar-layout">
-<div class="course-navbar-content">
-<div class="course-navbar-title">
-<div class="course-navbar-title">
-<h1>
-Mock course title — Advanced Methods in Experimental Research
-</h1>
-</div>
-</div>
-<div class="course-navbar-menu">
-<div class="course-navbar-links">
-<p><a class="course-navbar-link" href="./index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="./schedule.html" data-page="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="practical.qmd" data-page="practical.qmd">Practical info</a> <a class="course-navbar-link" href="./resources.html" data-page="resources.qmd">Resources</a> <a class="course-navbar-link" href="./faq.html" data-page="faq.qmd">FAQ</a></p>
-</div>
-</div>
-</div>
-<div class="course-navbar-brand">
-<p><img src="img/scilifelab-logo-full-neg.png" class="course-navbar-logo"></p>
-</div>
-</div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<section id="course-content" class="level1">
+<h1>Course Content</h1>
+<p>Welcome to the course materials.</p>
+<p>This section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.</p>
+<p>Replace this page with an introduction to your course content and add links to the relevant learning materials.</p>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<p>Use this page to help learners navigate the course content. For example, you might:</p>
+<ul>
+<li>Introduce the course structure.</li>
+<li>Explain how learners should work through the material.</li>
+<li>Link to the first module or lesson.</li>
+<li>Highlight recommended resources or prerequisites.</li>
+</ul>
 
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
-
-        const page = link.dataset.page;
-
-        const expectedPage =
-            page === "index.qmd"
-                ? "index.html"
-                : page.replace(".qmd", ".html");
-
-        if (expectedPage === currentPage) {
-            link.classList.add("course-navbar-link-active");
-        }
-
-    });
-
-});
-</script>
-<!--
-EDIT THIS FILE to customize the course welcome text.
-You can use normal Markdown here.
--->
-<div class="course-welcome">
-<div class="course-welcome-layout">
-<section id="mock-course-title-advanced-methods-in-experimental-research" class="level1 course-welcome-text">
-<h1>Mock course title — Advanced Methods in Experimental Research</h1>
-<div class="course-welcome-meta">
-<p><span class="course-welcome-item"> <i class="bi bi-calendar2-event"></i> 02 Sep 2026 – 16 Sep 2026 </span></p>
-<p><span class="course-welcome-item"> <i class="bi bi-geo-alt"></i> SciLifeLab Stockholm </span></p>
-</div>
-<section id="welcome-to-the-course" class="level2">
-<h2 data-anchor-id="welcome-to-the-course">Welcome to the course</h2>
-<p>In this mock course, you will learn how to design experiments, analyse data, and apply advanced research methods. Here you will find the schedule, course materials, important announcements, and practical information for the course.</p>
 </section>
 </section>
-<div class="course-welcome-image">
-<p><img src="img/welcome-graphic-placeholder.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
-<div class="course-registration">
-<div class="course-registration-content">
-<div class="course-registration-title">
-Registration is open
-</div>
-<div class="course-registration-date">
-Register before 25 October 2026.
-</div>
-</div>
-<a class="course-registration-button" href="https://registration.example.com"> Register for this course → </a>
-</div>
-<div class="course-upcoming-section">
-<div class="course-section-label">
-<p>NEXT UP</p>
-</div>
-<div class="course-upcoming" data-events="[{&quot;title&quot;: &quot;Welcome and Course Introduction&quot;, &quot;type&quot;: &quot;lecture&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T09:00:00&quot;, &quot;end&quot;: &quot;2026-09-02T09:45:00&quot;, &quot;location&quot;: &quot;SciLifeLab Solna&quot;, &quot;people&quot;: [&quot;Jane Doe&quot;], &quot;content&quot;: &quot;content/chapter1.html&quot;}, {&quot;title&quot;: &quot;Introduction to the Research Environment&quot;, &quot;type&quot;: &quot;lecture&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T10:00:00&quot;, &quot;end&quot;: &quot;2026-09-02T11:00:00&quot;, &quot;location&quot;: &quot;Lecture Hall A&quot;, &quot;people&quot;: [&quot;John Smith&quot;], &quot;content&quot;: &quot;content/chapter2.html&quot;}, {&quot;title&quot;: &quot;Coffee Break&quot;, &quot;type&quot;: &quot;break&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T11:00:00&quot;, &quot;end&quot;: &quot;2026-09-02T11:30:00&quot;, &quot;location&quot;: &quot;&quot;, &quot;people&quot;: [], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Hands-on Data Analysis&quot;, &quot;type&quot;: &quot;practical&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T11:30:00&quot;, &quot;end&quot;: &quot;2026-09-02T13:00:00&quot;, &quot;location&quot;: &quot;Computer Lab&quot;, &quot;people&quot;: [&quot;Jane Doe&quot;, &quot;Alex Johnson&quot;], &quot;content&quot;: &quot;content/chapter3.html&quot;}, {&quot;title&quot;: &quot;Lunch&quot;, &quot;type&quot;: &quot;break&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T13:00:00&quot;, &quot;end&quot;: &quot;2026-09-02T14:00:00&quot;, &quot;location&quot;: &quot;SciLifeLab Caf\u00e9&quot;, &quot;people&quot;: [], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Discussion and Reflection&quot;, &quot;type&quot;: &quot;discussion&quot;, &quot;group&quot;: &quot;Day 1&quot;, &quot;start&quot;: &quot;2026-09-02T14:00:00&quot;, &quot;end&quot;: &quot;2026-09-02T15:00:00&quot;, &quot;location&quot;: &quot;Seminar Room 2&quot;, &quot;people&quot;: [&quot;John Smith&quot;], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Advanced Methods&quot;, &quot;type&quot;: &quot;lecture&quot;, &quot;group&quot;: &quot;Day 2&quot;, &quot;start&quot;: &quot;2026-09-03T09:00:00&quot;, &quot;end&quot;: &quot;2026-09-03T10:30:00&quot;, &quot;location&quot;: &quot;Lecture Hall A&quot;, &quot;people&quot;: [&quot;Maria Andersson&quot;], &quot;content&quot;: &quot;content/chapter4.html&quot;}, {&quot;title&quot;: &quot;Workshop: Building a Workflow&quot;, &quot;type&quot;: &quot;practical&quot;, &quot;group&quot;: &quot;Day 2&quot;, &quot;start&quot;: &quot;2026-09-03T10:45:00&quot;, &quot;end&quot;: &quot;2026-09-03T12:30:00&quot;, &quot;location&quot;: &quot;Computer Lab&quot;, &quot;people&quot;: [&quot;Maria Andersson&quot;, &quot;Alex Johnson&quot;], &quot;content&quot;: &quot;content/chapter5.html&quot;}, {&quot;title&quot;: &quot;Guest Lecture: From Data to Discovery&quot;, &quot;type&quot;: &quot;discussion&quot;, &quot;group&quot;: &quot;Day 2&quot;, &quot;start&quot;: &quot;2026-09-03T14:00:00&quot;, &quot;end&quot;: &quot;2026-09-03T15:00:00&quot;, &quot;location&quot;: &quot;Auditorium&quot;, &quot;people&quot;: [&quot;Sarah Wilson&quot;], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Independent Project Work&quot;, &quot;type&quot;: &quot;group-work&quot;, &quot;group&quot;: &quot;Day 3&quot;, &quot;start&quot;: &quot;2026-09-04T09:00:00&quot;, &quot;end&quot;: &quot;2026-09-04T12:00:00&quot;, &quot;location&quot;: &quot;&quot;, &quot;people&quot;: [], &quot;content&quot;: &quot;content/chapter6.html&quot;}, {&quot;title&quot;: &quot;Project Presentations&quot;, &quot;type&quot;: &quot;presentation&quot;, &quot;group&quot;: &quot;Day 3&quot;, &quot;start&quot;: &quot;2026-09-04T13:00:00&quot;, &quot;end&quot;: &quot;2026-09-04T15:30:00&quot;, &quot;location&quot;: &quot;Auditorium&quot;, &quot;people&quot;: [&quot;Jane Doe&quot;], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Follow-up Workshop&quot;, &quot;type&quot;: &quot;workshop&quot;, &quot;group&quot;: &quot;Follow-up&quot;, &quot;start&quot;: &quot;2026-09-16T10:00:00&quot;, &quot;end&quot;: &quot;2026-09-16T12:00:00&quot;, &quot;location&quot;: &quot;Online&quot;, &quot;people&quot;: [&quot;John Smith&quot;], &quot;content&quot;: &quot;content/chapter7.html&quot;}, {&quot;title&quot;: &quot;Course Assessment&quot;, &quot;type&quot;: &quot;assessment&quot;, &quot;group&quot;: &quot;Follow-up&quot;, &quot;start&quot;: &quot;2026-09-23T13:00:00&quot;, &quot;end&quot;: &quot;2026-09-23T15:00:00&quot;, &quot;location&quot;: &quot;Online&quot;, &quot;people&quot;: [], &quot;content&quot;: &quot;&quot;}, {&quot;title&quot;: &quot;Final Course Meeting&quot;, &quot;type&quot;: &quot;consultation&quot;, &quot;group&quot;: &quot;Follow-up&quot;, &quot;start&quot;: &quot;2026-10-07T14:00:00&quot;, &quot;end&quot;: &quot;2026-10-07T15:00:00&quot;, &quot;location&quot;: &quot;SciLifeLab Solna&quot;, &quot;people&quot;: [&quot;Jane Doe&quot;, &quot;Maria Andersson&quot;], &quot;content&quot;: &quot;&quot;}]">
-<div class="course-upcoming-card">
-<div class="course-upcoming-day">
-<div class="course-upcoming-weekday">
-
-</div>
-<div class="course-upcoming-date">
-
-</div>
-<div class="course-upcoming-month">
-
-</div>
-</div>
-<div class="course-upcoming-details">
-<div class="course-upcoming-top">
-<p><span class="course-upcoming-time"></span> <span class="course-upcoming-type"></span></p>
-</div>
-<h3 class="course-upcoming-title">
-</h3>
-<div class="course-upcoming-speaker">
-
-</div>
-<div class="course-upcoming-location">
-
-</div>
-</div>
-<div class="course-upcoming-status">
-<div class="course-upcoming-countdown">
-
-</div>
-<p><a class="course-upcoming-link" href="./schedule.html"> Full schedule → </a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="course-links">
-<div class="course-section-label">
-<p>COURSE LINKS</p>
-</div>
-<div class="course-links-grid">
-<div class="course-link-card">
-<p><i class="bi bi-folder course-link-icon"></i></p>
-<div class="course-link-content">
-<h3>
-Course content
-</h3>
-<p>
-Slides, exercises and resources
-</p>
-<p><a href="./content/overview.html"> View course content → </a></p>
-</div>
-</div>
-<div class="course-link-card">
-<p><i class="bi bi-journal-text course-link-icon"></i></p>
-<div class="course-link-content">
-<h3>
-Course syllabus
-</h3>
-<p>
-Course structure, learning objectives and schedule
-</p>
-<p><a href="./syllabus.html"> View course syllabus → </a></p>
-</div>
-</div>
-<div class="course-link-card">
-<p><i class="bi bi-calendar2-event course-link-icon"></i></p>
-<div class="course-link-content">
-<h3>
-Schedule
-</h3>
-<p>
-Full course programme
-</p>
-<p><a href="./schedule.html"> View schedule → </a></p>
-</div>
-</div>
-<div class="course-link-card">
-<p><i class="bi bi-geo-alt course-link-icon"></i></p>
-<div class="course-link-content">
-<h3>
-Practical information
-</h3>
-<p>
-Location, travel and contact information
-</p>
-<p><a href="./practicalinfo.html"> View practical information → </a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="course-home-bottom">
-<div class="course-announcements">
-<div class="course-announcements-content">
-<div class="course-section-label">
-<p>COURSE ANNOUNCEMENTS</p>
-</div>
-<div class="course-announcement">
-<div class="course-announcement-date">
-10 May
-</div>
-<h3 class="course-announcement-title">
-Remember to bring your laptop
-</h3>
-<p>
-Please bring your laptop to all workshop sessions.
-</p>
-</div>
-<div class="course-announcement">
-<div class="course-announcement-date">
-4 May
-</div>
-<h3 class="course-announcement-title">
-Pre-course material is now available
-</h3>
-<p>
-You can now access the reading in the Course content section.
-</p>
-</div>
-<p><a class="course-announcements-link" href="announcements.qmd"></a></p><a class="course-announcements-link" href="announcements.qmd">
-<p>View all announcements →</p>
-</a><p><a class="course-announcements-link" href="announcements.qmd"></a></p>
-</div>
-</div>
-<div class="course-team">
-<div class="course-team-content">
-<div class="course-section-label">
-<p>COURSE TEAM</p>
-</div>
-<div class="course-team-member">
-<p><img class="course-team-photo" src="img/photos/InekeLuijten.png" alt="Jane Doe"></p>
-<div class="course-team-details">
-<div class="course-team-name">
-<p>Jane Doe</p>
-</div>
-<div class="course-team-role">
-<p>Course lead</p>
-</div>
-<div class="course-team-affiliation">
-<p>NBIS</p>
-</div>
-</div>
-</div>
-<div class="course-team-member">
-<p><img class="course-team-photo" src="img/photos/ElinKronander.png" alt="John Smith"></p>
-<div class="course-team-details">
-<div class="course-team-name">
-<p>John Smith</p>
-</div>
-<div class="course-team-role">
-<p>Instructor</p>
-</div>
-<div class="course-team-affiliation">
-<p>SciLifeLab</p>
-</div>
-</div>
-</div>
-<p><a class="course-team-link" href="./team.html"> View full team → </a></p>
-</div>
-</div>
-</div>
-<div class="landing-footer">
-<div class="landing-footer__meta">
-<p>By SciLifeLab Training Hub. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-<p>Built with Quarto and hosted on GitHub Pages.</p>
-</div>
-<div class="landing-footer__actions">
-<p><a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging/tree/main" class="landing-footer__image-link"> <img src="img/github-neg.png" alt="GitHub" class="landing-footer__image"> </a></p>
-</div>
-</div>
-</div>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -439,6 +202,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
