@@ -14,7 +14,7 @@ events:
     people:
       - Jane Doe
     description: "Introduction to the course, objectives, and practical information."
-    content: content/chapter1.qmd
+    content: content/module-1/introduction.qmd
 
   - title: "Introduction to the Research Environment"
     type: lecture
@@ -26,7 +26,7 @@ events:
     people:
       - John Smith
     description: ""
-    content: content/chapter2.qmd
+    content: content/module-1/topic-1.qmd
 
   - title: "Coffee Break"
     type: break

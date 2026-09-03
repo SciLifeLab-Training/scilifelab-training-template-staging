@@ -10,6 +10,9 @@ project:
     - syllabus.qmd
     - team.qmd
     - practicalinfo.qmd
+    - resources.qmd
+    - precourse.qmd
+    - faq.qmd
 
   pre-render:
     - python scripts/render_course.py

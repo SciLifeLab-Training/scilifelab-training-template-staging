@@ -3,9 +3,7 @@ def render_navbar_meta(course):
     title = course["title"]
 
     return f"""
-<div class="course-navbar-title">
 <h1>{title}</h1>
-</div>
 """.strip()
 
 

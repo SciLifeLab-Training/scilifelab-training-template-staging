@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+from pathlib import Path
+import shutil
+
 from loaders import (
     load_course,
     load_website,
@@ -38,8 +41,18 @@ from renderers.content import (
 from renderers.schedule import render_schedule
 
 
+ROOT = Path(__file__).resolve().parents[1]
+GENERATED_DIR = ROOT / "_generated"
+
+
 def main():
     print("Running course renderer...")
+
+    # Start every render with a clean generated directory.
+    if GENERATED_DIR.exists():
+        shutil.rmtree(GENERATED_DIR)
+
+    GENERATED_DIR.mkdir()
 
     course = validate_course(load_course())
     website = validate_website(load_website())
@@ -103,8 +116,8 @@ def main():
     )
 
     write_partial(
-    "content-navbar.html",
-    render_content_navbar(course, website),
+        "content-navbar.html",
+        render_content_navbar(course, website),
     )
 
     write_partial(

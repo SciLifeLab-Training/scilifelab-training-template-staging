@@ -1,5 +1,0 @@
-{{< include _sections/navbar.qmd >}}
-
-{{< include _generated/content.qmd >}}
-
-{{< include _sections/footer.qmd >}}
