@@ -30,7 +30,11 @@ from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
 from renderers.announcements import render_announcements
 from renderers.team import render_team
-from renderers.content import render_content_overview
+from renderers.content import (
+    render_content_overview,
+    render_content_navbar,
+    render_content_footer,
+)
 from renderers.schedule import render_schedule
 
 
@@ -96,6 +100,16 @@ def main():
     write_partial(
         "content.qmd",
         render_content_overview(sections),
+    )
+
+    write_partial(
+    "content-navbar.html",
+    render_content_navbar(course, website),
+    )
+
+    write_partial(
+        "content-footer.html",
+        render_content_footer(),
     )
 
 

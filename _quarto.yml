@@ -7,6 +7,9 @@ project:
     - index.qmd
     - schedule.qmd
     - content/
+    - syllabus.qmd
+    - team.qmd
+    - practicalinfo.qmd
 
   pre-render:
     - python scripts/render_course.py

@@ -1,0 +1,11 @@
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+
+    include-before-body:
+      - ../_generated/content-navbar.html
+
+    include-after-body:
+      - ../_generated/content-footer.html
