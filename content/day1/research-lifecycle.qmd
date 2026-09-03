@@ -1,5 +1,0 @@
----
-title: "Mapping the research lifecycle"
----
-
-Course materials will go here.

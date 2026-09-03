@@ -1,5 +1,0 @@
----
-title: "The why, what and how of Open Science"
----
-
-Course materials will go here.

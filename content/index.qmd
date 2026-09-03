@@ -1,5 +1,0 @@
----
-title: "Course content"
----
-
-Course materials will appear here.
