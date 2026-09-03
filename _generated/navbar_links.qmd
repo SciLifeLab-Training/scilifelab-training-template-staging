@@ -1,6 +1,0 @@
-<a class="course-navbar-link" href="index.qmd" data-page="index.qmd">Overview</a>
-<a class="course-navbar-link" href="schedule.qmd" data-page="schedule.qmd">Schedule</a>
-<a class="course-navbar-link" href="content/index.qmd" data-page="content/index.qmd">Course Content</a>
-<a class="course-navbar-link" href="syllabus.qmd" data-page="syllabus.qmd">Syllabus</a>
-<a class="course-navbar-link" href="team.qmd" data-page="team.qmd">Course Team</a>
-<a class="course-navbar-link" href="practicalinfo.qmd" data-page="practicalinfo.qmd">Practical info</a>
