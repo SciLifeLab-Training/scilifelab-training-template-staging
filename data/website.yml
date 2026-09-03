@@ -9,7 +9,7 @@ website:
       title: "Course content"
       description: "Slides, exercises and resources"
       icon: "folder"
-      href: "content/overview.qmd"
+      href: "content/index.qmd"
 
     syllabus:
       title: "Course syllabus"
@@ -57,3 +57,20 @@ website:
     enabled: true
     closing_date: "2026-10-25"
     url: "https://registration.example.com"
+
+
+content:
+
+  sections:
+
+    - id: module-1
+      label: "Module 1"
+      title: "Introduction to Open Science"
+
+    - id: module-2
+      label: "Module 2"
+      title: "Research Data Management"
+
+    - id: module-3
+      label: "Module 3"
+      title: "Reproducible Research"

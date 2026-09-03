@@ -18,6 +18,8 @@ def load_course():
 def load_website():
     return load_yaml("website.yml")["website"]
 
+def load_content():
+    return load_yaml("website.yml")["content"]
 
 def load_schedule():
     return load_yaml("schedule.yml")["events"]

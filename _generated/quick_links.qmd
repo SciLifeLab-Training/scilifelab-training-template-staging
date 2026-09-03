@@ -9,7 +9,7 @@
 
 <p>Slides, exercises and resources</p>
 
-<a href="content/overview.qmd">
+<a href="content/index.qmd">
 View course content →
 </a>
 

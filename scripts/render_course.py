@@ -3,10 +3,13 @@
 from loaders import (
     load_course,
     load_website,
+    load_content,
     load_schedule,
     load_team,
     load_announcements,
 )
+
+from content import load_content_sections
 
 from validators import (
     validate_course,
@@ -27,6 +30,7 @@ from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
 from renderers.announcements import render_announcements
 from renderers.team import render_team
+from renderers.content import render_content_overview
 from renderers.schedule import render_schedule
 
 
@@ -35,6 +39,10 @@ def main():
 
     course = validate_course(load_course())
     website = validate_website(load_website())
+
+    content = load_content()
+    sections = load_content_sections(content)
+
     registration = website.get("registration", {})
     events = validate_schedule(load_schedule())
     team = validate_team(load_team())
@@ -56,8 +64,8 @@ def main():
     )
 
     write_partial(
-    "registration.qmd",
-    render_registration(registration),
+        "registration.qmd",
+        render_registration(registration),
     )
 
     write_partial(
@@ -81,11 +89,15 @@ def main():
     )
 
     write_partial(
-    "schedule.qmd",
-    render_schedule(events, course),
-)
-    
+        "schedule.qmd",
+        render_schedule(events, course),
+    )
+
+    write_partial(
+        "content.qmd",
+        render_content_overview(sections),
+    )
+
 
 if __name__ == "__main__":
     main()
-

@@ -1,0 +1,20 @@
+---
+title: "Introduction"
+order: 1
+---
+
+This is placeholder content for testing the course content layout.
+
+## Learning objectives
+
+By the end of this section, you will understand the main concepts covered in this module.
+
+::: {.callout-note}
+## Key idea
+
+This is placeholder callout content for testing the Quarto layout.
+:::
+
+## Overview
+
+More placeholder Markdown content goes here.

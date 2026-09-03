@@ -11,26 +11,14 @@ def render_navbar_meta(course):
 
 def render_navbar_links(website):
 
-    pages = website["pages"]
-
     links = [
         ("Overview", "index.qmd"),
+        ("Schedule", "schedule.qmd"),
+        ("Course Content", "content/index.qmd"),
+        ("Syllabus", "syllabus.qmd"),
+        ("Course Team", "team.qmd"),
+        ("Practical info", "practicalinfo.qmd"),
     ]
-
-    if pages.get("schedule"):
-        links.append(("Schedule", "schedule.qmd"))
-
-    if pages.get("practical"):
-        links.append(("Practical info", "practical.qmd"))
-
-    if pages.get("resources"):
-        links.append(("Resources", "resources.qmd"))
-
-    if pages.get("faq"):
-        links.append(("FAQ", "faq.qmd"))
-
-    if pages.get("team_page"):
-        links.append(("Team", "team.qmd"))
 
     html = []
 

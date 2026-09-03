@@ -171,6 +171,7 @@ body {
         );
 
     color: white;
+    border-radius: 0 0 6px 6px 
 }
 
 /* Arranges the course title, navigation menu, and SciLifeLab logo into a two-column layout. The title and menu occupy the left column while the logo occupies the right column */
@@ -1025,6 +1026,7 @@ body {
   padding: 0.45rem clamp(0.75rem, 2vw, 1rem);
   background: #b8b8b8;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 6px 6px 0 0
 }
 
 /* Position the footer text and allow it to use the available width. */

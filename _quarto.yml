@@ -6,7 +6,7 @@ project:
   render:
     - index.qmd
     - schedule.qmd
-    - content/overview.qmd
+    - content/
 
   pre-render:
     - python scripts/render_course.py
