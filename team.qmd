@@ -1,0 +1,13 @@
+---
+title: Course team
+---
+
+
+::: {.course-shell}
+
+{{< include _sections/navbar.qmd >}}
+
+
+{{< include _sections/footer.qmd >}}
+
+:::
