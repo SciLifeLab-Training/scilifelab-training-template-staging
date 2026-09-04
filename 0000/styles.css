@@ -171,6 +171,7 @@ body {
         );
 
     color: white;
+    border-radius: 0 0 6px 6px 
 }
 
 /* Arranges the course title, navigation menu, and SciLifeLab logo into a two-column layout. The title and menu occupy the left column while the logo occupies the right column */
@@ -250,24 +251,16 @@ body {
     padding-top: 0.85rem;
 }
 
-/* Displays the navigation links horizontally with consistent spacing */
 .course-navbar-links {
     display: flex;
     align-items: center;
-
+    gap: 2.5rem;
     margin: 0;
     padding: 0;
 }
 
-/* Quarto may wrap the navigation links in a paragraph. This makes that wrapper behave like the navigation link container and removes its default paragraph spacing */
 .course-navbar-links p {
-    display: flex;
-    align-items: center;
-
-    gap: 2.5rem;
-
-    margin: 0;
-    padding: 0;
+    display: contents;
 }
 
 /* ======= Individual navigation links ========= */
@@ -1025,6 +1018,7 @@ body {
   padding: 0.45rem clamp(0.75rem, 2vw, 1rem);
   background: #b8b8b8;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 6px 6px 0 0
 }
 
 /* Position the footer text and allow it to use the available width. */
@@ -1448,3 +1442,64 @@ body {
     background: #555;
 }
 
+/* ==========================================================================
+   COURSE CONTENT PAGES
+   ========================================================================== */
+
+html.course-content-page body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html.course-content-page #quarto-content {
+    flex: 1;
+    min-height: 0;
+}
+
+/* Show the Quarto title on content pages.
+   The global stylesheet hides it for the landing/schedule pages. */
+
+html.course-content-page #title-block-header {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem var(--course-content-padding) 1rem;
+    box-sizing: border-box;
+}
+
+/* Reading width for the actual course content */
+
+html.course-content-page #quarto-document-content {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--course-content-padding) 3rem;
+    box-sizing: border-box;
+}
+
+/* Keep the content-page navbar and footer aligned
+   with the course shell */
+
+html.course-content-page .course-navbar,
+html.course-content-page .landing-footer {
+
+    width: 100%;
+
+    max-width: 1135px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    box-sizing: border-box;
+
+}
+
+html.course-content-page .landing-footer {
+
+    flex-shrink: 0;
+
+}

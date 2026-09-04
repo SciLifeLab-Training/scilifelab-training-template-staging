@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Content</title>
+<title>Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +23,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -59,7 +59,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
@@ -69,13 +69,119 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+    
+<div class="course-navbar">
+
+<div class="course-navbar-layout">
+
+<div class="course-navbar-content">
+
+<div class="course-navbar-title">
+<h1>Mock Course Title — Advanced Methods in Experimental Research</h1>
+</div>
+
+<div class="course-navbar-menu">
+
+<div class="course-navbar-links">
+<a class="course-navbar-link" href="#" data-page="index.qmd">Overview</a>
+<a class="course-navbar-link" href="#" data-page="schedule.qmd">Schedule</a>
+<a class="course-navbar-link" href="#" data-page="content/index.qmd">Course Content</a>
+<a class="course-navbar-link" href="#" data-page="syllabus.qmd">Syllabus</a>
+<a class="course-navbar-link" href="#" data-page="team.qmd">Course Team</a>
+<a class="course-navbar-link" href="#" data-page="practicalinfo.qmd">Practical info</a></div>
+
+</div>
+
+</div>
+
+<div class="course-navbar-brand">
+
+<img src="" data-course-asset="img/scilifelab-logo-full-neg.png" class="course-navbar-logo">
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+document.documentElement.classList.add("course-content-page");
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbar = document.querySelector(".course-navbar");
+    const footer = document.querySelector(".landing-footer");
+
+    /*
+     * Move the shared site chrome outside Quarto's
+     * main-content / TOC grid.
+     */
+
+    if (navbar) {
+        document.body.insertBefore(navbar, document.body.firstChild);
+    }
+
+    if (footer) {
+        document.body.appendChild(footer);
+    }
+
+    const pathname = window.location.pathname;
+    const contentMarker = "/content/";
+
+    const siteRoot = pathname.includes(contentMarker)
+        ? pathname.split(contentMarker)[0] + "/"
+        : "./";
+
+    const currentPage =
+        pathname.split("/").pop() || "index.html";
+
+    const isContentPage =
+        pathname.includes("/content/");
+
+    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+
+        const page = link.dataset.page;
+
+        const expectedPage =
+            page === "index.qmd"
+                ? "index.html"
+                : page.replace(".qmd", ".html");
+
+        link.href = siteRoot + expectedPage;
+
+        if (
+            isContentPage
+                ? page === "content/index.qmd"
+                : expectedPage === currentPage
+        ) {
+            link.classList.add("course-navbar-link-active");
+        }
+
+    });
+
+    document.querySelectorAll("[data-course-asset]").forEach(function (image) {
+        image.src = siteRoot + image.dataset.courseAsset;
+    });
+
+});
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course Content</h1>
+<h1 class="title">Introduction</h1>
 </div>
 
 
@@ -90,33 +196,58 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--
-Course content landing page.
-
-This page introduces the course materials and serves as the entry point to the content/ directory.
-
-The organization of the learning material is intentionally flexible and should be adapted to the needs of each course.
--->
-<section id="course-content" class="level1">
-<h1>Course Content</h1>
-<p>Welcome to the course materials.</p>
-<p>This section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.</p>
-<p>Replace this page with an introduction to your course content and add links to the relevant learning materials.</p>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Use this page to help learners navigate the course content. For example, you might:</p>
-<ul>
-<li>Introduce the course structure.</li>
-<li>Explain how learners should work through the material.</li>
-<li>Link to the first module or lesson.</li>
-<li>Highlight recommended resources or prerequisites.</li>
-</ul>
-
-
+<p>This is placeholder content for testing the course content layout.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>By the end of this section, you will understand the main concepts covered in this module.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is placeholder callout content for testing the Quarto layout.</p>
+</div>
+</div>
 </section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>More placeholder Markdown content goes here.</p>
+
+
 </section>
 
 </main> <!-- /main -->
+<footer class="landing-footer">
+
+<div class="landing-footer__meta">
+
+By SciLifeLab Training Hub. Licensed under
+<a href="https://creativecommons.org/licenses/by/4.0/">
+CC BY 4.0
+</a>.
+
+<br>
+
+Built with Quarto and hosted on GitHub Pages.
+
+</div>
+
+<div class="landing-footer__actions">
+
+<a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging/tree/main" class="landing-footer__image-link">
+
+<img src="" data-course-asset="img/github-neg.png" alt="GitHub" class="landing-footer__image">
+
+</a>
+
+</div>
+
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
