@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Content</title>
+<title>Practical info</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course Content</h1>
+<h1 class="title">Practical info</h1>
 </div>
 
 
@@ -90,31 +90,61 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--
-Course content landing page.
+<div class="course-shell">
+<div class="course-navbar">
+<div class="course-navbar-layout">
+<div class="course-navbar-content">
+<div class="course-navbar-title">
+<h1>
+Mock Course Title — Advanced Methods in Experimental Research
+</h1>
+</div>
+<div class="course-navbar-menu">
+<div class="course-navbar-links">
+<p><a class="course-navbar-link" href="./index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="./schedule.html" data-page="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="./content/index.html" data-page="content/index.qmd">Course Content</a> <a class="course-navbar-link" href="./syllabus.html" data-page="syllabus.qmd">Syllabus</a> <a class="course-navbar-link" href="./team.html" data-page="team.qmd">Course Team</a> <a class="course-navbar-link" href="./practicalinfo.html" data-page="practicalinfo.qmd">Practical info</a></p>
+</div>
+</div>
+</div>
+<div class="course-navbar-brand">
+<p><img src="img/scilifelab-logo-full-neg.png" class="course-navbar-logo"></p>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-This page introduces the course materials and serves as the entry point to the content/ directory.
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
-The organization of the learning material is intentionally flexible and should be adapted to the needs of each course.
--->
-<section id="course-content" class="level1">
-<h1>Course Content</h1>
-<p>Welcome to the course materials.</p>
-<p>This section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.</p>
-<p>Replace this page with an introduction to your course content and add links to the relevant learning materials.</p>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Use this page to help learners navigate the course content. For example, you might:</p>
-<ul>
-<li>Introduce the course structure.</li>
-<li>Explain how learners should work through the material.</li>
-<li>Link to the first module or lesson.</li>
-<li>Highlight recommended resources or prerequisites.</li>
-</ul>
+    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+
+        const page = link.dataset.page;
+
+        const expectedPage =
+            page === "index.qmd"
+                ? "index.html"
+                : page.replace(".qmd", ".html");
+
+        if (expectedPage === currentPage) {
+            link.classList.add("course-navbar-link-active");
+        }
+
+    });
+
+});
+</script>
+<div class="landing-footer">
+<div class="landing-footer__meta">
+<p>By SciLifeLab Training Hub. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p>Built with Quarto and hosted on GitHub Pages.</p>
+</div>
+<div class="landing-footer__actions">
+<p><a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging/tree/main" class="landing-footer__image-link"> <img src="img/github-neg.png" alt="GitHub" class="landing-footer__image"> </a></p>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
