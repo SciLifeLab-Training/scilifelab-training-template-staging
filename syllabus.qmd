@@ -1,12 +1,13 @@
 ---
 title: Syllabus
+title-block: false
 ---
-
 
 ::: {.course-shell}
 
 {{< include _sections/navbar.qmd >}}
 
+{{< include _generated/syllabus.qmd >}}
 
 {{< include _sections/footer.qmd >}}
 

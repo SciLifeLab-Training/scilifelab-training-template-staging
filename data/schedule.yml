@@ -4,7 +4,7 @@ events:
   # DAY 1
   # ------------------------------------------------------------------
 
-  - title: "Welcome and Course Introduction"
+  - title: "Welcome and Introduction"
     type: lecture
     group: "Day 1"
     start: 2026-09-02T09:00:00
@@ -13,7 +13,7 @@ events:
     location: "SciLifeLab Solna"
     people:
       - Jane Doe
-    description: "Introduction to the course, objectives, and practical information."
+    description: "Introduction to the training, objectives, and practical information."
     content: content/module-1/introduction.qmd
 
   - title: "Introduction to the Research Environment"

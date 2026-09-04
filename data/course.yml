@@ -3,54 +3,83 @@ course:
   # Identity
   title: "Mock Course Title — Advanced Methods in Experimental Research"
   subtitle: "This is placeholder subtitle for testing the landing page layout and responsive behaviour."
-  abstract: ""
   description: >
     Brief description of the course.
+
+  credits:
+    value: 2
+    unit: "hp"
+    note: "Suggested number of credits; formal approval is determined by the participant's host university."
 
   # Delivery
   start_date: "2026-09-02"
   end_date: "2026-09-16"
   duration: "2 days"
-  format: "Instructor-led"
+  mode: "hybrid"
+
+  instruction:
+    - "Self-study"
+    - "Online lectures"
+    - "In-person workshop"
+    - "Group activities"
+    
   location: "SciLifeLab Stockholm"
   language: "English"
 
   # Educational
-  target_audience: ""
-  expertise_level: ""
+  target_audience: "PhD students, postdocs, researchers, PIs"
+  expertise_level: "intermediate"
 
   prerequisites:
     knowledge:
-      - ""
+      - "Knowledge prerequisite 1"
+      - "Knowledge prerequisite 2"
+      - "Knowledge prerequisite 3"
     technical:
-      - ""
+      - "Technical prerequisite 1"
+      - "Technical prerequisite 2"
 
   learning_outcomes:
-    - ""
-
-  topics:
-    - ""
-
-  # Contact
-  contact_email: "training@example.org"
-
-reuse:
+    - "Learning outcome 1"
+    - "Learning outcome 2"
+    - "Learning outcome 3"
 
   keywords:
-    - ""
+    - "Keyword 1"
+    - "Keyword 2"
+    - "Keyword 3"
+    - "Keyword 3"
 
-  content_provider: "SciLifeLab"
+  examination:
+    description: >
+      Describe how participants will be assessed, if applicable.
 
-  licence: "CC BY 4.0"
+  # Administration
+  organizers:
+  - "Organizer 1"
+  - "Organizer 2"
 
-  doi:
+  content_providers:
+    - "Content provider 1"
+    - "Content provider 2"
 
-  version: "1.0"
+  course_leaders:
+    - name: "Jane Doe"
+      affiliation: "SciLifeLab"
+      email: "jane.doe@gmail.com"
+      orcid: ""
+    
+    - name: "John Smith"
+      affiliation: "SciLifeLab"
+      email: "john.smith@gmail.com"
+      orcid: ""
 
-  lifecycle: "draft"
+  # Contact
+  contact:
+    email: "training@example.org"
 
-  created:
 
-  published:
+  reuse:
 
-  revised:
+    licence: "CC BY 4.0"
+    doi: Sample DOI

@@ -65,12 +65,12 @@ content:
 
     - id: module-1
       label: "Module 1"
-      title: "Introduction to Open Science"
+      title: "Module 1 Title"
 
     - id: module-2
       label: "Module 2"
-      title: "Research Data Management"
+      title: "Module 2 Title"
 
     - id: module-3
       label: "Module 3"
-      title: "Reproducible Research"
+      title: "Module 3 Title"

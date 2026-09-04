@@ -39,6 +39,7 @@ from renderers.content import (
     render_content_footer,
 )
 from renderers.schedule import render_schedule
+from renderers.syllabus import render_syllabus
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -123,6 +124,11 @@ def main():
     write_partial(
         "content-footer.html",
         render_content_footer(),
+    )
+
+    write_partial(
+        "syllabus.qmd",
+        render_syllabus(course),
     )
 
 
