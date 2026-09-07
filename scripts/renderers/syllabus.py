@@ -402,6 +402,7 @@ def render_syllabus(course):
     reuse = course.get("reuse", {})
 
     licence = reuse.get("licence")
+    licence_url = reuse.get("licence_url")
     doi = reuse.get("doi")
 
     if licence or doi:
@@ -411,13 +412,21 @@ def render_syllabus(course):
             '<dl class="course-syllabus-details course-syllabus-reuse">'
         )
 
-        if licence:
-            html.append(
-                '<div>'
-                '<dt>Licence</dt>'
-                f'<dd>{licence}</dd>'
-                '</div>'
+    if licence:
+        licence_html = licence
+
+        if licence_url:
+            licence_html = (
+                f'<a href="{licence_url}" '
+                f'target="_blank" rel="noopener">{licence}</a>'
             )
+
+        html.append(
+            '<div>'
+            '<dt>Licence</dt>'
+            f'<dd>{licence_html}</dd>'
+            '</div>'
+        )
 
         if doi:
             html.append(

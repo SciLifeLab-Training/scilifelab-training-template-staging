@@ -2,7 +2,7 @@ course:
 
   # Identity
   title: "Mock Course Title — Advanced Methods in Experimental Research"
-  subtitle: "This is placeholder subtitle for testing the landing page layout and responsive behaviour."
+  subtitle: "This is a placeholder subtitle for testing the landing page layout and responsive behaviour."
   description: >
     Brief description of the course.
 
@@ -82,4 +82,5 @@ course:
   reuse:
 
     licence: "CC BY 4.0"
-    doi: Sample DOI
+    licence_url: "https://creativecommons.org/licenses/by/4.0/"
+    doi: "Sample DOI"
