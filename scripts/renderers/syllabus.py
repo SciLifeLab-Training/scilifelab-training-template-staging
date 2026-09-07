@@ -1,7 +1,7 @@
 from utils import format_date
 
 
-def render_syllabus(course):
+def render_syllabus(course, team):
 
     # ---------------------------------------------------------
     # Syllabus header
@@ -322,9 +322,9 @@ def render_syllabus(course):
     ]
 
     leaders = [
-        leader
-        for leader in course.get("course_leaders", [])
-        if leader.get("name")
+        person
+        for person in team
+        if "Training lead" in person.get("roles", [])
     ]
 
     if organizers or content_providers or leaders:
@@ -361,7 +361,7 @@ def render_syllabus(course):
 
         if leaders:
             html.append('<div class="course-syllabus-column">')
-            html.append('<h3>Training leaders</h3>')
+            html.append('<h3>Training lead(s)</h3>')
             html.append('<div class="course-syllabus-leaders">')
 
             for leader in leaders:

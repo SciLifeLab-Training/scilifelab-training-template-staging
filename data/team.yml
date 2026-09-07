@@ -2,22 +2,49 @@ team:
 
   - name: "Jane Doe"
     roles:
-      - Course lead
-    job_title: "Job title"
-    affiliation: "NBIS"
-    email: ""
+      - Training lead
+    job_title: "Senior Researcher"
+    affiliation: "SciLifeLab"
+    email: "jane.doe@example.org"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    linkedin: "https://www.linkedin.com/in/inekeluijten/"
+    github: "https://github.com/InekeL"
+    website: "www.ineke.com"
+    image: "img/photos/ElinKronander.png"
+
+  - name: "John Smith"
+    roles:
+      - Training lead
+      - Instructor
+    job_title: "Research Scientist"
+    affiliation: "SciLifeLab"
+    email: "john.smith@example.org"
     orcid: ""
     linkedin: ""
     github: ""
+    website: ""
     image: "img/photos/InekeLuijten.png"
-  
-  - name: "John Smith"
+
+  - name: "Alex Example"
     roles:
       - Instructor
-    job_title: "Job title"
+    job_title: "Bioinformatician"
+    affiliation: "Karolinska Institutet"
+    email: "alex@example.org"
+    orcid: ""
+    linkedin: ""
+    github: ""
+    website: ""
+    image: "img/photos/ElinKronander.png"
+
+  - name: "Sam Example"
+    roles:
+      - Contributor
+    job_title: "Research Engineer"
     affiliation: "SciLifeLab"
     email: ""
     orcid: ""
     linkedin: ""
     github: ""
+    website: ""
     image: "img/photos/ElinKronander.png"

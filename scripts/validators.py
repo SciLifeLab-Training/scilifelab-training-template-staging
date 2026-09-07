@@ -7,7 +7,6 @@ def validate_course(course):
         "language",
         "target_audience",
         "learning_outcomes",
-        "course_leaders",
         "organizers",
         "contact",
     ]
@@ -20,28 +19,17 @@ def validate_course(course):
         raise ValueError("course.learning_outcomes must be a list")
 
     if not course["learning_outcomes"]:
-        raise ValueError("course.learning_outcomes must contain at least one item")
-
-    if not isinstance(course["course_leaders"], list):
-        raise ValueError("course.course_leaders must be a list")
-
-    if not course["course_leaders"]:
-        raise ValueError("course.course_leaders must contain at least one person")
-
-    for leader in course["course_leaders"]:
-
-        name = leader.get("name", "<unnamed course leader>")
-
-        if not leader.get("name"):
-            raise ValueError(
-                f"Course leader '{name}' is missing 'name'"
-            )
+        raise ValueError(
+            "course.learning_outcomes must contain at least one item"
+        )
 
     if not isinstance(course["organizers"], list):
         raise ValueError("course.organizers must be a list")
 
     if not course["organizers"]:
-        raise ValueError("course.organizers must contain at least one item")
+        raise ValueError(
+            "course.organizers must contain at least one item"
+        )
 
     if not isinstance(course["contact"], dict):
         raise ValueError("course.contact must be a mapping")

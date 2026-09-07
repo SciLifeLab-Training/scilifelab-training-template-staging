@@ -63,21 +63,9 @@ course:
     - "Content provider 1"
     - "Content provider 2"
 
-  course_leaders:
-    - name: "Jane Doe"
-      affiliation: "SciLifeLab"
-      email: "jane.doe@gmail.com"
-      orcid: ""
-    
-    - name: "John Smith"
-      affiliation: "SciLifeLab"
-      email: "john.smith@gmail.com"
-      orcid: ""
-
   # Contact
   contact:
     email: "training@example.org"
-
 
   reuse:
 

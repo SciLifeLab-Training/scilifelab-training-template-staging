@@ -1,13 +1,14 @@
 ---
 title: Course team
+title-block: false
 ---
-
 
 ::: {.course-shell}
 
 {{< include _sections/navbar.qmd >}}
 
-
+{{< include _generated/team_page.qmd >}}
+  
 {{< include _sections/footer.qmd >}}
 
 :::

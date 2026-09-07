@@ -12,7 +12,7 @@ def render_announcements(announcements):
 
 <div class="course-section-label">
 
-COURSE ANNOUNCEMENTS
+ANNOUNCEMENTS
 
 </div>
 

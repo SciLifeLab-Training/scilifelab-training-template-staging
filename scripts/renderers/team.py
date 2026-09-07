@@ -1,13 +1,19 @@
 def render_team(team):
 
-    # Only show the first two team members on the homepage.
-    preview = team[:2]
+    # Show up to two training leads on the homepage.
+    training_leads = [
+        person
+        for person in team
+        if "Training lead" in person.get("roles", [])
+    ]
+
+    preview = training_leads[:2]
 
     members = []
 
     for person in preview:
 
-        role = ", ".join(person["roles"])
+        role = ", ".join(person.get("roles", []))
 
         members.append(
             f"""

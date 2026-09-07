@@ -33,6 +33,7 @@ from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
 from renderers.announcements import render_announcements
 from renderers.team import render_team
+from renderers.team_page import render_team_page
 from renderers.content import (
     render_content_overview,
     render_content_navbar,
@@ -107,6 +108,11 @@ def main():
     )
 
     write_partial(
+        "team_page.qmd",
+        render_team_page(team),
+    )
+
+    write_partial(
         "schedule.qmd",
         render_schedule(events, course),
     )
@@ -128,7 +134,7 @@ def main():
 
     write_partial(
         "syllabus.qmd",
-        render_syllabus(course),
+        render_syllabus(course, team),
     )
 
 

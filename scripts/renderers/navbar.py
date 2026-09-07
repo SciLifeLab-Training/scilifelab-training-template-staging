@@ -14,7 +14,7 @@ def render_navbar_links(website):
         ("Schedule", "schedule.qmd"),
         ("Course Content", "content/index.qmd"),
         ("Syllabus", "syllabus.qmd"),
-        ("Course Team", "team.qmd"),
+        ("Team", "team.qmd"),
         ("Practical info", "practicalinfo.qmd"),
     ]
 
