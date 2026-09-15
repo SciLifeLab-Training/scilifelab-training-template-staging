@@ -42,3 +42,7 @@ def load_announcements():
 def load_practical_info():
     data = load_yaml("course.yml") or {}
     return data.get("practical_info", {})
+
+def load_faq():
+    data = load_yaml("faq.yml") or {}
+    return data.get("faq", [])

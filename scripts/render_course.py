@@ -11,6 +11,7 @@ from loaders import (
     load_team,
     load_announcements,
     load_practical_info,
+    load_faq,
 )
 
 from content import load_content_sections
@@ -43,6 +44,7 @@ from renderers.content import (
 from renderers.schedule import render_schedule
 from renderers.syllabus import render_syllabus
 from renderers.practicalinfo import render_practical_info
+from renderers.faq import render_faq
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +69,21 @@ def main():
     team = validate_team(load_team())
     announcements = load_announcements()
     practical_info = load_practical_info()
+    faq = load_faq()
+
+    available_pages = set()
+
+    if events:
+        available_pages.add("schedule")
+
+    if practical_info:
+        available_pages.add("practical")
+
+    if faq:
+        available_pages.add("faq")
+
+    if announcements:
+        available_pages.add("announcements")
 
 
     write_partial(
@@ -80,9 +97,9 @@ def main():
     )
 
     write_partial(
-        "navbar_links.qmd",
-        render_navbar_links(website),
-    )
+    "navbar_links.qmd",
+    render_navbar_links(website, available_pages),
+)
 
     write_partial(
         "registration.qmd",
@@ -126,7 +143,7 @@ def main():
 
     write_partial(
         "content-navbar.html",
-        render_content_navbar(course, website),
+        render_content_navbar(course, website, available_pages),
     )
 
     write_partial(
@@ -144,6 +161,10 @@ def main():
     render_practical_info(practical_info),
     )
 
+    write_partial(
+        "faq.qmd",
+        render_faq(faq),
+    )
 
 if __name__ == "__main__":
     main()

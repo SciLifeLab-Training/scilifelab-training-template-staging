@@ -51,16 +51,15 @@ def render_content_overview(sections):
     return "\n".join(html)
 
 
-def render_content_navbar(course, website):
+def render_content_navbar(course, website, available_pages):
     meta = render_navbar_meta(course)
-    links = render_navbar_links(website)
+    links = render_navbar_links(website, available_pages)
 
     # Quarto tries to resolve HTML hrefs during rendering.
     # The actual URLs are assigned by JavaScript after the page loads.
     links = re.sub(r'href="[^"]+"', 'href="#"', links)
 
     return """
-    
 <div class="course-navbar">
 
 <div class="course-navbar-layout">
