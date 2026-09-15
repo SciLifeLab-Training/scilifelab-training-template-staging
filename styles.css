@@ -2571,3 +2571,219 @@ html.course-content-page .landing-footer {
     font-size: 0.85rem;
     line-height: 1.5;
 }
+
+/* ==================================================
+   FAQ
+   ================================================== */
+
+/* --------------------------------------------------
+   Page container
+   -------------------------------------------------- */
+
+.course-faq-page {
+    width: 100%;
+    max-width: var(--course-content-width);
+
+    margin: 2.5rem auto 4rem;
+    padding: 0 var(--course-content-padding);
+
+    box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------
+   Page header
+   -------------------------------------------------- */
+
+.course-faq-header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d9e0e3;
+}
+
+.course-faq-label {
+    margin-bottom: 0.85rem;
+
+    color: #045c64;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.course-faq-header h1 {
+    max-width: 28ch;
+
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.course-faq-intro {
+    max-width: 70ch;
+
+    margin: 0.75rem 0 0;
+
+    color: #777;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------------------------
+   FAQ section
+   -------------------------------------------------- */
+
+.course-faq-section {
+    padding: 2rem 0 0;
+}
+
+.course-faq-section + .course-faq-section {
+    padding-top: 2.5rem;
+}
+
+
+/* --------------------------------------------------
+   FAQ list
+   -------------------------------------------------- */
+
+.course-faq-list {
+    width: 100%;
+    margin: 0.75rem 0 0;
+}
+
+
+/* --------------------------------------------------
+   FAQ item
+   -------------------------------------------------- */
+
+.course-faq-item {
+    margin: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e0e3;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.course-faq-item + .course-faq-item {
+    margin-top: 0.75rem;
+}
+
+
+/* --------------------------------------------------
+   Question
+   -------------------------------------------------- */
+
+.course-faq-item summary {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1rem 1.15rem;
+
+    cursor: pointer;
+    list-style: none;
+
+    color: #101820;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.course-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.course-faq-item summary::marker {
+    display: none;
+}
+
+.course-faq-item summary:hover {
+    background: #f7f9fa;
+}
+
+
+/* --------------------------------------------------
+   Question number
+   -------------------------------------------------- */
+
+.course-faq-number {
+    flex: 0 0 auto;
+
+    width: 1.8rem;
+
+    color: #0b7180;
+
+    font-weight: 600;
+}
+
+
+/* --------------------------------------------------
+   Question text
+   -------------------------------------------------- */
+
+.course-faq-question {
+    flex: 1;
+}
+
+
+/* --------------------------------------------------
+   Chevron
+   -------------------------------------------------- */
+
+.course-faq-item summary .bi {
+    flex: 0 0 auto;
+
+    margin-left: 1rem;
+
+    color: #0b7180;
+    font-size: 0.8rem;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* --------------------------------------------------
+   Open state
+   -------------------------------------------------- */
+
+.course-faq-item[open] {
+    border-color: #c8d5d9;
+}
+
+.course-faq-item[open] summary {
+    background: #f7f9fa;
+
+    border-bottom: 1px solid #d9e0e3;
+}
+
+.course-faq-item[open] summary .bi {
+    transform: rotate(180deg);
+}
+
+
+/* --------------------------------------------------
+   Answer
+   -------------------------------------------------- */
+
+.course-faq-answer {
+    padding: 1rem 1.15rem 1.15rem 2.95rem;
+
+    background: #ffffff;
+}
+
+.course-faq-answer p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
