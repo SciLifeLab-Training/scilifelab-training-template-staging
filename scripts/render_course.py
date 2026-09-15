@@ -10,6 +10,7 @@ from loaders import (
     load_schedule,
     load_team,
     load_announcements,
+    load_practical_info,
 )
 
 from content import load_content_sections
@@ -41,6 +42,7 @@ from renderers.content import (
 )
 from renderers.schedule import render_schedule
 from renderers.syllabus import render_syllabus
+from renderers.practicalinfo import render_practical_info
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,14 +60,14 @@ def main():
 
     course = validate_course(load_course())
     website = validate_website(load_website())
-
     content = load_content()
     sections = load_content_sections(content)
-
     registration = website.get("registration", {})
     events = validate_schedule(load_schedule())
     team = validate_team(load_team())
     announcements = load_announcements()
+    practical_info = load_practical_info()
+
 
     write_partial(
         "welcome.qmd",
@@ -135,6 +137,11 @@ def main():
     write_partial(
         "syllabus.qmd",
         render_syllabus(course, team),
+    )
+
+    write_partial(
+    "practicalinfo.qmd",
+    render_practical_info(practical_info),
     )
 
 

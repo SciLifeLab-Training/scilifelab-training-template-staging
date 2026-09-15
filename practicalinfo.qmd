@@ -1,12 +1,13 @@
 ---
 title: Practical info
+title-block: false
 ---
-
 
 ::: {.course-shell}
 
 {{< include _sections/navbar.qmd >}}
 
+{{< include _generated/practicalinfo.qmd >}}
 
 {{< include _sections/footer.qmd >}}
 

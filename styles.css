@@ -2140,7 +2140,6 @@ html.course-content-page .landing-footer {
     line-height: 1.4;
 }
 
-
 /* --------------------------------------------------
    Profile links
    -------------------------------------------------- */
@@ -2150,35 +2149,8 @@ html.course-content-page .landing-footer {
     align-items: center;
     flex-wrap: wrap;
 
-    gap: 0.7rem;
-
-    margin-top: 0.8rem;
-}
-
-.course-team-card-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #045c64;
-    font-size: 0.95rem;
-    line-height: 1;
-
-    text-decoration: none;
-}
-
-.course-team-card-links a:hover {
-    color: #17283b;
-}
-
-.course-team-card-links i {
-    font-size: 1rem;
-}
-
-.course-team-card-links {
-    display: flex;
-    align-items: center;
     gap: 0.75rem;
+
     margin-top: 0.9rem;
 }
 
@@ -2190,20 +2162,412 @@ html.course-content-page .landing-footer {
     width: 22px;
     height: 22px;
 
-    color: #045c64;
     text-decoration: none;
 }
 
 .course-team-card-links a:hover {
-    color: #17283b;
+    opacity: 0.75;
 }
 
 .course-team-card-links i {
     font-size: 1.1rem;
 }
 
+
+/* GitHub */
+
+.course-team-card-links .bi-github {
+    color: #181717;
+}
+
+
+/* LinkedIn */
+
+.course-team-card-links .bi-linkedin {
+    color: #0A66C2;
+}
+
+
+/* Email */
+
+.course-team-card-links .bi-envelope {
+    color: #045c64;
+}
+
+
 .course-team-social-icon {
     display: block;
     width: 18px;
     height: 18px;
+}
+
+/* ==================================================
+   PRACTICAL INFO
+   ================================================== */
+
+/* --------------------------------------------------
+   Page container
+   -------------------------------------------------- */
+
+.course-practical-page {
+    width: 100%;
+    max-width: var(--course-content-width);
+
+    margin: 2.5rem auto 4rem;
+    padding: 0 var(--course-content-padding);
+
+    box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------
+   Page header
+   -------------------------------------------------- */
+
+.course-practical-header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d9e0e3;
+}
+
+.course-practical-label {
+    margin-bottom: 0.85rem;
+
+    color: #045c64;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.course-practical-header h1 {
+    max-width: 28ch;
+
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.course-practical-intro {
+    max-width: 70ch;
+
+    margin: 0.75rem 0 0;
+
+    color: #777;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------------------------
+   Sections
+   -------------------------------------------------- */
+
+.course-practical-section {
+    padding: 2rem 0 0;
+}
+
+.course-practical-section + .course-practical-section {
+    padding-top: 2.5rem;
+}
+
+.course-practical-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin: 0 0 0.55rem;
+
+    color: #101820;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+
+    border: none;
+}
+
+.course-practical-section > p {
+    margin: 0.45rem 0 0;
+
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------
+   Section icons
+   -------------------------------------------------- */
+
+.course-practical-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin: 0 0 0.55rem;
+
+    color: #101820;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+
+    border: none;
+}
+
+.course-practical-section h2 i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    min-width: 28px;
+
+    color: #0b7180;
+    font-size: 1.45rem;
+    font-weight: normal;
+    line-height: 1;
+}
+
+/* --------------------------------------------------
+   Venue
+   -------------------------------------------------- */
+
+.course-practical-venue {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+    gap: 1.25rem;
+
+    margin-top: 0.75rem;
+}
+
+.course-practical-venue-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 1.25rem 1.35rem;
+
+    background: #f7f9fa;
+    border-radius: 5px;
+}
+
+.course-practical-venue-details > div {
+    padding: 0 0 1rem;
+}
+
+.course-practical-venue-details > div + div {
+    padding-top: 1rem;
+    border-top: 1px solid #d9e0e3;
+}
+
+.course-practical-venue-details > div:last-child {
+    padding-bottom: 0;
+}
+
+.course-practical-venue-details strong {
+    display: block;
+
+    margin-bottom: 0.3rem;
+
+    color: #101820;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.course-practical-address {
+    line-height: 1.55;
+}
+
+
+/* --------------------------------------------------
+   Map
+   -------------------------------------------------- */
+
+.course-practical-map-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.course-practical-map {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.course-practical-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+}
+
+.course-practical-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    margin-top: 0.65rem;
+
+    color: #0075c9;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.course-practical-map-link::before {
+    content: "\f1c5";
+
+    font-family: "bootstrap-icons";
+    font-size: 0.95rem;
+}
+
+.course-practical-map-link:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------------------
+   Transport links
+   -------------------------------------------------- */
+
+.course-practical-links {
+    margin: 0.7rem 0 0;
+    padding-left: 1.8rem;
+}
+
+.course-practical-links li {
+    padding: 0.1rem 0;
+}
+
+.course-practical-links a {
+    color: #0075c9;
+    text-decoration: none;
+}
+
+.course-practical-links a:hover {
+    text-decoration: underline;
+}
+
+.course-practical-links a::after {
+    content: "\f1c5";
+
+    margin-left: 0.3rem;
+
+    font-family: "bootstrap-icons";
+    font-size: 0.75rem;
+}
+
+
+/* --------------------------------------------------
+   Accommodation table
+   -------------------------------------------------- */
+
+.course-practical-table-wrapper {
+    width: 100%;
+    margin-top: 0.7rem;
+
+    overflow-x: auto;
+}
+
+.course-practical-table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #d9e0e3;
+    border-radius: 5px;
+
+    font-size: 0.85rem;
+}
+
+.course-practical-table th {
+    padding: 0.55rem 0.75rem;
+
+    background: #f1f6f8;
+
+    color: #101820;
+    font-weight: 600;
+    text-align: left;
+
+    border-bottom: 1px solid #d9e0e3;
+}
+
+.course-practical-table td {
+    padding: 0.45rem 0.75rem;
+
+    border-bottom: 1px solid #d9e0e3;
+}
+
+.course-practical-table tr:last-child td {
+    border-bottom: none;
+}
+
+.course-practical-table a {
+    color: #0075c9;
+    text-decoration: none;
+}
+
+.course-practical-table a:hover {
+    text-decoration: underline;
+}
+
+.course-practical-table a::after {
+    content: "\f1c5";
+
+    margin-left: 0.3rem;
+
+    font-family: "bootstrap-icons";
+    font-size: 0.75rem;
+}
+
+
+/* --------------------------------------------------
+   Food
+   -------------------------------------------------- */
+
+.course-practical-section h2 + p {
+    margin-top: 0.45rem;
+}
+
+
+/* --------------------------------------------------
+   Additional information
+   -------------------------------------------------- */
+
+.course-practical-additional {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+    margin-top: 0.7rem;
+}
+
+.course-practical-additional-item {
+    padding: 1.15rem 1.25rem;
+
+    background: #f7f9fa;
+    border-radius: 5px;
+}
+
+.course-practical-additional-item h3 {
+    margin: 0;
+
+    color: #101820;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.35;
+
+    border: none;
+}
+
+.course-practical-additional-item p {
+    margin: 0.45rem 0 0;
+
+    color: #5f6b73;
+    font-size: 0.85rem;
+    line-height: 1.5;
 }

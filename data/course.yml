@@ -72,3 +72,65 @@ course:
     licence: "CC BY 4.0"
     licence_url: "https://creativecommons.org/licenses/by/4.0/"
     doi: "Sample DOI"
+
+
+practical_info:
+
+  venue:
+    name: "SciLifeLab Gamma 2"
+    address: |
+      Medicinaregatan 20
+      413 90 Solna
+      Sweden
+    room: "Antarctic"
+    instructions: >
+      The room is located on the ground floor. Turn left after
+      entering through the main entrance and look for the SND logo.
+    map_url: "https://www.openstreetmap.org/?mlat=59.350162&mlon=18.022383#map=19/59.350162/18.022383"
+
+
+  transport:
+    description: >
+      The nearest tram stop is Medicinaregatan. Public transport
+      information and tickets are available through the local
+      transport app.
+    links:
+      - title: "Public transport website"
+        url: "https://sl.se"
+      - title: "Public transport app"
+        url: "https://sl.se/en/fares-and-tickets/smart-phone-ticket-app"
+
+    parking: >
+      There is ample parking available close to the venue.
+      Parking fees can be paid using standard commercial parking apps.
+
+  accommodation:
+    description: >
+      A few selected hotels are listed below.
+    hotels:
+      - name: "Hotel Example"
+        distance: "900 m"
+        walking_time: "11 min"
+        url: "www.hotel.se"
+
+      - name: "Another Hotel"
+        distance: "1.7 km"
+        walking_time: "21 min"
+        url: ""
+
+  food:
+    description: >
+      The training fee includes lunch and coffee during the training.
+
+  additional:
+    - title: "What to bring"
+      content: >
+        Please bring your laptop and charger.
+
+    - title: "Wi-Fi"
+      content: >
+        Eduroam is available throughout the building.
+
+    - title: "Accessibility"
+      content: >
+        The venue is wheelchair accessible.

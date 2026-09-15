@@ -18,14 +18,18 @@ def load_course():
 def load_website():
     return load_yaml("website.yml")["website"]
 
+
 def load_content():
     return load_yaml("website.yml")["content"]
+
 
 def load_schedule():
     return load_yaml("schedule.yml")["events"]
 
+
 def load_team():
     return load_yaml("team.yml")["team"]
+
 
 def load_announcements():
 
@@ -33,3 +37,8 @@ def load_announcements():
         data = yaml.safe_load(f) or {}
 
     return data.get("announcements", [])
+
+
+def load_practical_info():
+    data = load_yaml("course.yml") or {}
+    return data.get("practical_info", {})
