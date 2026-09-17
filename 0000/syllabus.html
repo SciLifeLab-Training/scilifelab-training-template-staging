@@ -96,12 +96,20 @@ ul.task-list li input[type="checkbox"] {
 <div class="course-navbar-content">
 <div class="course-navbar-title">
 <h1>
-Mock Course Title — Advanced Methods in Experimental Research
+Mock Training Title — Advanced Methods in Experimental Research
 </h1>
 </div>
 <div class="course-navbar-menu">
 <div class="course-navbar-links">
-<p><a class="course-navbar-link" href="./index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="./content/index.html" data-page="content/index.qmd">Course Content</a> <a class="course-navbar-link" href="./syllabus.html" data-page="syllabus.qmd">Syllabus</a> <a class="course-navbar-link" href="./team.html" data-page="team.qmd">Team</a> <a class="course-navbar-link" href="./schedule.html" data-page="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="./practicalinfo.html" data-page="practicalinfo.qmd">Practical info</a> <a class="course-navbar-link" href="./precourse.html" data-page="precourse.qmd">Precourse</a> <a class="course-navbar-link" href="./faq.html" data-page="faq.qmd">FAQ</a></p>
+<a class="course-navbar-link" href="index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="content/index.html" data-page="content/index.qmd">Content</a> <a class="course-navbar-link" href="schedule.html" data-page="schedule.qmd">Schedule</a>
+<div class="course-navbar-dropdown">
+<button class="course-navbar-link course-navbar-dropdown-toggle" type="button" aria-haspopup="true">
+Information<i class="bi bi-chevron-down course-navbar-dropdown-icon"></i>
+</button>
+<div class="course-navbar-dropdown-menu">
+<p><a class="course-navbar-dropdown-link" href="precourse.html" data-page="precourse.qmd">Preparation</a> <a class="course-navbar-dropdown-link" href="practicalinfo.html" data-page="practicalinfo.qmd">Practicalities</a> <a class="course-navbar-dropdown-link" href="team.html" data-page="team.qmd">Team</a> <a class="course-navbar-dropdown-link" href="syllabus.html" data-page="syllabus.qmd">Syllabus</a> <a class="course-navbar-dropdown-link" href="faq.html" data-page="faq.qmd">FAQ</a></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -111,27 +119,45 @@ Mock Course Title — Advanced Methods in Experimental Research
 </div>
 </div>
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const currentPage =
         window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+    document.querySelectorAll("[data-page]").forEach(function (link) {
 
         const page = link.dataset.page;
 
-        const expectedPage =
-            page === "index.qmd"
-                ? "index.html"
-                : page.replace(".qmd", ".html");
+        if (!page) {
+            return;
+        }
 
-        if (expectedPage === currentPage) {
-            link.classList.add("course-navbar-link-active");
+        const expectedPage =
+            page.replace(".qmd", ".html");
+
+        if (expectedPage !== currentPage) {
+            return;
+        }
+
+        if (link.classList.contains("course-navbar-dropdown-link")) {
+
+            link.classList.add(
+                "course-navbar-dropdown-link-active"
+            );
+
+        } else {
+
+            link.classList.add(
+                "course-navbar-link-active"
+            );
+
         }
 
     });
 
 });
+
 </script>
 <div class="course-syllabus-header">
 <div class="course-syllabus-header-main">
@@ -139,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 Syllabus
 </div>
 <h1>
-Mock Course Title — Advanced Methods in Experimental Research
+Mock Training Title — Advanced Methods in Experimental Research
 </h1>
 <p class="course-syllabus-subtitle">
 This is a placeholder subtitle for testing the landing page layout and responsive behaviour.
@@ -161,10 +187,10 @@ Get in touch with the training team.
 <div class="course-syllabus">
 <section class="course-syllabus-section">
 <h2 class="anchored">
-Training overview
+Abstract
 </h2>
 <p>
-Brief description of the course.
+Brief description of the training.
 </p>
 <p class="course-syllabus-keywords">
 <strong>Keywords:</strong> Keyword 1 · Keyword 2 · Keyword 3 · Keyword 3
@@ -172,7 +198,7 @@ Brief description of the course.
 </section>
 <section class="course-syllabus-section">
 <h2 class="anchored">
-Training details
+Details
 </h2>
 <dl class="course-syllabus-details">
 <div>
@@ -356,7 +382,7 @@ Content provider 2
 </div>
 <div class="course-syllabus-column">
 <h3 class="anchored">
-Training lead(s)
+Team lead(s)
 </h3>
 <div class="course-syllabus-leaders">
 <div class="course-syllabus-leader">
