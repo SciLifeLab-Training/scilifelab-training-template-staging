@@ -1,0 +1,273 @@
+precourse:
+
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
+
+  intro: >
+    Please complete the following preparations before the training begins.
+    Some activities are required in advance, while others are
+    recommended to help you get the most out of the training.
+
+  # --------------------------------------------------
+  # Sections
+  # --------------------------------------------------
+
+  sections:
+
+    # ==================================================
+    # SECTION 1 — General preparation
+    # ==================================================
+
+    - title: "Getting started"
+
+      blocks:
+
+        - type: text
+          content: |
+            Please work through the preparation activities below before the course begins. If you have any questions, please contact the course organisers.
+
+        - type: checklist
+          title: "Preparation checklist"
+          items:
+            - "Create your required course accounts"
+            - "Check that your computer meets the hardware requirements"
+            - "Install the required software"
+            - "Complete the required reading"
+            - "Bring your laptop and charger"
+
+    # ==================================================
+    # SECTION 2 — Accounts
+    # ==================================================
+
+    - title: "Accounts"
+
+      blocks:
+
+        - type: callout
+          style: important
+          title: "Preparing for the workshop"
+          content: >
+            This course includes hands-on computer exercises.
+            Please make sure that you have access to the required
+            accounts and software before the course starts.
+
+        - type: account
+          title: "Life Science ID"
+
+          description: >
+            The Life Science Login enables researchers to use their
+            home organisation credentials or other supported identities
+            to sign in and access the services required for the course.
+
+          instructions: |
+            Please create your account before the course.
+
+            1. Open the registration page.
+            2. Choose your home organisation.
+            3. Complete the registration form.
+            4. Review and accept the terms.
+            5. Verify your email address.
+
+          links:
+            - title: "Create a Life Science ID"
+              url: "https://example.org"
+
+            - title: "Learn more about Life Science Login"
+              url: "https://example.org"
+
+        - type: account
+          title: "Course platform account"
+
+          description: >
+            You will use the course platform to access materials,
+            exercises and other course resources.
+
+          instructions: |
+            Please create your account before the course begins.
+
+            Use the same email address that you used when registering
+            for the course.
+
+          links:
+            - title: "Open the course platform"
+              url: "https://example.org"
+
+    # ==================================================
+    # SECTION 3 — Hardware requirements
+    # ==================================================
+
+    - title: "Hardware requirements"
+
+      blocks:
+
+        - type: hardware
+          title: "Computer requirements"
+
+          description: >
+            Please bring a computer that meets the following minimum requirements.
+
+          requirements:
+            - label: "RAM"
+              value: "8 GB or more"
+
+            - label: "Storage"
+              value: "20 GB available space"
+
+            - label: "Processor"
+              value: "Dual-core processor or better"
+
+            - label: "Internet"
+              value: "Reliable broadband connection"
+
+          instructions: |
+            Please bring the same computer that you will use during the practical sessions.
+
+            If your computer does not meet these requirements, please contact the course organisers before the course.
+
+        - type: callout
+          style: warning
+          title: "OBS"
+          content: >
+            If you are unable to bring a suitable computer, please contact the organisers as soon as possible.
+
+    # ==================================================
+    # SECTION 4 — Software requirements
+    # ==================================================
+
+    - title: "Software requirements"
+
+      blocks:
+
+        - type: text
+          content: >
+            Please install the software listed below before
+            attending the course. You may need to contact your
+            local IT department if you do not have administrative
+            rights on your computer.
+
+        - type: software
+          title: "Git"
+
+          description: >
+            Git is required for the practical exercises during
+            the course. No previous experience with Git is required.
+
+          instructions: |
+            1. Install Git before the course.
+            2. After installation, open a terminal and run:
+               `git --version`
+            3. You should see the installed Git version.
+
+          links:
+            - title: "Git installation"
+              url: "https://git-scm.com/install"
+
+            - title: "Git setup guidance"
+              url: "https://docs.github.com/en/get-started/git-basics/set-up-git"
+
+        - type: software
+          title: "R"
+
+          description: >
+            R is required for the statistical exercises.
+
+          instructions: |
+            Install the latest stable version of R.
+
+            If you already have R installed, please check that
+            your version is reasonably recent.
+
+          links:
+            - title: "Download R"
+              url: "https://cran.r-project.org/"
+
+        - type: software
+          title: "RStudio"
+
+          description: >
+            RStudio provides an integrated development environment
+            for working with R.
+
+          instructions: |
+            Install R before installing RStudio.
+
+            After installation, open RStudio once to make sure
+            that it starts correctly.
+
+          links:
+            - title: "Download RStudio"
+              url: "https://posit.co/download/rstudio/"
+
+    # ==================================================
+    # SECTION 5 — Required reading
+    # ==================================================
+
+    - title: "Required reading"
+
+      blocks:
+
+        - type: reading
+          title: "Articles"
+
+          description: >
+            Please read the following documents before the course.
+
+          citations:
+            - text: >
+                Research Data Alliance International Indigenous Data Sovereignty
+                Interest Group. (September 2019). CARE Principles for Indigenous
+                Data Governance.
+              url: "https://www.gida-global.org/care"
+
+            - text: >
+                Another Author or Organisation. (2020). Another document title.
+              url: "https://example.org/article"
+
+          instructions: |
+            Please read the documents before attending the course.
+
+            You do not need to memorise the principles. The purpose of the reading is to provide a common starting point for the discussion during the course.
+
+          prompt: >
+            Which of the four principles attracted your attention the most, and why?
+
+        - type: reading
+          title: "Additional recommended reading"
+
+          description: >
+            The following resource provides additional background
+            information. This reading is recommended but not required.
+
+          citations:
+            - text: >
+                Research Data Alliance International Indigenous Data Sovereignty
+                Interest Group. (September 2019). CARE Principles for Indigenous
+                Data Governance.
+              url: "https://www.gida-global.org/care"
+
+  
+
+    # ==================================================
+    # SECTION 6 — Additional information
+    # ==================================================
+
+    - title: "Additional information"
+
+      blocks:
+
+        - type: callout
+          style: note
+          title: "Need help?"
+          content: >
+            If you have difficulty completing any of the
+            preparations, please contact the course organisers
+            before the course.
+
+        - type: text
+          content: |
+            Some preparations may depend on your local IT environment.
+
+            If you do not have administrative rights on your computer, please contact your local IT department well in advance of the course.
+
+            You can still attend the course if you encounter problems, but contacting us beforehand will help us find an alternative.

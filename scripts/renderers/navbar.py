@@ -13,16 +13,15 @@ def render_navbar_links(website, available_pages):
         ("Overview", "index.qmd"),
         ("Course Content", "content/index.qmd"),
         ("Syllabus", "syllabus.qmd"),
-        ("Course Team", "team.qmd"),
+        ("Team", "team.qmd"),
     ]
 
     optional_pages = [
         ("Schedule", "schedule.qmd", "schedule"),
         ("Practical info", "practicalinfo.qmd", "practical"),
-        ("Before the course", "precourse.qmd", "precourse"),
+        ("Precourse", "precourse.qmd", "precourse"),
         ("FAQ", "faq.qmd", "faq"),
         ("Resources", "resources.qmd", "resources"),
-        ("Announcements", "announcements.qmd", "announcements"),
     ]
 
     for title, page, page_id in optional_pages:

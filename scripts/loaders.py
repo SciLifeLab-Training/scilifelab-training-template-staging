@@ -46,3 +46,7 @@ def load_practical_info():
 def load_faq():
     data = load_yaml("faq.yml") or {}
     return data.get("faq", [])
+
+def load_precourse():
+    data = load_yaml("precourse.yml") or {}
+    return data.get("precourse", {})

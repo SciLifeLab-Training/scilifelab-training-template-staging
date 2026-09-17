@@ -12,6 +12,7 @@ from loaders import (
     load_announcements,
     load_practical_info,
     load_faq,
+    load_precourse,
 )
 
 from content import load_content_sections
@@ -45,6 +46,7 @@ from renderers.schedule import render_schedule
 from renderers.syllabus import render_syllabus
 from renderers.practicalinfo import render_practical_info
 from renderers.faq import render_faq
+from renderers.precourse import render_precourse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +72,7 @@ def main():
     announcements = load_announcements()
     practical_info = load_practical_info()
     faq = load_faq()
+    precourse = load_precourse()
 
     available_pages = set()
 
@@ -82,8 +85,8 @@ def main():
     if faq:
         available_pages.add("faq")
 
-    if announcements:
-        available_pages.add("announcements")
+    if precourse.get("sections"):
+        available_pages.add("precourse")
 
 
     write_partial(
@@ -164,6 +167,11 @@ def main():
     write_partial(
         "faq.qmd",
         render_faq(faq),
+    )
+
+    write_partial(
+    "precourse.qmd",
+    render_precourse(precourse),
     )
 
 if __name__ == "__main__":
