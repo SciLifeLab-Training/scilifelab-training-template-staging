@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Content</title>
+<title>Before the course</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course Content</h1>
+<h1 class="title">Before the course</h1>
 </div>
 
 
@@ -90,31 +90,493 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!--
-Course content landing page.
+<div class="course-shell">
+<div class="course-navbar">
+<div class="course-navbar-layout">
+<div class="course-navbar-content">
+<div class="course-navbar-title">
+<h1>
+Mock Course Title — Advanced Methods in Experimental Research
+</h1>
+</div>
+<div class="course-navbar-menu">
+<div class="course-navbar-links">
+<p><a class="course-navbar-link" href="./index.html" data-page="index.qmd">Overview</a> <a class="course-navbar-link" href="./content/index.html" data-page="content/index.qmd">Course Content</a> <a class="course-navbar-link" href="./syllabus.html" data-page="syllabus.qmd">Syllabus</a> <a class="course-navbar-link" href="./team.html" data-page="team.qmd">Team</a> <a class="course-navbar-link" href="./schedule.html" data-page="schedule.qmd">Schedule</a> <a class="course-navbar-link" href="./practicalinfo.html" data-page="practicalinfo.qmd">Practical info</a> <a class="course-navbar-link" href="./precourse.html" data-page="precourse.qmd">Precourse</a> <a class="course-navbar-link" href="./faq.html" data-page="faq.qmd">FAQ</a></p>
+</div>
+</div>
+</div>
+<div class="course-navbar-brand">
+<p><img src="img/scilifelab-logo-full-neg.png" class="course-navbar-logo"></p>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-This page introduces the course materials and serves as the entry point to the content/ directory.
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
-The organization of the learning material is intentionally flexible and should be adapted to the needs of each course.
--->
-<section id="course-content" class="level1">
-<h1>Course Content</h1>
-<p>Welcome to the course materials.</p>
-<p>This section contains the learning content for the course. Depending on the course design, the material may be organized into modules, lectures, practical exercises, assignments, or other learning units.</p>
-<p>Replace this page with an introduction to your course content and add links to the relevant learning materials.</p>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Use this page to help learners navigate the course content. For example, you might:</p>
+    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+
+        const page = link.dataset.page;
+
+        const expectedPage =
+            page === "index.qmd"
+                ? "index.html"
+                : page.replace(".qmd", ".html");
+
+        if (expectedPage === currentPage) {
+            link.classList.add("course-navbar-link-active");
+        }
+
+    });
+
+});
+</script>
+<div class="course-page-header">
+<div class="course-precourse-header-main">
+<div class="course-precourse-label">
+Before the course
+</div>
+<h1>
+Prepare for the training
+</h1>
+<p class="course-precourse-intro">
+Please complete the following preparations before the training begins. Some activities are required in advance, while others are recommended to help you get the most out of the training.
+</p>
+</div>
+</div>
+<div class="course-precourse">
+<section class="course-precourse-section">
+<h2 class="anchored">
+Getting started
+</h2>
+<div class="course-precourse-text">
+<p>
+Please work through the preparation activities below before the course begins. If you have any questions, please contact the course organisers.
+</p>
+</div>
+<div class="course-precourse-box course-precourse-checklist">
+<div class="course-precourse-box-header">
+<i class="bi bi-check2-square course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Preparation checklist
+</h3>
+</div>
+<div class="course-precourse-box-body">
 <ul>
-<li>Introduce the course structure.</li>
-<li>Explain how learners should work through the material.</li>
-<li>Link to the first module or lesson.</li>
-<li>Highlight recommended resources or prerequisites.</li>
+<li>
+<label><input type="checkbox" class="course-precourse-checkbox"><span>Create your required course accounts</span></label>
+</li>
+<li>
+<label><input type="checkbox" class="course-precourse-checkbox"><span>Check that your computer meets the hardware requirements</span></label>
+</li>
+<li>
+<label><input type="checkbox" class="course-precourse-checkbox"><span>Install the required software</span></label>
+</li>
+<li>
+<label><input type="checkbox" class="course-precourse-checkbox"><span>Complete the required reading</span></label>
+</li>
+<li>
+<label><input type="checkbox" class="course-precourse-checkbox"><span>Bring your laptop and charger</span></label>
+</li>
 </ul>
+</div>
+</div>
+</section>
+<section class="course-precourse-section">
+<h2 class="anchored">
+Accounts
+</h2>
+<div class="course-precourse-callout course-precourse-callout-important">
+<div class="course-precourse-callout-title">
+<p><i class="bi bi-info-circle course-precourse-callout-icon"></i> Preparing for the workshop</p>
+</div>
+<div class="course-precourse-callout-content">
+<p>
+This course includes hands-on computer exercises. Please make sure that you have access to the required accounts and software before the course starts.
+</p>
+</div>
+</div>
+<div class="course-precourse-account-grid">
+<div class="course-precourse-box course-precourse-account">
+<div class="course-precourse-box-header">
+<i class="bi bi-person-badge course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Life Science ID
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+The Life Science Login enables researchers to use their home organisation credentials or other supported identities to sign in and access the services required for the course.
+</p>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Please create your account before the course.
+</p>
+<ol>
+<li>
+Open the registration page.
+</li>
+<li>
+Choose your home organisation.
+</li>
+<li>
+Complete the registration form.
+</li>
+<li>
+Review and accept the terms.
+</li>
+<li>
+Verify your email address.
+</li>
+</ol>
+</div>
+<ul class="course-precourse-links">
+<li>
+<a class="course-precourse-link" href="https://example.org" target="_blank" rel="noopener">Create a Life Science ID</a>
+</li>
+<li>
+<a class="course-precourse-link" href="https://example.org" target="_blank" rel="noopener">Learn more about Life Science Login</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="course-precourse-box course-precourse-account">
+<div class="course-precourse-box-header">
+<i class="bi bi-person-badge course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Course platform account
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+You will use the course platform to access materials, exercises and other course resources.
+</p>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Please create your account before the course begins.
+</p>
+<p>
+Use the same email address that you used when registering for the course.
+</p>
+</div>
+<ul class="course-precourse-links">
+<li>
+<a class="course-precourse-link" href="https://example.org" target="_blank" rel="noopener">Open the course platform</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="course-precourse-section">
+<h2 class="anchored">
+Hardware requirements
+</h2>
+<div class="course-precourse-box course-precourse-hardware">
+<div class="course-precourse-box-header">
+<i class="bi bi-laptop course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Computer requirements
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+Please bring a computer that meets the following minimum requirements.
+</p>
+</div>
+<dl class="course-precourse-requirements">
+<div>
+<dt>
+RAM
+</dt>
+<dd>
+8 GB or more
+</dd>
+</div>
+<div>
+<dt>
+Storage
+</dt>
+<dd>
+20 GB available space
+</dd>
+</div>
+<div>
+<dt>
+Processor
+</dt>
+<dd>
+Dual-core processor or better
+</dd>
+</div>
+<div>
+<dt>
+Internet
+</dt>
+<dd>
+Reliable broadband connection
+</dd>
+</div>
+</dl>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Please bring the same computer that you will use during the practical sessions.
+</p>
+<p>
+If your computer does not meet these requirements, please contact the course organisers before the course.
+</p>
+</div>
+</div>
+</div>
+<div class="course-precourse-callout course-precourse-callout-warning">
+<div class="course-precourse-callout-title">
+<p><i class="bi bi-exclamation-triangle course-precourse-callout-icon"></i> OBS</p>
+</div>
+<div class="course-precourse-callout-content">
+<p>
+If you are unable to bring a suitable computer, please contact the organisers as soon as possible.
+</p>
+</div>
+</div>
+</section>
+<section class="course-precourse-section">
+<h2 class="anchored">
+Software requirements
+</h2>
+<div class="course-precourse-text">
+<p>
+Please install the software listed below before attending the course. You may need to contact your local IT department if you do not have administrative rights on your computer.
+</p>
+</div>
+<div class="course-precourse-software-grid">
+<div class="course-precourse-box course-precourse-software">
+<div class="course-precourse-box-header">
+<i class="bi bi-download course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Git
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+Git is required for the practical exercises during the course. No previous experience with Git is required.
+</p>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<ol>
+<li>
+Install Git before the course.
+</li>
+<li>
+After installation, open a terminal and run: <code>git --version</code>
+</li>
+<li>
+You should see the installed Git version.
+</li>
+</ol>
+</div>
+<ul class="course-precourse-links">
+<li>
+<a class="course-precourse-link" href="https://git-scm.com/install" target="_blank" rel="noopener">Git installation</a>
+</li>
+<li>
+<a class="course-precourse-link" href="https://docs.github.com/en/get-started/git-basics/set-up-git" target="_blank" rel="noopener">Git setup guidance</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="course-precourse-box course-precourse-software">
+<div class="course-precourse-box-header">
+<i class="bi bi-download course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+R
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+R is required for the statistical exercises.
+</p>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Install the latest stable version of R.
+</p>
+<p>
+If you already have R installed, please check that your version is reasonably recent.
+</p>
+</div>
+<ul class="course-precourse-links">
+<li>
+<a class="course-precourse-link" href="https://cran.r-project.org/" target="_blank" rel="noopener">Download R</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="course-precourse-box course-precourse-software">
+<div class="course-precourse-box-header">
+<i class="bi bi-download course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+RStudio
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+RStudio provides an integrated development environment for working with R.
+</p>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Install R before installing RStudio.
+</p>
+<p>
+After installation, open RStudio once to make sure that it starts correctly.
+</p>
+</div>
+<ul class="course-precourse-links">
+<li>
+<a class="course-precourse-link" href="https://posit.co/download/rstudio/" target="_blank" rel="noopener">Download RStudio</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="course-precourse-section">
+<h2 class="anchored">
+Required reading
+</h2>
+<div class="course-precourse-box course-precourse-reading">
+<div class="course-precourse-box-header">
+<i class="bi bi-book course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Articles
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+Please read the following documents before the course.
+</p>
+</div>
+<div class="course-precourse-citations">
+<div class="course-precourse-citation">
+<p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer"> Research Data Alliance International Indigenous Data Sovereignty Interest Group. (September 2019). CARE Principles for Indigenous Data Governance.</a></p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer">
+</a><p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer"></a></p>
+</div>
+<div class="course-precourse-citation">
+<p><a href="https://example.org/article" target="_blank" rel="noopener noreferrer"> Another Author or Organisation. (2020). Another document title.</a></p><a href="https://example.org/article" target="_blank" rel="noopener noreferrer">
+</a><p><a href="https://example.org/article" target="_blank" rel="noopener noreferrer"></a></p>
+</div>
+</div>
+<div class="course-precourse-instructions">
+<h4 class="anchored">
+Instructions
+</h4>
+<p>
+Please read the documents before attending the course.
+</p>
+<p>
+You do not need to memorise the principles. The purpose of the reading is to provide a common starting point for the discussion during the course.
+</p>
+</div>
+<div class="course-precourse-prompt">
+<div class="course-precourse-prompt-title">
+<p><i class="bi bi-question-circle"></i> Reflection prompt</p>
+</div>
+<p>
+Which of the four principles attracted your attention the most, and why?
+</p>
+</div>
+</div>
+</div>
+<div class="course-precourse-box course-precourse-reading">
+<div class="course-precourse-box-header">
+<i class="bi bi-book course-precourse-box-icon"></i>
+<h3 class="course-precourse-box-title anchored">
+Additional recommended reading
+</h3>
+</div>
+<div class="course-precourse-box-body">
+<div class="course-precourse-resource-description">
+<p>
+The following resource provides additional background information. This reading is recommended but not required.
+</p>
+</div>
+<div class="course-precourse-citations">
+<div class="course-precourse-citation">
+<p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer"> Research Data Alliance International Indigenous Data Sovereignty Interest Group. (September 2019). CARE Principles for Indigenous Data Governance.</a></p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer">
+</a><p><a href="https://www.gida-global.org/care" target="_blank" rel="noopener noreferrer"></a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="course-precourse-section">
+<h2 class="anchored">
+Additional information
+</h2>
+<div class="course-precourse-callout course-precourse-callout-note">
+<div class="course-precourse-callout-title">
+<p><i class="bi bi-sticky course-precourse-callout-icon"></i> Need help?</p>
+</div>
+<div class="course-precourse-callout-content">
+<p>
+If you have difficulty completing any of the preparations, please contact the course organisers before the course.
+</p>
+</div>
+</div>
+<div class="course-precourse-text">
+<p>
+Some preparations may depend on your local IT environment.
+</p>
+<p>
+If you do not have administrative rights on your computer, please contact your local IT department well in advance of the course.
+</p>
+<p>
+You can still attend the course if you encounter problems, but contacting us beforehand will help us find an alternative.
+</p>
+</div>
+</section>
+</div>
+<div class="landing-footer">
+<div class="landing-footer__meta">
+<p>By SciLifeLab Training Hub. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p>Built with Quarto and hosted on GitHub Pages.</p>
+</div>
+<div class="landing-footer__actions">
+<p><a href="https://github.com/SciLifeLab-Training/scilifelab-training-template-staging/tree/main" class="landing-footer__image-link"> <img src="img/github-neg.png" alt="GitHub" class="landing-footer__image"> </a></p>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
