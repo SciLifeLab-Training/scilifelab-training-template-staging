@@ -161,7 +161,7 @@ def main():
 
     write_partial(
     "practicalinfo.qmd",
-    render_practical_info(practical_info),
+    render_practical_info(practical_info, course),
     )
 
     write_partial(
@@ -171,7 +171,7 @@ def main():
 
     write_partial(
     "precourse.qmd",
-    render_precourse(precourse),
+    render_precourse(precourse, course),
     )
 
 if __name__ == "__main__":

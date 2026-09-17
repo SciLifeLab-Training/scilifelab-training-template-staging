@@ -698,7 +698,7 @@ def _render_block(block):
 # Main renderer
 # ---------------------------------------------------------
 
-def render_precourse(precourse):
+def render_precourse(precourse, course):
     """
     Render the complete Before the course page.
 
@@ -720,7 +720,7 @@ def render_precourse(precourse):
     # Page header
     # -----------------------------------------------------
 
-    html.append('<div class="course-page-header">')
+    html.append('<div class="course-precourse-header">')
 
     html.append(
         '<div class="course-precourse-header-main">'
@@ -744,6 +744,37 @@ def render_precourse(precourse):
         )
 
     html.append('</div>')
+
+    contact = course.get("contact", {})
+    contact_email = contact.get("email")
+
+    if contact_email:
+        html.append('<div class="course-precourse-contact">')
+
+        html.append(
+            '<div class="course-precourse-contact-icon">'
+            '<i class="bi bi-envelope"></i>'
+            '</div>'
+        )
+
+        html.append(
+            '<div class="course-precourse-contact-title">'
+            'Questions about the training?'
+            '</div>'
+        )
+
+        html.append(
+            '<p>Get in touch with the training team.</p>'
+        )
+
+        html.append(
+            f'<a href="mailto:{contact_email}">'
+            f'{contact_email}'
+            '</a>'
+        )
+
+        html.append('</div>')
+
     html.append('</div>')
 
     # -----------------------------------------------------

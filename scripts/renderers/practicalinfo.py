@@ -50,7 +50,7 @@ def section_heading(icon, title):
         '</h2>'
     )
 
-def render_practical_info(practical_info):
+def render_practical_info(practical_info, course):
 
     if not practical_info:
         return ""
@@ -64,10 +64,19 @@ def render_practical_info(practical_info):
     # ---------------------------------------------------------
 
     html.append('<header class="course-practical-header">')
+
     html.append(
-        '<div class="course-practical-label">Practical info</div>'
+        '<div class="course-practical-header-main">'
     )
+
+    html.append(
+        '<div class="course-practical-label">'
+        'Practicalities'
+        '</div>'
+    )
+
     html.append('<h1>Practical information</h1>')
+
     html.append(
         '<p class="course-practical-intro">'
         'Here you will find everything you need to know before '
@@ -75,6 +84,39 @@ def render_practical_info(practical_info):
         'information, accommodation suggestions and other practical details.'
         '</p>'
     )
+
+    html.append('</div>')
+
+    contact = course.get("contact", {})
+    contact_email = contact.get("email")
+
+    if contact_email:
+        html.append('<div class="course-practical-contact">')
+
+        html.append(
+            '<div class="course-practical-contact-icon">'
+            '<i class="bi bi-envelope"></i>'
+            '</div>'
+        )
+
+        html.append(
+            '<div class="course-practical-contact-title">'
+            'Questions about the training?'
+            '</div>'
+        )
+
+        html.append(
+            '<p>Get in touch with the training team.</p>'
+        )
+
+        html.append(
+            f'<a href="mailto:{contact_email}">'
+            f'{contact_email}'
+            '</a>'
+        )
+
+        html.append('</div>')
+
     html.append('</header>')
 
     # ---------------------------------------------------------

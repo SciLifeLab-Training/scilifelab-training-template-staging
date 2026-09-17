@@ -21,29 +21,6 @@ def render_syllabus(course, team):
 
     html.append('</div>')
 
-    contact = course.get("contact", {})
-    contact_email = contact.get("email")
-
-    if contact_email:
-        html.append('<div class="course-syllabus-contact">')
-        html.append(
-            '<div class="course-syllabus-contact-icon">'
-            '<i class="bi bi-envelope"></i>'
-            '</div>'
-        )
-        html.append(
-            '<div class="course-syllabus-contact-title">'
-            'Questions about the training?'
-            '</div>'
-        )
-        html.append(
-            '<p>Get in touch with the training team.</p>'
-        )
-        html.append(
-            f'<a href="mailto:{contact_email}">{contact_email}</a>'
-        )
-        html.append('</div>')
-
     html.append('</div>')
 
     # ---------------------------------------------------------

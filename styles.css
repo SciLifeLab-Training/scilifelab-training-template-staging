@@ -1671,10 +1671,6 @@ html.course-content-page .landing-footer {
    -------------------------------------------------- */
 
 .course-syllabus-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 280px;
-    gap: 3rem;
-
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -1694,7 +1690,6 @@ html.course-content-page .landing-footer {
 }
 
 .course-syllabus-header h1 {
-    max-width: 28ch;
     margin: 0;
     font-size: 2rem;
     font-weight: 600;
@@ -1703,69 +1698,11 @@ html.course-content-page .landing-footer {
 
 
 .course-syllabus-subtitle {
-    max-width: 55ch;
-
     margin: 0.75rem 0 0;
 
     color: #777;
     font-size: 1.05rem;
     line-height: 1.5;
-}
-
-
-/* --------------------------------------------------
-   Contact box
-   -------------------------------------------------- */
-
-.course-syllabus-contact {
-    align-self: start;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 1.35rem 1.5rem;
-
-    border: none;
-    border-radius: 5px;
-
-    background: #f7f9fa;
-}
-
-.course-syllabus-contact-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 38px;
-    height: 38px;
-
-    margin-bottom: 0.75rem;
-
-    border-radius: 50%;
-
-    background: #C0D6D8;
-
-    color: #045C64;
-    font-size: 1.05rem;
-}
-
-.course-syllabus-contact-title {
-    margin-bottom: 0.4rem;
-    font-weight: 700;
-}
-
-.course-syllabus-contact p {
-    margin: 0 0 0.65rem;
-
-    color: #526476;
-    line-height: 1.45;
-}
-
-.course-syllabus-contact a {
-    color: #045C64;
-    font-weight: 600;
-
-    overflow-wrap: anywhere;
 }
 
 
@@ -2382,9 +2319,15 @@ html.course-content-page .landing-footer {
    -------------------------------------------------- */
 
 .course-practical-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 3rem;
+
     padding-bottom: 2rem;
+
     border-bottom: 1px solid #d9e0e3;
 }
+
 
 .course-practical-label {
     margin-bottom: 0.85rem;
@@ -2407,7 +2350,7 @@ html.course-content-page .landing-footer {
 }
 
 .course-practical-intro {
-    max-width: 70ch;
+    max-width: 55ch;
 
     margin: 0.75rem 0 0;
 
@@ -2416,6 +2359,56 @@ html.course-content-page .landing-footer {
     line-height: 1.5;
 }
 
+
+.course-practical-contact {
+    align-self: start;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.35rem 1.5rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #f7f9fa;
+}
+
+.course-practical-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 0.75rem;
+
+    border-radius: 50%;
+
+    background: #C0D6D8;
+    color: #045C64;
+    font-size: 1.05rem;
+}
+
+.course-practical-contact-title {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.course-practical-contact p {
+    margin: 0 0 0.65rem;
+
+    color: #526476;
+    line-height: 1.45;
+}
+
+.course-practical-contact a {
+    color: #045C64;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
 
 /* --------------------------------------------------
    Sections
@@ -2966,7 +2959,15 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-page-header {
+/* --------------------------------------------------
+   Preparation header
+   -------------------------------------------------- */
+
+.course-precourse-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 3rem;
+
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -2975,7 +2976,6 @@ html.course-content-page .landing-footer {
 
     box-sizing: border-box;
 }
-
 
 .course-precourse-label {
     margin-bottom: 0.85rem;
@@ -2987,8 +2987,7 @@ html.course-content-page .landing-footer {
     text-transform: uppercase;
 }
 
-
-.course-page-header h1 {
+.course-precourse-header h1 {
     max-width: 28ch;
 
     margin: 0;
@@ -2998,9 +2997,8 @@ html.course-content-page .landing-footer {
     line-height: 1.25;
 }
 
-
 .course-precourse-intro {
-    max-width: 70ch;
+    max-width: 55ch;
 
     margin: 0.75rem 0 0;
 
@@ -3009,6 +3007,58 @@ html.course-content-page .landing-footer {
     line-height: 1.5;
 }
 
+
+/* Contact box */
+
+.course-precourse-contact {
+    align-self: start;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.35rem 1.5rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #f7f9fa;
+}
+
+.course-precourse-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 0.75rem;
+
+    border-radius: 50%;
+
+    background: #C0D6D8;
+    color: #045C64;
+    font-size: 1.05rem;
+}
+
+.course-precourse-contact-title {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.course-precourse-contact p {
+    margin: 0 0 0.65rem;
+
+    color: #526476;
+    line-height: 1.45;
+}
+
+.course-precourse-contact a {
+    color: #045C64;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
 
 /* --------------------------------------------------------------------------
    Main page content
@@ -3033,12 +3083,7 @@ html.course-content-page .landing-footer {
     width: 100%;
 
     margin: 0;
-    padding: 0 0 1.5rem;
-}
-
-
-.course-precourse-section + .course-precourse-section {
-    padding-top: 1.5rem;
+    padding: 1.5rem 0;
 
     border-top: 1px solid #d9e0e3;
 }
