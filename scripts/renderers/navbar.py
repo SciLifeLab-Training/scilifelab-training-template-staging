@@ -6,39 +6,87 @@ def render_navbar_meta(course):
 <h1>{title}</h1>
 """.strip()
 
-
 def render_navbar_links(website, available_pages):
 
     links = [
         ("Overview", "index.qmd"),
-        ("Course Content", "content/index.qmd"),
-        ("Syllabus", "syllabus.qmd"),
-        ("Team", "team.qmd"),
+        ("Content", "content/index.qmd"),
     ]
 
-    optional_pages = [
-        ("Schedule", "schedule.qmd", "schedule"),
-        ("Practical info", "practicalinfo.qmd", "practical"),
-        ("Precourse", "precourse.qmd", "precourse"),
-        ("FAQ", "faq.qmd", "faq"),
-        ("Resources", "resources.qmd", "resources"),
-    ]
-
-    for title, page, page_id in optional_pages:
-
-        if page_id in available_pages:
-            links.append((title, page))
+    # Schedule is optional.
+    if "schedule" in available_pages:
+        links.append(("Schedule", "schedule.qmd"))
 
     html = []
 
+    # Main navigation links.
     for title, page in links:
+        href = page.replace(".qmd", ".html")
 
         html.append(
             f'<a class="course-navbar-link" '
-            f'href="{page}" '
+            f'href="{href}" '
             f'data-page="{page}">'
             f'{title}'
             '</a>'
         )
+
+    # Course information dropdown.
+    dropdown_links = [
+        ("Preparation", "precourse.qmd", "precourse"),
+        ("Practicalities", "practicalinfo.qmd", "practical"),
+        ("Team", "team.qmd", True),
+        ("Syllabus", "syllabus.qmd", True),
+        ("FAQ", "faq.qmd", "faq"),
+        ("Resources", "resources.qmd", "resources"),
+    ]
+
+    available_dropdown_links = []
+
+    for title, page, availability in dropdown_links:
+
+        if availability is True:
+            available = True
+        else:
+            available = availability in available_pages
+
+        if available:
+            available_dropdown_links.append((title, page))
+
+    if available_dropdown_links:
+
+        html.append(
+            '<div class="course-navbar-dropdown">'
+        )
+
+        html.append(
+            '<button class="course-navbar-link '
+            'course-navbar-dropdown-toggle" '
+            'type="button" '
+            'aria-haspopup="true">'
+            'Information'
+            '<i class="bi bi-chevron-down '
+            'course-navbar-dropdown-icon"></i>'
+            '</button>'
+        )
+
+        html.append(
+            '<div class="course-navbar-dropdown-menu">'
+        )
+
+        for title, page in available_dropdown_links:
+
+            href = page.replace(".qmd", ".html")
+
+            html.append(
+                f'<a class="course-navbar-dropdown-link" '
+                f'href="{href}" '
+                f'data-page="{page}">'
+                f'{title}'
+                '</a>'
+            )
+
+        html.append('</div>')
+        html.append('</div>')
 
     return "\n".join(html)

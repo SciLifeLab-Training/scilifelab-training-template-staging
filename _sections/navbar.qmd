@@ -33,25 +33,43 @@
 :::
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const currentPage =
         window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".course-navbar-link").forEach(function (link) {
+    document.querySelectorAll("[data-page]").forEach(function (link) {
 
         const page = link.dataset.page;
 
-        const expectedPage =
-            page === "index.qmd"
-                ? "index.html"
-                : page.replace(".qmd", ".html");
+        if (!page) {
+            return;
+        }
 
-        if (expectedPage === currentPage) {
-            link.classList.add("course-navbar-link-active");
+        const expectedPage =
+            page.replace(".qmd", ".html");
+
+        if (expectedPage !== currentPage) {
+            return;
+        }
+
+        if (link.classList.contains("course-navbar-dropdown-link")) {
+
+            link.classList.add(
+                "course-navbar-dropdown-link-active"
+            );
+
+        } else {
+
+            link.classList.add(
+                "course-navbar-link-active"
+            );
+
         }
 
     });
 
 });
+
 </script>

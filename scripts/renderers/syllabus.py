@@ -57,7 +57,7 @@ def render_syllabus(course, team):
     # ---------------------------------------------------------
 
     html.append('<section class="course-syllabus-section">')
-    html.append('<h2>Training overview</h2>')
+    html.append('<h2>Abstract</h2>')
     html.append(f'<p>{course["description"]}</p>')
 
     keywords = [
@@ -143,7 +143,7 @@ def render_syllabus(course, team):
 
     if details:
         html.append('<section class="course-syllabus-section">')
-        html.append('<h2>Training details</h2>')
+        html.append('<h2>Details</h2>')
         html.append('<dl class="course-syllabus-details">')
 
         for label, value in details:
@@ -361,7 +361,7 @@ def render_syllabus(course, team):
 
         if leaders:
             html.append('<div class="course-syllabus-column">')
-            html.append('<h3>Training lead(s)</h3>')
+            html.append('<h3>Team lead(s)</h3>')
             html.append('<div class="course-syllabus-leaders">')
 
             for leader in leaders:

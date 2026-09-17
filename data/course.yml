@@ -1,10 +1,10 @@
 course:
 
   # Identity
-  title: "Mock Course Title — Advanced Methods in Experimental Research"
+  title: "Mock Training Title — Advanced Methods in Experimental Research"
   subtitle: "This is a placeholder subtitle for testing the landing page layout and responsive behaviour."
   description: >
-    Brief description of the course.
+    Brief description of the training.
 
   credits:
     value: 2
