@@ -19,15 +19,13 @@ preparation:
     # SECTION 1 — General preparation
     # ==================================================
 
-    - title: "Getting started"
+    - title: ""
 
       blocks:
 
         - type: text
           content: |
-            Use this section for a general introduction to the preparation activities.
-            Explain what participants should do before the training and where they
-            can get help if they encounter problems.
+            Use the `checklist` block type in preparation.yml to provide participants with a simple overview of the preparation tasks they need to complete before the training. Add one item for each required or recommended activity.
 
         - type: checklist
           title: "Preparation checklist"
@@ -54,11 +52,11 @@ preparation:
           title: "Account 1"
 
           description: >
-            Use this field to explain what the account is, why participants need it,
+            Use this field to briefly explain what the account is, why participants need it,
             and what it will be used for during the training.
 
           instructions: |
-            Use the instructions field to describe how participants should create
+            Use this field to describe how participants should create
             or configure the account.
 
             1. Create account step 1. 
@@ -68,10 +66,10 @@ preparation:
             5. Create account step 5. 
 
           links:
-            - title: "Account registration"
+            - title: "Account registration link"
               url: "https://example.org"
 
-            - title: "Account documentation"
+            - title: "Account documentation link"
               url: "https://example.org"
 
         - type: account
@@ -86,7 +84,7 @@ preparation:
             to create or configure the account.
 
           links:
-            - title: "Create an account"
+            - title: "Create an account link"
               url: "https://example.org"
 
 
@@ -94,7 +92,7 @@ preparation:
           style: important
           title: "This is an important callout"
           content: >
-            Use an important callout to highlight information that participants
+            Use an **important** callout to highlight information that participants
             should be particularly aware of before completing the preparation activity.
 
 
@@ -108,41 +106,39 @@ preparation:
 
         - type: text
           content: |
-            Use this section to describe the software participants need to install before the training. Include any relevant version requirements or information about administrative permissions.
-
+           Use this section to describe the software participants need to install before the training. Use the `software` block type in preparation.yml for each application and include any relevant installation instructions and links.
         - type: software
           title: "Software 1"
 
           description: >
-            Use this section to describe the software participants need to install
-            before the training. Include any relevant version requirements or
-            information about administrative permissions.
+            Use this field to briefly describe the software, explain why participants need it,
+            and provide any relevant version or system requirements.
 
           instructions: |
-            Use the instructions field to describe how participants should install or configure the software.
+            Use this field to describe how participants should install or configure the software.
             1. Install software step 1.
             2. Install software step 2.
             3. Install software step 3.
 
           links:
-            - title: "Software download"
+            - title: "Software download link"
               url: "https://example.org"
 
-            - title: "Software documentation"
+            - title: "Software documentation link"
               url: "https://example.org"
 
         - type: software
           title: "Software 2"
 
           description: >
-            Add additional software requirements as separate software blocks.
-            Consecutive software blocks are automatically displayed in a grid. for code use `quotes`
+            Add additional software requirements as separate `software` blocks.
+            Consecutive software blocks are automatically displayed in a grid.
 
           instructions: |
             Provide the installation or configuration steps here.
 
           links:
-            - title: "Software download"
+            - title: "Software download link"
               url: "https://example.org"
 
         - type: software
@@ -153,19 +149,18 @@ preparation:
             several different applications or tools.
 
           instructions: |
-             Provide any installation or configuration instructions here.
+             Provide the installation or configuration steps here.
 
           links:
             - title: ""
               url: ""
 
         - type: callout
-          style: note
-          title: "This is a note callout"
+          style: warning
+          title: "This is a warning callout"
           content: >
-            Use a note callout for useful background information, tips,
-            reminders, or other information that does not require the
-            stronger emphasis of an important or warning callout.
+            Use a **warning** callout for information about a potential problem,
+            limitation, or action that participants should not overlook.
 
 
     # ==================================================
@@ -178,10 +173,10 @@ preparation:
 
         - type: text
           content: |
-             Use this section for a short introduction to the preparation activities. Explai
+             Use this section to describe the computer or other equipment participants need to bring or have access to. Use the `hardware` block type in preparation.yml to specify requirements such as RAM, storage, processor, or internet connection.
 
         - type: hardware
-          title: "Hardware requirements"
+          title: "Hardware 1"
 
           description: >
             Use this block to describe the computer or other equipment
@@ -201,19 +196,20 @@ preparation:
               value: "value"
 
           instructions: |
-            Use the instructions field for additional hardware-related
+            Use this field for additional hardware-related
             information or actions participants should take before the training.
 
             For example, explain whether participants need to bring their
             own computer, charger, headset, or other equipment.
 
-        - type: callout
-          style: warning
-          title: "This is a warning callout"
-          content: >
-            Use a warning callout for information about a potential problem,
-            limitation, or action that participants should not overlook.
 
+        - type: callout
+          style: note
+          title: "This is a note callout"
+          content: >
+            Use a **note** callout for useful background information, tips,
+            reminders, or other information that does not require the
+            stronger emphasis of an **important** or **warning** callout.
 
     # ==================================================
     # SECTION 5 — Required reading
@@ -225,27 +221,27 @@ preparation:
 
         - type: text
           content: |
-             Use this section for a short introduction to the preparation activities. Explai
-
+             Use this section to provide reading materials that participants should review before the training. Use the `reading` block type in preparation.yml for each reading resource.
 
         - type: reading
           title: "Reading 1"
 
           description: >
             Use this block for required reading that participants should
-            complete before the training. Adding a link will make the citation clickable for easy access. 
+            complete before the training. Adding a URL to a citation will
+            make it clickable for easy access.
 
           citations:
             - text: >
-                Example Author or Organisation. (2025). Example document title.
+                Example Author or Organisation. (year). Example document title.
               url: "https://example.org"
 
             - text: >
-                Another Author or Organisation. (2020). Another document title.
+                Another Author or Organisation. (year). Another document title.
               url: "https://example.org/article"
 
           instructions: |
-            Use the instructions field to explain how participants should
+            Use this field to explain how participants should
             approach the reading.
 
             For example, you can indicate whether participants should read
@@ -264,7 +260,7 @@ preparation:
 
           citations:
             - text: >
-                Example Author or Organisation. (2025). Example document title.
+                Example Author or Organisation. (year). Example document title.
               url: ""
 
   

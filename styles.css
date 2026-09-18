@@ -3180,6 +3180,24 @@ html.course-content-page .landing-footer {
     display: none;
 }
 
+.course-preparation-account,
+.course-preparation-software {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-preparation-account .course-preparation-box-body,
+.course-preparation-software .course-preparation-box-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.course-preparation-account .course-preparation-links,
+.course-preparation-software .course-preparation-links {
+    margin-top: auto;
+    padding-top: 1rem;
+}
 
 /* --------------------------------------------------------------------------
    Plain text blocks
@@ -3285,7 +3303,6 @@ html.course-content-page .landing-footer {
     border-color: #c7dfe3;
     border-left-color: #0b7180;
 }
-
 
 
 .course-preparation-callout-warning {
