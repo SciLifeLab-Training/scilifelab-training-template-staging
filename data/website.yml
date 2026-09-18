@@ -35,11 +35,11 @@ website:
       icon: "bookshelf"
       href: "resources.qmd"
 
-    precourse:
-      title: "Before the course"
-      description: "Preparation and pre-course material"
+    preparation:
+      title: "Preparation"
+      description: "Preparation material"
       icon: "clipboard-check"
-      href: "precourse.qmd"
+      href: "preparation.qmd"
 
     faq:
       title: "FAQ"

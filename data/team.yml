@@ -1,29 +1,36 @@
 team:
 
-  - name: "Jane Doe"
+  - name: "Training Lead1"
     roles:
       - Training lead
-    job_title: "Senior Researcher"
-    affiliation: "SciLifeLab"
+    job_title: "Job title"
+    affiliation: "Institution"
     email: "jane.doe@example.org"
+    course_contact: true
+    bio: >
+      Training Lead1 has extensive experience in single-cell genomics and bioinformatics,
+      and has been involved in developing and delivering training for over 10 years.
     orcid: "https://orcid.org/0000-0000-0000-0000"
-    linkedin: "https://www.linkedin.com/in/inekeluijten/"
-    github: "https://github.com/InekeL"
-    website: "www.ineke.com"
-    image: "img/photos/ElinKronander.png"
+    linkedin: "https://www.linkedin.com"
+    github: "https://github.com/"
+    website: "www.traininglead1.com"
+    image: "img/photos/team-photo.jpg"
 
   - name: "John Smith"
     roles:
       - Training lead
-      - Instructor
     job_title: "Research Scientist"
     affiliation: "SciLifeLab"
     email: "john.smith@example.org"
-    orcid: ""
+    course_contact: true
+    bio: >
+      John works on computational methods for multi-omics data analysis
+      and coordinates training activities across the programme.
+    orcid: "https://orcid.org/0000-0000-0000-0000"
     linkedin: ""
-    github: ""
+    github: "https://github.com/InekeL"
     website: ""
-    image: "img/photos/InekeLuijten.png"
+    image: "img/photos/team-photo.jpg"
 
   - name: "Alex Example"
     roles:
@@ -31,11 +38,15 @@ team:
     job_title: "Bioinformatician"
     affiliation: "Karolinska Institutet"
     email: "alex@example.org"
+    course_contact: false
+    bio: >
+      Alex develops and applies computational methods for genomics and
+      epigenomics, with several years of experience in training researchers.
     orcid: ""
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/inekeluijten/"
     github: ""
     website: ""
-    image: "img/photos/ElinKronander.png"
+    image: "img/photos/team-photo.jpg"
 
   - name: "Sam Example"
     roles:
@@ -43,8 +54,27 @@ team:
     job_title: "Research Engineer"
     affiliation: "SciLifeLab"
     email: ""
+    course_contact: false
+    bio: >
+      Sam supports the practical sessions and contributes technical expertise
+      in sequencing and data analysis.
     orcid: ""
     linkedin: ""
     github: ""
     website: ""
-    image: "img/photos/ElinKronander.png"
+    image: "img/photos/team-photo.jpg"
+
+
+  - name: "Bob Example"
+    roles:
+      - Contributor
+    job_title: "Research Engineer"
+    affiliation: "SciLifeLab"
+    email: "john.smith@example.org"
+    course_contact: false
+    bio: >
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    linkedin: ""
+    github: "https://github.com/InekeL"
+    website: ""
+    image: "img/photos/team-photo.jpg"

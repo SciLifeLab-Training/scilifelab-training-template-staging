@@ -11,7 +11,7 @@ project:
     - team.qmd
     - practicalinfo.qmd
     - resources.qmd
-    - precourse.qmd
+    - preparation.qmd
     - faq.qmd
 
   pre-render:

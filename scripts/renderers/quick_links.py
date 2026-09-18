@@ -13,7 +13,7 @@ def render_quick_links(website, schedule_events):
         "schedule",
         "practical",
         "resources",
-        "precourse",
+        "preparation",
         "faq",
     ]
 

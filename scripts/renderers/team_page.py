@@ -1,3 +1,6 @@
+from html import escape
+
+
 def render_team_page(team):
 
     role_sections = [
@@ -49,60 +52,109 @@ def render_team_page(team):
             continue
 
         html.append('<section class="course-team-section">')
-        html.append(f'<h2>{heading}</h2>')
+
+        html.append(f'<h2>{escape(heading)}</h2>')
+
         html.append(
-            f'<p class="course-team-section-description">{description}</p>'
+            '<p class="course-team-section-description">'
+            f'{escape(description)}'
+            '</p>'
         )
 
         html.append(f'<div class="{grid_class}">')
 
         for person in members:
 
+            name = escape(str(person.get("name", "")))
+            job_title = escape(str(person.get("job_title", "")))
+            affiliation = escape(str(person.get("affiliation", "")))
+            bio = escape(str(person.get("bio", "")))
+            email = person.get("email", "")
+            image = person.get("image", "")
+
             html.append('<article class="course-team-card">')
 
-            if person.get("image"):
+            if image:
                 html.append(
                     '<img '
                     'class="course-team-card-photo" '
-                    f'src="{person["image"]}" '
-                    f'alt="{person["name"]}">'
+                    f'src="{escape(image, quote=True)}" '
+                    f'alt="{name}">'
                 )
 
             html.append('<div class="course-team-card-body">')
 
             html.append(
-                f'<h3 class="course-team-card-name">'
-                f'{person["name"]}'
-                f'</h3>'
+                '<h3 class="course-team-card-name">'
+                f'{name}'
+                '</h3>'
             )
 
-            if person.get("job_title"):
+            if job_title:
                 html.append(
-                    f'<div class="course-team-card-job-title">'
-                    f'{person["job_title"]}'
-                    f'</div>'
+                    '<div class="course-team-card-job-title">'
+                    f'{job_title}'
+                    '</div>'
                 )
 
-            if person.get("affiliation"):
+            if affiliation:
                 html.append(
-                    f'<div class="course-team-card-affiliation">'
-                    f'{person["affiliation"]}'
-                    f'</div>'
+                    '<div class="course-team-card-affiliation">'
+                    f'{affiliation}'
+                    '</div>'
                 )
 
+            # Course contact
+            if person.get("course_contact"):
+
+                html.append(
+                    '<div class="course-team-card-contact">'
+                )
+
+                html.append(
+                    '<span class="course-team-contact-badge">'
+                    '<i class="bi bi-envelope"></i>'
+                    'Course contact'
+                    '</span>'
+                )
+
+                if email:
+                    html.append(
+                        f'<a class="course-team-contact-email" '
+                        f'href="mailto:{escape(email, quote=True)}">'
+                        f'{escape(email)}'
+                        '</a>'
+                    )
+
+                html.append('</div>')
+
+            # Optional biography
+            if bio:
+                html.append(
+                    '<p class="course-team-card-bio">'
+                    f'{bio}'
+                    '</p>'
+                )
+
+            # Profile links
             links = []
 
-            if person.get("email"):
+            if email:
                 links.append(
-                    f'<a href="mailto:{person["email"]}" '
+                    f'<a href="mailto:{escape(email, quote=True)}" '
                     'aria-label="Email" title="Email">'
                     '<i class="bi bi-envelope"></i>'
                     '</a>'
                 )
 
             if person.get("orcid"):
+                orcid = escape(
+                    str(person["orcid"]),
+                    quote=True,
+                )
+
                 links.append(
-                    f'<a href="{person["orcid"]}" '
+                    f'<a href="{orcid}" '
                     'target="_blank" rel="noopener" '
                     'aria-label="ORCID" title="ORCID">'
                     '<img '
@@ -113,8 +165,13 @@ def render_team_page(team):
                 )
 
             if person.get("github"):
+                github = escape(
+                    str(person["github"]),
+                    quote=True,
+                )
+
                 links.append(
-                    f'<a href="{person["github"]}" '
+                    f'<a href="{github}" '
                     'target="_blank" rel="noopener" '
                     'aria-label="GitHub" title="GitHub">'
                     '<i class="bi bi-github"></i>'
@@ -122,8 +179,13 @@ def render_team_page(team):
                 )
 
             if person.get("linkedin"):
+                linkedin = escape(
+                    str(person["linkedin"]),
+                    quote=True,
+                )
+
                 links.append(
-                    f'<a href="{person["linkedin"]}" '
+                    f'<a href="{linkedin}" '
                     'target="_blank" rel="noopener" '
                     'aria-label="LinkedIn" title="LinkedIn">'
                     '<i class="bi bi-linkedin"></i>'
@@ -131,10 +193,15 @@ def render_team_page(team):
                 )
 
             if person.get("website"):
+                website = escape(
+                    str(person["website"]),
+                    quote=True,
+                )
+
                 links.append(
-                    f'<a href="{person["website"]}" '
+                    f'<a href="{website}" '
                     'target="_blank" rel="noopener" '
-                    'aria-label="Website">'
+                    'aria-label="Website" title="Website">'
                     '<i class="bi bi-globe2"></i>'
                     '</a>'
                 )

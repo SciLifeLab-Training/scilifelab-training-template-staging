@@ -12,7 +12,7 @@ from loaders import (
     load_announcements,
     load_practical_info,
     load_faq,
-    load_precourse,
+    load_preparation,
 )
 
 from content import load_content_sections
@@ -46,7 +46,7 @@ from renderers.schedule import render_schedule
 from renderers.syllabus import render_syllabus
 from renderers.practicalinfo import render_practical_info
 from renderers.faq import render_faq
-from renderers.precourse import render_precourse
+from renderers.preparation import render_preparation
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,7 +72,7 @@ def main():
     announcements = load_announcements()
     practical_info = load_practical_info()
     faq = load_faq()
-    precourse = load_precourse()
+    preparation = load_preparation()
 
     available_pages = set()
 
@@ -85,8 +85,8 @@ def main():
     if faq:
         available_pages.add("faq")
 
-    if precourse.get("sections"):
-        available_pages.add("precourse")
+    if preparation.get("sections"):
+        available_pages.add("preparation")
 
 
     write_partial(
@@ -170,8 +170,8 @@ def main():
     )
 
     write_partial(
-    "precourse.qmd",
-    render_precourse(precourse, course),
+        "preparation.qmd",
+        render_preparation(preparation, course),
     )
 
 if __name__ == "__main__":

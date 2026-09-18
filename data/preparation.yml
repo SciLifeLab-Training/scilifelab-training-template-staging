@@ -1,0 +1,284 @@
+preparation:
+
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
+
+  intro: >
+    Please complete the following preparation activities before the training begins.
+    Use this page to provide participants with the accounts, software, hardware,
+    reading, and other information they need before attending the training.
+
+  # --------------------------------------------------
+  # Sections
+  # --------------------------------------------------
+
+  sections:
+
+    # ==================================================
+    # SECTION 1 — General preparation
+    # ==================================================
+
+    - title: "Getting started"
+
+      blocks:
+
+        - type: text
+          content: |
+            Use this section for a general introduction to the preparation activities.
+            Explain what participants should do before the training and where they
+            can get help if they encounter problems.
+
+        - type: checklist
+          title: "Preparation checklist"
+          items:
+            - "Item 1"
+            - "Item 2"
+            - "Item 3"
+            - "Item 4"
+            - "Item 5"
+
+    # ==================================================
+    # SECTION 2 — Accounts
+    # ==================================================
+
+    - title: "Accounts"
+
+      blocks:
+
+        - type: text
+          content: |
+            Use this section to describe the accounts participants need to create or access before the training. Use the `account` block type in preparation.yml for each account and provide a description, instructions, and relevant links.
+
+        - type: account
+          title: "Account 1"
+
+          description: >
+            Use this field to explain what the account is, why participants need it,
+            and what it will be used for during the training.
+
+          instructions: |
+            Use the instructions field to describe how participants should create
+            or configure the account.
+
+            1. Create account step 1. 
+            2. Create account step 2. 
+            3. Create account step 3. 
+            4. Create account step 4. 
+            5. Create account step 5. 
+
+          links:
+            - title: "Account registration"
+              url: "https://example.org"
+
+            - title: "Account documentation"
+              url: "https://example.org"
+
+        - type: account
+          title: "Account 2"
+
+          description: >
+            Add additional account requirements as separate `account` blocks.
+            Consecutive account blocks are automatically displayed in a grid.
+
+          instructions: |
+            Use this field to provide the steps participants should follow
+            to create or configure the account.
+
+          links:
+            - title: "Create an account"
+              url: "https://example.org"
+
+
+        - type: callout
+          style: important
+          title: "This is an important callout"
+          content: >
+            Use an important callout to highlight information that participants
+            should be particularly aware of before completing the preparation activity.
+
+
+    # ==================================================
+    # SECTION 3 — Software requirements
+    # ==================================================
+
+    - title: "Software requirements"
+
+      blocks:
+
+        - type: text
+          content: |
+            Use this section to describe the software participants need to install before the training. Include any relevant version requirements or information about administrative permissions.
+
+        - type: software
+          title: "Software 1"
+
+          description: >
+            Use this section to describe the software participants need to install
+            before the training. Include any relevant version requirements or
+            information about administrative permissions.
+
+          instructions: |
+            Use the instructions field to describe how participants should install or configure the software.
+            1. Install software step 1.
+            2. Install software step 2.
+            3. Install software step 3.
+
+          links:
+            - title: "Software download"
+              url: "https://example.org"
+
+            - title: "Software documentation"
+              url: "https://example.org"
+
+        - type: software
+          title: "Software 2"
+
+          description: >
+            Add additional software requirements as separate software blocks.
+            Consecutive software blocks are automatically displayed in a grid. for code use `quotes`
+
+          instructions: |
+            Provide the installation or configuration steps here.
+
+          links:
+            - title: "Software download"
+              url: "https://example.org"
+
+        - type: software
+          title: "Software 3"
+
+          description: >
+            Use additional software blocks whenever participants need
+            several different applications or tools.
+
+          instructions: |
+             Provide any installation or configuration instructions here.
+
+          links:
+            - title: ""
+              url: ""
+
+        - type: callout
+          style: note
+          title: "This is a note callout"
+          content: >
+            Use a note callout for useful background information, tips,
+            reminders, or other information that does not require the
+            stronger emphasis of an important or warning callout.
+
+
+    # ==================================================
+    # SECTION 4 — Hardware requirements
+    # ==================================================
+
+    - title: "Hardware requirements"
+
+      blocks:
+
+        - type: text
+          content: |
+             Use this section for a short introduction to the preparation activities. Explai
+
+        - type: hardware
+          title: "Hardware requirements"
+
+          description: >
+            Use this block to describe the computer or other equipment
+            participants need to bring or have access to.
+
+          requirements:
+            - label: "RAM"
+              value: "value"
+
+            - label: "Storage"
+              value: "value"
+
+            - label: "Processor"
+              value: "value"
+
+            - label: "Internet"
+              value: "value"
+
+          instructions: |
+            Use the instructions field for additional hardware-related
+            information or actions participants should take before the training.
+
+            For example, explain whether participants need to bring their
+            own computer, charger, headset, or other equipment.
+
+        - type: callout
+          style: warning
+          title: "This is a warning callout"
+          content: >
+            Use a warning callout for information about a potential problem,
+            limitation, or action that participants should not overlook.
+
+
+    # ==================================================
+    # SECTION 5 — Required reading
+    # ==================================================
+
+    - title: "Required reading"
+
+      blocks:
+
+        - type: text
+          content: |
+             Use this section for a short introduction to the preparation activities. Explai
+
+
+        - type: reading
+          title: "Reading 1"
+
+          description: >
+            Use this block for required reading that participants should
+            complete before the training. Adding a link will make the citation clickable for easy access. 
+
+          citations:
+            - text: >
+                Example Author or Organisation. (2025). Example document title.
+              url: "https://example.org"
+
+            - text: >
+                Another Author or Organisation. (2020). Another document title.
+              url: "https://example.org/article"
+
+          instructions: |
+            Use the instructions field to explain how participants should
+            approach the reading.
+
+            For example, you can indicate whether participants should read
+            the full document or focus on particular sections.
+
+          prompt: >
+            Use the reflection prompt to ask participants to think about
+            the reading before the training.
+
+        - type: reading
+          title: "Reading 2"
+
+          description: >
+            Add additional reading blocks when participants need to review
+            several different resources.
+
+          citations:
+            - text: >
+                Example Author or Organisation. (2025). Example document title.
+              url: ""
+
+  
+
+    # ==================================================
+    # SECTION 6 — Additional information
+    # ==================================================
+
+    - title: "Additional information"
+
+      blocks:
+
+        - type: text
+          content: |
+            Use this section for additional preparation information that does not fit naturally into the account, software, hardware, or reading sections.
+
+            You can also use it for information about local IT environments, accessibility, administrative permissions, or other practical details participants should know before the training.

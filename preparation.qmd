@@ -7,7 +7,7 @@ title-block: false
 
 {{< include _sections/navbar.qmd >}}
 
-{{< include _generated/precourse.qmd >}}
+{{< include _generated/preparation.qmd >}}
 
 {{< include _sections/footer.qmd >}}
 
