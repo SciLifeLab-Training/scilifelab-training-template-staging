@@ -7,14 +7,6 @@ include-in-header:
       <script src="js/schedule.js"></script>
 ---
 
-<!--
-Homepage composition.
-
-This page assembles the homepage from reusable components.
-Component rendering is handled separately by the Python renderer.
---> 
-
-
 ::: {.course-shell}
 
 {{< include _sections/navbar.qmd >}}

@@ -14,7 +14,7 @@ team:
     linkedin: "https://www.linkedin.com"
     github: "https://github.com/"
     website: "www.traininglead1.com"
-    image: "img/photos/team-photo.jpg"
+    image: "img/photos/team-photo.jpeg"
 
   - name: "Training Lead Name"
     roles:
@@ -30,7 +30,7 @@ team:
     linkedin: ""
     github: "https://github.com/InekeL"
     website: ""
-    image: "img/photos/team-photo.jpg"
+    image: "img/photos/team-photo.jpeg"
 
   - name: "Alex Example"
     roles:
@@ -46,7 +46,7 @@ team:
     linkedin: "https://www.linkedin.com/in/inekeluijten/"
     github: ""
     website: ""
-    image: "img/photos/team-photo.jpg"
+    image: "img/photos/team-photo.jpeg"
 
   - name: "Sam Example"
     roles:
@@ -62,7 +62,7 @@ team:
     linkedin: ""
     github: ""
     website: ""
-    image: "img/photos/team-photo.jpg"
+    image: "img/photos/team-photo.jpeg"
 
 
   - name: "Bob Example"
@@ -77,4 +77,4 @@ team:
     linkedin: ""
     github: "https://github.com/InekeL"
     website: ""
-    image: "img/photos/team-photo.jpg"
+    image: "img/photos/team-photo.jpeg"
