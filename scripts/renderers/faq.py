@@ -3,6 +3,11 @@ def render_faq(faq):
     if not faq:
         return ""
 
+    questions = faq.get("questions") or []
+
+    if not questions:
+        return ""
+
     html = []
 
     html.append('<div class="course-faq-page">')
@@ -21,13 +26,13 @@ def render_faq(faq):
         '<h1>Frequently asked questions</h1>'
     )
 
-    html.append(
-        '<p class="course-faq-intro">'
-        'Here you will find answers to common questions about this '
-        'training. If you cannot find the information you are looking '
-        'for, please contact the organisers.'
-        '</p>'
-    )
+    if faq.get("intro"):
+
+        html.append(
+            '<p class="course-faq-intro">'
+            f'{faq["intro"]}'
+            '</p>'
+        )
 
     html.append('</header>')
 
@@ -37,7 +42,7 @@ def render_faq(faq):
 
     html.append('<div class="course-faq-list">')
 
-    for index, item in enumerate(faq, start=1):
+    for index, item in enumerate(questions, start=1):
 
         question = item.get("question")
         answer = item.get("answer")
@@ -64,7 +69,6 @@ def render_faq(faq):
         html.append('</details>')
 
     html.append('</div>')
-
     html.append('</div>')
 
     return "\n".join(html).strip()
