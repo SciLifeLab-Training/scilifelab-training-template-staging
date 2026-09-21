@@ -857,7 +857,7 @@ body {
 
 /* Styles the link to the full course schedule */
 .course-upcoming-link {
-    color: #045c64;
+    color: #087584;
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
@@ -865,7 +865,9 @@ body {
 
 /* Underlines the schedule link when hovered */
 .course-upcoming-link:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 
@@ -926,17 +928,16 @@ body {
 
 /*Styles the links */
 .course-link-content a {
-    color: #045c64;
-
-    text-decoration: none;
-
-    font-size: 0.8rem;
+    color: #087584;
+    font-size: 0.80rem;
     font-weight: 600;
+    text-decoration: none;
 }
 
-/* Underlines the quick links link when hovered */
 .course-link-content a:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* ==========================================================================
@@ -1076,17 +1077,16 @@ body {
 
 .course-announcements-link {
     display: inline-block;
-
-    color: #045c64;
-
+    color: #087584;
     font-size: 0.80rem;
     font-weight: 600;
-
     text-decoration: none;
 }
 
-.course-announcements-link:hover {
+.course-announcements-content a:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* ==========================================================================
@@ -1148,18 +1148,17 @@ body {
 }
 
 .course-team-link {
-    color: #045c64;
-
+    color: #087584;
     font-size: 0.80rem;
     font-weight: 600;
-
     text-decoration: none;
 }
 
 .course-team-link:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
-
 
 
 /* ==========================================================================
