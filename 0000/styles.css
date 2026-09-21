@@ -1671,10 +1671,6 @@ html.course-content-page .landing-footer {
    -------------------------------------------------- */
 
 .course-syllabus-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 280px;
-    gap: 3rem;
-
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -1694,7 +1690,6 @@ html.course-content-page .landing-footer {
 }
 
 .course-syllabus-header h1 {
-    max-width: 28ch;
     margin: 0;
     font-size: 2rem;
     font-weight: 600;
@@ -1703,69 +1698,11 @@ html.course-content-page .landing-footer {
 
 
 .course-syllabus-subtitle {
-    max-width: 55ch;
-
     margin: 0.75rem 0 0;
 
     color: #777;
     font-size: 1.05rem;
     line-height: 1.5;
-}
-
-
-/* --------------------------------------------------
-   Contact box
-   -------------------------------------------------- */
-
-.course-syllabus-contact {
-    align-self: start;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 1.35rem 1.5rem;
-
-    border: none;
-    border-radius: 5px;
-
-    background: #f7f9fa;
-}
-
-.course-syllabus-contact-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 38px;
-    height: 38px;
-
-    margin-bottom: 0.75rem;
-
-    border-radius: 50%;
-
-    background: #C0D6D8;
-
-    color: #045C64;
-    font-size: 1.05rem;
-}
-
-.course-syllabus-contact-title {
-    margin-bottom: 0.4rem;
-    font-weight: 700;
-}
-
-.course-syllabus-contact p {
-    margin: 0 0 0.65rem;
-
-    color: #526476;
-    line-height: 1.45;
-}
-
-.course-syllabus-contact a {
-    color: #045C64;
-    font-weight: 600;
-
-    overflow-wrap: anywhere;
 }
 
 
@@ -2179,7 +2116,6 @@ html.course-content-page .landing-footer {
 }
 
 .course-team-section-description {
-    max-width: 70ch;
     margin: 0.45rem 0 1.25rem;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -2203,10 +2139,9 @@ html.course-content-page .landing-footer {
 
 .course-team-grid-members {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
-
 
 /* --------------------------------------------------
    Team cards
@@ -2214,13 +2149,13 @@ html.course-content-page .landing-footer {
 
 .course-team-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     min-width: 0;
 
     box-sizing: border-box;
 
-    padding: 1.25rem;
+    padding: 1.4rem;
 
     background: #f7f9fa;
     border-radius: 5px;
@@ -2259,19 +2194,20 @@ html.course-content-page .landing-footer {
     height: 120px;
 }
 
-
 /* --------------------------------------------------
    Card content
    -------------------------------------------------- */
 
 .course-team-card-body {
     min-width: 0;
+    flex: 1;
 
     margin-left: 1.15rem;
 }
 
 .course-team-card-name {
     margin: 0;
+
     font-size: 1.0rem;
     font-weight: 600;
     line-height: 1.3;
@@ -2296,6 +2232,76 @@ html.course-content-page .landing-footer {
     font-size: 0.85rem;
     line-height: 1.4;
 }
+
+
+/* --------------------------------------------------
+   Course contact
+   -------------------------------------------------- */
+
+.course-team-card-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.55rem;
+
+    margin-top: 0.75rem;
+}
+
+.course-team-contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0.25rem 0.6rem;
+
+    border-radius: 999px;
+
+    background: #dceff1;
+    color: #045c64;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.course-team-contact-badge i {
+    font-size: 0.8rem;
+}
+
+.course-team-contact-email {
+    color: #045c64;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.course-team-contact-email:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------------------
+   Biography
+   -------------------------------------------------- */
+
+.course-team-card-bio {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+
+    margin: 0.75rem 0 0;
+
+    color: #687178;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
 
 /* --------------------------------------------------
    Profile links
@@ -2357,16 +2363,15 @@ html.course-content-page .landing-footer {
     width: 18px;
     height: 18px;
 }
-
 /* ==================================================
-   PRACTICAL INFO
+   PRACTICALITIES
    ================================================== */
 
 /* --------------------------------------------------
    Page container
    -------------------------------------------------- */
 
-.course-practical-page {
+.course-practicalities-page {
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -2376,17 +2381,27 @@ html.course-content-page .landing-footer {
     box-sizing: border-box;
 }
 
+.course-practicalities-page .anchorjs-link,
+.course-practicalities-section .anchorjs-link {
+    display: none !important;
+}
 
 /* --------------------------------------------------
    Page header
    -------------------------------------------------- */
 
-.course-practical-header {
+.course-practicalities-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 3rem;
+
     padding-bottom: 2rem;
+
     border-bottom: 1px solid #d9e0e3;
 }
 
-.course-practical-label {
+
+.course-practicalities-label {
     margin-bottom: 0.85rem;
 
     color: #045c64;
@@ -2396,7 +2411,7 @@ html.course-content-page .landing-footer {
     text-transform: uppercase;
 }
 
-.course-practical-header h1 {
+.course-practicalities-header h1 {
     max-width: 28ch;
 
     margin: 0;
@@ -2406,8 +2421,8 @@ html.course-content-page .landing-footer {
     line-height: 1.25;
 }
 
-.course-practical-intro {
-    max-width: 70ch;
+.course-practicalities-intro {
+    max-width: 55ch;
 
     margin: 0.75rem 0 0;
 
@@ -2417,19 +2432,75 @@ html.course-content-page .landing-footer {
 }
 
 
+.course-practicalities-contact {
+    align-self: start;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.35rem 1.5rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #f7f9fa;
+}
+
+.course-practicalities-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 0.75rem;
+
+    border-radius: 50%;
+
+    background: #C0D6D8;
+    color: #045C64;
+    font-size: 1.05rem;
+}
+
+.course-practicalities-contact-title {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.course-practicalities-contact p {
+    margin: 0 0 0.65rem;
+
+    color: #526476;
+    line-height: 1.45;
+}
+
+.course-practicalities-contact a {
+    color: #087584;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.course-practicalities-contact a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* --------------------------------------------------
    Sections
    -------------------------------------------------- */
 
-.course-practical-section {
+.course-practicalities-section {
     padding: 2rem 0 0;
 }
 
-.course-practical-section + .course-practical-section {
+.course-practicalities-section + .course-practicalities-section {
     padding-top: 2.5rem;
 }
 
-.course-practical-section h2 {
+.course-practicalities-section h2 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -2444,7 +2515,7 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-section > p {
+.course-practicalities-section > p {
     margin: 0.45rem 0 0;
 
     font-size: 0.9rem;
@@ -2455,7 +2526,7 @@ html.course-content-page .landing-footer {
    Section icons
    -------------------------------------------------- */
 
-.course-practical-section h2 {
+.course-practicalities-section h2 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -2470,7 +2541,7 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-section h2 i {
+.course-practicalities-section h2 i {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2488,7 +2559,7 @@ html.course-content-page .landing-footer {
    Venue
    -------------------------------------------------- */
 
-.course-practical-venue {
+.course-practicalities-venue {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
     gap: 1.25rem;
@@ -2496,7 +2567,7 @@ html.course-content-page .landing-footer {
     margin-top: 0.75rem;
 }
 
-.course-practical-venue-details {
+.course-practicalities-venue-details {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -2507,20 +2578,20 @@ html.course-content-page .landing-footer {
     border-radius: 5px;
 }
 
-.course-practical-venue-details > div {
+.course-practicalities-venue-details > div {
     padding: 0 0 1rem;
 }
 
-.course-practical-venue-details > div + div {
+.course-practicalities-venue-details > div + div {
     padding-top: 1rem;
     border-top: 1px solid #d9e0e3;
 }
 
-.course-practical-venue-details > div:last-child {
+.course-practicalities-venue-details > div:last-child {
     padding-bottom: 0;
 }
 
-.course-practical-venue-details strong {
+.course-practicalities-venue-details strong {
     display: block;
 
     margin-bottom: 0.3rem;
@@ -2530,7 +2601,7 @@ html.course-content-page .landing-footer {
     font-weight: 600;
 }
 
-.course-practical-address {
+.course-practicalities-address {
     line-height: 1.55;
 }
 
@@ -2539,20 +2610,20 @@ html.course-content-page .landing-footer {
    Map
    -------------------------------------------------- */
 
-.course-practical-map-column {
+.course-practicalities-map-column {
     display: flex;
     flex-direction: column;
     min-width: 0;
 }
 
-.course-practical-map {
+.course-practicalities-map {
     flex: 1;
     width: 100%;
     overflow: hidden;
     border-radius: 5px;
 }
 
-.course-practical-map iframe {
+.course-practicalities-map iframe {
     display: block;
     width: 100%;
     height: 100%;
@@ -2560,7 +2631,7 @@ html.course-content-page .landing-footer {
     border: 0;
 }
 
-.course-practical-map-link {
+.course-practicalities-map-link {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -2572,14 +2643,14 @@ html.course-content-page .landing-footer {
     text-decoration: none;
 }
 
-.course-practical-map-link::before {
+.course-practicalities-map-link::before {
     content: "\f1c5";
 
     font-family: "bootstrap-icons";
     font-size: 0.95rem;
 }
 
-.course-practical-map-link:hover {
+.course-practicalities-map-link:hover {
     text-decoration: underline;
 }
 
@@ -2588,31 +2659,34 @@ html.course-content-page .landing-footer {
    Transport links
    -------------------------------------------------- */
 
-.course-practical-links {
-    margin: 0.7rem 0 0;
-    padding-left: 1.8rem;
+.course-practicalities-links {
+    margin: 1rem 0 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-.course-practical-links li {
-    padding: 0.1rem 0;
+
+.course-practicalities-links li {
+    margin: 0;
+    padding: 0.35rem 0;
+
+    font-size: 0.86rem;
+    line-height: 1.4;
 }
 
-.course-practical-links a {
-    color: #0075c9;
+
+.course-practicalities-links a {
+    color: #087584;
+    font-weight: 600;
     text-decoration: none;
 }
 
-.course-practical-links a:hover {
+
+.course-practicalities-links a:hover {
+    color: #045c64;
     text-decoration: underline;
-}
-
-.course-practical-links a::after {
-    content: "\f1c5";
-
-    margin-left: 0.3rem;
-
-    font-family: "bootstrap-icons";
-    font-size: 0.75rem;
+    text-underline-offset: 2px;
 }
 
 
@@ -2620,14 +2694,14 @@ html.course-content-page .landing-footer {
    Accommodation table
    -------------------------------------------------- */
 
-.course-practical-table-wrapper {
+.course-practicalities-table-wrapper {
     width: 100%;
     margin-top: 0.7rem;
 
     overflow-x: auto;
 }
 
-.course-practical-table {
+.course-practicalities-table {
     width: 100%;
 
     border-collapse: separate;
@@ -2641,7 +2715,7 @@ html.course-content-page .landing-footer {
     font-size: 0.85rem;
 }
 
-.course-practical-table th {
+.course-practicalities-table th {
     padding: 0.55rem 0.75rem;
 
     background: #f1f6f8;
@@ -2653,40 +2727,33 @@ html.course-content-page .landing-footer {
     border-bottom: 1px solid #d9e0e3;
 }
 
-.course-practical-table td {
+.course-practicalities-table td {
     padding: 0.45rem 0.75rem;
 
     border-bottom: 1px solid #d9e0e3;
 }
 
-.course-practical-table tr:last-child td {
+.course-practicalities-table tr:last-child td {
     border-bottom: none;
 }
 
-.course-practical-table a {
-    color: #0075c9;
+.course-practicalities-table a {
+    color: #087584;
+    font-weight: 600;
     text-decoration: none;
 }
 
-.course-practical-table a:hover {
+.course-practicalities-table a:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
-
-.course-practical-table a::after {
-    content: "\f1c5";
-
-    margin-left: 0.3rem;
-
-    font-family: "bootstrap-icons";
-    font-size: 0.75rem;
-}
-
 
 /* --------------------------------------------------
    Food
    -------------------------------------------------- */
 
-.course-practical-section h2 + p {
+.course-practicalities-section h2 + p {
     margin-top: 0.45rem;
 }
 
@@ -2695,7 +2762,7 @@ html.course-content-page .landing-footer {
    Additional information
    -------------------------------------------------- */
 
-.course-practical-additional {
+.course-practicalities-additional {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
@@ -2703,14 +2770,14 @@ html.course-content-page .landing-footer {
     margin-top: 0.7rem;
 }
 
-.course-practical-additional-item {
+.course-practicalities-additional-item {
     padding: 1.15rem 1.25rem;
 
     background: #f7f9fa;
     border-radius: 5px;
 }
 
-.course-practical-additional-item h3 {
+.course-practicalities-additional-item h3 {
     margin: 0;
 
     color: #101820;
@@ -2721,13 +2788,14 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-additional-item p {
+.course-practicalities-additional-item p {
     margin: 0.45rem 0 0;
 
     color: #5f6b73;
     font-size: 0.85rem;
     line-height: 1.5;
 }
+
 
 /* ==================================================
    FAQ
@@ -2947,7 +3015,7 @@ html.course-content-page .landing-footer {
 
 
 /* ==========================================================================
-   BEFORE THE COURSE PAGE
+   PREPARATION PAGE
    ========================================================================== */
 
 
@@ -2955,7 +3023,7 @@ html.course-content-page .landing-footer {
    Page container
    -------------------------------------------------------------------------- */
 
-.course-precourse-page {
+.course-preparation-page {
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -2965,8 +3033,22 @@ html.course-content-page .landing-footer {
     box-sizing: border-box;
 }
 
+/* Remove Quarto heading anchor icons from the Preparation page */
+.course-preparation-page .anchorjs-link,
+.course-preparation .anchorjs-link {
+    display: none !important;
+}
 
-.course-page-header {
+
+/* --------------------------------------------------
+   Preparation header
+   -------------------------------------------------- */
+
+.course-preparation-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 3rem;
+
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -2976,8 +3058,7 @@ html.course-content-page .landing-footer {
     box-sizing: border-box;
 }
 
-
-.course-precourse-label {
+.course-preparation-label {
     margin-bottom: 0.85rem;
 
     color: #045c64;
@@ -2987,8 +3068,7 @@ html.course-content-page .landing-footer {
     text-transform: uppercase;
 }
 
-
-.course-page-header h1 {
+.course-preparation-header h1 {
     max-width: 28ch;
 
     margin: 0;
@@ -2998,9 +3078,8 @@ html.course-content-page .landing-footer {
     line-height: 1.25;
 }
 
-
-.course-precourse-intro {
-    max-width: 70ch;
+.course-preparation-intro {
+    max-width: 55ch;
 
     margin: 0.75rem 0 0;
 
@@ -3010,11 +3089,69 @@ html.course-content-page .landing-footer {
 }
 
 
+/* Contact box */
+
+.course-preparation-contact {
+    align-self: start;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.35rem 1.5rem;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #f7f9fa;
+}
+
+.course-preparation-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 0.75rem;
+
+    border-radius: 50%;
+
+    background: #C0D6D8;
+    color: #045C64;
+    font-size: 1.05rem;
+}
+
+.course-preparation-contact-title {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.course-preparation-contact p {
+    margin: 0 0 0.65rem;
+
+    color: #526476;
+    line-height: 1.45;
+}
+
+.course-preparation-contact a {
+    color: #087584;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.course-preparation-contact a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* --------------------------------------------------------------------------
    Main page content
    -------------------------------------------------------------------------- */
 
-.course-precourse {
+.course-preparation {
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -3029,22 +3166,17 @@ html.course-content-page .landing-footer {
    Sections
    -------------------------------------------------------------------------- */
 
-.course-precourse-section {
+.course-preparation-section {
     width: 100%;
 
     margin: 0;
-    padding: 0 0 1.5rem;
-}
-
-
-.course-precourse-section + .course-precourse-section {
-    padding-top: 1.5rem;
+    padding: 1.5rem 0;
 
     border-top: 1px solid #d9e0e3;
 }
 
 
-.course-precourse-section > h2 {
+.course-preparation-section > h2 {
     margin: 0 0 0.9rem;
 
     color: #202b33;
@@ -3056,16 +3188,34 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-section > h2::after {
+.course-preparation-section > h2::after {
     display: none;
 }
 
+.course-preparation-account,
+.course-preparation-software {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-preparation-account .course-preparation-box-body,
+.course-preparation-software .course-preparation-box-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.course-preparation-account .course-preparation-links,
+.course-preparation-software .course-preparation-links {
+    margin-top: auto;
+    padding-top: 1rem;
+}
 
 /* --------------------------------------------------------------------------
    Plain text blocks
    -------------------------------------------------------------------------- */
 
-.course-precourse-text {
+.course-preparation-text {
     margin: 0 0 1.25rem;
 
     color: #3f474d;
@@ -3074,12 +3224,12 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-text p {
+.course-preparation-text p {
     margin: 0 0 0.9rem;
 }
 
 
-.course-precourse-text p:last-child {
+.course-preparation-text p:last-child {
     margin-bottom: 0;
 }
 
@@ -3094,7 +3244,7 @@ html.course-content-page .landing-footer {
    This keeps Quarto from moving them into its aside/margin layout.
 */
 
-.course-precourse-callout {
+.course-preparation-callout {
     display: block;
 
     width: 100%;
@@ -3117,7 +3267,7 @@ html.course-content-page .landing-footer {
 
 /* Callout title */
 
-.course-precourse-callout-title {
+.course-preparation-callout-title {
     display: flex;
     align-items: center;
     gap: 0.45rem;
@@ -3131,7 +3281,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-callout-icon {
+.course-preparation-callout-icon {
     flex-shrink: 0;
 
     color: #0b7180;
@@ -3141,68 +3291,67 @@ html.course-content-page .landing-footer {
 
 /* Callout content */
 
-.course-precourse-callout-content {
+.course-preparation-callout-content {
     color: #3f4d52;
     font-size: 0.88rem;
     line-height: 1.55;
 }
 
 
-.course-precourse-callout-content p {
+.course-preparation-callout-content p {
     margin: 0 0 0.75rem;
 }
 
 
-.course-precourse-callout-content p:last-child {
+.course-preparation-callout-content p:last-child {
     margin-bottom: 0;
 }
 
 
 /* Callout variants */
 
-.course-precourse-callout-important {
+.course-preparation-callout-important {
     background: #edf7f8;
     border-color: #c7dfe3;
     border-left-color: #0b7180;
 }
 
 
-
-.course-precourse-callout-warning {
+.course-preparation-callout-warning {
     background: #faf7ed;
     border-color: #e7dfc7;
     border-left-color: #9b7a2d;
 }
 
-.course-precourse-callout-warning .course-precourse-callout-title {
+.course-preparation-callout-warning .course-preparation-callout-title {
     color: #765d22;
 }
 
-.course-precourse-callout-warning .course-precourse-callout-icon {
+.course-preparation-callout-warning .course-preparation-callout-icon {
     color: #9b7a2d;
 }
 
-.course-precourse-callout-note {
+.course-preparation-callout-note {
     background: #f1f7f3;
 
     border-color: #d3e3d8;
     border-left-color: #6f967b;
 }
 
-.course-precourse-callout-note .course-precourse-callout-title {
+.course-preparation-callout-note .course-preparation-callout-title {
     color: #526b5a;
 }
 
-.course-precourse-callout-note .course-precourse-callout-icon {
+.course-preparation-callout-note .course-preparation-callout-icon {
     color: #6f967b;
 }
 
 
 /* --------------------------------------------------------------------------
-   Standard pre-course boxes
+   Standard preparation boxes
    -------------------------------------------------------------------------- */
 
-.course-precourse-box {
+.course-preparation-box {
     width: 100%;
 
     margin: 1.25rem 0;
@@ -3222,7 +3371,7 @@ html.course-content-page .landing-footer {
    Box header
    -------------------------------------------------------------------------- */
 
-.course-precourse-box-header {
+.course-preparation-box-header {
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -3235,7 +3384,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-box-title {
+.course-preparation-box-title {
     margin: 0;
 
     color: #27343a;
@@ -3245,7 +3394,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-box-icon {
+.course-preparation-box-icon {
     flex-shrink: 0;
 
     color: #0b7180;
@@ -3257,7 +3406,7 @@ html.course-content-page .landing-footer {
    Box body
    -------------------------------------------------------------------------- */
 
-.course-precourse-box-body {
+.course-preparation-box-body {
     padding: 1.1rem 1.2rem 1.2rem;
 }
 
@@ -3266,14 +3415,14 @@ html.course-content-page .landing-footer {
    Checklist
    -------------------------------------------------------------------------- */
 
-.course-precourse-checklist {
+.course-preparation-checklist {
     display: inline-block;
     width: fit-content;
     max-width: 100%;
 }
 
 
-.course-precourse-checklist ul {
+.course-preparation-checklist ul {
     margin: 0;
     padding: 0;
 
@@ -3281,7 +3430,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-checklist li {
+.course-preparation-checklist li {
     margin: 0;
     padding: 0.22rem 0;
 
@@ -3291,7 +3440,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-checklist li label {
+.course-preparation-checklist li label {
     display: flex;
     align-items: flex-start;
     gap: 0.65rem;
@@ -3300,7 +3449,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-checkbox {
+.course-preparation-checkbox {
     width: 13px;
     min-width: 13px;
     height: 13px;
@@ -3315,7 +3464,7 @@ html.course-content-page .landing-footer {
    Account grid
    -------------------------------------------------------------------------- */
 
-.course-precourse-account-grid {
+.course-preparation-account-grid {
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3326,28 +3475,28 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-account-grid .course-precourse-box {
+.course-preparation-account-grid .course-preparation-box {
     margin: 0;
 }
 
-.course-precourse-software-grid {
+.course-preparation-software-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin: 1.25rem 0;
 }
 
-.course-precourse-software-grid .course-precourse-box {
+.course-preparation-software-grid .course-preparation-box {
     margin: 0;
 }
 
 
-.course-precourse-instructions ol {
+.course-preparation-instructions ol {
     margin: 0.5rem 0 0;
     padding-left: 1.5rem;
 }
 
-.course-precourse-instructions ol li {
+.course-preparation-instructions ol li {
     margin: 0.25rem 0;
     padding-left: 0.15rem;
 }
@@ -3356,19 +3505,19 @@ html.course-content-page .landing-footer {
    Resource descriptions
    -------------------------------------------------------------------------- */
 
-.course-precourse-resource-description {
+.course-preparation-resource-description {
     color: #4b555b;
     font-size: 0.88rem;
     line-height: 1.55;
 }
 
 
-.course-precourse-resource-description p {
+.course-preparation-resource-description p {
     margin: 0 0 0.75rem;
 }
 
 
-.course-precourse-resource-description p:last-child {
+.course-preparation-resource-description p:last-child {
     margin-bottom: 0;
 }
 
@@ -3377,7 +3526,7 @@ html.course-content-page .landing-footer {
    Instructions
    -------------------------------------------------------------------------- */
 
-.course-precourse-instructions {
+.course-preparation-instructions {
     margin: 1.1rem 0 0;
     padding: 1rem 0 0;
 
@@ -3385,7 +3534,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-instructions h4 {
+.course-preparation-instructions h4 {
     margin: 0 0 0.55rem;
 
     color: #4f5b61;
@@ -3395,7 +3544,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-instructions p {
+.course-preparation-instructions p {
     margin: 0 0 0.7rem;
 
     color: #414b50;
@@ -3404,7 +3553,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-instructions p:last-child {
+.course-preparation-instructions p:last-child {
     margin-bottom: 0;
 }
 
@@ -3413,7 +3562,7 @@ html.course-content-page .landing-footer {
    Links
    -------------------------------------------------------------------------- */
 
-.course-precourse-links {
+.course-preparation-links {
     margin: 1rem 0 0;
     padding: 0;
 
@@ -3421,7 +3570,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-links li {
+.course-preparation-links li {
     margin: 0;
     padding: 0.35rem 0;
 
@@ -3430,14 +3579,14 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-link {
+.course-preparation-link {
     color: #087584;
     font-weight: 600;
     text-decoration: none;
 }
 
 
-.course-precourse-link:hover {
+.course-preparation-link:hover {
     color: #045c64;
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -3448,7 +3597,7 @@ html.course-content-page .landing-footer {
    Hardware requirements
    -------------------------------------------------------------------------- */
 
-.course-precourse-requirements {
+.course-preparation-requirements {
     margin: 1rem 0 0;
     padding: 0;
 
@@ -3456,7 +3605,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-requirements > div {
+.course-preparation-requirements > div {
     display: grid;
 
     grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
@@ -3469,12 +3618,12 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-requirements > div:last-child {
+.course-preparation-requirements > div:last-child {
     border-bottom: none;
 }
 
 
-.course-precourse-requirements dt {
+.course-preparation-requirements dt {
     margin: 0;
 
     color: #68747a;
@@ -3483,7 +3632,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-requirements dd {
+.course-preparation-requirements dd {
     margin: 0;
 
     color: #3f474d;
@@ -3495,7 +3644,7 @@ html.course-content-page .landing-footer {
    Reading blocks
    -------------------------------------------------------------------------- */
 
-.course-precourse-citation {
+.course-preparation-citation {
     margin: 0.9rem 0 0;
     padding: 0.95rem 0.75rem 0.3rem;
 
@@ -3509,13 +3658,13 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-citation a {
+.course-preparation-citation a {
     color: inherit;
     text-decoration: none;
     transition: color 0.15s ease;
 }
 
-.course-precourse-citation a:hover {
+.course-preparation-citation a:hover {
     color: #087584;
 }
 
@@ -3523,7 +3672,7 @@ html.course-content-page .landing-footer {
    Reflection prompt
    -------------------------------------------------------------------------- */
 
-.course-precourse-prompt {
+.course-preparation-prompt {
     margin: 1rem 0 0;
     padding: 0.9rem 1rem;
 
@@ -3538,7 +3687,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-prompt-title {
+.course-preparation-prompt-title {
     display: flex;
     align-items: center;
     gap: 0.45rem;
@@ -3551,17 +3700,17 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-precourse-prompt-title i {
+.course-preparation-prompt-title i {
     color: #0b7180;
 }
 
 
-.course-precourse-prompt p {
+.course-preparation-prompt p {
     margin: 0 0 0.7rem;
 }
 
 
-.course-precourse-prompt p:last-child {
+.course-preparation-prompt p:last-child {
     margin-bottom: 0;
 }
 
@@ -3570,12 +3719,12 @@ html.course-content-page .landing-footer {
    Standalone links block
    -------------------------------------------------------------------------- */
 
-.course-precourse-links-block {
+.course-preparation-links-block {
     padding-bottom: 0;
 }
 
 
-.course-precourse-links-block .course-precourse-links {
+.course-preparation-links-block .course-preparation-links {
     margin-top: 0.25rem;
 }
 
@@ -3584,18 +3733,18 @@ html.course-content-page .landing-footer {
    Remove unwanted default spacing from generated content
    -------------------------------------------------------------------------- */
 
-.course-precourse p:last-child {
+.course-preparation p:last-child {
     margin-bottom: 0;
 }
 
 
-.course-precourse h3,
-.course-precourse h4 {
+.course-preparation h3,
+.course-preparation h4 {
     border: none;
 }
 
 
-.course-precourse ul,
-.course-precourse ol {
+.course-preparation ul,
+.course-preparation ol {
     margin-bottom: 0;
 }
