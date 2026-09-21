@@ -2363,16 +2363,15 @@ html.course-content-page .landing-footer {
     width: 18px;
     height: 18px;
 }
-
 /* ==================================================
-   PRACTICAL INFO
+   PRACTICALITIES
    ================================================== */
 
 /* --------------------------------------------------
    Page container
    -------------------------------------------------- */
 
-.course-practical-page {
+.course-practicalities-page {
     width: 100%;
     max-width: var(--course-content-width);
 
@@ -2387,7 +2386,7 @@ html.course-content-page .landing-footer {
    Page header
    -------------------------------------------------- */
 
-.course-practical-header {
+.course-practicalities-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 280px;
     gap: 3rem;
@@ -2398,7 +2397,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-practical-label {
+.course-practicalities-label {
     margin-bottom: 0.85rem;
 
     color: #045c64;
@@ -2408,7 +2407,7 @@ html.course-content-page .landing-footer {
     text-transform: uppercase;
 }
 
-.course-practical-header h1 {
+.course-practicalities-header h1 {
     max-width: 28ch;
 
     margin: 0;
@@ -2418,7 +2417,7 @@ html.course-content-page .landing-footer {
     line-height: 1.25;
 }
 
-.course-practical-intro {
+.course-practicalities-intro {
     max-width: 55ch;
 
     margin: 0.75rem 0 0;
@@ -2429,7 +2428,7 @@ html.course-content-page .landing-footer {
 }
 
 
-.course-practical-contact {
+.course-practicalities-contact {
     align-self: start;
 
     width: 100%;
@@ -2443,7 +2442,7 @@ html.course-content-page .landing-footer {
     background: #f7f9fa;
 }
 
-.course-practical-contact-icon {
+.course-practicalities-contact-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2460,19 +2459,19 @@ html.course-content-page .landing-footer {
     font-size: 1.05rem;
 }
 
-.course-practical-contact-title {
+.course-practicalities-contact-title {
     margin-bottom: 0.4rem;
     font-weight: 700;
 }
 
-.course-practical-contact p {
+.course-practicalities-contact p {
     margin: 0 0 0.65rem;
 
     color: #526476;
     line-height: 1.45;
 }
 
-.course-practical-contact a {
+.course-practicalities-contact a {
     color: #045C64;
     font-weight: 600;
 
@@ -2483,15 +2482,15 @@ html.course-content-page .landing-footer {
    Sections
    -------------------------------------------------- */
 
-.course-practical-section {
+.course-practicalities-section {
     padding: 2rem 0 0;
 }
 
-.course-practical-section + .course-practical-section {
+.course-practicalities-section + .course-practicalities-section {
     padding-top: 2.5rem;
 }
 
-.course-practical-section h2 {
+.course-practicalities-section h2 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -2506,7 +2505,7 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-section > p {
+.course-practicalities-section > p {
     margin: 0.45rem 0 0;
 
     font-size: 0.9rem;
@@ -2517,7 +2516,7 @@ html.course-content-page .landing-footer {
    Section icons
    -------------------------------------------------- */
 
-.course-practical-section h2 {
+.course-practicalities-section h2 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -2532,7 +2531,7 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-section h2 i {
+.course-practicalities-section h2 i {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2550,7 +2549,7 @@ html.course-content-page .landing-footer {
    Venue
    -------------------------------------------------- */
 
-.course-practical-venue {
+.course-practicalities-venue {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
     gap: 1.25rem;
@@ -2558,7 +2557,7 @@ html.course-content-page .landing-footer {
     margin-top: 0.75rem;
 }
 
-.course-practical-venue-details {
+.course-practicalities-venue-details {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -2569,20 +2568,20 @@ html.course-content-page .landing-footer {
     border-radius: 5px;
 }
 
-.course-practical-venue-details > div {
+.course-practicalities-venue-details > div {
     padding: 0 0 1rem;
 }
 
-.course-practical-venue-details > div + div {
+.course-practicalities-venue-details > div + div {
     padding-top: 1rem;
     border-top: 1px solid #d9e0e3;
 }
 
-.course-practical-venue-details > div:last-child {
+.course-practicalities-venue-details > div:last-child {
     padding-bottom: 0;
 }
 
-.course-practical-venue-details strong {
+.course-practicalities-venue-details strong {
     display: block;
 
     margin-bottom: 0.3rem;
@@ -2592,7 +2591,7 @@ html.course-content-page .landing-footer {
     font-weight: 600;
 }
 
-.course-practical-address {
+.course-practicalities-address {
     line-height: 1.55;
 }
 
@@ -2601,20 +2600,20 @@ html.course-content-page .landing-footer {
    Map
    -------------------------------------------------- */
 
-.course-practical-map-column {
+.course-practicalities-map-column {
     display: flex;
     flex-direction: column;
     min-width: 0;
 }
 
-.course-practical-map {
+.course-practicalities-map {
     flex: 1;
     width: 100%;
     overflow: hidden;
     border-radius: 5px;
 }
 
-.course-practical-map iframe {
+.course-practicalities-map iframe {
     display: block;
     width: 100%;
     height: 100%;
@@ -2622,7 +2621,7 @@ html.course-content-page .landing-footer {
     border: 0;
 }
 
-.course-practical-map-link {
+.course-practicalities-map-link {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -2634,14 +2633,14 @@ html.course-content-page .landing-footer {
     text-decoration: none;
 }
 
-.course-practical-map-link::before {
+.course-practicalities-map-link::before {
     content: "\f1c5";
 
     font-family: "bootstrap-icons";
     font-size: 0.95rem;
 }
 
-.course-practical-map-link:hover {
+.course-practicalities-map-link:hover {
     text-decoration: underline;
 }
 
@@ -2650,25 +2649,25 @@ html.course-content-page .landing-footer {
    Transport links
    -------------------------------------------------- */
 
-.course-practical-links {
+.course-practicalities-links {
     margin: 0.7rem 0 0;
     padding-left: 1.8rem;
 }
 
-.course-practical-links li {
+.course-practicalities-links li {
     padding: 0.1rem 0;
 }
 
-.course-practical-links a {
+.course-practicalities-links a {
     color: #0075c9;
     text-decoration: none;
 }
 
-.course-practical-links a:hover {
+.course-practicalities-links a:hover {
     text-decoration: underline;
 }
 
-.course-practical-links a::after {
+.course-practicalities-links a::after {
     content: "\f1c5";
 
     margin-left: 0.3rem;
@@ -2682,14 +2681,14 @@ html.course-content-page .landing-footer {
    Accommodation table
    -------------------------------------------------- */
 
-.course-practical-table-wrapper {
+.course-practicalities-table-wrapper {
     width: 100%;
     margin-top: 0.7rem;
 
     overflow-x: auto;
 }
 
-.course-practical-table {
+.course-practicalities-table {
     width: 100%;
 
     border-collapse: separate;
@@ -2703,7 +2702,7 @@ html.course-content-page .landing-footer {
     font-size: 0.85rem;
 }
 
-.course-practical-table th {
+.course-practicalities-table th {
     padding: 0.55rem 0.75rem;
 
     background: #f1f6f8;
@@ -2715,26 +2714,26 @@ html.course-content-page .landing-footer {
     border-bottom: 1px solid #d9e0e3;
 }
 
-.course-practical-table td {
+.course-practicalities-table td {
     padding: 0.45rem 0.75rem;
 
     border-bottom: 1px solid #d9e0e3;
 }
 
-.course-practical-table tr:last-child td {
+.course-practicalities-table tr:last-child td {
     border-bottom: none;
 }
 
-.course-practical-table a {
+.course-practicalities-table a {
     color: #0075c9;
     text-decoration: none;
 }
 
-.course-practical-table a:hover {
+.course-practicalities-table a:hover {
     text-decoration: underline;
 }
 
-.course-practical-table a::after {
+.course-practicalities-table a::after {
     content: "\f1c5";
 
     margin-left: 0.3rem;
@@ -2748,7 +2747,7 @@ html.course-content-page .landing-footer {
    Food
    -------------------------------------------------- */
 
-.course-practical-section h2 + p {
+.course-practicalities-section h2 + p {
     margin-top: 0.45rem;
 }
 
@@ -2757,7 +2756,7 @@ html.course-content-page .landing-footer {
    Additional information
    -------------------------------------------------- */
 
-.course-practical-additional {
+.course-practicalities-additional {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
@@ -2765,14 +2764,14 @@ html.course-content-page .landing-footer {
     margin-top: 0.7rem;
 }
 
-.course-practical-additional-item {
+.course-practicalities-additional-item {
     padding: 1.15rem 1.25rem;
 
     background: #f7f9fa;
     border-radius: 5px;
 }
 
-.course-practical-additional-item h3 {
+.course-practicalities-additional-item h3 {
     margin: 0;
 
     color: #101820;
@@ -2783,13 +2782,14 @@ html.course-content-page .landing-footer {
     border: none;
 }
 
-.course-practical-additional-item p {
+.course-practicalities-additional-item p {
     margin: 0.45rem 0 0;
 
     color: #5f6b73;
     font-size: 0.85rem;
     line-height: 1.5;
 }
+
 
 /* ==================================================
    FAQ

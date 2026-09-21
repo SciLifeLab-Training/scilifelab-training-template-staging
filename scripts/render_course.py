@@ -10,7 +10,7 @@ from loaders import (
     load_schedule,
     load_team,
     load_announcements,
-    load_practical_info,
+    load_practicalities,
     load_faq,
     load_preparation,
 )
@@ -44,7 +44,7 @@ from renderers.content import (
 )
 from renderers.schedule import render_schedule
 from renderers.syllabus import render_syllabus
-from renderers.practicalinfo import render_practical_info
+from renderers.practicalities import render_practicalities
 from renderers.faq import render_faq
 from renderers.preparation import render_preparation
 
@@ -70,7 +70,7 @@ def main():
     events = validate_schedule(load_schedule())
     team = validate_team(load_team())
     announcements = load_announcements()
-    practical_info = load_practical_info()
+    practicalities = load_practicalities()
     faq = load_faq()
     preparation = load_preparation()
 
@@ -79,8 +79,8 @@ def main():
     if events:
         available_pages.add("schedule")
 
-    if practical_info:
-        available_pages.add("practical")
+    if practicalities:
+        available_pages.add("practicalities")
 
     if faq:
         available_pages.add("faq")
@@ -160,8 +160,8 @@ def main():
     )
 
     write_partial(
-    "practicalinfo.qmd",
-    render_practical_info(practical_info, course),
+    "practicalities.qmd",
+    render_practicalities(practicalities, course),
     )
 
     write_partial(

@@ -9,7 +9,7 @@ project:
     - content/
     - syllabus.qmd
     - team.qmd
-    - practicalinfo.qmd
+    - practicalities.qmd
     - resources.qmd
     - preparation.qmd
     - faq.qmd

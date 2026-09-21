@@ -6,13 +6,13 @@ website:
   pages:
 
     content:
-      title: "Course content"
+      title: "Content"
       description: "Slides, exercises and resources"
       icon: "folder"
       href: "content/index.qmd"
 
     syllabus:
-      title: "Course syllabus"
+      title: "Syllabus"
       description: "Course structure, learning objectives and schedule"
       icon: "journal-text"
       href: "syllabus.qmd"
@@ -24,10 +24,10 @@ website:
       href: "schedule.qmd"
 
     practical:
-      title: "Practical information"
+      title: "Practicalities"
       description: "Location, travel and contact information"
       icon: "geo-alt"
-      href: "practicalinfo.qmd"
+      href: "practicalities.qmd"
 
     resources:
       title: "Resources"

@@ -1,5 +1,5 @@
 ---
-title: Practical info
+title: Practicalities
 title-block: false
 ---
 
@@ -7,7 +7,7 @@ title-block: false
 
 {{< include _sections/navbar.qmd >}}
 
-{{< include _generated/practicalinfo.qmd >}}
+{{< include _generated/practicalities.qmd >}}
 
 {{< include _sections/footer.qmd >}}
 

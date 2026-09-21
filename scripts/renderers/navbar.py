@@ -34,7 +34,7 @@ def render_navbar_links(website, available_pages):
     # Course information dropdown.
     dropdown_links = [
         ("Preparation", "preparation.qmd", "preparation"),
-        ("Practicalities", "practicalinfo.qmd", "practical"),
+        ("Practicalities", "practicalities.qmd", "practicalities"),
         ("Team", "team.qmd", True),
         ("Syllabus", "syllabus.qmd", True),
         ("FAQ", "faq.qmd", "faq"),
