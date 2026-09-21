@@ -1,13 +1,40 @@
 from utils import format_date
 
 
-def render_welcome(course):
+def render_welcome(course, website):
 
     title = course["title"]
 
     start = course.get("start_date")
     end = course.get("end_date")
     location = course.get("location")
+
+    welcome = website.get("welcome", {})
+
+    welcome_title = welcome.get(
+        "title",
+        "Welcome to the training",
+    )
+
+    welcome_text = welcome.get(
+        "text",
+        "",
+    )
+
+    image = welcome.get(
+        "image",
+        {},
+    )
+
+    image_src = image.get(
+        "src",
+        "",
+    )
+
+    image_alt = image.get(
+        "alt",
+        "",
+    )
 
     meta = []
 
@@ -43,17 +70,45 @@ def render_welcome(course):
 </span>
 """)
 
-    meta_html = ""
+    html = []
+
+    html.append(
+        '<div class="course-welcome-text">'
+    )
+
+    html.append(
+        f"# {title}"
+    )
 
     if meta:
-        meta_html = f"""
-<div class="course-welcome-meta">
-{''.join(meta)}
-</div>
-"""
+        html.append(
+            '<div class="course-welcome-meta">'
+            + "".join(meta)
+            + "</div>"
+        )
 
-    return f"""
-# {title}
+    if welcome_title:
+        html.append(
+            f"## {welcome_title}"
+        )
 
-{meta_html}
-""".strip()
+    if welcome_text:
+        html.append(
+            welcome_text
+        )
+
+    html.append("</div>")
+
+    if image_src:
+
+        html.append(
+            '<div class="course-welcome-image">'
+        )
+
+        html.append(
+            f'![]({image_src} "{image_alt}")'
+        )
+
+        html.append("</div>")
+
+    return "\n\n".join(html).strip()

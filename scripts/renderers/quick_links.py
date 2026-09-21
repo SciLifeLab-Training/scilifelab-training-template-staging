@@ -86,7 +86,17 @@ View {page["title"].lower()} →
         return ""
 
     return (
+        '<div class="course-links">\n'
+        '\n'
+        '<div class="course-section-label">\n'
+        '\n'
+        'QUICK LINKS\n'
+        '\n'
+        '</div>\n'
+        '\n'
         '<div class="course-links-grid">\n'
         + "\n".join(cards)
-        + "\n</div>"
-    )
+        + "\n</div>\n"
+        '\n'
+        '</div>'
+    ).strip()

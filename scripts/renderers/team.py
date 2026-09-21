@@ -41,7 +41,32 @@ def render_team(team):
 </div>
 
 </div>
-"""
+""".strip()
         )
 
-    return "\n".join(members).strip()
+    if not members:
+        return ""
+
+    return f"""
+::: {{.course-team}}
+
+<div class="course-team-content">
+
+<div class="course-section-label">
+
+TEAM
+
+</div>
+
+{"".join(members)}
+
+<a class="course-team-link" href="team.qmd">
+
+View full team →
+
+</a>
+
+</div>
+
+:::
+""".strip()

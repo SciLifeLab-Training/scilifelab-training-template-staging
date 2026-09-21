@@ -1,92 +1,271 @@
 website:
 
+  # ==================================================
+  # Navigation
+  # ==================================================
+  #
+  # Controls labels used in the website navigation.
+  # The navigation structure itself is defined by the
+  # available pages below and by the website renderer.
+  #
+  # Edit this section only if you want to change the
+  # visible wording of navigation elements.
+  #
+
   navigation:
+
     content_label: "Course Content"
+
+
+  # ==================================================
+  # Website pages and quick links
+  # ==================================================
+  #
+  # Defines the title, description, icon, and source page
+  # for pages that can be displayed as homepage quick links
+  # and used in the website navigation.
+  #
+  # This is NOT a complete list of all pages on the website.
+  # For example, the Team page is a permanent website page
+  # but is not offered as a homepage quick link.
+  #
+  # Optional pages are shown only when corresponding
+  # content is available. The homepage quick-links section
+  # also limits which available pages are displayed.
+  #
+  # Do not change the page keys (for example, "schedule"
+  # or "practicalities") unless the Python renderer is
+  # changed accordingly.
+  #
 
   pages:
 
+    # Course content page.
+    # This page contains the training modules, slides,
+    # exercises, and other course materials.
     content:
       title: "Content"
-      description: "Slides, exercises and resources"
+      description: "Modules, slides and exercises"
       icon: "folder"
       href: "content/index.qmd"
 
+    # Course syllabus page.
+    # Provides the overall course structure, learning
+    # objectives, prerequisites, and other syllabus
+    # information.
     syllabus:
       title: "Syllabus"
-      description: "Course structure, learning objectives and schedule"
+      description: "Course description, learning outcomes and prerequisites"
       icon: "journal-text"
       href: "syllabus.qmd"
 
+    # Course schedule page.
+    # Contains the detailed programme and timetable.
+    # This page is shown when schedule data is available.
     schedule:
       title: "Schedule"
-      description: "Full course programme"
+      description: "Programme, sessions and timings"
       icon: "calendar2-event"
       href: "schedule.qmd"
 
+    # Practical information page.
+    # Use this for venue, transport, accommodation,
+    # food, accessibility, and other practical details.
+    # This page is shown when practicalities data exists.
     practicalities:
       title: "Practicalities"
-      description: "Location, travel and contact information"
+      description: "Venue, travel, accommodation and other practical information"
       icon: "geo-alt"
       href: "practicalities.qmd"
 
+    # Additional resources page.
+    # Use this for useful links, further reading,
+    # references, datasets, tools, or other resources.
+    # This page is shown when resource data exists.
     resources:
       title: "Resources"
-      description: "Additional reading and useful links"
+      description: "Further reading, links and useful resources"
       icon: "bookshelf"
       href: "resources.qmd"
 
+    # Preparation page.
+    # Use this for anything participants should complete
+    # or arrange before the training, such as accounts,
+    # software, hardware, or required reading.
+    # This page is shown when preparation data exists.
     preparation:
       title: "Preparation"
-      description: "Preparation material"
+      description: "What to do and prepare before the training"
       icon: "clipboard-check"
       href: "preparation.qmd"
 
+    # Frequently asked questions page.
+    # Use this for common questions participants may have
+    # before or during the training.
+    # This page is shown when FAQ data exists.
     faq:
       title: "FAQ"
-      description: "Frequently asked questions"
+      description: "Answers to frequently asked questions"
       icon: "question-circle"
       href: "faq.qmd"
 
+
+  # ==================================================
+  # Homepage
+  # ==================================================
+  #
+  # Controls optional sections displayed on the overview
+  # page.
+  #
+  # Set a value to false to hide the corresponding section.
+  # The section may also be omitted automatically when there
+  # is no corresponding data.
+  #
+
   homepage:
 
+    # Show the announcements section on the overview page.
+    # Announcements are configured in data/announcements.yml.
     announcements: true
+
+    # Show the upcoming-events section on the overview page.
+    # Events are configured in data/schedule.yml.
     upcoming: true
+
+
+  # ==================================================
+  # Registration
+  # ==================================================
+  #
+  # Controls the registration banner displayed on the
+  # overview page.
+  #
+  # Set "enabled" to false to remove the registration
+  # banner from the website.
+  #
+  # "closing_date" is used to indicate when registration
+  # closes. Use ISO format: YYYY-MM-DD.
+  #
+  # "url" should point to the registration page or form.
+  #
 
   registration:
 
     enabled: true
+
+    # Replace with the actual registration closing date.
     closing_date: "2026-10-25"
+
+    # Replace with the actual registration URL.
     url: "https://registration.example.com"
 
 
-    # --------------------------------------------------
-    # Footer
-    # --------------------------------------------------
-    
+  # ==================================================
+  # Welcome section
+  # ==================================================
+  #
+  # Controls the main welcome section on the overview page.
+  #
+  # "title" is the heading displayed above the introduction.
+  #
+  # "text" is the introductory text shown to participants.
+  # Keep this concise: briefly explain what the training is
+  # about and what participants will find on the website.
+  #
+  # "image" controls the illustration displayed alongside
+  # the welcome text.
+  #
+  # The image file itself should be stored in the img/
+  # directory. Only the path and alternative text are
+  # configured here.
+  #
+
+  welcome:
+
+    title: "Welcome to the training"
+
+    text: >
+      Use this section to introduce the training. Briefly describe
+      what participants will learn, what they can expect, and what
+      they will find on this website.
+
+    image:
+      # Replace with the path to the welcome image.
+      src: "img/welcome-graphic-placeholder.png"
+
+      # Describe the image for accessibility.
+      alt: "Welcome illustration"
+
+
+  # ==================================================
+  # Footer
+  # ==================================================
+  #
+  # Controls the content displayed in the website footer.
+  #
+  # The footer layout and styling are handled by the template.
+  # Use this section only to provide the footer content.
+  #
+
   footer:
 
-    # Replace with the organisation or programme responsible
-    # for the training.
-    organisation: "Organisation or training programme name"
+    # Name of the organisation, programme, or group
+    # responsible for the training.
+    organisation: "Organisation or Training Programme name"
 
+    # Licence applied to the course website/content.
+    #
+    # Replace both values if a different licence is used.
     licence:
       name: "CC BY 4.0"
       url: "https://creativecommons.org/licenses/by/4.0/"
 
-    # Update this text if needed.
+    # Text describing the website template used to build
+    # this website.
+    #
+    # Usually this can be left unchanged unless the
+    # template attribution needs to be modified.
     built_with:
       text: "This website was built using the"
       template_name: "SciLifeLab Training Webpage Template"
       template_url: "https://github.com/SciLifeLab-Training/scilifelab-training-template-staging"
       suffix: "and is hosted on GitHub Pages."
 
+    # Link and image used for the repository icon in the footer.
+    #
+    # Replace "url" with the GitHub repository for this
+    # specific course website.
     repository:
-      # Replace with the repository for this course website.
       url: "https://github.com/your-organisation/your-repository"
 
+      # Image displayed as the repository link.
+      # Normally this can be left unchanged.
       image: "img/github-neg.png"
+
+      # Alternative text for the repository image.
       alt: "GitHub repository"
 
+
+# ======================================================
+# Course content navigation
+# ======================================================
+#
+# Defines the sections displayed in the course content
+# navigation.
+#
+# Each section corresponds to a course module or major
+# content area.
+#
+# "id" should match the corresponding content directory
+# or identifier used by the content structure.
+#
+# "label" is the short name displayed in navigation.
+#
+# "title" is the descriptive title shown for the section.
+#
+# Add, remove, or rename sections here to match the
+# structure of the course.
+#
 
 content:
 
@@ -103,5 +282,3 @@ content:
     - id: module-3
       label: "Module 3"
       title: "Module 3 Title"
-
-

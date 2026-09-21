@@ -92,7 +92,7 @@ def main():
 
     write_partial(
         "welcome.qmd",
-        render_welcome(course),
+        render_welcome(course, website),
     )
 
     write_partial(

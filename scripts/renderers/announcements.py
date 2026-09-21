@@ -70,7 +70,7 @@ No active announcements.
 
 <div class="course-section-label">
 
-COURSE ANNOUNCEMENTS
+ANNOUNCEMENTS
 
 </div>
 
