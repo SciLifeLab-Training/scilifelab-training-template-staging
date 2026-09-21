@@ -1680,6 +1680,11 @@ html.course-content-page .landing-footer {
     box-sizing: border-box;
 }
 
+.course-syllabus-page .anchorjs-link,
+.course-syllabus-section .anchorjs-link {
+    display: none !important;
+}
+
 .course-syllabus-label {
     margin-bottom: 0.85rem;
     color: #045c64;
@@ -1946,9 +1951,16 @@ html.course-content-page .landing-footer {
 }
 
 .course-syllabus-leader a {
-    color: #045C64;
-
+    color: #087584;
+    font-weight: 600;
+    text-decoration: none;
     overflow-wrap: anywhere;
+}
+
+.course-syllabus-leader a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 
@@ -1977,7 +1989,16 @@ html.course-content-page .landing-footer {
 }
 
 .course-syllabus-reuse a {
-    color: #045C64;
+    color: #087584;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.course-syllabus-reuse a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 
