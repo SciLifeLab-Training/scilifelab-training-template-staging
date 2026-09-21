@@ -1,61 +1,101 @@
 
 practicalities:
 
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
+
+  intro: >
+    Use this page to provide participants with practical information
+    they need before attending the training, including the venue,
+    transport, accommodation, food, and other useful details.
+
+  # --------------------------------------------------
+  # Venue
+  # --------------------------------------------------
+
   venue:
-    name: "SciLifeLab Gamma 2"
+    name: "Venue Name"
     address: |
-      Medicinaregatan 20
-      413 90 Solna
+      Street address 00
+      000 00 City
       Sweden
-    room: "Antarctic"
+    room: "Room name or number"
     instructions: >
-      The room is located on the ground floor. Turn left after
-      entering through the main entrance and look for the SND logo.
+      Provide directions for finding the training room, including
+      the relevant entrance, floor, building, reception, or other
+      landmarks participants should know about.
     map_url: "https://www.openstreetmap.org/?mlat=59.350162&mlon=18.022383#map=19/59.350162/18.022383"
 
+  # --------------------------------------------------
+  # Transport
+  # --------------------------------------------------
 
   transport:
     description: >
-      The nearest tram stop is Medicinaregatan. Public transport
-      information and tickets are available through the local
-      transport app.
+      Describe how participants can reach the venue using public
+      transport. Include the nearest station, stop, or other useful
+      information.
     links:
       - title: "Public transport website"
-        url: "https://sl.se"
+        url: "https://example.org"
       - title: "Public transport app"
-        url: "https://sl.se/en/fares-and-tickets/smart-phone-ticket-app"
+        url: "https://example.org"
 
     parking: >
-      There is ample parking available close to the venue.
-      Parking fees can be paid using standard commercial parking apps.
+      Provide information about parking near the venue, including
+      availability, restrictions, fees, payment methods, or any
+      other information participants should know.
+
+  # --------------------------------------------------
+  # Accommodation
+  # --------------------------------------------------
 
   accommodation:
     description: >
-      A few selected hotels are listed below.
+      Provide information about accommodation near the venue.
+      You can list recommended hotels below, including their
+      approximate distance and walking time from the venue.
     hotels:
-      - name: "Hotel Example"
-        distance: "900 m"
-        walking_time: "11 min"
-        url: "www.hotel.se"
+      - name: "Hotel name"
+        distance: "x meter"
+        walking_time: "x minutes"
+        url: "https://example.org"
 
-      - name: "Another Hotel"
-        distance: "1.7 km"
-        walking_time: "21 min"
+      - name: "Hotel name"
+        distance: "x km"
+        walking_time: "x min"
         url: ""
+
+  # --------------------------------------------------
+  # Food
+  # --------------------------------------------------
 
   food:
     description: >
-      The training fee includes lunch and coffee during the training.
+      Describe what food and refreshments are provided during the
+      training, such as lunch, coffee, or other refreshments.
+    dietary_information: >
+      Provide information about dietary requirements, allergies,
+      or how participants should communicate special dietary needs.
+
+
+  # --------------------------------------------------
+  # Additional information
+  # --------------------------------------------------
 
   additional:
-    - title: "What to bring"
+    - title: "For example: What to bring"
       content: >
-        Please bring your laptop and charger.
+        List anything participants should bring with them, such as
+        a laptop, charger, identification, notebook, or other equipment.
 
-    - title: "Wi-Fi"
+    - title: "For example: Wi-Fi"
       content: >
-        Eduroam is available throughout the building.
+        Provide information about Wi-Fi access at the venue, including
+        the network name and any instructions participants need to follow.
 
-    - title: "Accessibility"
+    - title: "For example: Accessibility"
       content: >
-        The venue is wheelchair accessible.
+        Provide information about accessibility at the venue and any
+        arrangements participants should be aware of.

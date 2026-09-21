@@ -80,13 +80,13 @@ def render_practicalities(practicalities, course):
 
     html.append("<h1>Practical information</h1>")
 
-    html.append(
-        '<p class="course-practicalities-intro">'
-        "Here you will find everything you need to know before "
-        "attending the training, including venue details, travel "
-        "information, accommodation suggestions and other practical details."
-        "</p>"
-    )
+    if practicalities.get("intro"):
+
+        html.append(
+            '<p class="course-practicalities-intro">'
+            f'{practicalities["intro"]}'
+            '</p>'
+        )
 
     html.append("</div>")
 

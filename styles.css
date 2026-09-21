@@ -2381,6 +2381,10 @@ html.course-content-page .landing-footer {
     box-sizing: border-box;
 }
 
+.course-practicalities-page .anchorjs-link,
+.course-practicalities-section .anchorjs-link {
+    display: none !important;
+}
 
 /* --------------------------------------------------
    Page header
@@ -2472,10 +2476,16 @@ html.course-content-page .landing-footer {
 }
 
 .course-practicalities-contact a {
-    color: #045C64;
+    color: #087584;
     font-weight: 600;
-
+    text-decoration: none;
     overflow-wrap: anywhere;
+}
+
+.course-practicalities-contact a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* --------------------------------------------------
@@ -2650,30 +2660,33 @@ html.course-content-page .landing-footer {
    -------------------------------------------------- */
 
 .course-practicalities-links {
-    margin: 0.7rem 0 0;
-    padding-left: 1.8rem;
+    margin: 1rem 0 0;
+    padding: 0;
+
+    list-style: none;
 }
+
 
 .course-practicalities-links li {
-    padding: 0.1rem 0;
+    margin: 0;
+    padding: 0.35rem 0;
+
+    font-size: 0.86rem;
+    line-height: 1.4;
 }
 
+
 .course-practicalities-links a {
-    color: #0075c9;
+    color: #087584;
+    font-weight: 600;
     text-decoration: none;
 }
 
+
 .course-practicalities-links a:hover {
+    color: #045c64;
     text-decoration: underline;
-}
-
-.course-practicalities-links a::after {
-    content: "\f1c5";
-
-    margin-left: 0.3rem;
-
-    font-family: "bootstrap-icons";
-    font-size: 0.75rem;
+    text-underline-offset: 2px;
 }
 
 
@@ -2725,23 +2738,16 @@ html.course-content-page .landing-footer {
 }
 
 .course-practicalities-table a {
-    color: #0075c9;
+    color: #087584;
+    font-weight: 600;
     text-decoration: none;
 }
 
 .course-practicalities-table a:hover {
+    color: #045c64;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
-
-.course-practicalities-table a::after {
-    content: "\f1c5";
-
-    margin-left: 0.3rem;
-
-    font-family: "bootstrap-icons";
-    font-size: 0.75rem;
-}
-
 
 /* --------------------------------------------------
    Food
@@ -3009,7 +3015,7 @@ html.course-content-page .landing-footer {
 
 
 /* ==========================================================================
-   BEFORE THE COURSE PAGE
+   PREPARATION PAGE
    ========================================================================== */
 
 
@@ -3129,10 +3135,16 @@ html.course-content-page .landing-footer {
 }
 
 .course-preparation-contact a {
-    color: #045C64;
+    color: #087584;
     font-weight: 600;
-
+    text-decoration: none;
     overflow-wrap: anywhere;
+}
+
+.course-preparation-contact a:hover {
+    color: #045c64;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------
