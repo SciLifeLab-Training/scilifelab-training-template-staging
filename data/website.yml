@@ -23,7 +23,7 @@ website:
       icon: "calendar2-event"
       href: "schedule.qmd"
 
-    practical:
+    practicalities:
       title: "Practicalities"
       description: "Location, travel and contact information"
       icon: "geo-alt"
@@ -59,6 +59,35 @@ website:
     url: "https://registration.example.com"
 
 
+    # --------------------------------------------------
+    # Footer
+    # --------------------------------------------------
+    
+  footer:
+
+    # Replace with the organisation or programme responsible
+    # for the training.
+    organisation: "Organisation or training programme name"
+
+    licence:
+      name: "CC BY 4.0"
+      url: "https://creativecommons.org/licenses/by/4.0/"
+
+    # Update this text if needed.
+    built_with:
+      text: "This website was built using the"
+      template_name: "SciLifeLab Training Webpage Template"
+      template_url: "https://github.com/SciLifeLab-Training/scilifelab-training-template-staging"
+      suffix: "and is hosted on GitHub Pages."
+
+    repository:
+      # Replace with the repository for this course website.
+      url: "https://github.com/your-organisation/your-repository"
+
+      image: "img/github-neg.png"
+      alt: "GitHub repository"
+
+
 content:
 
   sections:
@@ -74,3 +103,5 @@ content:
     - id: module-3
       label: "Module 3"
       title: "Module 3 Title"
+
+

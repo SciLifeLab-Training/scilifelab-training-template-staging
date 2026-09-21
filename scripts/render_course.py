@@ -47,6 +47,7 @@ from renderers.syllabus import render_syllabus
 from renderers.practicalities import render_practicalities
 from renderers.faq import render_faq
 from renderers.preparation import render_preparation
+from renderers.footer import render_footer
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -173,6 +174,11 @@ def main():
         "preparation.qmd",
         render_preparation(preparation, course),
     )
+
+    write_partial(
+    "footer.qmd",
+    render_footer(website),
+    )   
 
 if __name__ == "__main__":
     main()

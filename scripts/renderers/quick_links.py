@@ -11,7 +11,7 @@ def render_quick_links(website, schedule_events):
         "content",
         "syllabus",
         "schedule",
-        "practical",
+        "practicalities",
         "resources",
         "preparation",
         "faq",
