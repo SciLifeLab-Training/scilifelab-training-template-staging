@@ -359,11 +359,6 @@ def render_syllabus(course, team):
                         '</a>'
                     )
 
-                if leader.get("orcid"):
-                    html.append(
-                        f'<span>ORCID: {leader["orcid"]}</span>'
-                    )
-
                 html.append('</div>')
 
             html.append('</div>')

@@ -1,67 +1,69 @@
 course:
 
   # Identity
-  title: "Mock Title — Advanced Methods in Experimental Research in the Life Science"
-  subtitle: "This is a placeholder subtitle for testing the landing page layout and responsive behaviour."
+  title: "Training title"
+  subtitle: "Short subtitle describing the training"
   description: >
-    Brief description of the training.
+    Provide a short description of the training, including its main
+    topic, purpose, or focus.
 
   credits:
-    value: 2
+    value: x
     unit: "hp"
-    note: "Suggested number of credits; formal approval is determined by the participant's host university."
+    note: "Provide the number of credits awarded (in ECTS or hp), if applicable.
+      Indicate whether formal approval is determined by the participant's host university."
 
   # Delivery
-  start_date: "2026-09-02"
-  end_date: "2026-09-16"
-  duration: "2 days"
-  mode: "hybrid"
+  # Replace these placeholder dates with the actual training dates.
+  start_date: "2026-01-01"
+  end_date: "2026-01-02"
+  duration: "Number of days"
+  mode: "Online / In-person / Hybrid"
 
   instruction:
-    - "Self-study"
-    - "Online lectures"
-    - "In-person workshop"
-    - "Group activities"
+    - "Describe the main teaching format or activity, e.g. Self-study"
+    - "Add another teaching format or activity, e.g. Online lectures"
+    - "Add another teaching format or activity, e.g. In-person workshop"
     
-  location: "SciLifeLab Stockholm"
-  language: "English"
+  location: "Venue name or online"
+  language: "Language the training is provided in"
 
   # Educational
-  target_audience: "PhD students, postdocs, researchers, PIs"
-  expertise_level: "intermediate"
+  target_audience: "Describe the intended participant group"
+  expertise_level: "Beginner / Intermediate / Advanced"
 
   prerequisites:
     knowledge:
-      - "Knowledge prerequisite 1"
-      - "Knowledge prerequisite 2"
-      - "Knowledge prerequisite 3"
+      - "Describe a required knowledge prerequisite"
+      - "Add another knowledge prerequisite"
     technical:
-      - "Technical prerequisite 1"
-      - "Technical prerequisite 2"
+      - "Describe a required technical prerequisite"
+      - "Add another technical prerequisite"
 
   learning_outcomes:
-    - "Learning outcome 1"
-    - "Learning outcome 2"
-    - "Learning outcome 3"
+    - "Add a learning outcome"
+    - "Add another learning outcome"
+    - "Add another learning outcome"
 
   keywords:
     - "Keyword 1"
     - "Keyword 2"
     - "Keyword 3"
-    - "Keyword 3"
 
   examination:
     description: >
       Describe how participants will be assessed, if applicable.
+      Remove or leave this field empty if the training does not
+      include an examination or other assessment.
 
   # Administration
   organizers:
-  - "Organizer 1"
-  - "Organizer 2"
+    - "Organizer name"
+    - "Add another organizer"
 
   content_providers:
-    - "Content provider 1"
-    - "Content provider 2"
+    - "Content provider name"
+    - "Add another content provider"
 
   # Contact
   contact:
@@ -71,5 +73,5 @@ course:
 
     licence: "CC BY 4.0"
     licence_url: "https://creativecommons.org/licenses/by/4.0/"
-    doi: "Sample DOI"
+    doi: "DOI, if applicable"
 

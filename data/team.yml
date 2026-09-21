@@ -1,6 +1,6 @@
 team:
 
-  - name: "Training Lead1"
+  - name: "Training Lead Name"
     roles:
       - Training lead
     job_title: "Job title"
@@ -16,11 +16,11 @@ team:
     website: "www.traininglead1.com"
     image: "img/photos/team-photo.jpg"
 
-  - name: "John Smith"
+  - name: "Training Lead Name"
     roles:
       - Training lead
-    job_title: "Research Scientist"
-    affiliation: "SciLifeLab"
+    job_title: "Job title"
+    affiliation: "Institution"
     email: "john.smith@example.org"
     course_contact: true
     bio: >
