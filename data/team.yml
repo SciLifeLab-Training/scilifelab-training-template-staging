@@ -1,5 +1,54 @@
 team:
 
+  # This file contains information about the training team
+  # used throughout the website, including the Team page,
+  # syllabus, and overview page team preview.
+  #
+  # Some fields are required and some are optional.
+  #
+  # The validator (validators.py) checks the required fields
+  # and stops the website from rendering if any required
+  # information is missing.
+
+  # ==================================================
+  # Team data rules
+  # ==================================================
+
+  # At least one team member is required.
+  
+  # Required fields for every team member:
+    # - name
+    # - roles
+    # - affiliation
+  
+  # Allowed roles:
+    # - Training lead
+    # - Instructor
+    # - Contributor
+  
+  # At least one team member must have:
+    # - course_contact: true
+    # - an email address
+  
+  # Training leads are optional.
+
+  # On the overview page, up to two team members are shown:
+    # 1. Training leads first.
+    # 2. Instructors fill any remaining places.
+    # 3. Contributors are not shown in the homepage preview.
+
+  # Optional fields for team members:
+    # - job_title
+    # - email
+    # - course_contact
+    # - bio
+    # - orcid
+    # - linkedin
+    # - github
+    # - website
+    # - image
+
+
   # --------------------------------------------------
   # Page introduction
   # --------------------------------------------------
@@ -22,11 +71,12 @@ team:
     # Training leads are responsible for the overall
     # development, coordination, and delivery of the training.
     #
-    # The first two people with the role "Training lead"
-    # are also shown in the team preview on the overview page.
-    #
     # The "roles" value must contain "Training lead" for the
     # person to appear in the training-lead section.
+    #
+    # Training leads are shown first in the homepage team
+    # preview, followed by instructors if fewer than two
+    # training leads are available.
 
     - name: "Training Lead Name"
       roles:

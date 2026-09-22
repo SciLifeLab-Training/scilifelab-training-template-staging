@@ -69,12 +69,29 @@ def validate_schedule(events):
 def validate_team(team):
 
     if not isinstance(team, dict):
-        raise ValueError("team.yml must contain a 'team' mapping")
+        raise ValueError(
+            "team.yml must contain a 'team' mapping"
+        )
 
-    members = team.get("members") or []
+    members = team.get("members")
 
     if not isinstance(members, list):
-        raise ValueError("team.members must be a list")
+        raise ValueError(
+            "team.members must be a list"
+        )
+
+    if not members:
+        raise ValueError(
+            "team.members must contain at least one member"
+        )
+
+    allowed_roles = {
+        "Training lead",
+        "Instructor",
+        "Contributor",
+    }
+
+    course_contact_found = False
 
     required = [
         "name",
@@ -84,13 +101,58 @@ def validate_team(team):
 
     for member in members:
 
-        member_name = member.get("name", "<unnamed member>")
+        member_name = member.get(
+            "name",
+            "<unnamed member>"
+        )
 
         for field in required:
 
             if not member.get(field):
                 raise ValueError(
-                    f"Team member '{member_name}' is missing '{field}'"
+                    f"Team member '{member_name}' "
+                    f"is missing '{field}'"
                 )
+
+        if not isinstance(member["roles"], list):
+            raise ValueError(
+                f"Team member '{member_name}' "
+                "roles must be a list"
+            )
+
+        if not member["roles"]:
+            raise ValueError(
+                f"Team member '{member_name}' "
+                "must have at least one role"
+            )
+
+        invalid_roles = set(member["roles"]) - allowed_roles
+
+        if invalid_roles:
+            invalid = ", ".join(sorted(invalid_roles))
+
+            raise ValueError(
+                f"Team member '{member_name}' "
+                f"has invalid role(s): {invalid}. "
+                "Allowed roles are: Training lead, "
+                "Instructor, Contributor"
+            )
+
+        if member.get("course_contact") is True:
+
+            if not member.get("email"):
+                raise ValueError(
+                    f"Team member '{member_name}' "
+                    "is marked as course_contact but "
+                    "has no email address"
+                )
+
+            course_contact_found = True
+
+    if not course_contact_found:
+        raise ValueError(
+            "At least one team member must have "
+            "'course_contact: true' and an email address"
+        )
 
     return team

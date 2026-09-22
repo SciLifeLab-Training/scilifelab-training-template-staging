@@ -2,14 +2,26 @@ def render_team(team):
 
     members = team.get("members") or []
 
-    # Show up to two training leads on the homepage.
+    # Show up to two team members on the homepage.
+    # Training leads are shown first, followed by instructors.
     training_leads = [
         person
         for person in members
         if "Training lead" in person.get("roles", [])
     ]
 
+    instructors = [
+        person
+        for person in members
+        if "Instructor" in person.get("roles", [])
+    ]
+
     preview = training_leads[:2]
+
+    if len(preview) < 2:
+        preview.extend(
+            instructors[:2 - len(preview)]
+        )
 
     rendered_members = []
 
