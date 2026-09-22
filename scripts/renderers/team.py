@@ -1,33 +1,49 @@
 def render_team(team):
 
+    members = team.get("members") or []
+
     # Show up to two training leads on the homepage.
     training_leads = [
         person
-        for person in team
+        for person in members
         if "Training lead" in person.get("roles", [])
     ]
 
     preview = training_leads[:2]
 
-    members = []
+    rendered_members = []
 
     for person in preview:
 
         role = ", ".join(person.get("roles", []))
 
-        members.append(
+        image = person.get("image", "")
+        name = person.get("name", "")
+        affiliation = person.get("affiliation", "")
+
+        if image:
+
+            image_html = f"""
+<img
+    class="course-team-photo"
+    src="{image}"
+    alt="{name}">
+""".strip()
+
+        else:
+
+            image_html = ""
+
+        rendered_members.append(
             f"""
 <div class="course-team-member">
 
-<img
-    class="course-team-photo"
-    src="{person["image"]}"
-    alt="{person["name"]}">
+{image_html}
 
 <div class="course-team-details">
 
 <div class="course-team-name">
-{person["name"]}
+{name}
 </div>
 
 <div class="course-team-role">
@@ -35,7 +51,7 @@ def render_team(team):
 </div>
 
 <div class="course-team-affiliation">
-{person["affiliation"]}
+{affiliation}
 </div>
 
 </div>
@@ -44,7 +60,7 @@ def render_team(team):
 """.strip()
         )
 
-    if not members:
+    if not rendered_members:
         return ""
 
     return f"""
@@ -58,7 +74,7 @@ TEAM
 
 </div>
 
-{"".join(members)}
+{"".join(rendered_members)}
 
 <a class="course-team-link" href="team.qmd">
 

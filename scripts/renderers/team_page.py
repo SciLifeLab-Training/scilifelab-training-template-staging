@@ -3,6 +3,8 @@ from html import escape
 
 def render_team_page(team):
 
+    members = team.get("members") or []
+
     role_sections = [
         (
             "Training leads",
@@ -28,32 +30,54 @@ def render_team_page(team):
 
     html.append('<div class="course-team-page">')
 
+    # --------------------------------------------------
+    # Page header
+    # --------------------------------------------------
+
     html.append('<header class="course-team-page-header">')
-    html.append('<div class="course-team-page-label">Training team</div>')
-    html.append('<h1>Meet the training team</h1>')
+
     html.append(
-        '<p class="course-team-page-intro">'
-        'This training is developed and delivered by a team of experts '
-        'from SciLifeLab and partner organisations. Here you can find '
-        'information about the training leads, instructors, and contributors.'
-        '</p>'
+        '<div class="course-team-page-label">'
+        'Training team'
+        '</div>'
     )
+
+    html.append(
+        '<h1>Meet the training team</h1>'
+    )
+
+    if team.get("intro"):
+
+        html.append(
+            '<p class="course-team-page-intro">'
+            f'{escape(str(team["intro"]))}'
+            '</p>'
+        )
+
     html.append('</header>')
+
+    # --------------------------------------------------
+    # Team sections
+    # --------------------------------------------------
 
     for heading, description, role, grid_class in role_sections:
 
-        members = [
+        role_members = [
             person
-            for person in team
+            for person in members
             if role in person.get("roles", [])
         ]
 
-        if not members:
+        if not role_members:
             continue
 
-        html.append('<section class="course-team-section">')
+        html.append(
+            '<section class="course-team-section">'
+        )
 
-        html.append(f'<h2>{escape(heading)}</h2>')
+        html.append(
+            f'<h2>{escape(heading)}</h2>'
+        )
 
         html.append(
             '<p class="course-team-section-description">'
@@ -61,20 +85,41 @@ def render_team_page(team):
             '</p>'
         )
 
-        html.append(f'<div class="{grid_class}">')
+        html.append(
+            f'<div class="{grid_class}">'
+        )
 
-        for person in members:
+        for person in role_members:
 
-            name = escape(str(person.get("name", "")))
-            job_title = escape(str(person.get("job_title", "")))
-            affiliation = escape(str(person.get("affiliation", "")))
-            bio = escape(str(person.get("bio", "")))
+            name = escape(
+                str(person.get("name", ""))
+            )
+
+            job_title = escape(
+                str(person.get("job_title", ""))
+            )
+
+            affiliation = escape(
+                str(person.get("affiliation", ""))
+            )
+
+            bio = escape(
+                str(person.get("bio", ""))
+            )
+
             email = person.get("email", "")
             image = person.get("image", "")
 
-            html.append('<article class="course-team-card">')
+            html.append(
+                '<article class="course-team-card">'
+            )
+
+            # --------------------------------------------------
+            # Photo
+            # --------------------------------------------------
 
             if image:
+
                 html.append(
                     '<img '
                     'class="course-team-card-photo" '
@@ -82,7 +127,13 @@ def render_team_page(team):
                     f'alt="{name}">'
                 )
 
-            html.append('<div class="course-team-card-body">')
+            # --------------------------------------------------
+            # Card body
+            # --------------------------------------------------
+
+            html.append(
+                '<div class="course-team-card-body">'
+            )
 
             html.append(
                 '<h3 class="course-team-card-name">'
@@ -91,6 +142,7 @@ def render_team_page(team):
             )
 
             if job_title:
+
                 html.append(
                     '<div class="course-team-card-job-title">'
                     f'{job_title}'
@@ -98,13 +150,17 @@ def render_team_page(team):
                 )
 
             if affiliation:
+
                 html.append(
                     '<div class="course-team-card-affiliation">'
                     f'{affiliation}'
                     '</div>'
                 )
 
+            # --------------------------------------------------
             # Course contact
+            # --------------------------------------------------
+
             if person.get("course_contact"):
 
                 html.append(
@@ -113,41 +169,44 @@ def render_team_page(team):
 
                 html.append(
                     '<span class="course-team-contact-badge">'
-                    '<i class="bi bi-envelope"></i>'
                     'Course contact'
                     '</span>'
                 )
 
-                if email:
-                    html.append(
-                        f'<a class="course-team-contact-email" '
-                        f'href="mailto:{escape(email, quote=True)}">'
-                        f'{escape(email)}'
-                        '</a>'
-                    )
+                html.append(
+                    '</div>'
+                )
 
-                html.append('</div>')
+            # --------------------------------------------------
+            # Biography
+            # --------------------------------------------------
 
-            # Optional biography
             if bio:
+
                 html.append(
                     '<p class="course-team-card-bio">'
                     f'{bio}'
                     '</p>'
                 )
 
+            # --------------------------------------------------
             # Profile links
+            # --------------------------------------------------
+
             links = []
 
             if email:
+
                 links.append(
                     f'<a href="mailto:{escape(email, quote=True)}" '
-                    'aria-label="Email" title="Email">'
+                    'aria-label="Email" '
+                    'title="Email">'
                     '<i class="bi bi-envelope"></i>'
                     '</a>'
                 )
 
             if person.get("orcid"):
+
                 orcid = escape(
                     str(person["orcid"]),
                     quote=True,
@@ -155,8 +214,10 @@ def render_team_page(team):
 
                 links.append(
                     f'<a href="{orcid}" '
-                    'target="_blank" rel="noopener" '
-                    'aria-label="ORCID" title="ORCID">'
+                    'target="_blank" '
+                    'rel="noopener" '
+                    'aria-label="ORCID" '
+                    'title="ORCID">'
                     '<img '
                     'src="https://cdn.simpleicons.org/orcid" '
                     'alt="" '
@@ -165,6 +226,7 @@ def render_team_page(team):
                 )
 
             if person.get("github"):
+
                 github = escape(
                     str(person["github"]),
                     quote=True,
@@ -172,13 +234,16 @@ def render_team_page(team):
 
                 links.append(
                     f'<a href="{github}" '
-                    'target="_blank" rel="noopener" '
-                    'aria-label="GitHub" title="GitHub">'
+                    'target="_blank" '
+                    'rel="noopener" '
+                    'aria-label="GitHub" '
+                    'title="GitHub">'
                     '<i class="bi bi-github"></i>'
                     '</a>'
                 )
 
             if person.get("linkedin"):
+
                 linkedin = escape(
                     str(person["linkedin"]),
                     quote=True,
@@ -186,13 +251,16 @@ def render_team_page(team):
 
                 links.append(
                     f'<a href="{linkedin}" '
-                    'target="_blank" rel="noopener" '
-                    'aria-label="LinkedIn" title="LinkedIn">'
+                    'target="_blank" '
+                    'rel="noopener" '
+                    'aria-label="LinkedIn" '
+                    'title="LinkedIn">'
                     '<i class="bi bi-linkedin"></i>'
                     '</a>'
                 )
 
             if person.get("website"):
+
                 website = escape(
                     str(person["website"]),
                     quote=True,
@@ -200,25 +268,40 @@ def render_team_page(team):
 
                 links.append(
                     f'<a href="{website}" '
-                    'target="_blank" rel="noopener" '
-                    'aria-label="Website" title="Website">'
+                    'target="_blank" '
+                    'rel="noopener" '
+                    'aria-label="Website" '
+                    'title="Website">'
                     '<i class="bi bi-globe2"></i>'
                     '</a>'
                 )
 
             if links:
+
                 html.append(
                     '<div class="course-team-card-links">'
                     + "\n".join(links)
                     + '</div>'
                 )
 
-            html.append('</div>')
-            html.append('</article>')
+            html.append(
+                '</div>'
+            )
 
-        html.append('</div>')
-        html.append('</section>')
+            html.append(
+                '</article>'
+            )
 
-    html.append('</div>')
+        html.append(
+            '</div>'
+        )
+
+        html.append(
+            '</section>'
+        )
+
+    html.append(
+        '</div>'
+    )
 
     return "\n".join(html).strip()

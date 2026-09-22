@@ -1,6 +1,75 @@
 course:
 
+  # This file contains course-specific information used
+  # throughout the website, including the course syllabus.
+  #
+  # Some fields are required and some are optional,
+  # depending on the type and format of the training.
+  #
+  # The validator (validators.py) checks the required fields
+  # and stops the website from rendering if any required
+  # information is missing.
+
+  # ==================================================
+  # Required fields
+  # ==================================================
+  # title
+  # description
+  # mode
+  # language
+  # target_audience
+  # learning_outcomes
+  # organizers
+  # contact.email
+
+  # ==================================================
+  # Optional fields
+  # ==================================================
+  #
+  # The following fields can be omitted when they are not applicable to the training:
+  #
+  # subtitle
+  # start_date
+  # end_date
+  # duration
+  # location
+  # instruction
+  # credits
+  # expertise_level
+  # prerequisites
+  # keywords
+  # examination
+  # content_providers
+  # reuse.licence
+  # reuse.licence_url
+  # reuse.doi
+  # reuse.doi_url
+  # reuse.preferred_citation
+  #
+  # For example:
+  #
+  # - start_date and end_date can be omitted for training
+  #   without fixed dates, such as self-paced training.
+  #
+  # - location can be omitted when it is not relevant.
+  #   For online training, it can be set to "Online".
+  #
+  # - duration can describe the expected workload for
+  #   self-paced training.
+  #
+  # - prerequisites can be omitted when there are no
+  #   specific prerequisites.
+  #
+  # - examination can be omitted when there is no formal
+  #   examination or assessment.
+
+
+  # --------------------------------------------------
   # Identity
+  # --------------------------------------------------
+  #
+  # Basic information about the training.
+
   title: "Training title"
   subtitle: "Short subtitle describing the training"
   description: >
@@ -8,13 +77,21 @@ course:
     topic, purpose, or focus.
 
   credits:
-    value: x
-    unit: "hp"
-    note: "Provide the number of credits awarded (in ECTS or hp), if applicable.
-      Indicate whether formal approval is determined by the participant's host university."
+    value: numerical value
+    unit: "hp/ECTS"
+    note: "Provide the number of credits awarded (in ECTS/hp), if applicable.
+      Specify whether formal approval is determined by the participant's host university."
 
+  # --------------------------------------------------
   # Delivery
-  # Replace these placeholder dates with the actual training dates.
+  # --------------------------------------------------
+  #
+  # Information about when, where, and how the training
+  # is delivered.
+  #
+  # Replace the placeholder dates with the actual training dates.
+  # Dates must use ISO format: YYYY-MM-DD.
+
   start_date: "2026-01-01"
   end_date: "2026-01-02"
   duration: "Number of days"
@@ -28,7 +105,14 @@ course:
   location: "Venue name or online"
   language: "Language the training is provided in"
 
-  # Educational
+  # --------------------------------------------------
+  # Educational information
+  # --------------------------------------------------
+  #
+  # Describes who the training is intended for, what
+  # participants need to know beforehand, and what they
+  # should learn from the training.
+
   target_audience: "Describe the intended participant group"
   expertise_level: "Beginner / Intermediate / Advanced"
 
@@ -50,28 +134,61 @@ course:
     - "Keyword 2"
     - "Keyword 3"
 
+  # --------------------------------------------------
+  # Examination and assessment
+  # --------------------------------------------------
+  #
+  # Describe how participants are assessed, if applicable.
+  # If the training does not include an examination or other
+  # formal assessment, this field can be left empty or removed.
+
   examination:
     description: >
       Describe how participants will be assessed, if applicable.
       Remove or leave this field empty if the training does not
       include an examination or other assessment.
 
+  # --------------------------------------------------
   # Administration
+  # --------------------------------------------------
+  #
+  # Organisations responsible for organising the training
+  # and providing its educational content.
+
   organizers:
-    - "Organizer name"
-    - "Add another organizer"
+    - "Name of organizing institution"
+    - "Add another organizing institution"
 
   content_providers:
-    - "Content provider name"
-    - "Add another content provider"
+    - "Name of institution providing content"
+    - "Name of another institution providing content"
 
+  # --------------------------------------------------
   # Contact
+  # --------------------------------------------------
+  #
+  # Main contact address for questions about the training.
+
   contact:
     email: "training@example.org"
+
+  # --------------------------------------------------
+  # Reuse
+  # --------------------------------------------------
+  #
+  # Information about how the course material may be reused.
+  #
+  # "licence_url" should point to the licence information.
+  # Add a DOI if the training or its materials have one.
+  # "preferred_citation" describes how reusers should cite
+  # the course material.
 
   reuse:
 
     licence: "CC BY 4.0"
     licence_url: "https://creativecommons.org/licenses/by/4.0/"
     doi: "DOI, if applicable"
+    doi_url: "https://doi.org/10.xxxx/xxxxx"
+    preferred_citation: >
+      Provide the preferred citation for this course or its materials, including authors, title, year, DOI, or other information as appropriate.
 

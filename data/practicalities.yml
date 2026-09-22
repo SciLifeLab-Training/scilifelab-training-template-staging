@@ -1,4 +1,3 @@
-
 practicalities:
 
   # --------------------------------------------------
@@ -13,6 +12,15 @@ practicalities:
   # --------------------------------------------------
   # Venue
   # --------------------------------------------------
+  #
+  # Information about where the training takes place.
+  # "map_url": 
+      # Create a map link using OpenStreetMap:
+      # 1. Go to https://www.openstreetmap.org/
+      # 2. Search for the venue address.
+      # 3. Zoom and centre the map on the correct location.
+      # 4. Select "Share" and copy the map URL.
+      # 5. Paste the URL below.
 
   venue:
     name: "Venue Name"
@@ -30,18 +38,21 @@ practicalities:
   # --------------------------------------------------
   # Transport
   # --------------------------------------------------
+  #
+  # Information about travelling to the venue.
 
   transport:
     description: >
       Describe how participants can reach the venue using public
       transport. Include the nearest station, stop, or other useful
       information.
-    links:
-      - title: "Public transport website"
-        url: "https://example.org"
-      - title: "Public transport app"
-        url: "https://example.org"
 
+    links:
+      - title: "Public transport website link"
+        url: "https://example.org"
+      - title: "Public transport app link"
+        url: "https://example.org"
+    
     parking: >
       Provide information about parking near the venue, including
       availability, restrictions, fees, payment methods, or any
@@ -50,6 +61,9 @@ practicalities:
   # --------------------------------------------------
   # Accommodation
   # --------------------------------------------------
+  # Information about accommodation near the training venue.
+  # Add one entry for each hotel or other accommodation option.
+  # Leave "url" empty if no website link should be displayed.
 
   accommodation:
     description: >
@@ -70,11 +84,15 @@ practicalities:
   # --------------------------------------------------
   # Food
   # --------------------------------------------------
+  #
+  # Information about meals and refreshments provided during
+  # the training, as well as dietary requirements.
 
   food:
     description: >
       Describe what food and refreshments are provided during the
       training, such as lunch, coffee, or other refreshments.
+
     dietary_information: >
       Provide information about dietary requirements, allergies,
       or how participants should communicate special dietary needs.
@@ -83,19 +101,27 @@ practicalities:
   # --------------------------------------------------
   # Additional information
   # --------------------------------------------------
+  #
+  # Practical information that does not fit naturally into the sections above.
+  # Add, remove, or rename entries as needed.
 
   additional:
-    - title: "For example: What to bring"
+    - title: "Example: What to bring"
       content: >
         List anything participants should bring with them, such as
         a laptop, charger, identification, notebook, or other equipment.
 
-    - title: "For example: Wi-Fi"
+    - title: "Example: Wi-Fi"
       content: >
         Provide information about Wi-Fi access at the venue, including
         the network name and any instructions participants need to follow.
 
-    - title: "For example: Accessibility"
+    - title: "Example: Accessibility"
       content: >
         Provide information about accessibility at the venue and any
         arrangements participants should be aware of.
+
+    - title: "Other information"
+      content: >
+        Add any other practical information that participants should
+        know before attending the training.

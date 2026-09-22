@@ -298,9 +298,11 @@ def render_syllabus(course, team):
         if provider
     ]
 
+    team_members = team.get("members") or []
+
     leaders = [
         person
-        for person in team
+        for person in team_members
         if "Training lead" in person.get("roles", [])
     ]
 
@@ -376,35 +378,57 @@ def render_syllabus(course, team):
     licence = reuse.get("licence")
     licence_url = reuse.get("licence_url")
     doi = reuse.get("doi")
+    doi_url = reuse.get("doi_url")
+    preferred_citation = reuse.get("preferred_citation")
 
-    if licence or doi:
-        html.append('<section class="course-syllabus-section">')
+    if licence or doi or preferred_citation:
+        html.append(
+            '<section class="course-syllabus-section">'
+        )
         html.append('<h2>Reuse</h2>')
         html.append(
             '<dl class="course-syllabus-details course-syllabus-reuse">'
         )
 
-    if licence:
-        licence_html = licence
+        if licence:
+            licence_html = licence
 
-        if licence_url:
-            licence_html = (
-                f'<a href="{licence_url}" '
-                f'target="_blank" rel="noopener">{licence}</a>'
+            if licence_url:
+                licence_html = (
+                    f'<a href="{licence_url}" '
+                    f'target="_blank" rel="noopener">'
+                    f'{licence}</a>'
+                )
+
+            html.append(
+                '<div>'
+                '<dt>Licence</dt>'
+                f'<dd>{licence_html}</dd>'
+                '</div>'
             )
 
-        html.append(
-            '<div>'
-            '<dt>Licence</dt>'
-            f'<dd>{licence_html}</dd>'
-            '</div>'
-        )
-
         if doi:
+            doi_html = doi
+
+            if doi_url:
+                doi_html = (
+                    f'<a href="{doi_url}" '
+                    f'target="_blank" rel="noopener">'
+                    f'{doi}</a>'
+                )
+
             html.append(
                 '<div>'
                 '<dt>DOI</dt>'
-                f'<dd>{doi}</dd>'
+                f'<dd>{doi_html}</dd>'
+                '</div>'
+            )
+
+        if preferred_citation:
+            html.append(
+                '<div class="course-syllabus-preferred-citation">'
+                '<dt>Preferred citation</dt>'
+                f'<dd>{preferred_citation}</dd>'
                 '</div>'
             )
 

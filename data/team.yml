@@ -1,80 +1,136 @@
 team:
 
-  - name: "Training Lead Name"
-    roles:
-      - Training lead
-    job_title: "Job title"
-    affiliation: "Institution"
-    email: "jane.doe@example.org"
-    course_contact: true
-    bio: >
-      Training Lead1 has extensive experience in single-cell genomics and bioinformatics,
-      and has been involved in developing and delivering training for over 10 years.
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-    linkedin: "https://www.linkedin.com"
-    github: "https://github.com/"
-    website: "www.traininglead1.com"
-    image: "img/photos/team-photo.jpeg"
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
 
-  - name: "Training Lead Name"
-    roles:
-      - Training lead
-    job_title: "Job title"
-    affiliation: "Institution"
-    email: "john.smith@example.org"
-    course_contact: true
-    bio: >
-      John works on computational methods for multi-omics data analysis
-      and coordinates training activities across the programme.
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-    linkedin: ""
-    github: "https://github.com/InekeL"
-    website: ""
-    image: "img/photos/team-photo.jpeg"
+  intro: >
+    Use this section to introduce the training team. Briefly
+    describe who develops and delivers the training and the
+    roles represented on the team.
 
-  - name: "Alex Example"
-    roles:
-      - Instructor
-    job_title: "Bioinformatician"
-    affiliation: "Karolinska Institutet"
-    email: "alex@example.org"
-    course_contact: false
-    bio: >
-      Alex develops and applies computational methods for genomics and
-      epigenomics, with several years of experience in training researchers.
-    orcid: ""
-    linkedin: "https://www.linkedin.com/in/inekeluijten/"
-    github: ""
-    website: ""
-    image: "img/photos/team-photo.jpeg"
+  # --------------------------------------------------
+  # Team members
+  # --------------------------------------------------
 
-  - name: "Sam Example"
-    roles:
-      - Contributor
-    job_title: "Research Engineer"
-    affiliation: "SciLifeLab"
-    email: ""
-    course_contact: false
-    bio: >
-      Sam supports the practical sessions and contributes technical expertise
-      in sequencing and data analysis.
-    orcid: ""
-    linkedin: ""
-    github: ""
-    website: ""
-    image: "img/photos/team-photo.jpeg"
+  members:
+  
+    # --------------------------------------------------
+    # Training leads
+    # --------------------------------------------------
+    #
+    # Training leads are responsible for the overall
+    # development, coordination, and delivery of the training.
+    #
+    # The first two people with the role "Training lead"
+    # are also shown in the team preview on the overview page.
+    #
+    # The "roles" value must contain "Training lead" for the
+    # person to appear in the training-lead section.
+
+    - name: "Training Lead Name"
+      roles:
+        - Training lead
+      job_title: "Job Title"
+      affiliation: "Institution or organisation"
+      email: "training.lead@example.org"
+      # Set course_contact to true if participants should be able to identify this person as a course contact.
+      course_contact: true
+      bio: >
+        Provide a 1-to-2-sentence biography describing this person's
+        expertise, role in the training, and relevant experience.
+      # Optional profile links. Leave empty if not applicable.
+      orcid: "https://orcid.org/0000-0000-0000-0000"
+      linkedin: "https://www.linkedin.com/in/example"
+      github: ""
+      website: ""
+      image: "img/photos/team-photo.jpeg"
+
+    # Add another training lead if applicable.
+    - name: "Training Lead Name"
+      roles:
+        - Training lead
+      job_title: "Job Title"
+      affiliation: "Institution or organisation"
+      email: ""
+      course_contact: false
+      bio: >
+        Provide a 1-to-2-sentence biography describing this person's
+        expertise, role in the training, and relevant experience.
+      orcid: ""
+      linkedin: ""
+      github: "https://github.com/example"
+      website: "https://example.org"
+      image: "img/photos/team-photo.jpeg"
 
 
-  - name: "Bob Example"
-    roles:
-      - Contributor
-    job_title: "Research Engineer"
-    affiliation: "SciLifeLab"
-    email: "john.smith@example.org"
-    course_contact: false
-    bio: >
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-    linkedin: ""
-    github: "https://github.com/InekeL"
-    website: ""
-    image: "img/photos/team-photo.jpeg"
+    # --------------------------------------------------
+    # Instructors
+    # --------------------------------------------------
+    #
+    # Instructors teach, facilitate, or otherwise contribute
+    # directly to the educational activities.
+    #
+    # Use the role "Instructor" to place a person in the
+    # instructor section of the full Team page.
+
+    - name: "Instructor Name"
+      roles:
+        - Instructor
+      job_title: "Job Title"
+      affiliation: "Institution or organisation"
+      email: "instructor@example.org"
+      course_contact: false
+      bio: >
+        Provide a 1-to-2-sentence biography describing this person's
+        expertise, role in the training, and relevant experience.
+      orcid: ""
+      linkedin: "https://www.linkedin.com/in/example"
+      github: ""
+      website: ""
+      image: "img/photos/team-photo.jpeg"
+
+    # Add another instructor if applicable.
+
+
+    # --------------------------------------------------
+    # Contributors
+    # --------------------------------------------------
+    #
+    # Contributors provide expertise, content, materials,
+    # technical support, or other contributions to the training.
+    #
+    # Use the role "Contributor" to place a person in the
+    # contributor section of the full Team page.
+
+    - name: "Contributor Name"
+      roles:
+        - Contributor
+      job_title: "Job Title"
+      affiliation: "Institution or organisation"
+      email: ""
+      course_contact: false
+      bio: >
+        Provide a 1-to-2-sentence biography describing this person's
+        expertise, role in the training, and relevant experience.
+      orcid: "https://orcid.org/0000-0000-0000-0000"
+      linkedin: ""
+      github: "https://github.com/example"
+      website: ""
+      image: "img/photos/team-photo.jpeg"
+
+    # Add another contributor if applicable.
+    
+    - name: "Contributor Name"
+      roles:
+        - Contributor
+      job_title: ""
+      affiliation: "Institution or organisation"
+      email: "contributor@example.org"
+      course_contact: false
+      bio: ""
+      orcid: ""
+      linkedin: ""
+      github: ""
+      website: "https://example.org"
+      image: ""

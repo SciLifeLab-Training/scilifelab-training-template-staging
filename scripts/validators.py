@@ -39,7 +39,6 @@ def validate_course(course):
 
     return course
 
-
 def validate_website(website):
 
     pages = website.get("pages", {})
@@ -69,17 +68,21 @@ def validate_schedule(events):
 
 def validate_team(team):
 
-    if not isinstance(team, list):
-        raise ValueError("team.yml must contain a 'team' list")
+    if not isinstance(team, dict):
+        raise ValueError("team.yml must contain a 'team' mapping")
+
+    members = team.get("members") or []
+
+    if not isinstance(members, list):
+        raise ValueError("team.members must be a list")
 
     required = [
         "name",
         "roles",
         "affiliation",
-        "image",
     ]
 
-    for member in team:
+    for member in members:
 
         member_name = member.get("name", "<unnamed member>")
 

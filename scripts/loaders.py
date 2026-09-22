@@ -28,7 +28,8 @@ def load_schedule():
 
 
 def load_team():
-    return load_yaml("team.yml")["team"]
+    data = load_yaml("team.yml") or {}
+    return data.get("team", {})
 
 
 def load_announcements():

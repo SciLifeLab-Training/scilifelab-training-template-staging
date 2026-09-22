@@ -5,19 +5,24 @@ preparation:
   # --------------------------------------------------
 
   intro: >
-    Please complete the following preparation activities before the training begins.
     Use this page to provide participants with the accounts, software, hardware,
     reading, and other information they need before attending the training.
 
   # --------------------------------------------------
   # Sections
   # --------------------------------------------------
+  #
+  # Add, remove, or rename sections to match the preparation
+  # requirements for the training.
 
   sections:
 
-    # ==================================================
-    # SECTION 1 — General preparation
-    # ==================================================
+    # --------------------------------------------------
+    # SECTION 1: Checklist
+    # --------------------------------------------------
+    #
+    # Use this section to provide a checklist of the main 
+    # preparation tasks participants should complete before the training.
 
     - title: ""
 
@@ -30,15 +35,18 @@ preparation:
         - type: checklist
           title: "Preparation checklist"
           items:
-            - "Item 1"
-            - "Item 2"
-            - "Item 3"
-            - "Item 4"
-            - "Item 5"
+            - "Complete preparation task 1"
+            - "Complete preparation task 2"
+            - "Complete preparation task 3"
+            - "Complete preparation task 4"
 
-    # ==================================================
-    # SECTION 2 — Accounts
-    # ==================================================
+
+    # --------------------------------------------------
+    # SECTION 2: Accounts
+    # --------------------------------------------------
+    #
+    # Use this section to list any accounts participants need to 
+    # create or access before the training. 
 
     - title: "Accounts"
 
@@ -46,24 +54,22 @@ preparation:
 
         - type: text
           content: |
-            Use this section to describe the accounts participants need to create or access before the training. Use the `account` block type in preparation.yml for each account and provide a description, instructions, and relevant links.
+            Describe the accounts participants need to create or access before the training. Use the `account` block type in preparation.yml for each account and provide a description, instructions, and relevant links.
 
         - type: account
           title: "Account 1"
 
           description: >
-            Use this field to briefly explain what the account is, why participants need it,
-            and what it will be used for during the training.
+            Briefly explain what the account is, why participants
+            need it, and how it will be used during the training.
 
           instructions: |
-            Use this field to describe how participants should create
+            Provide the steps participants should follow to create
             or configure the account.
 
             1. Create account step 1. 
             2. Create account step 2. 
             3. Create account step 3. 
-            4. Create account step 4. 
-            5. Create account step 5. 
 
           links:
             - title: "Account registration link"
@@ -80,11 +86,11 @@ preparation:
             Consecutive account blocks are automatically displayed in a grid.
 
           instructions: |
-            Use this field to provide the steps participants should follow
-            to create or configure the account.
+            Provide the steps participants should follow to create
+            or configure this account.
 
           links:
-            - title: "Create an account link"
+            - title: "Create account link"
               url: "https://example.org"
 
 
@@ -96,26 +102,31 @@ preparation:
             should be particularly aware of before completing the preparation activity.
 
 
-    # ==================================================
-    # SECTION 3 — Software requirements
-    # ==================================================
+    # --------------------------------------------------
+    # SECTION 3: Software requirements
+    # --------------------------------------------------
+    #
+    # Use this section for software participants need to
+    # install, update, or configure before the training.
 
+    
     - title: "Software requirements"
 
       blocks:
 
         - type: text
           content: |
-           Use this section to describe the software participants need to install before the training. Use the `software` block type in preparation.yml for each application and include any relevant installation instructions and links.
+           List the software participants need before the training. Use the `software` block type in preparation.yml for each application and include any relevant installation instructions and links.
         - type: software
           title: "Software 1"
 
           description: >
-            Use this field to briefly describe the software, explain why participants need it,
-            and provide any relevant version or system requirements.
+            Briefly describe the software and explain why participants
+            need it. Include version or operating-system requirements
+            if applicable.
 
           instructions: |
-            Use this field to describe how participants should install or configure the software.
+            Provide the installation or configuration steps here.            
             1. Install software step 1.
             2. Install software step 2.
             3. Install software step 3.
@@ -145,8 +156,7 @@ preparation:
           title: "Software 3"
 
           description: >
-            Use additional software blocks whenever participants need
-            several different applications or tools.
+            Add another software requirement here.
 
           instructions: |
              Provide the installation or configuration steps here.
@@ -163,9 +173,13 @@ preparation:
             limitation, or action that participants should not overlook.
 
 
-    # ==================================================
-    # SECTION 4 — Hardware requirements
-    # ==================================================
+    # --------------------------------------------------
+    # SECTION 4: Hardware requirements
+    # --------------------------------------------------
+    #
+    # Use this section for computers or other equipment
+    # participants need to bring or have access to.
+    
 
     - title: "Hardware requirements"
 
@@ -173,34 +187,32 @@ preparation:
 
         - type: text
           content: |
-             Use this section to describe the computer or other equipment participants need to bring or have access to. Use the `hardware` block type in preparation.yml to specify requirements such as RAM, storage, processor, or internet connection.
+             Describe the computer or other equipment participants need to bring or have access to. Use the `hardware` block type in preparation.yml to specify requirements such as RAM, storage, processor, or internet connection.
 
         - type: hardware
           title: "Hardware 1"
 
           description: >
-            Use this block to describe the computer or other equipment
-            participants need to bring or have access to.
+            Describe the equipment participants need and include
+            any minimum technical requirements.
 
           requirements:
             - label: "RAM"
-              value: "value"
+              value: "Minimum requirement"
 
             - label: "Storage"
-              value: "value"
+              value: "Minimum requirement"
 
             - label: "Processor"
-              value: "value"
+              value: "Requirement"
 
             - label: "Internet"
-              value: "value"
+              value: "Requirement"
 
           instructions: |
-            Use this field for additional hardware-related
-            information or actions participants should take before the training.
-
-            For example, explain whether participants need to bring their
-            own computer, charger, headset, or other equipment.
+            Provide any additional information participants should know,
+            such as whether they need to bring their own computer,
+            charger, headset, or other equipment.
 
 
         - type: callout
@@ -211,9 +223,14 @@ preparation:
             reminders, or other information that does not require the
             stronger emphasis of an **important** or **warning** callout.
 
-    # ==================================================
-    # SECTION 5 — Required reading
-    # ==================================================
+
+    # --------------------------------------------------
+    # SECTION 5: Required reading
+    # --------------------------------------------------
+    #
+    # Use this section for articles, documentation, or other
+    # material participants should review before the training.
+    
 
     - title: "Required reading"
 
@@ -221,15 +238,15 @@ preparation:
 
         - type: text
           content: |
-             Use this section to provide reading materials that participants should review before the training. Use the `reading` block type in preparation.yml for each reading resource.
+             Provide reading materials that participants should review before the training. Use the `reading` block type in preparation.yml for each reading resource.
 
         - type: reading
           title: "Reading 1"
 
           description: >
-            Use this block for required reading that participants should
-            complete before the training. Adding a URL to a citation will
-            make it clickable for easy access.
+             Briefly describe the reading and explain what participants
+             should get from it. Adding a URL to a citation will
+             make it clickable for easy access.
 
           citations:
             - text: >
@@ -241,33 +258,33 @@ preparation:
               url: "https://example.org/article"
 
           instructions: |
-            Use this field to explain how participants should
-            approach the reading.
-
-            For example, you can indicate whether participants should read
-            the full document or focus on particular sections.
+            Explain how participants should approach the reading.
+            For example, indicate whether they should read the full
+            document or focus on particular sections.
 
           prompt: >
-            Use the reflection prompt to ask participants to think about
-            the reading before the training.
+            Add a question or reflection prompt if participants should
+            think about something before the training.
 
         - type: reading
           title: "Reading 2"
 
           description: >
-            Add additional reading blocks when participants need to review
-            several different resources.
+             Add another required reading resource here.
 
           citations:
             - text: >
                 Example Author or Organisation. (year). Example document title.
               url: ""
-
   
 
-    # ==================================================
-    # SECTION 6 — Additional information
-    # ==================================================
+    # --------------------------------------------------
+    # SECTION 6: Additional information
+    # --------------------------------------------------
+    #
+    # Use this section for preparation information that does
+    # not fit naturally into the other categories.
+    
 
     - title: "Additional information"
 
@@ -275,6 +292,4 @@ preparation:
 
         - type: text
           content: |
-            Use this section for additional preparation information that does not fit naturally into the account, software, hardware, or reading sections.
-
-            You can also use it for information about local IT environments, accessibility, administrative permissions, or other practical details participants should know before the training.
+            Use this section for other information participants should know before the training, such as local IT requirements, administrative permissions, accessibility information,or other preparation details.
