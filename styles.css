@@ -46,10 +46,6 @@
   border: 0;
 }
 
-.navbar-brand img {
-  max-height: 38px;
-}
-
 .navbar-title {
   font-size: 1.05rem;
   font-weight: 600;
@@ -248,8 +244,8 @@ body {
 /* Controls the displayed size of the SciLifeLab logo. */
 .course-navbar-logo {
     display: block;
-    width: 180px;
-    height: auto;
+    height: 40px;
+    width: auto;
 }
 
 
