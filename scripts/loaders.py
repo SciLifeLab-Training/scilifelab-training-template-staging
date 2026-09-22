@@ -51,3 +51,7 @@ def load_faq():
 def load_preparation():
     data = load_yaml("preparation.yml") or {}
     return data.get("preparation", {})
+
+def load_resources():
+    data = load_yaml("resources.yml") or {}
+    return data.get("resources", {})

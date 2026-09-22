@@ -13,6 +13,7 @@ from loaders import (
     load_practicalities,
     load_faq,
     load_preparation,
+    load_resources
 )
 
 from content import load_content_sections
@@ -48,6 +49,7 @@ from renderers.practicalities import render_practicalities
 from renderers.faq import render_faq
 from renderers.preparation import render_preparation
 from renderers.footer import render_footer
+from renderers.resources import render_resources
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +76,7 @@ def main():
     practicalities = load_practicalities()
     faq = load_faq()
     preparation = load_preparation()
+    resources = load_resources()
 
     available_pages = set()
 
@@ -88,6 +91,9 @@ def main():
 
     if preparation.get("sections"):
         available_pages.add("preparation")
+
+    if resources:
+        available_pages.add("resources")
 
 
     write_partial(
@@ -179,6 +185,11 @@ def main():
     "footer.qmd",
     render_footer(website),
     )   
+
+    write_partial(
+    "resources.qmd",
+    render_resources(resources),
+    )
 
 if __name__ == "__main__":
     main()

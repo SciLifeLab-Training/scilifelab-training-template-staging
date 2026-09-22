@@ -1,0 +1,137 @@
+resources:
+
+
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
+
+  intro: >
+    Use this page to provide resources participants can explore
+    after the training, including further reading, useful links,
+    documentation, tools, datasets, and related training.
+
+
+  # --------------------------------------------------
+  # Further reading
+  # --------------------------------------------------
+  #
+  # Books, papers, articles, reviews, and other material
+  # participants can use to explore the topic in more depth.
+  
+  further_reading:
+
+    - title: "Resource title"
+      description: >
+        Briefly describe the resource, including what it covers
+        or what participants can find in it.
+      url: "https://example.org"
+
+  
+    - title: "Resource title"
+      description: >
+        Briefly describe the resource, including what it covers
+        or what participants can find in it.
+      url: "https://example.org"
+
+
+  # --------------------------------------------------
+  # Useful links
+  # --------------------------------------------------
+  #
+  # Relevant websites, portals, communities, organisations,
+  # or other online resources participants may find useful
+  # after the training.
+
+  useful_links:
+
+    - title: "Resource title"
+      description: >
+        Briefly describe the website, organisation, service,
+        or other resource.
+      url: "https://example.org"
+
+    - title: "Resource title"
+      description: >
+        Briefly describe the website, organisation, service,
+        or other resource.
+      url: "https://example.org"
+
+    - title: "Resource title"
+      description: >
+        Briefly describe the website, organisation, service,
+        or other resource.
+      url: "https://example.org"
+
+
+  # --------------------------------------------------
+  # Documentation and tutorials
+  # --------------------------------------------------
+  #
+  # Documentation, guides, tutorials, walkthroughs,
+  # and other practical learning resources.
+
+  documentation_and_tutorials:
+
+    - title: "Resource title"
+      description: >
+        Briefly describe what the documentation or tutorial covers
+        and what participants can find there.
+      url: "https://example.org"
+
+
+  # --------------------------------------------------
+  # Tools and software
+  # --------------------------------------------------
+  #
+  # Software, packages, platforms, applications, or other
+  # tools that participants may want to continue using
+  # after the training.
+
+  tools_and_software:
+
+    - title: "Tool name"
+      description: >
+        Briefly describe the tool or software and what it is used for.
+      url: "https://example.org"
+
+    - title: "Tool name"
+      description: >
+        Briefly describe the tool or software and what it is used for.
+      url: "https://example.org"
+
+
+  # --------------------------------------------------
+  # Datasets
+  # --------------------------------------------------
+  #
+  # Public datasets, repositories, example datasets,
+  # or other data resources participants can use for
+  # further exploration or practice.
+
+  datasets:
+
+    - title: "Dataset name"
+      description: >
+        Briefly describe the dataset, repository, or data resource
+        and what it contains.
+      url: "https://example.org"
+
+
+  # --------------------------------------------------
+  # Related training
+  # --------------------------------------------------
+  #
+  # Other courses, workshops, training materials, or
+  # learning opportunities related to this training.
+
+  related_training:
+
+    - title: "Related training"
+      description: >
+        Briefly describe the training and the topics it covers.
+      url: "https://example.org"
+
+    - title: "Related training"
+      description: >
+        Briefly describe the training and the topics it covers.
+      url: "https://example.org"
