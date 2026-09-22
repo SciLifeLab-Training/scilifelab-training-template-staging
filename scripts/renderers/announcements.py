@@ -86,3 +86,96 @@ View all announcements →
 
 :::
 """.strip()
+
+
+def render_announcements_page(announcements):
+
+    if not announcements:
+        return """
+<div class="course-announcements-page">
+
+<header class="course-announcements-header">
+
+<div class="course-announcements-label">
+Announcements
+</div>
+
+<h1>Announcements</h1>
+
+<p class="course-announcements-intro">
+There are currently no announcements.
+</p>
+
+</header>
+
+</div>
+""".strip()
+
+    announcements = sorted(
+        announcements,
+        key=lambda announcement: announcement["date"],
+        reverse=True,
+    )
+
+    html = []
+
+    html.append('<div class="course-announcements-page">')
+
+    html.append('<header class="course-announcements-header">')
+
+    html.append(
+        '<div class="course-announcements-label">'
+        'Announcements'
+        '</div>'
+    )
+
+    html.append('<h1>Announcements</h1>')
+
+    html.append(
+        '<p class="course-announcements-intro">'
+        'Updates and information about the training.'
+        '</p>'
+    )
+
+    html.append('</header>')
+
+    html.append('<main class="course-announcements-list">')
+
+    for announcement in announcements:
+
+        announcement_date = announcement["date"]
+
+        if isinstance(announcement_date, date):
+            formatted_date = announcement_date.strftime("%-d %B %Y")
+        else:
+            formatted_date = str(announcement_date)
+
+        html.append(
+            '<article class="course-announcement-page-item">'
+        )
+
+        html.append(
+            '<div class="course-announcement-page-date">'
+            f'{formatted_date}'
+            '</div>'
+        )
+
+        html.append(
+            '<h2 class="course-announcement-page-title">'
+            f'{announcement["title"]}'
+            '</h2>'
+        )
+
+        html.append(
+            '<p class="course-announcement-page-text">'
+            f'{announcement["text"]}'
+            '</p>'
+        )
+
+        html.append('</article>')
+
+    html.append('</main>')
+
+    html.append('</div>')
+
+    return "\n".join(html).strip()

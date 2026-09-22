@@ -35,7 +35,10 @@ from renderers.navbar import (
 from renderers.registration import render_registration
 from renderers.upcoming import render_upcoming
 from renderers.quick_links import render_quick_links
-from renderers.announcements import render_announcements
+from renderers.announcements import (
+    render_announcements,
+    render_announcements_page,
+)
 from renderers.team import render_team
 from renderers.team_page import render_team_page
 from renderers.content import (
@@ -95,6 +98,8 @@ def main():
     if resources:
         available_pages.add("resources")
 
+    if announcements:
+        available_pages.add("announcements")
 
     write_partial(
         "welcome.qmd",
@@ -129,6 +134,11 @@ def main():
     write_partial(
         "announcements.qmd",
         render_announcements(announcements),
+    )
+
+    write_partial(
+    "announcements_page.qmd",
+    render_announcements_page(announcements),
     )
 
     write_partial(
