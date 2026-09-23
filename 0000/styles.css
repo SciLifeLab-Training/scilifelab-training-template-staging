@@ -46,10 +46,6 @@
   border: 0;
 }
 
-.navbar-brand img {
-  max-height: 38px;
-}
-
 .navbar-title {
   font-size: 1.05rem;
   font-weight: 600;
@@ -248,8 +244,8 @@ body {
 /* Controls the displayed size of the SciLifeLab logo. */
 .course-navbar-logo {
     display: block;
-    width: 180px;
-    height: auto;
+    height: 46px;
+    width: auto;
 }
 
 
@@ -549,66 +545,111 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
 /* ==========================================================================
    COURSE REGISTRATION
    ========================================================================== */
 
 .course-registration {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 2.5rem;
 
     margin: 1.5rem 2.5rem;
-    padding: 1rem 1.5rem;
+    padding: 0.7rem 1.5rem;
 
-    background: #045C64;
+    background: #eef7f7;
+    border: 1px solid #dcebec;
     border-radius: 6px;
 
-    color: white;
+    color: #3f474d;
 }
 
 .course-registration-content {
-    gap: 0.15rem;
-    line-height: 1;
+    min-width: 0;
+    margin: 0;
+    align-self: center;
+
+    transform: translateY(0.45rem);
 }
 
 .course-registration-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1.7;
+    margin: 0 0 0.2rem;
+
+    color: #045C64;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.10em;
     text-transform: uppercase;
 }
 
-.course-registration-date {
-    font-size: 0.85rem;
-    font-weight: 400;
-    line-height: 1.7;
+.course-registration-deadline {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #222;
 }
 
-.course-registration-button {
-    display: flex;
-    align-items: center;
+.course-registration-fee {
+    margin: 0.05rem 0 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #222;
 
-    padding: 0.65rem 1.2rem;
+}
+
+.course-registration-note {
+    max-width: 75ch;
+    margin: 0.1rem 0 0;
+
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+
+.course-registration-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    padding: 0.65rem 1.1rem;
 
     background: #9cc31c;
     color: #ffffff;
 
     border-radius: 4px;
 
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.82rem;
+    font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
 
     white-space: nowrap;
+    transform: translateY(0.45rem);
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.15s ease;
 }
 
 .course-registration-button:hover {
     background: #8aad18;
+    color: #ffffff;
     text-decoration: none;
 }
 
+.course-registration-button:focus-visible {
+    outline: 2px solid #045C64;
+    outline-offset: 3px;
+}
 
 
 /* ==========================================================================
@@ -1027,7 +1068,7 @@ body {
 /* ======= Announcement date ========= */
 
 .course-announcement-date {
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     font-weight: 600;
     color: #333;
 
@@ -1040,7 +1081,7 @@ body {
 .course-announcement-title {
     margin: 0 0 0.15rem;
 
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     font-weight: 600;
 
     color: #333;
@@ -3928,3 +3969,146 @@ html.course-content-page .landing-footer {
     font-size: 0.75rem;
 }
 
+
+
+/* ==================================================
+   ANNOUNCEMENTS PAGE
+   ================================================== */
+
+/* --------------------------------------------------
+   Page header
+   -------------------------------------------------- */
+.course-announcements-page .anchorjs-link,
+.course-announcements-section .anchorjs-link {
+    display: none !important;
+}
+.course-announcements-header {
+    width: 100%;
+    max-width: var(--course-content-width);
+
+    margin: 2.5rem auto 0;
+    padding: 0 var(--course-content-padding);
+
+    box-sizing: border-box;
+}
+
+.course-announcements-label {
+    margin-bottom: 0.85rem;
+
+    color: #045c64;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.course-announcements-header h1 {
+    max-width: 28ch;
+
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.course-announcements-intro {
+    max-width: 55ch;
+
+    margin: 0.75rem 0 0;
+
+    color: #777;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------------------------
+   Announcement list
+   -------------------------------------------------- */
+
+.course-announcements-list {
+    width: 100%;
+    max-width: var(--course-content-width);
+
+    margin: 2.75rem auto 4rem;
+    padding: 0 var(--course-content-padding);
+
+    box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------
+   Individual announcement
+   -------------------------------------------------- */
+
+.course-announcement-page-item {
+    position: relative;
+
+    max-width: 900px;
+
+    padding: 0 0 1.75rem 2rem;
+    margin: 0 0 1.75rem;
+
+    border-left: 1px solid #e5e5e5;
+}
+
+.course-announcement-page-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -5px;
+    top: 0.35rem;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #9cc31c;
+}
+
+
+/* --------------------------------------------------
+   Date
+   -------------------------------------------------- */
+
+.course-announcement-page-date {
+    margin-bottom: 0.3rem;
+
+    color: #045c64;
+    font-size: 0.80rem;
+    font-weight: 600;
+}
+
+
+/* --------------------------------------------------
+   Title
+   -------------------------------------------------- */
+
+.course-announcement-page-title {
+    margin: 0 0 0.45rem;
+
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    border: none;
+}
+
+
+/* --------------------------------------------------
+   Text
+   -------------------------------------------------- */
+
+.course-announcement-page-text {
+    max-width: 70ch;
+
+    margin: 0;
+
+    color: #555;
+    font-size: 0.90rem;
+    line-height: 1.55;
+}
