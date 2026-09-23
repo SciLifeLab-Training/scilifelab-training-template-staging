@@ -137,27 +137,52 @@ website:
   # Registration
   # ==================================================
   #
-  # Controls the registration banner displayed on the
-  # overview page.
+  # Use this section to control the registration information
+  # shown on the training overview page.
   #
-  # Set "enabled" to false to remove the registration
-  # banner from the website.
+  # Set "enabled" to true to show the registration banner.
+  # Set it to false if the training does not have registration
+  # information or if you do not want to show it.
   #
-  # "closing_date" is used to indicate when registration
-  # closes. Use ISO format: YYYY-MM-DD.
+  # The registration banner changes automatically based
+  # on the opening and closing dates:
+
+  # - Before registration opens:
+  #   The banner displays: 'Registration opens on 'date''
   #
-  # "url" should point to the registration page or form.
+  # - While registration is open:
+  #   The banner displays the registration deadline, training fee,
+  #   and a link to the registration form.
   #
+  # - After registration closes:
+  #   The banner can either display 'Registration is now closed', 
+  #   or be remove completely.
+  #       "after_closing" can be:
+  #       - closed  → keep showing a "Registration is now closed" message
+  #       - hide    → remove the registration information
+  #
+  # The opening and closing dates should use the format: YYYY-MM-DD
 
   registration:
 
     enabled: true
 
-    # Replace with the actual registration closing date.
-    closing_date: "2026-10-25"
-
-    # Replace with the actual registration URL.
+    opening_date: "2026-09-20"
+    closing_date: "2026-09-25"
+    # Choose whether the banner remains visible after registration closes or disappears.
+    after_closing: "closed"
+    # add the link to the registration page or form.
     url: "https://registration.example.com"
+    cost:
+        # The training fee is optional. If an amount is provided,
+        # it is displayed in the registration banner.
+        # The note can be used to explain different fees or
+        # direct participants to the registration form for details.
+      amount: 1500
+      currency: "SEK"
+      note: >
+        The cost may differ depending on the participant's
+        institution. See the registration form for more information.
 
 
   # ==================================================
@@ -202,10 +227,6 @@ website:
   # ==================================================
   #
   # Controls the content displayed in the website footer.
-  #
-  # The footer layout and styling are handled by the template.
-  # Use this section only to provide the footer content.
-  #
 
   footer:
 
@@ -214,15 +235,12 @@ website:
     organisation: "Organisation or Training Programme name"
 
     # Licence applied to the course website/content.
-    #
-    # Replace both values if a different licence is used.
     licence:
       name: "CC BY 4.0"
       url: "https://creativecommons.org/licenses/by/4.0/"
 
     # Text describing the website template used to build
     # this website.
-    #
     # Usually this can be left unchanged unless the
     # template attribution needs to be modified.
     built_with:
@@ -232,7 +250,6 @@ website:
       suffix: "and is hosted on GitHub Pages."
 
     # Link and image used for the repository icon in the footer.
-    #
     # Replace "url" with the GitHub repository for this
     # specific course website.
     repository:
