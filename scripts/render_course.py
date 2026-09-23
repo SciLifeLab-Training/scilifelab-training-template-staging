@@ -98,7 +98,7 @@ def main():
     if resources:
         available_pages.add("resources")
 
-    if announcements:
+    if announcements.get("items"):
         available_pages.add("announcements")
 
     write_partial(

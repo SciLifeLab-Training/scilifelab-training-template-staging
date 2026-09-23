@@ -1,13 +1,42 @@
 announcements:
 
-  - date: 2026-05-10
-    title: "Remember to bring your laptop"
-    text: "Please bring your laptop to all workshop sessions."
+  # --------------------------------------------------
+  # Page introduction
+  # --------------------------------------------------
 
-  - date: 2026-05-04
-    title: "Preparation material is now available"
-    text: "You can now access the reading in the Course content section."
+  intro: >
+    Use this page to provide participants with short updates and important information about the training.
 
-  - date: 2026-04-28
-    title: "Course preparation"
-    text: "Please complete the preparation before the course starts."
+  # --------------------------------------------------
+  # Announcements
+  # --------------------------------------------------
+  #
+  # Add one entry for each announcement.
+  #
+  # "date" should use ISO format: YYYY-MM-DD.
+  # Announcements are automatically ordered by date,
+  # with the newest announcement shown first.
+  #
+  # The two most recent announcements are also displayed
+  # on the training overview page.
+  
+
+  items:
+
+    - date: 2026-01-01
+      title: "Announcement title"
+      text: >
+        Provide a short update or important information
+        for participants.
+
+    - date: 2026-01-02
+      title: "Announcement title"
+      text: >
+        Provide a short update or important information
+        for participants.
+
+    - date: 2026-01-03
+      title: "Announcement title"
+      text: >
+        Provide a short update or important information
+        for participants.

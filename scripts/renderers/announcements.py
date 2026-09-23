@@ -3,7 +3,9 @@ from datetime import date
 
 def render_announcements(announcements):
 
-    if not announcements:
+    items = announcements.get("items", [])
+
+    if not items:
 
         return """
 ::: {.course-announcements}
@@ -28,18 +30,18 @@ No active announcements.
 """.strip()
 
     # Sort newest first.
-    announcements = sorted(
-        announcements,
+    items = sorted(
+        items,
         key=lambda announcement: announcement["date"],
         reverse=True,
     )
 
     # Show only the two most recent announcements.
-    announcements = announcements[:2]
+    items = items[:2]
 
     cards = []
 
-    for announcement in announcements:
+    for announcement in items:
 
         announcement_date = announcement["date"]
 
@@ -90,7 +92,10 @@ View all announcements →
 
 def render_announcements_page(announcements):
 
-    if not announcements:
+    items = announcements.get("items", [])
+    intro = announcements.get("intro", "")
+
+    if not items:
         return """
 <div class="course-announcements-page">
 
@@ -111,8 +116,9 @@ There are currently no announcements.
 </div>
 """.strip()
 
-    announcements = sorted(
-        announcements,
+    # Sort newest first.
+    items = sorted(
+        items,
         key=lambda announcement: announcement["date"],
         reverse=True,
     )
@@ -129,25 +135,31 @@ There are currently no announcements.
         '</div>'
     )
 
-    html.append('<h1>Announcements</h1>')
+    html.append('<h1>Training updates</h1>')
 
-    html.append(
-        '<p class="course-announcements-intro">'
-        'Updates and information about the training.'
-        '</p>'
-    )
+    if intro:
+        html.append(
+            '<p class="course-announcements-intro">'
+            f'{intro}'
+            '</p>'
+        )
 
     html.append('</header>')
 
     html.append('<main class="course-announcements-list">')
 
-    for announcement in announcements:
+    for announcement in items:
 
         announcement_date = announcement["date"]
 
         if isinstance(announcement_date, date):
-            formatted_date = announcement_date.strftime("%-d %B %Y")
+
+            formatted_date = announcement_date.strftime(
+                "%-d %B %Y"
+            )
+
         else:
+
             formatted_date = str(announcement_date)
 
         html.append(

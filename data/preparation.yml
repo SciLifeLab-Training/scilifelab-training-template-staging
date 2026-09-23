@@ -30,7 +30,7 @@ preparation:
 
         - type: text
           content: |
-            Use the `checklist` block type in preparation.yml to provide participants with a simple overview of the preparation tasks they need to complete before the training. Add one item for each required or recommended activity.
+            Use the `checklist` block type to provide participants with a simple overview of the preparation tasks they need to complete before the training. Add one item for each required or recommended activity.
 
         - type: checklist
           title: "Preparation checklist"
@@ -54,7 +54,7 @@ preparation:
 
         - type: text
           content: |
-            Describe the accounts participants need to create or access before the training. Use the `account` block type in preparation.yml for each account and provide a description, instructions, and relevant links.
+            Describe the accounts participants need to create or access before the training. Use the `account` block type for each account and provide a description, instructions, and relevant links.
 
         - type: account
           title: "Account 1"
@@ -116,7 +116,7 @@ preparation:
 
         - type: text
           content: |
-           List the software participants need before the training. Use the `software` block type in preparation.yml for each application and include any relevant installation instructions and links.
+           List the software participants need before the training. Use the `software` block type for each application and include any relevant installation instructions and links.
         - type: software
           title: "Software 1"
 
@@ -187,7 +187,7 @@ preparation:
 
         - type: text
           content: |
-             Describe the computer or other equipment participants need to bring or have access to. Use the `hardware` block type in preparation.yml to specify requirements such as RAM, storage, processor, or internet connection.
+             Describe the computer or other equipment participants need to bring or have access to. Use the `hardware` block type to specify requirements such as RAM, storage, processor, or internet connection.
 
         - type: hardware
           title: "Hardware 1"
@@ -238,7 +238,7 @@ preparation:
 
         - type: text
           content: |
-             Provide reading materials that participants should review before the training. Use the `reading` block type in preparation.yml for each reading resource.
+             Provide reading materials that participants should review before the training. Use the `reading` block type for each reading resource.
 
         - type: reading
           title: "Reading 1"

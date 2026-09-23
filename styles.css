@@ -3933,7 +3933,10 @@ html.course-content-page .landing-footer {
 /* --------------------------------------------------
    Page header
    -------------------------------------------------- */
-
+.course-announcements-page .anchorjs-link,
+.course-announcements-section .anchorjs-link {
+    display: none !important;
+}
 .course-announcements-header {
     width: 100%;
     max-width: var(--course-content-width);
